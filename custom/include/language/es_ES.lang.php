@@ -1,0 +1,75 @@
+<?php
+$GLOBALS['app_list_strings']['sexo_list']=array (
+  '' => '',
+  'Masculino' => 'Masculino',
+  'Femenino' => 'Femenino',
+);
+$GLOBALS['app_list_strings']['course_interest_list']=array (
+  '' => '',
+  'Pateleria' => 'Pasteleria',
+  'Fotografia' => 'Fotografia',
+);
+$GLOBALS['app_list_strings']['lead_status_dom']=array (
+  '' => '',
+  'New' => 'Nuevo',
+  'Converted' => 'Convertido',
+);
+$GLOBALS['app_list_strings']['sales_stage_dom']=array (
+  'Prospecting' => 'Preinforme',
+  'Qualification' => 'Informe',
+  'Closed Won' => 'Venta',
+  'Closed Lost' => 'Perdido',
+);
+$GLOBALS['app_list_strings']['account_type_dom']=array (
+  '' => '',
+  'Estudiante' => 'Estudiante',
+  'Potencial' => 'Potencial',
+);
+$app_list_strings['moduleList']['Leads']='Preinformes/Potenciales';
+$app_list_strings['moduleListSingular']['Leads']='Preinforme/Potencial';
+$app_list_strings['record_type_display']['Leads']='Preinforme/Potencial';
+$app_list_strings['parent_type_display']['Leads']='Preinforme/Potencial';
+$app_list_strings['record_type_display_notes']['Leads']='Preinforme/Potencial';
+$app_list_strings['moduleListSingular']['Accounts']='Preinforme/Cuenta';
+$app_list_strings['record_type_display']['Accounts']='Preinforme/Cuenta';
+$app_list_strings['parent_type_display']['Accounts']='Preinforme/Cuenta';
+$app_list_strings['record_type_display_notes']['Accounts']='Preinforme/Cuenta';
+$app_list_strings['moduleList']['Contacts']='Preinformes/Contactos';
+$app_list_strings['moduleList']['Accounts']='Preinformes/Cuentas';
+$app_list_strings['moduleListSingular']['Contacts']='Preinforme/Contacto';
+$app_list_strings['record_type_display']['Contacts']='Preinforme/Contacto';
+$app_list_strings['parent_type_display']['Contacts']='Preinforme/Contacto';
+$app_list_strings['record_type_display_notes']['Contacts']='Preinforme/Contacto';
+$app_list_strings['moduleList']['Opportunities']='Preinformes';
+$app_list_strings['moduleListSingular']['Opportunities']='Preinforme';
+$app_list_strings['record_type_display']['Opportunities']='Preinforme';
+$app_list_strings['parent_type_display']['Opportunities']='Preinforme';
+$app_list_strings['record_type_display_notes']['Opportunities']='Preinforme';
+$GLOBALS['app_list_strings']['id_type_list']=array (
+  '' => '',
+  'DNI' => 'DNI',
+);
+$app_list_strings['moduleList']['SecurityGroups']='Filiales';
+$app_list_strings['moduleListSingular']['SecurityGroups']='Filial';
+$GLOBALS['app_list_strings']['type_course_list']=array (
+  '' => '',
+  'Curso' => 'Curso',
+  'Taller' => 'Taller',
+  'Carrera' => 'Carrera',
+);
+$GLOBALS['app_list_strings']['turn_list']=array (
+  '' => '',
+  'Manana' => 'Mañana',
+  'Mediodia' => 'Mediodía',
+  'Tarde' => 'Tarde',
+  'Noche' => 'Noche',
+);
+$GLOBALS['app_list_strings']['opportunity_type_dom']=array (
+  '' => '',
+  'Inscripcion' => 'Inscripción',
+  'Reinscripcion' => 'Reinscripción',
+);
+$GLOBALS['app_list_strings']['payment_methods_list']=array (
+  '' => '',
+  'Efectivo' => 'Efectivo',
+);
