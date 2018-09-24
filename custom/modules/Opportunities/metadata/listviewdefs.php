@@ -7,7 +7,7 @@ array (
     'default' => true,
     'label' => 'LBL_ID_AUTOINCREMENT_C',
     'width' => '10%',
-	'link'  => true,
+    'link' => true,
   ),
   'ACCOUNT_NAME' => 
   array (
@@ -40,13 +40,13 @@ array (
   ),
   'SALES_STAGE' => 
   array (
-    'width' => '15%',
+    'width' => '20%',
     'label' => 'LBL_LIST_SALES_STAGE',
     'default' => true,
   ),
   'ASSIGNED_USER_NAME' => 
   array (
-    'width' => '5%',
+    'width' => '10%',
     'label' => 'LBL_LIST_ASSIGNED_USER',
     'module' => 'Employees',
     'id' => 'ASSIGNED_USER_ID',
