@@ -1,5 +1,5 @@
 <?php
-// created: 2018-09-24 20:12:25
+// created: 2018-09-24 21:38:55
 $mod_strings = array (
   'ERR_NO_2FACTOR_EMAIL_TMPL' => 'No se ha indicado plantilla de correo para la seguridad en 2 pasos, cambia los ajustes en la página de gestión de contraseñas.',
   'ERR_NO_2FACTOR_EMAIL_TMPL_CODE' => 'La plantilla de correo para seguridad en 2 pasos, debe tener por lo menos la variable $code.',

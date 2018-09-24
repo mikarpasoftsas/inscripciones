@@ -40,7 +40,7 @@ array (
   ),
   'SALES_STAGE' => 
   array (
-    'width' => '10%',
+    'width' => '15%',
     'label' => 'LBL_LIST_SALES_STAGE',
     'default' => true,
   ),

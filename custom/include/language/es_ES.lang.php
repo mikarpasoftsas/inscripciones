@@ -73,3 +73,5 @@ $GLOBALS['app_list_strings']['payment_methods_list']=array (
   '' => '',
   'Efectivo' => 'Efectivo',
 );
+$app_strings['LBL_TABGROUP_SALES'] = 'Catalogo';
+?>

@@ -128,3 +128,11 @@ Mon Sep 24 20:10:11 2018 [9880][1][FATAL]  Query Failed:  SELECT  mks_categoryme
 
  AND jt0.deleted=0 where mks_categorymedia.deleted=0 ORDER BY mks_categorymedia.date_entered DESC LIMIT 0,21: MySQL error 1146: Table 'crm_creacttive.mks_categorymedia' doesn't exist
 Mon Sep 24 20:12:02 2018 [7797][1][FATAL] log call at: modules/Administration/index.tpl:54 - MY_FRAME is not set
+Mon Sep 24 21:37:43 2018 [7797][1][FATAL] log call at: modules/Administration/index.tpl:54 - MY_FRAME is not set
+Mon Sep 24 21:40:04 2018 [3078][1][FATAL] log call at: modules/Administration/index.tpl:54 - MY_FRAME is not set
+Mon Sep 24 21:40:13 2018 [3078][1][FATAL] ERROR: rmdir_recursive(): argument cache/themes/Creacttive/modules is not a file or a dir.
+Mon Sep 24 21:40:14 2018 [3078][1][FATAL] log call at: modules/Administration/index.tpl:54 - MY_FRAME is not set
+Mon Sep 24 21:40:37 2018 [4406][1][FATAL] log call at: modules/Administration/index.tpl:54 - MY_FRAME is not set
+Mon Sep 24 21:41:18 2018 [10552][1][FATAL] log call at: modules/Administration/index.tpl:54 - MY_FRAME is not set
+Mon Sep 24 22:26:41 2018 [6450][-none-][FATAL] Could not connect to DB server  as root. port : Access denied for user 'root'@'localhost' (using password: NO)
+Mon Sep 24 22:27:41 2018 [4616][-none-][FATAL] Could not connect to DB server  as root. port : Access denied for user 'root'@'localhost' (using password: NO)

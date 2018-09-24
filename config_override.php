@@ -54,4 +54,7 @@ $sugar_config['addAjaxBannedModules'][46] = 'Tasks';
 $sugar_config['addAjaxBannedModules'][47] = 'Meetings';
 $sugar_config['addAjaxBannedModules'][48] = 'Calls';
 $sugar_config['addAjaxBannedModules'][49] = 'SecurityGroups';
+$sugar_config['default_module_favicon'] = false;
+$sugar_config['dashlet_auto_refresh_min'] = '30';
+$sugar_config['stack_trace_errors'] = false;
 /***CONFIGURATOR***/

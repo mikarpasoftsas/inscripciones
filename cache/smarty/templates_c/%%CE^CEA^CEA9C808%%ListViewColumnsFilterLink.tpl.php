@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.31, created on 2018-09-24 20:12:36
+<?php /* Smarty version 2.6.31, created on 2018-09-24 21:40:27
          compiled from include/ListView/ListViewColumnsFilterLink.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_translate', 'include/ListView/ListViewColumnsFilterLink.tpl', 3, false),)), $this); ?>

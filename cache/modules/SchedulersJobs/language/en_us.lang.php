@@ -1,8 +1,6 @@
 <?php
-// created: 2018-09-24 20:13:02
+// created: 2018-09-24 21:39:02
 $mod_strings = array (
-  'LBL_ASSIGNED_TO_ID' => 'Assigned User Id',
-  'LBL_ASSIGNED_TO_NAME' => 'Assigned to',
   'LBL_NAME' => 'Job Name',
   'LBL_EXECUTE_TIME' => 'Execute Time',
   'LBL_SCHEDULER_ID' => 'Scheduler',
