@@ -13,7 +13,7 @@ custom/working/*
 custom/modules/*/Ext/
 custom/modules/unified_search_modules_display.php
 # Ignore AOD indexes
-modules/AOD_Index/Index/*
+modules/AOD_Index/*
 install/status.json
 # Configuration files should be ignored.
 /config.php
@@ -95,7 +95,7 @@ tests/_output/*
 BrowserStackLocal
 browserstack.err
 cache/
-custom/**/
+#custom/**/
 .sass-cache/
 .php_cs.cache
 

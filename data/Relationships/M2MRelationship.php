@@ -142,7 +142,7 @@ class M2MRelationship extends SugarRelationship
     	if(get_class($rhs) != 'User' && get_class($rhs) != 'ACLRole' && get_class($lhs) == 'SecurityGroup') {
 			$rhs->$rhsLinkName->addBean($lhs);			
 			$this->callBeforeAdd($rhs, $lhs, $rhsLinkName);
-
+             
 			$dataToInsert = $this->getRowToInsert($lhs, $rhs, $additionalFields);
 			$this->addRow($dataToInsert);
     		$rhs->$rhsLinkName->addBean($lhs);
@@ -164,7 +164,18 @@ class M2MRelationship extends SugarRelationship
             $GLOBALS['log']->fatal("could not load LHS $lhsLinkName in $lhsClass");
             return false;
         }
-        if (empty($rhs->$rhsLinkName) && !$rhs->load_relationship($rhsLinkName))
+        
+		/*					
+		Mikarpasoft - Sugar controla la manipulacion del modulo ACLRole, por 
+		Solo fue posible aca forzar la carga de la relacion con el modulo de Usuarios de Filial
+		*/
+		
+		if(get_class($rhs) == 'ACLRole' && get_class($lhs) == 'mks_SubsidiaryUsers')
+		{
+			$rhsLinkName = 'mks_subsidiaryusers_aclroles';						
+		}
+		
+		if (empty($rhs->$rhsLinkName) && !$rhs->load_relationship($rhsLinkName))
         {
             $rhsClass = get_class($rhs);
             $GLOBALS['log']->fatal("could not load RHS $rhsLinkName in $rhsClass");

@@ -464,6 +464,24 @@ class SugarBean
                     $this->field_defs = null;
                 } else {
                     $this->field_defs = $dictionary[$this->object_name]['fields'];
+					
+					/*
+					  Mikarpasoft - Sugar controla la manipulacion del modulo ACLRole, por 
+					  Solo fue posible aca forzar la carga de la relacion con el modulo de Usuarios de Filial
+					*/
+					if($this->object_name == 'ACLRole')
+					{	
+						$this->field_defs['mks_subsidiaryusers_aclroles'] = array (
+							
+							  'name' => 'mks_subsidiaryusers_aclroles',
+							  'type' => 'link',
+							  'relationship' => 'mks_subsidiaryusers_aclroles',
+							  'source' => 'non-db',
+							  'module' => 'ACLRoles',
+							  'bean_name' => 'ACLRole',
+							  'vname' => 'LBL_MKS_SUBSIDIARYUSERS_ACLROLES_FROM_ACLROLES_TITLE',
+						);						
+					}
                 }
 
                 if (!empty($dictionary[$this->object_name]['optimistic_locking'])) {
