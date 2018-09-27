@@ -74,4 +74,35 @@ $GLOBALS['app_list_strings']['payment_methods_list']=array (
   'Efectivo' => 'Efectivo',
 );
 $app_strings['LBL_TABGROUP_SALES'] = 'Catalogo';
-?>
+
+$GLOBALS['app_list_strings']['moduleListSingular']=array (
+  'Home' => 'Inicio',
+  'Dashboard' => 'Cuadro de Mando',
+  'Contacts' => 'Preinforme/Contacto',
+  'Accounts' => 'Preinforme/Cuenta',
+  'Opportunities' => 'Preinforme',
+  'Cases' => 'Caso',
+  'Notes' => 'Nota',
+  'Calls' => 'Llamada',
+  'Emails' => 'Email',
+  'EmailTemplates' => 'Plantilla de Email',
+  'Meetings' => 'Reunión',
+  'Tasks' => 'Tarea',
+  'Calendar' => 'Calendario',
+  'Leads' => 'Preinforme/Potencial',
+  'Activities' => 'Actividades',
+  'Bugs' => 'Incidencia',
+  'KBDocuments' => 'Base de Conocimiento',
+  'Feeds' => 'RSS',
+  'iFrames' => 'Mis Sitios',
+  'TimePeriods' => 'Período de Tiempo',
+  'Project' => 'Proyecto',
+  'ProjectTask' => 'Tarea de Proyecto',
+  'Prospects' => 'Público Objetivo',
+  'Campaigns' => 'Campaña',
+  'Documents' => 'Documentos',
+  'Sync' => 'Sincronización',
+  'Users' => 'Usuarios',
+  'SugarFavorites' => 'Favoritos',
+  'SecurityGroups' => 'Filial',
+);
