@@ -2,6 +2,12 @@
  //WARNING: The contents of this file are auto-generated
 
 
+ // created: 2018-09-24 18:13:28
+$dictionary['mks_InterestCourse']['fields']['id_autoincrement_c']['inline_edit']='1';
+$dictionary['mks_InterestCourse']['fields']['id_autoincrement_c']['labelValue']='#';
+
+ 
+
 // created: 2018-09-19 21:19:28
 $dictionary["mks_InterestCourse"]["fields"]["mks_interestcourse_opportunities"] = array (
   'name' => 'mks_interestcourse_opportunities',
@@ -35,6 +41,16 @@ $dictionary["mks_InterestCourse"]["fields"]["mks_interestcourse_opportunitiesopp
   'vname' => 'LBL_MKS_INTERESTCOURSE_OPPORTUNITIES_FROM_MKS_INTERESTCOURSE_TITLE',
 );
 
+
+ // created: 2018-09-22 17:02:03
+$dictionary['mks_InterestCourse']['fields']['name']['default']='-';
+$dictionary['mks_InterestCourse']['fields']['name']['inline_edit']=true;
+$dictionary['mks_InterestCourse']['fields']['name']['duplicate_merge']='disabled';
+$dictionary['mks_InterestCourse']['fields']['name']['duplicate_merge_dom_value']='0';
+$dictionary['mks_InterestCourse']['fields']['name']['merge_filter']='disabled';
+$dictionary['mks_InterestCourse']['fields']['name']['unified_search']=false;
+
+ 
 
 // created: 2018-09-20 17:52:35
 $dictionary["mks_InterestCourse"]["fields"]["leads_mks_interestcourse_1"] = array (
@@ -74,20 +90,4 @@ $dictionary["mks_InterestCourse"]["fields"]["leads_mks_interestcourse_1leads_ida
   'vname' => 'LBL_LEADS_MKS_INTERESTCOURSE_1_FROM_MKS_INTERESTCOURSE_TITLE',
 );
 
-
- // created: 2018-09-22 17:02:03
-$dictionary['mks_InterestCourse']['fields']['name']['default']='-';
-$dictionary['mks_InterestCourse']['fields']['name']['inline_edit']=true;
-$dictionary['mks_InterestCourse']['fields']['name']['duplicate_merge']='disabled';
-$dictionary['mks_InterestCourse']['fields']['name']['duplicate_merge_dom_value']='0';
-$dictionary['mks_InterestCourse']['fields']['name']['merge_filter']='disabled';
-$dictionary['mks_InterestCourse']['fields']['name']['unified_search']=false;
-
- 
-
- // created: 2018-09-24 18:13:28
-$dictionary['mks_InterestCourse']['fields']['id_autoincrement_c']['inline_edit']='1';
-$dictionary['mks_InterestCourse']['fields']['id_autoincrement_c']['labelValue']='#';
-
- 
 ?>

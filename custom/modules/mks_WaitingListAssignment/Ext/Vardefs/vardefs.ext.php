@@ -2,6 +2,12 @@
  //WARNING: The contents of this file are auto-generated
 
 
+ // created: 2018-09-24 17:15:05
+$dictionary['mks_WaitingListAssignment']['fields']['id_autoincrement_c']['inline_edit']='1';
+$dictionary['mks_WaitingListAssignment']['fields']['id_autoincrement_c']['labelValue']='#';
+
+ 
+
 // created: 2018-09-24 17:10:37
 $dictionary["mks_WaitingListAssignment"]["fields"]["mks_waitinglistassignment_opportunities"] = array (
   'name' => 'mks_waitinglistassignment_opportunities',
@@ -39,12 +45,6 @@ $dictionary["mks_WaitingListAssignment"]["fields"]["mks_waitinglistassignment_op
  // created: 2018-09-24 17:14:39
 $dictionary['mks_WaitingListAssignment']['fields']['name']['full_text_search']=array (
 );
-
- 
-
- // created: 2018-09-24 17:15:05
-$dictionary['mks_WaitingListAssignment']['fields']['id_autoincrement_c']['inline_edit']='1';
-$dictionary['mks_WaitingListAssignment']['fields']['id_autoincrement_c']['labelValue']='#';
 
  
 ?>
