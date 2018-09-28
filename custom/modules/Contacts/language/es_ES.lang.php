@@ -1,5 +1,5 @@
 <?php
-// created: 2018-09-24 11:31:30
+// created: 2018-09-28 13:53:49
 $mod_strings = array (
   'LBL_LEADS' => 'Preinformes/Potenciales',
   'LBL_LEADS_SUBPANEL_TITLE' => 'Preinformes/Potenciales',
@@ -7,10 +7,10 @@ $mod_strings = array (
   'LBL_OPPORTUNITIES_SUBPANEL_TITLE' => 'Preinformes',
   'LBL_OPPORTUNITY_ROLE' => 'Rol en Preinforme',
   'LBL_OPPORTUNITY_ROLE_ID' => 'ID de Rol en Preinforme',
-  'LBL_ACCOUNT_NAME' => 'Nombre de Preinforme/Cuenta:',
-  'LBL_ACCOUNT_ID' => 'ID de Preinforme/Cuenta:',
-  'LBL_ACCOUNT' => 'Preinforme/Cuenta',
-  'LBL_LIST_ACCOUNT_NAME' => 'Nombre de Preinforme/Cuenta',
+  'LBL_ACCOUNT_NAME' => 'Nombre de Contacto:',
+  'LBL_ACCOUNT_ID' => 'ID de Contacto:',
+  'LBL_ACCOUNT' => 'Contacto',
+  'LBL_LIST_ACCOUNT_NAME' => 'Nombre de Contacto',
   'LBL_OFFICE_PHONE' => ' Tel. Laboral',
   'LBL_MOBILE_PHONE' => 'Tel. Celular',
   'LBL_FAX_PHONE' => ' Tel. Alternativo',

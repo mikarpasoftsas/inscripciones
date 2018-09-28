@@ -1,5 +1,5 @@
 <?php
-// created: 2018-09-24 19:44:10
+// created: 2018-09-28 13:53:49
 $mod_strings = array (
   'LBL_OFFICE_PHONE' => 'Tel. Laboral',
   'LBL_MOBILE_PHONE' => 'Tel. Celular',
@@ -51,14 +51,14 @@ $mod_strings = array (
   'LBL_OPPORTUNITY_ID' => 'ID Preinforme',
   'LBL_OPPORTUNITY_NAME' => 'Nombre de la Preinforme:',
   'LBL_CONVERTED_OPP' => 'Preinforme Convertida:',
-  'LBL_ACCOUNT' => 'Preinforme/Cuenta',
-  'LBL_ACCOUNT_DESCRIPTION' => 'Descripción de la Preinforme/Cuenta',
-  'LBL_ACCOUNT_ID' => 'ID de Preinforme/Cuenta',
-  'LBL_ACCOUNT_NAME' => 'Nombre de Preinforme/Cuenta:',
-  'LBL_LIST_ACCOUNT_NAME' => 'Nombre de Preinforme/Cuenta',
-  'LBL_CONVERTED_ACCOUNT' => 'Preinforme/Cuenta Convertida:',
-  'LNK_SELECT_ACCOUNTS' => 'O Seleccione una Preinforme/Cuenta',
-  'LNK_NEW_ACCOUNT' => 'Crear Preinforme/Cuenta',
+  'LBL_ACCOUNT' => 'Contacto',
+  'LBL_ACCOUNT_DESCRIPTION' => 'Descripción de la Contacto',
+  'LBL_ACCOUNT_ID' => 'ID de Contacto',
+  'LBL_ACCOUNT_NAME' => 'Nombre de Contacto:',
+  'LBL_LIST_ACCOUNT_NAME' => 'Nombre de Contacto',
+  'LBL_CONVERTED_ACCOUNT' => 'Contacto Convertida:',
+  'LNK_SELECT_ACCOUNTS' => 'O Seleccione una Contacto',
+  'LNK_NEW_ACCOUNT' => 'Crear Contacto',
   'LBL_CONTACTS' => 'Preinformes/Contactos',
   'LBL_LEADS' => 'Clientes Potenciales',
   'LBL_CONTACT_ID' => 'ID Preinforme/Contacto',
