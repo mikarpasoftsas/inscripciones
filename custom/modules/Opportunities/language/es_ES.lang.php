@@ -1,5 +1,5 @@
 <?php
-// created: 2018-09-24 19:42:09
+// created: 2018-09-28 13:53:49
 $mod_strings = array (
   'LBL_LEADS' => 'Preinformes/Potenciales',
   'LBL_LEADS_SUBPANEL_TITLE' => 'Preinformes/Potenciales',
@@ -16,8 +16,8 @@ $mod_strings = array (
   'LBL_SALES_STAGE' => 'Estado:',
   'LBL_DATE_CLOSED' => 'Fecha de cierre:',
   'LBL_ACCOUNT_NAME' => 'Contacto',
-  'LBL_ACCOUNTS' => 'Preinformes/Cuentas',
-  'LBL_ACCOUNT_ID' => 'ID de Preinforme/Cuenta',
+  'LBL_ACCOUNTS' => 'Contactos',
+  'LBL_ACCOUNT_ID' => 'ID de Contacto',
   'LBL_LIST_ACCOUNT_NAME' => 'Contacto',
   'LBL_CONTACTS' => 'Preinformes/Contactos',
   'LBL_CONTACTS_SUBPANEL_TITLE' => 'Preinformes/Contactos',
