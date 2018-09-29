@@ -1,7 +1,4 @@
-<?php 
- //WARNING: The contents of this file are auto-generated
-
-
+<?php
 
 $mod_strings['LBL_JCKL_DASHBOARD_LICENSEADDON'] = 'Dashboard Copy License';
 $mod_strings['LBL_JCKL_DASHBOARD_LICENSEADDON_LICENSE_TITLE'] = 'Dashboard Copy License Configuration';
@@ -10,5 +7,3 @@ $mod_strings['LBL_JACKAL_DASHBOARD_MANAGER_GROUP_TITLE'] = 'Jackal Software Plug
 $mod_strings['LBL_JACKAL_DASHBOARD_MANAGER_GROUP_DESCRIPTION'] = 'Configure Jackal Software Plugins';
 $mod_strings['LBL_JACKAL_DASHBOARDCOPY_TITLE'] = 'Dashboard Copy Manager for SuiteCRM';
 $mod_strings['LBL_JACKAL_DASHBOARDCOPY_DESCRIPTION'] = 'Copy user dashboards to other users';
-
-?>

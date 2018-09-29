@@ -99,4 +99,9 @@ include('custom/metadata/mks_subsidiaryusers_aclrolesMetaData.php');
 include('custom/metadata/mks_movementdescription_notes_1MetaData.php');
 
 
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/jckl_dashboarddeployments_jckl_dashboardtemplatesMetaData.php');
+
+
 ?>
