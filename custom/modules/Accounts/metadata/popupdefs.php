@@ -5,23 +5,15 @@ $popupMeta = array (
     'orderBy' => 'name',
     'whereClauses' => array (
   'name' => 'accounts.name',
-  'billing_address_city' => 'accounts.billing_address_city',
   'account_type' => 'accounts.account_type',
-  'industry' => 'accounts.industry',
-  'billing_address_state' => 'accounts.billing_address_state',
-  'billing_address_country' => 'accounts.billing_address_country',
   'email' => 'accounts.email',
-  'assigned_user_id' => 'accounts.assigned_user_id',
+  'id_local_c' => 'accounts_cstm.id_local_c',
 ),
     'searchInputs' => array (
   0 => 'name',
-  1 => 'billing_address_city',
   3 => 'account_type',
-  4 => 'industry',
-  5 => 'billing_address_state',
-  6 => 'billing_address_country',
   7 => 'email',
-  8 => 'assigned_user_id',
+  8 => 'id_local_c',
 ),
     'create' => array (
   'formBase' => 'AccountFormBase.php',
@@ -40,6 +32,13 @@ $popupMeta = array (
     'name' => 'name',
     'width' => '10%',
   ),
+  'id_local_c' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_ID_LOCAL_C',
+    'width' => '10%',
+    'name' => 'id_local_c',
+  ),
   'account_type' => 
   array (
     'type' => 'enum',
@@ -47,46 +46,9 @@ $popupMeta = array (
     'width' => '10%',
     'name' => 'account_type',
   ),
-  'industry' => 
-  array (
-    'type' => 'enum',
-    'label' => 'LBL_INDUSTRY',
-    'width' => '10%',
-    'name' => 'industry',
-  ),
-  'billing_address_city' => 
-  array (
-    'name' => 'billing_address_city',
-    'width' => '10%',
-  ),
-  'billing_address_state' => 
-  array (
-    'name' => 'billing_address_state',
-    'width' => '10%',
-  ),
-  'billing_address_country' => 
-  array (
-    'name' => 'billing_address_country',
-    'width' => '10%',
-  ),
   'email' => 
   array (
     'name' => 'email',
-    'width' => '10%',
-  ),
-  'assigned_user_id' => 
-  array (
-    'name' => 'assigned_user_id',
-    'label' => 'LBL_ASSIGNED_TO',
-    'type' => 'enum',
-    'function' => 
-    array (
-      'name' => 'get_user_array',
-      'params' => 
-      array (
-        0 => false,
-      ),
-    ),
     'width' => '10%',
   ),
 ),
