@@ -20,11 +20,13 @@ $subpanel_layout = array(
 			'width' => '9999%',
 			'sortable'=>false,
 		),
+		/*
 		'remove_button'=>array(
 			'widget_class' => 'SubPanelRemoveButton',
 		 	'module' => 'SecurityGroups',
 			'width' => '5%',
 			//'refresh_page'=>true,
 		),
+		*/
 	),
 );

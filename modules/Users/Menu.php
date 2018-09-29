@@ -54,7 +54,7 @@ if ($GLOBALS['current_user']->isAdminForModule('Users')
 
     $module_menu = Array(
         Array("index.php?module=Users&action=EditView&return_module=Users&return_action=DetailView", $mod_strings['LNK_NEW_USER'], "Create"),
-        Array("index.php?module=Users&action=EditView&usertype=group&return_module=Users&return_action=DetailView", $mod_strings['LNK_NEW_GROUP_USER'], "Create_Group_User")
+        //Array("index.php?module=Users&action=EditView&usertype=group&return_module=Users&return_action=DetailView", $mod_strings['LNK_NEW_GROUP_USER'], "Create_Group_User")
     );
     $module_menu[] = Array("index.php?module=Users&action=ListView&return_module=Users&return_action=DetailView", $mod_strings['LNK_USER_LIST'], "List");
 
