@@ -7,10 +7,14 @@ $popupMeta = array (
   'name' => 'mks_interestcourse.name',
 ),
     'searchInputs' => array (
-  0 => 'mks_interestcourse_number',
   1 => 'name',
-  2 => 'priority',
-  3 => 'status',
+),
+    'searchdefs' => array (
+  'name' => 
+  array (
+    'name' => 'name',
+    'width' => '10%',
+  ),
 ),
     'listviewdefs' => array (
   'COURSE' => 

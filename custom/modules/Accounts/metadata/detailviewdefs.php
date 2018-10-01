@@ -239,10 +239,6 @@ array (
             'label' => 'LBL_TYPE',
           ),
         ),
-        1 => 
-        array (
-          0 => 'campaign_name',
-        ),
       ),
     ),
   ),
