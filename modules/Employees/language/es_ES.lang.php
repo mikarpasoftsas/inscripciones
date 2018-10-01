@@ -149,6 +149,6 @@ $mod_strings = array(
     'LBL_PROJECT_USERS_1_FROM_PROJECT_TITLE' => 'Usuarios del projecto a partir del nombre del proyecto',
     'LBL_PROJECT_CONTACTS_1_FROM_CONTACTS_TITLE' => 'Contactos del proyecto a partir del nombre de contactos',
     'LBL_ROLES' => 'Roles',
-    'LBL_SECURITYGROUPS' => 'Grupos de Seguridad',
+    'LBL_SECURITYGROUPS' => 'Filiales',
     'LBL_PROSPECT_LIST' => 'Lista de Público Objetivo',
 );

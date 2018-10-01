@@ -57,9 +57,15 @@
             <div id="dialog" title="&copy; {$APP.LBL_SUITE_POWERED_BY}">
                 <p>{$COPYRIGHT}</p>
             </div>
+            <!--
             <div id="copyrightbuttons" class="footer_left">
                 <a id="admin_options">&copy; {$APP.LBL_SUITE_SUPERCHARGED}</a>
                 <a id="powered_by">&copy; {$APP.LBL_SUITE_POWERED_BY}</a>
+            </div>
+            -->
+            <div id="copyrightbuttons" class="footer_left">
+                <!--<a id="admin_options">&copy; {$APP.LBL_SUITE_SUPERCHARGED}</a>-->
+                <a href="http://www.creacttive.com" target="_blank">Powered By CREACTTIVE.COM</a>
             </div>
         </div>
     	<div class="footer_right">

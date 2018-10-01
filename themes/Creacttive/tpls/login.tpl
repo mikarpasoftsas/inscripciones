@@ -48,13 +48,13 @@
 <!-- Start login container -->
 
 <div class="p_login">
-
+<!--
 	<div class="p_login_top">
 		
 		<a title="SuiteCRM" href="http://www.suitecrm.com">SuiteCRM</a>
 		
 	</div>
-    
+-->
     <div class="p_login_middle">
         {if $LOGIN_ERROR_MESSAGE}
             <p align='center' class='error'>{$LOGIN_ERROR_MESSAGE}</p>
@@ -148,8 +148,8 @@
     
     <div class="p_login_bottom">
 
-    		<a id="admin_options">&copy; Supercharged by SuiteCRM</a>
-            <a id="powered_by">&copy; Powered By SugarCRM</a>
+    		<a id="admin_options"><!--&copy; Supercharged by SuiteCRM--></a>
+                <a id="powered_by" href="http://www.creacttive.com" target="_blank">Powered By CREACTTIVE.COM</a>
     	
 	</div>
     

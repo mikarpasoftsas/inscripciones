@@ -61,5 +61,5 @@ $mod_strings = array(
     'LBL_ALL' => 'Todo',
     'LBL_DUPLICATE_OF' => 'Duplicado De ',
 
-    'LBL_SECURITYGROUPS' => 'Grupos de Seguridad',
+    'LBL_SECURITYGROUPS' => 'Filiales',
 );

@@ -45,8 +45,8 @@ if (!defined('sugarEntry') || !sugarEntry) {
 $mod_strings = array(
     'LBL_ASSIGNED_TO_ID' => 'Id de Usuario Asignado',
     'LBL_ASSIGNED_TO_NAME' => 'Asignado a',
-    'LBL_SECURITYGROUPS' => 'Grupos de Seguridad',
-    'LBL_SECURITYGROUPS_SUBPANEL_TITLE' => 'Grupos de Seguridad',
+    'LBL_SECURITYGROUPS' => 'Filiales',
+    'LBL_SECURITYGROUPS_SUBPANEL_TITLE' => 'Filiales',
     'LBL_ID' => 'ID',
     'LBL_DATE_ENTERED' => 'Fecha de Creación',
     'LBL_DATE_MODIFIED' => 'Fecha de Modificación',

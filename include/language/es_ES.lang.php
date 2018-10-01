@@ -101,7 +101,7 @@ $app_list_strings = array(
         'TrackerQueries' => 'Consultas de Monitorización',
         'FAQ' => 'FAQ',
         'Newsletters' => 'Boletines de Noticias',
-        'SugarFeed' => 'SuiteCRM alimentación',
+        'SugarFeed' => 'Alimentación de Feed',
         'SugarFavorites' => 'Favoritos',
 
         'OAuthKeys' => 'Claves del Consumidor OAuth',
@@ -806,7 +806,7 @@ $app_list_strings = array(
     ),
 
     'dom_email_link_type' => array(
-        'sugar' => 'Cliente de correo de SuiteCRM',
+        'sugar' => 'Cliente de correo de la Plataforma',
         'mailto' => 'Cliente de correo externo',
     ),
 
@@ -1177,12 +1177,12 @@ $app_strings = array(
     'LBL_EMAIL_ADDRESS_PRIMARY' => 'Dirección de Email',
     'LBL_EMAIL_ADDRESS_OPT_IN' => 'Ha confirmado que su dirección de correo ha sido autorizada a enviar: ',
     'LBL_EMAIL_ADDRESS_OPT_IN_ERR' => 'No fue posible confirmar la dirección de correo',
-    'LBL_EMAIL_ARCHIVE_TO_SUGAR' => 'Importar a SuiteCRM',
+    'LBL_EMAIL_ARCHIVE_TO_SUGAR' => 'Importar a la Plataforma',
     'LBL_EMAIL_ASSIGNMENT' => 'Asignación',
     'LBL_EMAIL_ATTACH_FILE_TO_EMAIL' => 'Adjuntar',
     'LBL_EMAIL_ATTACHMENT' => 'Adjuntar',
     'LBL_EMAIL_ATTACHMENTS' => 'Desde el Equipo Local',
-    'LBL_EMAIL_ATTACHMENTS2' => 'Desde Documentos SuiteCRM',
+    'LBL_EMAIL_ATTACHMENTS2' => 'Desde Documentos',
     'LBL_EMAIL_ATTACHMENTS3' => 'Adjuntos de Plantilla',
     'LBL_EMAIL_ATTACHMENTS_FILE' => 'Archivo',
     'LBL_EMAIL_ATTACHMENTS_DOCUMENT' => 'Documento',
@@ -1233,7 +1233,7 @@ $app_strings = array(
     'LBL_EMAIL_ERROR_CHECK_IE_SETTINGS' => 'Por favor, compruebe su configuración.',
     'LBL_EMAIL_ERROR_DESC' => 'Se han detectado errores:',
     'LBL_EMAIL_DELETE_ERROR_DESC' => 'No tiene acceso a este área. Contacte con el administrador del sitio para obtener acceso.',
-    'LBL_EMAIL_ERROR_DUPE_FOLDER_NAME' => 'Los nombres de carpetas SuiteCRM deben ser únicos.',
+    'LBL_EMAIL_ERROR_DUPE_FOLDER_NAME' => 'Los nombres de carpetas deben ser únicos.',
     'LBL_EMAIL_ERROR_EMPTY' => 'Por favor, introduzca algún criterio de búsqueda.',
     'LBL_EMAIL_ERROR_GENERAL_TITLE' => 'Ha ocurrido un error',
     'LBL_EMAIL_ERROR_MESSAGE_DELETED' => 'Mensaje eliminado del servidor',
@@ -1281,7 +1281,7 @@ $app_strings = array(
     'LBL_EMAIL_IE_DELETE_SUCCESSFUL' => 'Borrado satisfactorio.',
     'LBL_EMAIL_IE_SAVE' => 'Guardando Información de Cuenta de Correo',
     'LBL_EMAIL_IMPORTING_EMAIL' => 'Importando Email',
-    'LBL_EMAIL_IMPORT_EMAIL' => 'Importar en SuiteCRM',
+    'LBL_EMAIL_IMPORT_EMAIL' => 'Importar en la Plataforma',
     'LBL_EMAIL_IMPORT_SETTINGS' => 'Configuración de Importación',
     'LBL_EMAIL_INVALID' => 'No válido',
     'LBL_EMAIL_LOADING' => 'Cargando...',
@@ -1303,12 +1303,12 @@ $app_strings = array(
     'LBL_EMAIL_MENU_RENAMING_FOLDER' => 'Renombrando Carpeta',
     'LBL_EMAIL_MENU_MAKE_SELECTION' => 'Por favor, realice una selección antes de intentar esta operación.',
 
-    'LBL_EMAIL_MENU_HELP_ADD_FOLDER' => 'Crear una Carpeta (remota o en SuiteCRM)',
-    'LBL_EMAIL_MENU_HELP_DELETE_FOLDER' => 'Eliminar una Carpeta (remota o en SuiteCRM)',
+    'LBL_EMAIL_MENU_HELP_ADD_FOLDER' => 'Crear una Carpeta (remota o en la Plataforma)',
+    'LBL_EMAIL_MENU_HELP_DELETE_FOLDER' => 'Eliminar una Carpeta (remota o en la Plataforma)',
     'LBL_EMAIL_MENU_HELP_EMPTY_TRASH' => 'Vacía todas las carpetas de Papelera de sus cuentas de correo',
     'LBL_EMAIL_MENU_HELP_MARK_READ' => 'Marcar estos emails como leídos',
     'LBL_EMAIL_MENU_HELP_MARK_UNFLAGGED' => 'Marcar estos emails no etiquetados',
-    'LBL_EMAIL_MENU_HELP_RENAME_FOLDER' => 'Renombrar una Carpeta (remota o en SuiteCRM)',
+    'LBL_EMAIL_MENU_HELP_RENAME_FOLDER' => 'Renombrar una Carpeta (remota o en la Plataforma)',
 
     'LBL_EMAIL_MESSAGES' => 'mensajes',
 
@@ -1413,10 +1413,10 @@ $app_strings = array(
     'LBL_SMTPTYPE_EXCHANGE' => 'Microsoft Exchange',
     'LBL_SMTPTYPE_OTHER' => 'Otro:',
     'LBL_EMAIL_SPACER_MAIL_SERVER' => '[ Carpetas Remotas ]',
-    'LBL_EMAIL_SPACER_LOCAL_FOLDER' => '[ Carpetas de SuiteCRM ]',
+    'LBL_EMAIL_SPACER_LOCAL_FOLDER' => '[ Carpetas de la Plataforma ]',
     'LBL_EMAIL_SUBJECT' => 'Asunto',
     'LBL_EMAIL_SUCCESS' => 'Éxito',
-    'LBL_EMAIL_SUGAR_FOLDER' => 'Carpeta de SuiteCRM',
+    'LBL_EMAIL_SUGAR_FOLDER' => 'Carpeta de la Plataforma',
     'LBL_EMAIL_TEMPLATE_EDIT_PLAIN_TEXT' => 'El cuerpo de la plantilla de correo está vacío',
     'LBL_EMAIL_TEMPLATES' => 'Plantillas',
     'LBL_EMAIL_TO' => 'Para',
@@ -1465,9 +1465,9 @@ $app_strings = array(
     'ERR_EXISTING_PORTAL_USERNAME' => 'Error: El Nombre de Portal ya ha sido asignado a otro contacto.',
     'ERR_COMPATIBLE_PRECISION_VALUE' => 'El valor del campo no es compatible con el tipo de precisión',
     'ERR_EXTERNAL_API_SAVE_FAIL' => 'Se produjo un error al tratar de salvar en la cuenta externa.',
-    'ERR_NO_DB' => 'No se ha podido realizar una conexión a la base de datos. Por favor, consulte SuiteCRM error.log para más detalles (0).',
-    'ERR_DB_FAIL' => 'Error de base de datos. Por favor, consulte SuiteCRM error .log para más detalles.',
-    'ERR_DB_VERSION' => 'Archivos de SuiteCRM {0} sólo se puede utilizar con una base de datos de SuiteCRM {1}.',
+    'ERR_NO_DB' => 'No se ha podido realizar una conexión a la base de datos. Por favor, consulte error.log para más detalles (0).',
+    'ERR_DB_FAIL' => 'Error de base de datos. Por favor, consulte error .log para más detalles.',
+    'ERR_DB_VERSION' => 'Archivos de SuiteCRM {0} sólo se puede utilizar con una base de datos {1}.',
 
     'LBL_ACCOUNT' => 'Cuenta',
     'LBL_ACCOUNTS' => 'Cuentas',
@@ -1490,7 +1490,7 @@ $app_strings = array(
     'LBL_BACK' => 'Atrás',
     'LBL_BILLING_ADDRESS' => 'Dirección de Facturación',
     'LBL_QUICK_CREATE' => 'Crear ',
-    'LBL_BROWSER_TITLE' => 'SuiteCRM - CRM de Fuentes Abiertas',
+    'LBL_BROWSER_TITLE' => 'CRM de Fuentes Abiertas',
     'LBL_BUGS' => 'Incidencias',
     'LBL_BY' => 'por',
     'LBL_CALLS' => 'Llamadas',
@@ -1882,18 +1882,18 @@ $app_strings = array(
     'LBL_DASHLET_CONFIGURE_DISPLAY_ROWS' => 'Mostrar Filas',
 
     // MySugar status strings
-    'LBL_MAX_DASHLETS_REACHED' => 'Ha alcanzado el máximo número de dashlets establecido por su administrador. Por favor, quite un SuiteCRM Dashlet para poder agregar más.',
-    'LBL_ADDING_DASHLET' => 'Agregando SuiteCRM Dashlet ...',
-    'LBL_ADDED_DASHLET' => 'SuiteCRM Dashlet Agregado',
-    'LBL_REMOVE_DASHLET_CONFIRM' => '¿Está seguro de que desea quitar el SuiteCRM Dashlet?',
-    'LBL_REMOVING_DASHLET' => 'Quitando SuiteCRM Dashlet ...',
-    'LBL_REMOVED_DASHLET' => 'SuiteCRM Dashlet Quitado',
+    'LBL_MAX_DASHLETS_REACHED' => 'Ha alcanzado el máximo número de dashlets establecido por su administrador. Por favor, quite un Dashlet para poder agregar más.',
+    'LBL_ADDING_DASHLET' => 'Agregando Dashlet ...',
+    'LBL_ADDED_DASHLET' => 'Dashlet Agregado',
+    'LBL_REMOVE_DASHLET_CONFIRM' => '¿Está seguro de que desea quitar el Dashlet?',
+    'LBL_REMOVING_DASHLET' => 'Quitando Dashlet ...',
+    'LBL_REMOVED_DASHLET' => 'Dashlet Quitado',
 
     // MySugar Menu Options
 
     'LBL_LOADING_PAGE' => 'Cargando página, espere por favor...',
 
-    'LBL_RELOAD_PAGE' => 'Por favor, <a href="javascript: window.location.reload()">recargue la ventana</a> para usar este SuiteCRM Dashlet.',
+    'LBL_RELOAD_PAGE' => 'Por favor, <a href="javascript: window.location.reload()">recargue la ventana</a> para usar este Dashlet.',
     'LBL_ADD_DASHLETS' => 'Agregar Dashlets',
     'LBL_CLOSE_DASHLETS' => 'Cerrar',
     'LBL_OPTIONS' => 'Opciones',
@@ -2131,7 +2131,7 @@ $app_strings = array(
 
     // footer
     'LBL_SUITE_TOP' => 'Volver al parte superior',
-    'LBL_SUITE_SUPERCHARGED' => 'Sobrealimentado por SuiteCRM',
+    'LBL_SUITE_SUPERCHARGED' => 'Sobrealimentado',
     'LBL_SUITE_POWERED_BY' => 'Desarrollado por SugarCRM',
     'LBL_SUITE_DESC1' => 'SuiteCRM ha sido escrito y ensamblado por <a href="https://salesagility.com"> SalesAgility</a>.  El programa se suministra TAL CUAL ES, sin garantía.  Bajo licencia AGPLv3.',
     'LBL_SUITE_DESC2' => 'Este programa es software libre; puede redistribuirlo y/o modificarlo bajo los términos de la GNU Affero General Public License versión 3 publicada por la Free Software Foundation, incluyendo el permiso adicional en la cabecera del código fuente.',
@@ -3501,7 +3501,7 @@ $app_strings['LBL_COLLECTION_TYPE'] = 'Tipo';
 
 $app_strings['LBL_ADD_TAB'] = 'Añadir pestaña';
 $app_strings['LBL_EDIT_TAB'] = 'Editar Pestañas';
-$app_strings['LBL_SUITE_DASHBOARD'] = 'Cuadro de Mando SuiteCRM'; //Can be translated in all caps. This string will be used by SuiteP template menu actions
+$app_strings['LBL_SUITE_DASHBOARD'] = 'Cuadro de Mando'; //Can be translated in all caps. This string will be used by SuiteP template menu actions
 $app_strings['LBL_ENTER_DASHBOARD_NAME'] = 'Introduzca el nombre del Dashboard:';
 $app_strings['LBL_NUMBER_OF_COLUMNS'] = 'Número de columnas:';
 $app_strings['LBL_DELETE_DASHBOARD1'] = '¿Seguro que desea eliminar';
