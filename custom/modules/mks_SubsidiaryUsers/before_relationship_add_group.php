@@ -16,7 +16,8 @@
 				  $default_group = BeanFactory::getBean('SecurityGroups');
 				  $default_group->retrieve_by_string_fields(array('id'=>$group->id,'deleted'=>0));
 				  $default_group->load_relationship('users');
-				  $default_group->users->add($bean->user_id_c);			  		
+				  $default_group->users->add($bean->user_id_c);		
+				  $GLOBALS['log']->fatal('Set Grupo In Rel');				  
 				  				
 			   }			   
 			}  

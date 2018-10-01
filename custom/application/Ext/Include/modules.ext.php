@@ -3,16 +3,64 @@
 
  
  //WARNING: The contents of this file are auto-generated
-$beanList['mks_Teacher'] = 'mks_Teacher';
-$beanFiles['mks_Teacher'] = 'modules/mks_Teacher/mks_Teacher.php';
-$moduleList[] = 'mks_Teacher';
+$beanList['mks_Bank'] = 'mks_Bank';
+$beanFiles['mks_Bank'] = 'modules/mks_Bank/mks_Bank.php';
+$moduleList[] = 'mks_Bank';
 
 
  
  //WARNING: The contents of this file are auto-generated
-$beanList['mks_PaymentConcepts'] = 'mks_PaymentConcepts';
-$beanFiles['mks_PaymentConcepts'] = 'modules/mks_PaymentConcepts/mks_PaymentConcepts.php';
-$moduleList[] = 'mks_PaymentConcepts';
+$beanList['mks_CategoryMedia'] = 'mks_CategoryMedia';
+$beanFiles['mks_CategoryMedia'] = 'modules/mks_CategoryMedia/mks_CategoryMedia.php';
+$moduleList[] = 'mks_CategoryMedia';
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+$beanList['mks_Classroom'] = 'mks_Classroom';
+$beanFiles['mks_Classroom'] = 'modules/mks_Classroom/mks_Classroom.php';
+$moduleList[] = 'mks_Classroom';
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+$beanList['mks_Courses'] = 'mks_Courses';
+$beanFiles['mks_Courses'] = 'modules/mks_Courses/mks_Courses.php';
+$moduleList[] = 'mks_Courses';
+$beanList['mks_SubjectMatter'] = 'mks_SubjectMatter';
+$beanFiles['mks_SubjectMatter'] = 'modules/mks_SubjectMatter/mks_SubjectMatter.php';
+$moduleList[] = 'mks_SubjectMatter';
+$beanList['mks_CoursesDetail'] = 'mks_CoursesDetail';
+$beanFiles['mks_CoursesDetail'] = 'modules/mks_CoursesDetail/mks_CoursesDetail.php';
+$moduleList[] = 'mks_CoursesDetail';
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+$beanList['jckl_DashboardDeployments'] = 'jckl_DashboardDeployments';
+$beanFiles['jckl_DashboardDeployments'] = 'modules/jckl_DashboardDeployments/jckl_DashboardDeployments.php';
+$modules_exempt_from_availability_check['jckl_DashboardDeployments'] = 'jckl_DashboardDeployments';
+$report_include_modules['jckl_DashboardDeployments'] = 'jckl_DashboardDeployments';
+$modInvisList[] = 'jckl_DashboardDeployments';
+$beanList['jckl_DashboardTemplates'] = 'jckl_DashboardTemplates';
+$beanFiles['jckl_DashboardTemplates'] = 'modules/jckl_DashboardTemplates/jckl_DashboardTemplates.php';
+$modules_exempt_from_availability_check['jckl_DashboardTemplates'] = 'jckl_DashboardTemplates';
+$report_include_modules['jckl_DashboardTemplates'] = 'jckl_DashboardTemplates';
+$modInvisList[] = 'jckl_DashboardTemplates';
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+$beanList['mks_InterestCourse'] = 'mks_InterestCourse';
+$beanFiles['mks_InterestCourse'] = 'modules/mks_InterestCourse/mks_InterestCourse.php';
+$moduleList[] = 'mks_InterestCourse';
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+$beanList['mks_MeansNotice'] = 'mks_MeansNotice';
+$beanFiles['mks_MeansNotice'] = 'modules/mks_MeansNotice/mks_MeansNotice.php';
+$moduleList[] = 'mks_MeansNotice';
 
 
  
@@ -36,22 +84,23 @@ $moduleList[] = 'mks_CategoryTypesMovement';
 
  
  //WARNING: The contents of this file are auto-generated
-$beanList['mks_Courses'] = 'mks_Courses';
-$beanFiles['mks_Courses'] = 'modules/mks_Courses/mks_Courses.php';
-$moduleList[] = 'mks_Courses';
-$beanList['mks_SubjectMatter'] = 'mks_SubjectMatter';
-$beanFiles['mks_SubjectMatter'] = 'modules/mks_SubjectMatter/mks_SubjectMatter.php';
-$moduleList[] = 'mks_SubjectMatter';
-$beanList['mks_CoursesDetail'] = 'mks_CoursesDetail';
-$beanFiles['mks_CoursesDetail'] = 'modules/mks_CoursesDetail/mks_CoursesDetail.php';
-$moduleList[] = 'mks_CoursesDetail';
+$beanList['mks_NonworkingDays'] = 'mks_NonworkingDays';
+$beanFiles['mks_NonworkingDays'] = 'modules/mks_NonworkingDays/mks_NonworkingDays.php';
+$moduleList[] = 'mks_NonworkingDays';
 
 
  
  //WARNING: The contents of this file are auto-generated
-$beanList['mks_NonworkingDays'] = 'mks_NonworkingDays';
-$beanFiles['mks_NonworkingDays'] = 'modules/mks_NonworkingDays/mks_NonworkingDays.php';
-$moduleList[] = 'mks_NonworkingDays';
+$beanList['mks_PaymentConcepts'] = 'mks_PaymentConcepts';
+$beanFiles['mks_PaymentConcepts'] = 'modules/mks_PaymentConcepts/mks_PaymentConcepts.php';
+$moduleList[] = 'mks_PaymentConcepts';
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+$beanList['mks_PaymentMethods'] = 'mks_PaymentMethods';
+$beanFiles['mks_PaymentMethods'] = 'modules/mks_PaymentMethods/mks_PaymentMethods.php';
+$moduleList[] = 'mks_PaymentMethods';
 
 
  
@@ -66,9 +115,9 @@ $moduleList[] = 'mks_SubsidiaryGroup';
 
  
  //WARNING: The contents of this file are auto-generated
-$beanList['mks_InterestCourse'] = 'mks_InterestCourse';
-$beanFiles['mks_InterestCourse'] = 'modules/mks_InterestCourse/mks_InterestCourse.php';
-$moduleList[] = 'mks_InterestCourse';
+$beanList['mks_Teacher'] = 'mks_Teacher';
+$beanFiles['mks_Teacher'] = 'modules/mks_Teacher/mks_Teacher.php';
+$moduleList[] = 'mks_Teacher';
 
 
  
@@ -76,41 +125,6 @@ $moduleList[] = 'mks_InterestCourse';
 $beanList['mks_WaitingList'] = 'mks_WaitingList';
 $beanFiles['mks_WaitingList'] = 'modules/mks_WaitingList/mks_WaitingList.php';
 $moduleList[] = 'mks_WaitingList';
-
-
- 
- //WARNING: The contents of this file are auto-generated
-$beanList['mks_PaymentMethods'] = 'mks_PaymentMethods';
-$beanFiles['mks_PaymentMethods'] = 'modules/mks_PaymentMethods/mks_PaymentMethods.php';
-$moduleList[] = 'mks_PaymentMethods';
-
-
- 
- //WARNING: The contents of this file are auto-generated
-$beanList['mks_CategoryMedia'] = 'mks_CategoryMedia';
-$beanFiles['mks_CategoryMedia'] = 'modules/mks_CategoryMedia/mks_CategoryMedia.php';
-$moduleList[] = 'mks_CategoryMedia';
-
-
- 
- //WARNING: The contents of this file are auto-generated
-$beanList['mks_Bank'] = 'mks_Bank';
-$beanFiles['mks_Bank'] = 'modules/mks_Bank/mks_Bank.php';
-$moduleList[] = 'mks_Bank';
-
-
- 
- //WARNING: The contents of this file are auto-generated
-$beanList['mks_MeansNotice'] = 'mks_MeansNotice';
-$beanFiles['mks_MeansNotice'] = 'modules/mks_MeansNotice/mks_MeansNotice.php';
-$moduleList[] = 'mks_MeansNotice';
-
-
- 
- //WARNING: The contents of this file are auto-generated
-$beanList['mks_Classroom'] = 'mks_Classroom';
-$beanFiles['mks_Classroom'] = 'modules/mks_Classroom/mks_Classroom.php';
-$moduleList[] = 'mks_Classroom';
 
 
  

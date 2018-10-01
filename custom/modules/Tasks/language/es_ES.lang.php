@@ -1,9 +1,9 @@
 <?php
-// created: 2018-09-24 11:31:30
+// created: 2018-09-28 13:53:48
 $mod_strings = array (
   'LBL_LEADS' => 'Preinformes/Potenciales',
   'LBL_OPPORTUNITY' => 'Preinforme',
-  'LBL_ACCOUNT' => 'Preinforme/Cuenta',
+  'LBL_ACCOUNT' => 'Contacto',
   'LBL_CONTACT_NAME' => 'Preinforme/Contacto',
   'LBL_CONTACT' => 'Preinforme/Contacto:',
   'LBL_CONTACT_ID' => 'ID de Preinforme/Contacto:',

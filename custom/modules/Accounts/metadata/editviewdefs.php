@@ -208,10 +208,6 @@ array (
         array (
           0 => 'account_type',
         ),
-        1 => 
-        array (
-          0 => 'campaign_name',
-        ),
       ),
     ),
   ),
