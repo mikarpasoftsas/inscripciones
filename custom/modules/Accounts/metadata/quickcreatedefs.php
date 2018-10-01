@@ -207,15 +207,6 @@ array (
             'name' => 'account_type',
           ),
         ),
-        1 => 
-        array (
-          0 => 
-          array (
-            'name' => 'campaign_name',
-            'comment' => 'The first campaign name for Account (Meta-data only)',
-            'label' => 'LBL_CAMPAIGN',
-          ),
-        ),
       ),
     ),
   ),

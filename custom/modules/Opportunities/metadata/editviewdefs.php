@@ -50,12 +50,8 @@ array (
         ),
         1 => 
         array (
-          0 => 'opportunity_type',
-          1 => 'sales_stage',
-        ),
-        2 => 
-        array (
-          0 => 
+          0 => 'sales_stage',
+          1 => 
           array (
             'name' => 'means_notice_c',
             'studio' => 'visible',

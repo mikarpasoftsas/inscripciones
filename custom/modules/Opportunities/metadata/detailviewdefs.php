@@ -60,18 +60,17 @@ array (
         ),
         2 => 
         array (
-          0 => 'opportunity_type',
-          1 => 'sales_stage',
-        ),
-        3 => 
-        array (
-          0 => 
+          0 => 'sales_stage',
+          1 => 
           array (
             'name' => 'means_notice_c',
             'studio' => 'visible',
             'label' => 'LBL_MEANS_NOTICE',
           ),
-          1 => 
+        ),
+        3 => 
+        array (
+          0 => 
           array (
             'name' => 'assigned_user_name',
             'label' => 'LBL_ASSIGNED_TO',

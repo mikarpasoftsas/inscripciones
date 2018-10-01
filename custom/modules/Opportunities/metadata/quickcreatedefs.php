@@ -49,17 +49,10 @@ array (
         ),
         1 => 
         array (
-          0 => 
-          array (
-            'name' => 'opportunity_type',
-          ),
-          1 => 'sales_stage',
+          0 => 'sales_stage',
+          1 => 'lead_source',
         ),
         2 => 
-        array (
-          0 => 'lead_source',
-        ),
-        3 => 
         array (
           0 => 
           array (
