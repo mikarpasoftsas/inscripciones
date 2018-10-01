@@ -44,8 +44,6 @@ $GLOBALS['app_list_strings']['id_type_list']=array (
   '' => '',
   'DNI' => 'DNI',
 );
-$app_list_strings['moduleList']['SecurityGroups']='Filiales';
-$app_list_strings['moduleListSingular']['SecurityGroups']='Filial';
 $GLOBALS['app_list_strings']['type_course_list']=array (
   '' => '',
   'Curso' => 'Curso',
@@ -110,3 +108,7 @@ $app_list_strings['moduleList']['AOS_Products']='Articulos';
 $app_list_strings['moduleListSingular']['AOS_Products']='Articulo';
 $app_list_strings['moduleList']['AOS_Product_Categories']='Articulos - Categorías';
 $app_list_strings['moduleListSingular']['AOS_Product_Categories']='Articulo - Categoría';
+$app_list_strings['moduleList']['SecurityGroups']='Filiales';
+$app_list_strings['moduleList']['mks_SubsidiaryGroup']='Grupo de Usuarios de Filial';
+$app_list_strings['moduleListSingular']['SecurityGroups']='Filial';
+$app_list_strings['moduleListSingular']['mks_SubsidiaryGroup']='Grupo de Usuarios de Filial';
