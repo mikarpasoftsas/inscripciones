@@ -111,7 +111,7 @@
                                                 {foreach from=$recentRecords item=item name=lastViewed }
                                                     {if $smarty.foreach.lastViewed.iteration < 4} {* limit to 3 results *}
                                                         <li class="recentlinks" role="presentation">
-                                                            <a title="{$item.module_name}"
+                                                            <a title="{$item.item_summary_short}"
                                                                accessKey="{$smarty.foreach.lastViewed.iteration}"
                                                                href="{sugar_link module=$item.module_name action='DetailView' record=$item.item_id link_only=1}" class="recent-links-detail">
                                                                 <span class="suitepicon suitepicon-module-{$item.module_name|lower|replace:'_':'-'}"></span>
@@ -134,7 +134,7 @@
                                                 {foreach from=$favoriteRecords item=item name=lastViewed}
                                                     {if $smarty.foreach.lastViewed.iteration < 4} {* limit to 3 results *}
                                                         <li class="favoritelinks" role="presentation">
-                                                            <a title="{$item.module_name}"
+                                                            <a title="{$item.item_summary_short}"
                                                                accessKey="{$smarty.foreach.lastViewed.iteration}"
                                                                href="{sugar_link module=$item.module_name action='DetailView' record=$item.id link_only=1}"  class="favorite-links-detail">
                                                                 <span class="suitepicon suitepicon-module-{$item.module_name|lower|replace:'_':'-'}"></span>
@@ -218,7 +218,7 @@
                                                         {foreach from=$recentRecords item=item name=lastViewed}
                                                             {if $item.module_name == $name and $submoduleRecentRecords < 3}
                                                                 <li class="recentlinks" role="presentation">
-                                                                    <a title="{$item.module_name}"
+                                                                    <a title="{$item.item_summary_short}"
                                                                        accessKey="{$smarty.foreach.lastViewed.iteration}"
                                                                        href="{sugar_link module=$item.module_name action='DetailView' record=$item.item_id link_only=1}" class="recent-links-detail">
 
@@ -250,7 +250,7 @@
                                                     {foreach from=$favoriteRecords item=item name=lastViewed}
                                                         {if $item.module_name == $name and $submoduleFavoriteRecords < 3}
                                                             <li class="favoritelinks" role="presentation">
-                                                                <a title="{$item.module_name}"
+                                                                <a title="{$item.item_summary_short}"
                                                                    accessKey="{$smarty.foreach.lastViewed.iteration}"
                                                                    href="{sugar_link module=$item.module_name action='DetailView' record=$item.id link_only=1}" class="favorite-links-detail">
                                                                     <span class="suitepicon suitepicon-module-{$item.module_name|lower|replace:'_':'-'}"></span>
@@ -365,7 +365,7 @@
                                             {foreach from=$recentRecords item=item name=lastViewed}
                                                 {if $item.module_name == $submodule and $submoduleRecentRecords < 3}
                                                     <li class="recentlinks" role="presentation">
-                                                        <a title="{$item.module_name}"
+                                                        <a title="{$item.item_summary_short}"
                                                            accessKey="{$smarty.foreach.lastViewed.iteration}"
                                                            href="{sugar_link module=$item.module_name action='DetailView' record=$item.item_id link_only=1}" class="recent-links-detail">
                                                             <span aria-hidden="true">{$item.item_summary_short}</span>
@@ -392,7 +392,7 @@
                                         {foreach from=$favoriteRecords item=item name=lastViewed}
                                             {if $item.module_name == $submodule and $submoduleFavoriteRecords < 3}
                                                 <li class="favoritelinks" role="presentation">
-                                                    <a title="{$item.module_name}"
+                                                    <a title="{$item.item_summary_short}"
                                                        accessKey="{$smarty.foreach.lastViewed.iteration}"
                                                        href="{sugar_link module=$item.module_name action='DetailView' record=$item.id link_only=1}" class="favorite-links-detail">
                                                         <span aria-hidden="true">{$item.item_summary_short}</span>
@@ -557,14 +557,14 @@
                     <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                         {$APP.LBL_CREATE_BUTTON_LABEL}<span class="suitepicon suitepicon-action-caret"></span>
                     </a>
-                     <ul class="dropdown-menu" role="menu">
-                        <!--<li><a href="index.php?module=Accounts&action=EditView&return_module=Accounts&return_action=DetailView">{$APP.LBL_QUICK_CREATE}{sugar_translate module="Accounts" label="LBL_MODULE_NAME"}</a></li>-->
-                        <!--<li><a href="index.php?module=Contacts&action=EditView&return_module=Contacts&return_action=DetailView">{$APP.LBL_QUICK_CREATE}{sugar_translate module="Contacts" label="LBL_MODULE_NAME"}</a></li>-->
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="index.php?module=Accounts&action=EditView&return_module=Accounts&return_action=DetailView">{$APP.LBL_QUICK_CREATE}{sugar_translate module="Accounts" label="LBL_MODULE_NAME"}</a></li>
+                        <li><a href="index.php?module=Contacts&action=EditView&return_module=Contacts&return_action=DetailView">{$APP.LBL_QUICK_CREATE}{sugar_translate module="Contacts" label="LBL_MODULE_NAME"}</a></li>
                         <li><a href="index.php?module=Opportunities&action=EditView&return_module=Opportunities&return_action=DetailView">{$APP.LBL_QUICK_CREATE}{sugar_translate module="Opportunities" label="LBL_MODULE_NAME"}</a></li>
-                        <!--<li><a href="index.php?module=Leads&action=EditView&return_module=Leads&return_action=DetailView">{$APP.LBL_QUICK_CREATE}{sugar_translate module="Leads" label="LBL_MODULE_NAME"}</a></li>-->
-                        <!--<li><a href="index.php?module=Documents&action=EditView&return_module=Documents&return_action=DetailView">{$APP.LBL_QUICK_CREATE}{sugar_translate module="Documents" label="LBL_MODULE_NAME"}</a></li>-->
-                        <!--<li><a href="index.php?module=Calls&action=EditView&return_module=Calls&return_action=DetailView">{$APP.LBL_QUICK_CREATE}{sugar_translate module="Calls" label="LBL_MODULE_NAME"}</a></li>-->
-                        <!--<li><a href="index.php?module=Tasks&action=EditView&return_module=Tasks&return_action=DetailView">{$APP.LBL_QUICK_CREATE}{sugar_translate module="Tasks" label="LBL_MODULE_NAME"}</a></li>-->
+                        <li><a href="index.php?module=Leads&action=EditView&return_module=Leads&return_action=DetailView">{$APP.LBL_QUICK_CREATE}{sugar_translate module="Leads" label="LBL_MODULE_NAME"}</a></li>
+                        <li><a href="index.php?module=Documents&action=EditView&return_module=Documents&return_action=DetailView">{$APP.LBL_QUICK_CREATE}{sugar_translate module="Documents" label="LBL_MODULE_NAME"}</a></li>
+                        <li><a href="index.php?module=Calls&action=EditView&return_module=Calls&return_action=DetailView">{$APP.LBL_QUICK_CREATE}{sugar_translate module="Calls" label="LBL_MODULE_NAME"}</a></li>
+                        <li><a href="index.php?module=Tasks&action=EditView&return_module=Tasks&return_action=DetailView">{$APP.LBL_QUICK_CREATE}{sugar_translate module="Tasks" label="LBL_MODULE_NAME"}</a></li>
                     </ul>
                 </li>
                 <li id="" class="dropdown nav navbar-nav navbar-search">
@@ -640,14 +640,14 @@
                     <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                         {$APP.LBL_CREATE_BUTTON_LABEL}<span class="suitepicon suitepicon-action-caret"></span>
                     </a>
-                     <ul class="dropdown-menu" role="menu">
-                        <!--<li><a href="index.php?module=Accounts&action=EditView&return_module=Accounts&return_action=DetailView">{$APP.LBL_QUICK_CREATE}{sugar_translate module="Accounts" label="LBL_MODULE_NAME"}</a></li>-->
-                        <!--<li><a href="index.php?module=Contacts&action=EditView&return_module=Contacts&return_action=DetailView">{$APP.LBL_QUICK_CREATE}{sugar_translate module="Contacts" label="LBL_MODULE_NAME"}</a></li>-->
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="index.php?module=Accounts&action=EditView&return_module=Accounts&return_action=DetailView">{$APP.LBL_QUICK_CREATE}{sugar_translate module="Accounts" label="LBL_MODULE_NAME"}</a></li>
+                        <li><a href="index.php?module=Contacts&action=EditView&return_module=Contacts&return_action=DetailView">{$APP.LBL_QUICK_CREATE}{sugar_translate module="Contacts" label="LBL_MODULE_NAME"}</a></li>
                         <li><a href="index.php?module=Opportunities&action=EditView&return_module=Opportunities&return_action=DetailView">{$APP.LBL_QUICK_CREATE}{sugar_translate module="Opportunities" label="LBL_MODULE_NAME"}</a></li>
-                        <!--<li><a href="index.php?module=Leads&action=EditView&return_module=Leads&return_action=DetailView">{$APP.LBL_QUICK_CREATE}{sugar_translate module="Leads" label="LBL_MODULE_NAME"}</a></li>-->
-                        <!--<li><a href="index.php?module=Documents&action=EditView&return_module=Documents&return_action=DetailView">{$APP.LBL_QUICK_CREATE}{sugar_translate module="Documents" label="LBL_MODULE_NAME"}</a></li>-->
-                        <!--<li><a href="index.php?module=Calls&action=EditView&return_module=Calls&return_action=DetailView">{$APP.LBL_QUICK_CREATE}{sugar_translate module="Calls" label="LBL_MODULE_NAME"}</a></li>-->
-                        <!--<li><a href="index.php?module=Tasks&action=EditView&return_module=Tasks&return_action=DetailView">{$APP.LBL_QUICK_CREATE}{sugar_translate module="Tasks" label="LBL_MODULE_NAME"}</a></li>-->
+                        <li><a href="index.php?module=Leads&action=EditView&return_module=Leads&return_action=DetailView">{$APP.LBL_QUICK_CREATE}{sugar_translate module="Leads" label="LBL_MODULE_NAME"}</a></li>
+                        <li><a href="index.php?module=Documents&action=EditView&return_module=Documents&return_action=DetailView">{$APP.LBL_QUICK_CREATE}{sugar_translate module="Documents" label="LBL_MODULE_NAME"}</a></li>
+                        <li><a href="index.php?module=Calls&action=EditView&return_module=Calls&return_action=DetailView">{$APP.LBL_QUICK_CREATE}{sugar_translate module="Calls" label="LBL_MODULE_NAME"}</a></li>
+                        <li><a href="index.php?module=Tasks&action=EditView&return_module=Tasks&return_action=DetailView">{$APP.LBL_QUICK_CREATE}{sugar_translate module="Tasks" label="LBL_MODULE_NAME"}</a></li>
                     </ul>
                 </li>
                 <li id="" class="dropdown nav navbar-nav navbar-search">
@@ -766,7 +766,7 @@
                                 {if $smarty.foreach.lastViewed.index < 5}
                                     <div class="recently_viewed_link_container_sidebar">
                                         <li class="recentlinks" role="presentation">
-                                            <a title="{$item.module_name}"
+                                            <a title="{$item.item_summary_short}"
                                                accessKey="{$smarty.foreach.lastViewed.iteration}"
                                                href="{sugar_link module=$item.module_name action='DetailView' record=$item.item_id link_only=1}"
                                                class="recent-links-detail">
@@ -790,7 +790,7 @@
                             {if $smarty.foreach.lastViewed.index < 5}
                             <div class="recently_viewed_link_container_sidebar">
                                 <li class="recentlinks" role="presentation">
-                                    <a title="{$item.module_name}" accessKey="{$smarty.foreach.lastViewed.iteration}" href="{sugar_link module=$item.module_name action='DetailView' record=$item.id link_only=1}" class="favorite-links-detail">
+                                    <a title="{$item.item_summary_short}" accessKey="{$smarty.foreach.lastViewed.iteration}" href="{sugar_link module=$item.module_name action='DetailView' record=$item.id link_only=1}" class="favorite-links-detail">
                                         <span class="suitepicon suitepicon-module-{$item.module_name|lower|replace:'_':'-'}"></span>
                                         <span aria-hidden="true">{$item.item_summary_short}</span>
                                     </a>

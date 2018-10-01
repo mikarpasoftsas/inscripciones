@@ -1,5 +1,5 @@
 <?php
-// created: 2018-09-28 13:53:49
+// created: 2018-10-01 19:37:00
 $mod_strings = array (
   'LBL_LEADS' => 'Preinformes/Potenciales',
   'LBL_OPPORTUNITIES' => 'Preinforme',
@@ -11,4 +11,5 @@ $mod_strings = array (
   'LBL_CONTACT_ID' => 'ID Preinforme/Contacto:',
   'LBL_LIST_CONTACT' => 'Preinforme/Contacto',
   'LBL_SECURITYGROUPS' => 'Grupos de Seguridad',
+  'LBL_SECURITYGROUPS_SUBPANEL_TITLE' => 'Grupos de Seguridad',
 );
