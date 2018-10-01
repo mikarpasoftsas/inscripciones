@@ -27,10 +27,10 @@ $layout_defs["Leads"]["subpanel_setup"]['leads_mks_interestcourse_1'] = array (
 
 
 //auto-generated file DO NOT EDIT
-$layout_defs['Leads']['subpanel_setup']['mks_interestcourse_leads']['override_subpanel_name'] = 'Lead_subpanel_mks_interestcourse_leads';
+$layout_defs['Leads']['subpanel_setup']['leads_mks_waitinglistassignment_1']['override_subpanel_name'] = 'Lead_subpanel_leads_mks_waitinglistassignment_1';
 
 
 //auto-generated file DO NOT EDIT
-$layout_defs['Leads']['subpanel_setup']['leads_mks_waitinglistassignment_1']['override_subpanel_name'] = 'Lead_subpanel_leads_mks_waitinglistassignment_1';
+$layout_defs['Leads']['subpanel_setup']['mks_interestcourse_leads']['override_subpanel_name'] = 'Lead_subpanel_mks_interestcourse_leads';
 
 ?>
