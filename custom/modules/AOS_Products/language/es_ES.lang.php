@@ -1,5 +1,5 @@
 <?php
-// created: 2018-09-28 19:46:48
+// created: 2018-09-29 15:19:24
 $mod_strings = array (
   'LBL_CONTACT' => 'Preinforme/Contacto',
   'LBL_SECURITYGROUPS' => 'Grupos de Seguridad',
@@ -16,4 +16,7 @@ $mod_strings = array (
   'LBL_NAME' => 'Nombre del Articulo',
   'LBL_PRODUCT_IMAGE' => 'Imagen del Aarticulo',
   'LBL_TYPE' => 'Tipo de Articulo',
+  'LBL_CURRENCY' => 'Moneda:',
+  'LBL_COST' => 'Costo',
+  'LBL_PRICE' => 'Precio',
 );

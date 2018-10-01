@@ -6,6 +6,8 @@ $hook_array = Array();
 // position, file, function 
 $hook_array['after_login'] = Array(); 
 $hook_array['after_login'][] = Array(1, 'SugarFeed old feed entry remover', 'modules/SugarFeed/SugarFeedFlush.php','SugarFeedFlush', 'flushStaleEntries'); 
+$hook_array['before_filter'] = Array(); 
+$hook_array['before_filter'][] = Array(1, 'just_my_records', 'custom/modules/Users/just_my_records.php','just_my_records', 'just_my_records'); 
 
 
 
