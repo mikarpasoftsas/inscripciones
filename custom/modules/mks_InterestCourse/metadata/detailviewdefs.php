@@ -49,11 +49,6 @@ array (
         array (
           0 => 
           array (
-            'name' => 'leads_mks_interestcourse_1_name',
-            'label' => 'LBL_LEADS_MKS_INTERESTCOURSE_1_FROM_LEADS_TITLE',
-          ),
-          1 => 
-          array (
             'name' => 'mks_interestcourse_opportunities_name',
             'label' => 'LBL_MKS_INTERESTCOURSE_OPPORTUNITIES_FROM_OPPORTUNITIES_TITLE',
           ),
