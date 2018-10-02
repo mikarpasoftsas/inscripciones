@@ -105,6 +105,13 @@ $moduleList[] = 'mks_PaymentMethods';
 
  
  //WARNING: The contents of this file are auto-generated
+$beanList['mks_Sizes'] = 'mks_Sizes';
+$beanFiles['mks_Sizes'] = 'modules/mks_Sizes/mks_Sizes.php';
+$moduleList[] = 'mks_Sizes';
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
 $beanList['mks_SubsidiaryUsers'] = 'mks_SubsidiaryUsers';
 $beanFiles['mks_SubsidiaryUsers'] = 'modules/mks_SubsidiaryUsers/mks_SubsidiaryUsers.php';
 $moduleList[] = 'mks_SubsidiaryUsers';
@@ -132,13 +139,6 @@ $moduleList[] = 'mks_WaitingList';
 $beanList['mks_WaitingListAssignment'] = 'mks_WaitingListAssignment';
 $beanFiles['mks_WaitingListAssignment'] = 'modules/mks_WaitingListAssignment/mks_WaitingListAssignment.php';
 $moduleList[] = 'mks_WaitingListAssignment';
-
-
- 
- //WARNING: The contents of this file are auto-generated
-$beanList['mks_Sizes'] = 'mks_Sizes';
-$beanFiles['mks_Sizes'] = 'modules/mks_Sizes/mks_Sizes.php';
-$moduleList[] = 'mks_Sizes';
 
 
 ?>
