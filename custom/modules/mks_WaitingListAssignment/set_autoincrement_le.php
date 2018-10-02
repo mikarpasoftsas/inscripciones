@@ -9,11 +9,11 @@ class set_autoincrement_le {
 	{
 		require_once('custom/include/SugarFields/Fields/Autoincrement/SugarFieldAutoincrement.php');
 		
-		$sfa =  new SugarFieldAutoincrement();
+		$sfa =  new SugarFieldAutoincrement('Autoincrement');
 				
-		if(empty($bean->id_autoincrement_c))
+		if($bean->id_autoincrement_c=='pending')
 		{	
-			$sfa->save($bean,array(),'id_autoincrement_c',array('start_number'=>'0001','format'=>'{LE}{-}{y}{-}{00000}{}{}'));
+			$sfa->save($bean,array(),'id_autoincrement_c',array('start_number'=>'00001','format'=>'{LE}{-}{y}{-}{00000}{}{}'));
 			
 			$bean->name = $bean->id_autoincrement_c;
 		}	

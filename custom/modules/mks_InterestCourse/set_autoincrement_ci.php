@@ -9,9 +9,9 @@ class set_autoincrement_ci {
 	{
 		require_once('custom/include/SugarFields/Fields/Autoincrement/SugarFieldAutoincrement.php');
 		
-		$sfa =  new SugarFieldAutoincrement();
+		$sfa =  new SugarFieldAutoincrement('Autoincrement');
 				
-		if(empty($bean->id_autoincrement_c))
+		if($bean->id_autoincrement_c=='pending')
 		{	
 			$sfa->save($bean,array(),'id_autoincrement_c',array('start_number'=>'00001','format'=>'{CI}{-}{y}{-}{00000}{}{}'));
 			

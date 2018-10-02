@@ -29,7 +29,7 @@ class SugarFieldAutoincrement extends SugarFieldBase {
 
 		$GLOBALS['log']->debug("SugarFieldAutoincrement::save() function called.");
 
-		$format = !empty($properties["format"])?$properties["format"]: "{TESTCO}{-}{y}{-}{0000}{-}{ACCOUNT}";
+		$format = !empty($properties["format"])?$properties["format"]: "{TESTCO}{-}{y}{-}{00000}{-}{ACCOUNT}";
 		// E.g. {TESTCO}{-}{y}{-}{0000}{-}{ACCOUNT}
 		$start_number = $properties["start_number"];
 
@@ -52,7 +52,7 @@ class SugarFieldAutoincrement extends SugarFieldBase {
 		// ensure a valid format before we get to this point
 
 		if ( ( !isset( $matches ) ) || ( !isset( $matches[1] ) ) ) {
-			$format = "{INVALID_FORMAT}{-}{y}{-}{0000}{-}{SUFFIX}";
+			$format = "{INVALID_FORMAT}{-}{y}{-}{00000}{-}{SUFFIX}";
 			preg_match_all("!\{(.*?)\}!", $format, $matches);
 		}
 
@@ -62,7 +62,7 @@ class SugarFieldAutoincrement extends SugarFieldBase {
 		// This should not happen as the validation should ensure a valid format before we get to this point
 
 		if ( ( !isset($props) ) || ( count($props) !=7 ) ) {
-			$format = "{INVALID_FORMAT}{-}{y}{-}{0000}{}{}";
+			$format = "{INVALID_FORMAT}{-}{y}{-}{00000}{}{}";
 			preg_match_all("!\{(.*?)\}!", $format, $matches);
 			$props = $matches[1];
 		}
@@ -74,7 +74,7 @@ class SugarFieldAutoincrement extends SugarFieldBase {
 		$dateformat = 		isset( $props[2] ) ? $props[2]: "";
 		$seperator_02 = 	isset( $props[3] ) ? $props[3]: "";
 		// if the number format is not set then default to 0000 as it is required for the field to function
-		$number_format = 	isset( $props[4] ) ? $props[4]: "0000";
+		$number_format = 	isset( $props[4] ) ? $props[4]: "00000";
 		$seperator_03 = 	isset( $props[5] ) ? $props[5]: "";
 		$suffix = 			isset( $props[6] ) ? $props[6]: "";
 		$number_len 	= 	strlen($number_format);
@@ -123,7 +123,11 @@ class SugarFieldAutoincrement extends SugarFieldBase {
 
 		$GLOBALS['log']->debug("SugarFieldAutoincrement::save() regular expression pattern=". $pattern);
 		$initializeCode = false;
-
+		
+		if($bean->$field == 'pending')
+		
+			$bean->$field = '';
+	   
 		if ( empty ( $bean->$field ) ) {
 			/**
 			 * Only set the value on the first time the record is saved, or if there is not value set

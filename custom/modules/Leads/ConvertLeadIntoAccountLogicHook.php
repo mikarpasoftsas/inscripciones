@@ -116,7 +116,12 @@ class ConvertLeadIntoAccountLogicHook {
 			$opp->account_id  = $account->id;
 			$opp->sales_stage = 'Prospecting';
 			$opp->amount	  = 0;
-			$opp->mks_meansnotice_id_c = $bean->mks_meansnotice_id_c;
+			
+			if(isset($_REQUEST['mks_meansnotice_id_c'])&&!empty($_REQUEST['mks_meansnotice_id_c']))
+				$opp->mks_meansnotice_id_c = $_REQUEST['mks_meansnotice_id_c'];
+			else
+				$opp->mks_meansnotice_id_c = $mks_meansnotice_id_c;
+				
 			$opp->assigned_user_id = $bean->assigned_user_id;
 			$opp->id_autoincrement_c = 'pending';
 			$opp->save();		
@@ -128,6 +133,7 @@ class ConvertLeadIntoAccountLogicHook {
 			$ci->leads_mks_interestcourse_1leads_ida 			   =  $bean->id;
 			$ci->mks_interestcourse_opportunitiesopportunities_ida =  $opp->id;
 			$ci->assigned_user_id = $bean->assigned_user_id;
+			$ci->id_autoincrement_c = 'pending';
 			$ci->save();
 			}
 			

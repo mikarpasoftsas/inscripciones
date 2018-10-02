@@ -11,8 +11,8 @@ class set_autoincrement {
 						
 		if($bean->id_autoincrement_c=='pending')
 		{	
-			$sfa =  new SugarFieldAutoincrement();
-			$sfa->save($bean,array(),'id_autoincrement_c',array('start_number'=>'0001','format'=>'{PI}{-}{y}{-}{0000}{}{}'));			
+			$sfa =  new SugarFieldAutoincrement('Autoincrement');
+			$sfa->save($bean,array(),'id_autoincrement_c',array('start_number'=>'00001','format'=>'{PI}{-}{y}{-}{00000}{}{}'));			
 		}	
 		
 		if(empty($bean->amout))
