@@ -14,9 +14,10 @@ class set_autoincrement_ci {
 		if($bean->id_autoincrement_c=='pending')
 		{	
 			$sfa->save($bean,array(),'id_autoincrement_c',array('start_number'=>'00001','format'=>'{CI}{-}{y}{-}{00000}{}{}'));
-			
-			$bean->name = $bean->id_autoincrement_c;
+						
 		}	
+		
+		$bean->name = $bean->id_autoincrement_c;
 	}	
 	
 }
