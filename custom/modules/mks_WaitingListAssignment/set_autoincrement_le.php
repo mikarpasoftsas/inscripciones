@@ -13,10 +13,10 @@ class set_autoincrement_le {
 				
 		if($bean->id_autoincrement_c=='pending')
 		{	
-			$sfa->save($bean,array(),'id_autoincrement_c',array('start_number'=>'00001','format'=>'{LE}{-}{y}{-}{00000}{}{}'));
-			
-			$bean->name = $bean->id_autoincrement_c;
+			$sfa->save($bean,array(),'id_autoincrement_c',array('start_number'=>'00001','format'=>'{LE}{-}{y}{-}{00000}{}{}'));			
 		}	
+		
+		$bean->name = $bean->id_autoincrement_c;
 	}	
 	
 }
