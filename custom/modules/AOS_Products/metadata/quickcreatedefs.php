@@ -2,7 +2,7 @@
 $module_name = 'AOS_Products';
 $viewdefs [$module_name] = 
 array (
-  'EditView' => 
+  'QuickCreate' => 
   array (
     'templateMeta' => 
     array (
@@ -41,7 +41,6 @@ array (
           'panelDefault' => 'expanded',
         ),
       ),
-      'syncDetailEditViews' => false,
     ),
     'panels' => 
     array (
@@ -57,6 +56,7 @@ array (
           1 => 
           array (
             'name' => 'aos_product_category_name',
+            'studio' => 'visible',
             'label' => 'LBL_AOS_PRODUCT_CATEGORYS_NAME',
           ),
         ),

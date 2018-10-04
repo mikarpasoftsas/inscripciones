@@ -8,12 +8,6 @@ array (
     'default' => true,
     'link' => true,
   ),
-  'PART_NUMBER' => 
-  array (
-    'width' => '10%',
-    'label' => 'LBL_PART_NUMBER',
-    'default' => true,
-  ),
   'COST' => 
   array (
     'width' => '10%',
@@ -56,6 +50,12 @@ array (
     'width' => '5%',
     'label' => 'LBL_DATE_ENTERED',
     'default' => true,
+  ),
+  'PART_NUMBER' => 
+  array (
+    'width' => '10%',
+    'label' => 'LBL_PART_NUMBER',
+    'default' => false,
   ),
 );
 ;
