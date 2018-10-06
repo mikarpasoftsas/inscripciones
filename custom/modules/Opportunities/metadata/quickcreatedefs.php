@@ -50,16 +50,21 @@ array (
         1 => 
         array (
           0 => 'sales_stage',
-          1 => 'lead_source',
+          1 => 
+          array (
+            'name' => 'means_notice_c',
+            'studio' => 'visible',
+            'label' => 'LBL_MEANS_NOTICE',
+          ),
         ),
         2 => 
         array (
           0 => 
           array (
-            'name' => 'description',
-            'comment' => 'Full text of the note',
-            'label' => 'LBL_DESCRIPTION',
+            'name' => 'next_call_c',
+            'label' => 'LBL_NEXT_CALL',
           ),
+          1 => '',
         ),
       ),
       'LBL_PANEL_ASSIGNMENT' => 

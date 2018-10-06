@@ -211,15 +211,7 @@ $layout_defs['Activities'] = array( // the key to the layout_defs must be the na
 			 		 	'vname' => 'LBL_LIST_STATUS',
 			 		 	'width' => '15%',
 					),
-					array(
-			 		 	'name' => 'contact_name',
-			 		 	'module' => 'Contacts',
-						'widget_class' => 'SubPanelDetailViewLink',
-			 		 	'target_record_key' => 'contact_id',
-			 		 	'target_module' => 'Contacts',
-			 		 	'vname' => 'LBL_LIST_CONTACT',
-			 		 	'width' => '11%',
-					),
+					
 					array(
 			 		 	'name' => 'parent_name',
 			 		 	'module' => 'Calls',

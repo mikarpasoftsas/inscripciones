@@ -91,15 +91,51 @@ $dictionary['Account']['fields']['primary_address_home_c']['labelValue']='primar
 
  
 
- // created: 2018-09-21 20:16:05
+ // created: 2018-10-06 12:13:13
 $dictionary['Account']['fields']['first_name_c']['inline_edit']='1';
-$dictionary['Account']['fields']['first_name_c']['labelValue']='Primer Nombre';
+$dictionary['Account']['fields']['first_name_c']['labelValue']='Nombre';
 
  
 
  // created: 2018-09-21 20:18:18
 $dictionary['Account']['fields']['last_name_c']['inline_edit']='1';
 $dictionary['Account']['fields']['last_name_c']['labelValue']='Apellidos';
+
+ 
+
+ // created: 2018-10-06 12:15:48
+$dictionary['Account']['fields']['phone_mobile_c']['inline_edit']='1';
+$dictionary['Account']['fields']['phone_mobile_c']['labelValue']='Tel. Celular';
+
+ 
+
+ // created: 2018-10-06 12:20:44
+$dictionary['Account']['fields']['phone_home_c']['inline_edit']='1';
+$dictionary['Account']['fields']['phone_home_c']['labelValue']='Tel. Particular';
+
+ 
+
+ // created: 2018-10-06 12:22:38
+$dictionary['Account']['fields']['phone_office']['inline_edit']=true;
+$dictionary['Account']['fields']['phone_office']['comments']='The office phone number';
+$dictionary['Account']['fields']['phone_office']['merge_filter']='disabled';
+
+ 
+
+ // created: 2018-10-06 12:25:00
+$dictionary['Account']['fields']['birthdate_c']['inline_edit']='1';
+$dictionary['Account']['fields']['birthdate_c']['labelValue']='Fecha de nacimieto';
+
+ 
+
+ // created: 2018-10-06 12:26:54
+$dictionary['Account']['fields']['mks_meansnotice_id_c']['inline_edit']=1;
+
+ 
+
+ // created: 2018-10-06 12:26:54
+$dictionary['Account']['fields']['means_notice_c']['inline_edit']='1';
+$dictionary['Account']['fields']['means_notice_c']['labelValue']='Medio de aviso';
 
  
 ?>

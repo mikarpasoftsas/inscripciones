@@ -23,13 +23,6 @@ $GLOBALS['app_list_strings']['type_course_list']=array (
   'Taller' => 'Taller',
   'Carrera' => 'Carrera',
 );
-$GLOBALS['app_list_strings']['turn_list']=array (
-  '' => '',
-  'Manana' => 'Mañana',
-  'Tarde' => 'Tarde',
-  'Noche' => 'Noche',
-  'Mediodia' => 'Mediodía',
-);
 $GLOBALS['app_list_strings']['opportunity_type_dom']=array (
   '' => '',
   'Inscripcion' => 'Inscripción',
@@ -70,4 +63,23 @@ $GLOBALS['app_list_strings']['moduleListSingular']=array (
   'Users' => 'User',
   'SugarFavorites' => 'SuiteCRM Favorites',
   'SecurityGroups' => 'Filial',
+);
+$GLOBALS['app_list_strings']['day_available_list']=array (
+  '' => '',
+  'Lunes' => 'Lunes',
+  'Martes' => 'Martes',
+  'Miercoles' => 'Miercoles',
+  'Jueves' => 'Jueves',
+  'Viernes' => 'Viernes',
+  'Sabado' => 'Sàbado',
+  'Domingo' => 'Domingo',
+  'Todos' => 'Todos',
+);
+$GLOBALS['app_list_strings']['turn_list']=array (
+  '' => '',
+  'Manana' => 'Mañana',
+  'Tarde' => 'Tarde',
+  'Noche' => 'Noche',
+  'Mediodia' => 'Mediodía',
+  'Todos' => 'Todos',
 );

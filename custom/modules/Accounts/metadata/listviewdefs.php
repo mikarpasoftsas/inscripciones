@@ -1,31 +1,17 @@
 <?php
 $listViewDefs ['Accounts'] = 
 array (
+  'DATE_ENTERED' => 
+  array (
+    'width' => '5%',
+    'label' => 'LBL_DATE_ENTERED',
+    'default' => true,
+  ),
   'NAME' => 
   array (
     'width' => '20%',
     'label' => 'LBL_LIST_ACCOUNT_NAME',
     'link' => true,
-    'default' => true,
-  ),
-  'ACCOUNT_TYPE' => 
-  array (
-    'width' => '10%',
-    'label' => 'LBL_TYPE',
-    'default' => true,
-  ),
-  'PHONE_OFFICE' => 
-  array (
-    'width' => '10%',
-    'label' => 'LBL_LIST_PHONE',
-    'default' => true,
-  ),
-  'ASSIGNED_USER_NAME' => 
-  array (
-    'width' => '10%',
-    'label' => 'LBL_LIST_ASSIGNED_USER',
-    'module' => 'Employees',
-    'id' => 'ASSIGNED_USER_ID',
     'default' => true,
   ),
   'EMAIL1' => 
@@ -37,10 +23,34 @@ array (
     'customCode' => '{$EMAIL1_LINK}',
     'default' => true,
   ),
-  'DATE_ENTERED' => 
+  'PHONE_OFFICE' => 
   array (
-    'width' => '5%',
-    'label' => 'LBL_DATE_ENTERED',
+    'width' => '10%',
+    'label' => 'LBL_LIST_PHONE',
+    'default' => true,
+  ),
+  'MEANS_NOTICE_C' => 
+  array (
+    'type' => 'relate',
+    'default' => true,
+    'studio' => 'visible',
+    'label' => 'LBL_MEANS_NOTICE_C',
+    'id' => 'MKS_MEANSNOTICE_ID_C',
+    'link' => true,
+    'width' => '15%',
+  ),
+  'ACCOUNT_TYPE' => 
+  array (
+    'width' => '10%',
+    'label' => 'LBL_TYPE',
+    'default' => true,
+  ),
+  'ASSIGNED_USER_NAME' => 
+  array (
+    'width' => '10%',
+    'label' => 'LBL_LIST_ASSIGNED_USER',
+    'module' => 'Employees',
+    'id' => 'ASSIGNED_USER_ID',
     'default' => true,
   ),
   'INDUSTRY' => 
