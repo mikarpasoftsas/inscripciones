@@ -58,6 +58,15 @@ array (
             'label' => 'LBL_MEANS_NOTICE',
           ),
         ),
+        2 => 
+        array (
+          0 => 
+          array (
+            'name' => 'next_call_c',
+            'label' => 'LBL_NEXT_CALL',
+          ),
+          1 => '',
+        ),
       ),
       'LBL_PANEL_ASSIGNMENT' => 
       array (

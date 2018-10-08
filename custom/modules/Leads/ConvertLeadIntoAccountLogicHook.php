@@ -42,9 +42,12 @@ class ConvertLeadIntoAccountLogicHook {
 				$account  = BeanFactory::getBean('Accounts');
 				$account->name 		   	   = $bean->first_name . " " . $bean->last_name;	
 				$account->first_name_c = $bean->first_name;
-				$account->last_name_c  = $bean->last_name;			
+				$account->last_name_c  = $bean->last_name;	
+				$account->phone_mobile_c					= $bean->phone_mobile;	
+				$account->phone_home_c						= $bean->phone_home;				
 				$account->phone_office						= $bean->phone_work;
 				$account->phone_alternate					= $bean->phone_fax;
+				$account->birthdate_c						= $bean->birthdate_c;
 				$account->sexo_c							= $bean->sexo_c;
 				$account->id_type_c							= $bean->id_type_c;
 				$account->id_local_c						= $bean->id_local_c;

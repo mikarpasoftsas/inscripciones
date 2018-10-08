@@ -100,6 +100,12 @@ $dictionary['Opportunity']['fields']['mks_meansnotice_id_c']['inline_edit']=1;
 
  
 
+ // created: 2018-10-06 12:41:16
+$dictionary['Opportunity']['fields']['next_call_c']['inline_edit']='1';
+$dictionary['Opportunity']['fields']['next_call_c']['labelValue']='Próxima llamada';
+
+ 
+
  // created: 2018-09-21 13:52:34
 $dictionary['Opportunity']['fields']['sales_stage']['default']='Prospecting';
 $dictionary['Opportunity']['fields']['sales_stage']['len']=100;

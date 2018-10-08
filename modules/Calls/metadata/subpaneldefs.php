@@ -71,27 +71,7 @@ $layout_defs['Calls'] = array(
             'get_subpanel_data' => 'leads',
             'title_key' => 'LBL_LEADS_SUBPANEL_TITLE',
             'top_buttons' => array(),
-        ),
-        'history' => array(
-            'order' => 40,
-            'title_key' => 'LBL_HISTORY_SUBPANEL_TITLE',
-            'type' => 'collection',
-            'subpanel_name' => 'history',   //this values is not associated with a physical file.
-            'sort_order' => 'desc',
-            'sort_by' => 'date_entered',
-            'header_definition_from_subpanel' => 'calls',
-            'module' => 'History',
-            'top_buttons' => array(
-                array('widget_class' => 'SubPanelTopCreateNoteButton'),
-            ),
-            'collection_list' => array(
-                'notes' => array(
-                    'module' => 'Notes',
-                    'subpanel_name' => 'ForCalls',
-                    'get_subpanel_data' => 'notes',
-                ),
-            ),
-        ), /* end history subpanel def */
+        ),        
         'securitygroups' => array(
             'top_buttons' => array(array('widget_class' => 'SubPanelTopSelectButton', 'popup_module' => 'SecurityGroups', 'mode' => 'MultiSelect'),),
             'order' => 900,

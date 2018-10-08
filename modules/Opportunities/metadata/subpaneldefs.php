@@ -52,14 +52,14 @@ $layout_defs['Opportunities'] = array(
             'module' => 'Activities',
 
             'top_buttons' => array(
-                array('widget_class' => 'SubPanelTopCreateTaskButton'),
-                array('widget_class' => 'SubPanelTopScheduleMeetingButton'),
+                #array('widget_class' => 'SubPanelTopCreateTaskButton'),
+                #array('widget_class' => 'SubPanelTopScheduleMeetingButton'),
                 array('widget_class' => 'SubPanelTopScheduleCallButton'),
-                array('widget_class' => 'SubPanelTopComposeEmailButton'),
+                #array('widget_class' => 'SubPanelTopComposeEmailButton'),
             ),
 
             'collection_list' => array(
-                'meetings' => array(
+                /*'meetings' => array(
                     'module' => 'Meetings',
                     'subpanel_name' => 'ForActivities',
                     'get_subpanel_data' => 'meetings',
@@ -68,7 +68,7 @@ $layout_defs['Opportunities'] = array(
                     'module' => 'Tasks',
                     'subpanel_name' => 'ForActivities',
                     'get_subpanel_data' => 'tasks',
-                ),
+                ),*/
                 'calls' => array(
                     'module' => 'Calls',
                     'subpanel_name' => 'ForActivities',
@@ -94,6 +94,7 @@ $layout_defs['Opportunities'] = array(
             ),
 
             'collection_list' => array(
+			/*
                 'meetings' => array(
                     'module' => 'Meetings',
                     'subpanel_name' => 'ForHistory',
@@ -104,11 +105,13 @@ $layout_defs['Opportunities'] = array(
                     'subpanel_name' => 'ForHistory',
                     'get_subpanel_data' => 'tasks',
                 ),
+			*/	
                 'calls' => array(
                     'module' => 'Calls',
                     'subpanel_name' => 'ForHistory',
                     'get_subpanel_data' => 'calls',
                 ),
+			/*	
                 'notes' => array(
                     'module' => 'Notes',
                     'subpanel_name' => 'ForHistory',
@@ -121,6 +124,7 @@ $layout_defs['Opportunities'] = array(
                     'function_parameters' => array('import_function_file' => 'include/utils.php', 'link' => 'contacts'),
                     'generate_select' => true,
                 ),
+			*/	
             ),
             'searchdefs' => array(
                 'collection' =>
