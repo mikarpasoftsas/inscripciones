@@ -4,7 +4,7 @@ array (
   'EditView' => 
   array (
     'templateMeta' => 
-    array (
+    array (		
       'maxColumns' => '2',
       'widths' => 
       array (
@@ -35,7 +35,15 @@ array (
         ),
       ),
       'syncDetailEditViews' => false,
+	  'includes' =>
+		array(
+			0 =>
+                array(
+                        'file' => 'custom/modules/Opportunities/script_op.js',
+                ),
+		),	  
     ),
+	
     'panels' => 
     array (
       'default' => 

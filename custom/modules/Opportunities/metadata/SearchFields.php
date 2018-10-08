@@ -1,5 +1,5 @@
 <?php
-// created: 2018-10-06 12:41:16
+// created: 2018-10-08 17:05:58
 $searchFields['Opportunities'] = array (
   'name' => 
   array (
