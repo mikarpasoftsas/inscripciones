@@ -47,11 +47,6 @@ array (
           'newTab' => false,
           'panelDefault' => 'expanded',
         ),
-        'LBL_PANEL_ADVANCED' => 
-        array (
-          'newTab' => false,
-          'panelDefault' => 'expanded',
-        ),
       ),
     ),
     'panels' => 
@@ -95,10 +90,23 @@ array (
           ),
           1 => 
           array (
-            'name' => 'phone_office',
+            'name' => 'phone_mobile_c',
+            'label' => 'LBL_PHONE_MOBILE',
           ),
         ),
         3 => 
+        array (
+          0 => 
+          array (
+            'name' => 'phone_home_c',
+            'label' => 'LBL_PHONE_HOME',
+          ),
+          1 => 
+          array (
+            'name' => 'phone_office',
+          ),
+        ),
+        4 => 
         array (
           0 => 
           array (
@@ -106,24 +114,33 @@ array (
             'comment' => 'An alternate phone number',
             'label' => 'LBL_PHONE_ALT',
           ),
-        ),
-        4 => 
-        array (
-          0 => 
+          1 => 
           array (
-            'name' => 'email1',
+            'name' => 'birthdate_c',
+            'label' => 'LBL_BIRTHDATE',
           ),
         ),
         5 => 
         array (
           0 => 
           array (
-            'name' => 'description',
-            'comment' => 'Full text of the note',
-            'label' => 'LBL_DESCRIPTION',
+            'name' => 'email1',
           ),
         ),
         6 => 
+        array (
+          0 => 
+          array (
+            'name' => 'means_notice_c',
+            'studio' => 'visible',
+            'label' => 'LBL_MEANS_NOTICE_C',
+          ),
+          1 => 
+          array (
+            'name' => 'account_type',
+          ),
+        ),
+        7 => 
         array (
           0 => 
           array (
@@ -194,17 +211,6 @@ array (
           array (
             'name' => 'primary_address_neighborhood_c',
             'label' => 'LBL_PRIMARY_ADDRESS_NEIGHBORHOOD',
-          ),
-          1 => '',
-        ),
-      ),
-      'LBL_PANEL_ADVANCED' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            'name' => 'account_type',
           ),
         ),
       ),

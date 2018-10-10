@@ -98,8 +98,7 @@ array (
           ),
           1 => 
           array (
-            'name' => 'date_entered',
-            'customCode' => '{$fields.date_entered.value} {$APP.LBL_BY} {$fields.created_by_name.value}',
+            'name' => 'date_entered',            
           ),
         ),
         1 => 
@@ -112,8 +111,7 @@ array (
           1 => 
           array (
             'name' => 'date_modified',
-            'label' => 'LBL_DATE_MODIFIED',
-            'customCode' => '{$fields.date_modified.value} {$APP.LBL_BY} {$fields.modified_by_name.value}',
+            'label' => 'LBL_DATE_MODIFIED',          
           ),
         ),
       ),
