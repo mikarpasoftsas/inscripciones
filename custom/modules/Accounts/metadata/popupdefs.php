@@ -9,6 +9,7 @@ $popupMeta = array (
   'email' => 'accounts.email',
   'id_local_c' => 'accounts_cstm.id_local_c',
   'phone_office' => 'accounts.phone_office',
+  'phone_mobile_c' => 'accounts_cstm.phone_mobile_c',
 ),
     'searchInputs' => array (
   0 => 'name',
@@ -16,6 +17,7 @@ $popupMeta = array (
   7 => 'email',
   8 => 'id_local_c',
   9 => 'phone_office',
+  10 => 'phone_mobile_c',
 ),
     'create' => array (
   'formBase' => 'AccountFormBase.php',
@@ -33,6 +35,13 @@ $popupMeta = array (
   array (
     'name' => 'name',
     'width' => '10%',
+  ),
+  'phone_mobile_c' => 
+  array (
+    'type' => 'phone',
+    'label' => 'LBL_PHONE_MOBILE',
+    'width' => '10%',
+    'name' => 'phone_mobile_c',
   ),
   'phone_office' => 
   array (
