@@ -1,5 +1,5 @@
 <?php
-// created: 2018-10-06 12:43:03
+// created: 2018-10-10 20:49:02
 $mod_strings = array (
   'LBL_LEADS' => 'Preinformes/Potenciales',
   'LBL_LEADS_SUBPANEL_TITLE' => 'Preinformes/Potenciales',
@@ -33,4 +33,5 @@ $mod_strings = array (
   'LBL_MEANS_NOTICE' => 'Medio de aviso',
   'LBL_NEXT_CALL' => 'Próxima llamada',
   'LBL_DETAILVIEW_PANEL1' => 'Otro',
+  'LBL_MODIFIED_NAME' => 'Modificado Por',
 );
