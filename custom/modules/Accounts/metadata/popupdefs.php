@@ -4,20 +4,20 @@ $popupMeta = array (
     'varName' => 'ACCOUNT',
     'orderBy' => 'name',
     'whereClauses' => array (
-  'name' => 'accounts.name',
   'account_type' => 'accounts.account_type',
   'email' => 'accounts.email',
   'id_local_c' => 'accounts_cstm.id_local_c',
-  'phone_office' => 'accounts.phone_office',
   'phone_mobile_c' => 'accounts_cstm.phone_mobile_c',
+  'last_name_c' => 'accounts_cstm.last_name_c',
+  'first_name_c' => 'accounts_cstm.first_name_c',
 ),
     'searchInputs' => array (
-  0 => 'name',
   3 => 'account_type',
   7 => 'email',
   8 => 'id_local_c',
-  9 => 'phone_office',
   10 => 'phone_mobile_c',
+  11 => 'last_name_c',
+  12 => 'first_name_c',
 ),
     'create' => array (
   'formBase' => 'AccountFormBase.php',
@@ -31,10 +31,19 @@ $popupMeta = array (
   'createButton' => 'LNK_NEW_ACCOUNT',
 ),
     'searchdefs' => array (
-  'name' => 
+  'last_name_c' => 
   array (
-    'name' => 'name',
+    'type' => 'varchar',
+    'label' => 'LBL_LAST_NAME',
     'width' => '10%',
+    'name' => 'last_name_c',
+  ),
+  'first_name_c' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_FIRST_NAME',
+    'width' => '10%',
+    'name' => 'first_name_c',
   ),
   'phone_mobile_c' => 
   array (
@@ -43,19 +52,10 @@ $popupMeta = array (
     'width' => '10%',
     'name' => 'phone_mobile_c',
   ),
-  'phone_office' => 
+  'email' => 
   array (
-    'type' => 'phone',
-    'label' => 'LBL_PHONE_OFFICE',
+    'name' => 'email',
     'width' => '10%',
-    'name' => 'phone_office',
-  ),
-  'id_local_c' => 
-  array (
-    'type' => 'varchar',
-    'label' => 'LBL_ID_LOCAL_C',
-    'width' => '10%',
-    'name' => 'id_local_c',
   ),
   'account_type' => 
   array (
@@ -64,34 +64,39 @@ $popupMeta = array (
     'width' => '10%',
     'name' => 'account_type',
   ),
-  'email' => 
+  'id_local_c' => 
   array (
-    'name' => 'email',
+    'type' => 'varchar',
+    'label' => 'LBL_ID_LOCAL_C',
     'width' => '10%',
+    'name' => 'id_local_c',
   ),
 ),
     'listviewdefs' => array (
-  'DATE_ENTERED' => 
+  'LAST_NAME_C' => 
   array (
-    'type' => 'datetime',
-    'label' => 'LBL_DATE_ENTERED',
-    'width' => '10%',
-    'default' => true,
-  ),
-  'NAME' => 
-  array (
-    'width' => '40%',
-    'label' => 'LBL_LIST_ACCOUNT_NAME',
+    'type' => 'varchar',
     'link' => true,
     'default' => true,
-    'name' => 'name',
+    'label' => 'LBL_LAST_NAME',
+    'width' => '10%',
+    'name' => 'last_name_c',
   ),
-  'PHONE_OFFICE' => 
+  'FIRST_NAME_C' => 
+  array (
+    'type' => 'varchar',
+    'link' => true,
+    'default' => true,
+    'label' => 'LBL_FIRST_NAME',
+    'width' => '10%',
+  ),
+  'PHONE_MOBILE_C' => 
   array (
     'type' => 'phone',
-    'label' => 'LBL_PHONE_OFFICE',
-    'width' => '10%',
     'default' => true,
+    'label' => 'LBL_PHONE_MOBILE',
+    'width' => '10%',
+    'name' => 'phone_mobile_c',
   ),
   'EMAIL1' => 
   array (
@@ -106,16 +111,6 @@ $popupMeta = array (
     'default' => true,
     'name' => 'email1',
   ),
-  'MEANS_NOTICE_C' => 
-  array (
-    'type' => 'relate',
-    'default' => true,
-    'studio' => 'visible',
-    'label' => 'LBL_MEANS_NOTICE_C',
-    'id' => 'MKS_MEANSNOTICE_ID_C',
-    'link' => true,
-    'width' => '10%',
-  ),
   'ACCOUNT_TYPE' => 
   array (
     'type' => 'enum',
@@ -124,12 +119,13 @@ $popupMeta = array (
     'default' => true,
     'name' => 'account_type',
   ),
-  'ASSIGNED_USER_NAME' => 
+  'ID_LOCAL_C' => 
   array (
-    'width' => '2%',
-    'label' => 'LBL_LIST_ASSIGNED_USER',
+    'type' => 'varchar',
     'default' => true,
-    'name' => 'assigned_user_name',
+    'label' => 'LBL_ID_LOCAL_C',
+    'width' => '10%',
+    'name' => 'id_local_c',
   ),
 ),
 );
