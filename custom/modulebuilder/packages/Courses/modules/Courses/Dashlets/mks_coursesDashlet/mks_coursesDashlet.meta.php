@@ -45,8 +45,8 @@ if (!defined('sugarEntry') || !sugarEntry) {
 global $app_strings;
 
 $dashletMeta['mks_CoursesDashlet'] = array(
-    'module' => 'mks_courses',
-    'title' => translate('LBL_HOMEPAGE_TITLE', 'mks_courses'),
-    'description' => 'A customizable view into mks_courses',
+    'module' => 'mks_Courses',
+    'title' => translate('LBL_HOMEPAGE_TITLE', 'mks_Courses'),
+    'description' => 'A customizable view into mks_Courses',
     'category' => 'Module Views'
 );

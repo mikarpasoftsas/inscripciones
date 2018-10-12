@@ -43,23 +43,23 @@ if (!defined('sugarEntry') || !sugarEntry) {
 }
 
 require_once('include/Dashlets/DashletGeneric.php');
-require_once('modules/mks_courses/mks_courses.php');
+require_once('modules/mks_Courses/mks_Courses.php');
 
 class mks_CoursesDashlet extends DashletGeneric {
     function __construct($id, $def = null)
     {
         global $current_user, $app_strings;
-        require('modules/mks_courses/metadata/dashletviewdefs.php');
+        require('modules/mks_Courses/metadata/dashletviewdefs.php');
 
         parent::__construct($id, $def);
 
         if (empty($def['title'])) {
-            $this->title = translate('LBL_HOMEPAGE_TITLE', 'mks_courses');
+            $this->title = translate('LBL_HOMEPAGE_TITLE', 'mks_Courses');
         }
 
         $this->searchFields = $dashletData['mks_CoursesDashlet']['searchFields'];
         $this->columns = $dashletData['mks_CoursesDashlet']['columns'];
 
-        $this->seedBean = new mks_courses();        
+        $this->seedBean = new mks_Courses();        
     }
 }
