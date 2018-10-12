@@ -1,5 +1,5 @@
 <?php
-// created: 2018-09-24 18:13:28
+// created: 2018-10-12 22:26:31
 $mod_strings = array (
   'LBL_NAME' => 'Nombre',
   'LBL_LEADS_MKS_INTERESTCOURSE_1_FROM_LEADS_TITLE' => 'Prospecto',
