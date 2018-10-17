@@ -5,42 +5,29 @@ array (
   array (
     'basic_search' => 
     array (
-      'name' => 
+      'last_name_c' => 
       array (
-        'name' => 'name',
+        'type' => 'varchar',
         'default' => true,
+        'label' => 'LBL_LAST_NAME',
         'width' => '10%',
+        'name' => 'last_name_c',
       ),
-      'current_user_only' => 
+      'first_name_c' => 
       array (
-        'name' => 'current_user_only',
-        'label' => 'LBL_CURRENT_USER_FILTER',
-        'type' => 'bool',
+        'type' => 'varchar',
         'default' => true,
+        'label' => 'LBL_FIRST_NAME',
         'width' => '10%',
+        'name' => 'first_name_c',
       ),
-      'favorites_only' => 
+      'phone_mobile_c' => 
       array (
-        'name' => 'favorites_only',
-        'label' => 'LBL_FAVORITES_FILTER',
-        'type' => 'bool',
-      ),
-    ),
-    'advanced_search' => 
-    array (
-      'name' => 
-      array (
-        'name' => 'name',
+        'type' => 'phone',
         'default' => true,
+        'label' => 'LBL_PHONE_MOBILE',
         'width' => '10%',
-      ),
-      'phone' => 
-      array (
-        'name' => 'phone',
-        'label' => 'LBL_ANY_PHONE',
-        'type' => 'name',
-        'default' => true,
-        'width' => '10%',
+        'name' => 'phone_mobile_c',
       ),
       'email' => 
       array (
@@ -56,6 +43,65 @@ array (
         'default' => true,
         'width' => '10%',
       ),
+      'id_local_c' => 
+      array (
+        'type' => 'varchar',
+        'default' => true,
+        'label' => 'LBL_ID_LOCAL_C',
+        'width' => '10%',
+        'name' => 'id_local_c',
+      ),
+    ),
+    'advanced_search' => 
+    array (
+	
+	    'last_name_c' => 
+      array (
+        'type' => 'varchar',
+        'default' => true,
+        'label' => 'LBL_LAST_NAME',
+        'width' => '10%',
+        'name' => 'last_name_c',
+      ),
+      'first_name_c' => 
+      array (
+        'type' => 'varchar',
+        'default' => true,
+        'label' => 'LBL_FIRST_NAME',
+        'width' => '10%',
+        'name' => 'first_name_c',
+      ),
+      'phone_mobile_c' => 
+      array (
+        'type' => 'phone',
+        'default' => true,
+        'label' => 'LBL_PHONE_MOBILE',
+        'width' => '10%',
+        'name' => 'phone_mobile_c',
+      ),
+      'email' => 
+      array (
+        'name' => 'email',
+        'label' => 'LBL_ANY_EMAIL',
+        'type' => 'name',
+        'default' => true,
+        'width' => '10%',
+      ),
+      'account_type' => 
+      array (
+        'name' => 'account_type',
+        'default' => true,
+        'width' => '10%',
+      ),
+      'id_local_c' => 
+      array (
+        'type' => 'varchar',
+        'default' => true,
+        'label' => 'LBL_ID_LOCAL_C',
+        'width' => '10%',
+        'name' => 'id_local_c',
+      ),
+     
     ),
   ),
   'templateMeta' => 

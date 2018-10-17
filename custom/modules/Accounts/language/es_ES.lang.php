@@ -1,5 +1,5 @@
 <?php
-// created: 2018-10-06 12:39:40
+// created: 2018-10-12 21:00:36
 $mod_strings = array (
   'LBL_LEADS' => 'Clientes Potenciales',
   'LBL_LEADS_SUBPANEL_TITLE' => 'Preinformes/Potenciales',
@@ -9,7 +9,7 @@ $mod_strings = array (
   'LBL_PHONE_ALTER_C' => 'phone alter c',
   'LBL_SEXO_C' => 'Sexo',
   'LBL_ID_TYPE_C' => 'Tipo de Doc.',
-  'LBL_ID_LOCAL_C' => ' Identificación',
+  'LBL_ID_LOCAL_C' => 'Número de documento',
   'LBL_PRIMARY_ADDRESS_NUMBER_C' => 'Número',
   'LBL_PRIMARY_ADDRESS_FLOOR_C' => 'Piso',
   'LBL_PRIMARY_ADDRESS_NEIGHBORHOOD' => 'Barrio',
