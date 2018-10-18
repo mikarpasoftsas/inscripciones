@@ -1,5 +1,5 @@
 <?php
-// created: 2018-10-18 19:37:26
+// created: 2018-10-18 20:07:45
 $mod_strings = array (
   'LBL_LEADS' => 'Preinformes/Potenciales',
   'LBL_LEADS_SUBPANEL_TITLE' => 'Preinformes/Potenciales',
@@ -11,7 +11,7 @@ $mod_strings = array (
   'LBL_MY_CLOSED_OPPORTUNITIES' => 'Mis Preinformes Cerradas',
   'LBL_TOP_OPPORTUNITIES' => 'Mis Principales Preinformes',
   'LBL_AMOUNT' => 'Monto de Preinforme:',
-  'LBL_OPPORTUNITY_NAME' => 'Nombre del Preinforme:',
+  'LBL_OPPORTUNITY_NAME' => 'Apellido/Nombre',
   'LBL_MODULE_NAME' => 'Preinformes',
   'LBL_SALES_STAGE' => 'Estado:',
   'LBL_DATE_CLOSED' => 'Fecha de cierre:',
@@ -38,4 +38,5 @@ $mod_strings = array (
   'LBL_EDITVIEW_PANEL1' => 'Nuevo Panel 1',
   'LBL_MEANS_NOTICE1_MKS_MEANSNOTICE_ID' => 'Medio de Aviso 2 (relacionado  ID)',
   'LBL_MEANS_NOTICE1' => 'Medio de aviso 2',
+  'LBL_CREATED' => 'Creado Por',
 );
