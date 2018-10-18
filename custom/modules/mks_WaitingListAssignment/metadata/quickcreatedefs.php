@@ -34,6 +34,12 @@ array (
           'panelDefault' => 'expanded',
         ),
       ),
+	  'includes' => 
+	   array(	
+			array (
+				'file' => 'custom/modules/mks_WaitingListAssignment/js/editview.js',       
+			)	
+	   ),
     ),
     'panels' => 
     array (

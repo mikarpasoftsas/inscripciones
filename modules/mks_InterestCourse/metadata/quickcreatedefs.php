@@ -28,7 +28,7 @@ array (
           'newTab' => false,
           'panelDefault' => 'expanded',
         ),
-      ),
+      ),	 
     ),
     'panels' => 
     array (

@@ -105,6 +105,14 @@ $app_list_strings['moduleList']['SecurityGroups']='Filiales';
 $app_list_strings['moduleList']['mks_SubsidiaryGroup']='Grupo de Usuarios de Filial';
 $app_list_strings['moduleListSingular']['SecurityGroups']='Filial';
 $app_list_strings['moduleListSingular']['mks_SubsidiaryGroup']='Grupo de Usuarios de Filial';
+$GLOBALS['app_list_strings']['turn_list']=array (
+  '' => '',
+  'Manana' => 'Mañana',
+  'Mediodia' => 'Mediodía',
+  'Tarde' => 'Tarde',
+  'Noche' => 'Noche',
+  'Todos' => 'Todos',
+);
 $GLOBALS['app_list_strings']['day_available_list']=array (
   '' => '',
   'Lunes' => 'Lunes',
@@ -114,13 +122,4 @@ $GLOBALS['app_list_strings']['day_available_list']=array (
   'Viernes' => 'Viernes',
   'Sabado' => 'Sàbado',
   'Domingo' => 'Domingo',
-  'Todos' => 'Todos',
-);
-$GLOBALS['app_list_strings']['turn_list']=array (
-  '' => '',
-  'Manana' => 'Mañana',
-  'Mediodia' => 'Mediodía',
-  'Tarde' => 'Tarde',
-  'Noche' => 'Noche',
-  'Todos' => 'Todos',
 );

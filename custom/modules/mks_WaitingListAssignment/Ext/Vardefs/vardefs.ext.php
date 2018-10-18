@@ -47,4 +47,10 @@ $dictionary['mks_WaitingListAssignment']['fields']['id_autoincrement_c']['inline
 $dictionary['mks_WaitingListAssignment']['fields']['id_autoincrement_c']['labelValue']='#';
 
  
+
+ // created: 2018-10-18 14:45:31
+$dictionary['mks_WaitingListAssignment']['fields']['day_available']['default']='^^';
+$dictionary['mks_WaitingListAssignment']['fields']['day_available']['len']=NULL;
+
+ 
 ?>
