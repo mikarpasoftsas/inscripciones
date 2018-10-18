@@ -13,17 +13,53 @@ array (
         'width' => '10%',
         'name' => 'id_autoincrement_c',
       ),
+      'account_name' => 
+      array (
+        'name' => 'account_name',
+        'default' => true,
+        'width' => '10%',
+      ),
       'name' => 
       array (
         'name' => 'name',
         'default' => true,
         'width' => '10%',
       ),
+      'means_notice_c' => 
+      array (
+        'type' => 'relate',
+        'default' => true,
+        'studio' => 'visible',
+        'label' => 'LBL_MEANS_NOTICE',
+        'link' => true,
+        'width' => '10%',
+        'id' => 'MKS_MEANSNOTICE_ID_C',
+        'name' => 'means_notice_c',
+      ),
+      'means_notice1_c' => 
+      array (
+        'type' => 'relate',
+        'default' => true,
+        'studio' => 'visible',
+        'label' => 'LBL_MEANS_NOTICE1',
+        'link' => true,
+        'width' => '10%',
+        'id' => 'MKS_MEANSNOTICE_ID1_C',
+        'name' => 'means_notice1_c',
+      ),
       'sales_stage' => 
       array (
         'name' => 'sales_stage',
         'default' => true,
         'width' => '10%',
+      ),
+      'date_entered' => 
+      array (
+        'type' => 'datetime',
+        'label' => 'LBL_DATE_ENTERED',
+        'width' => '10%',
+        'default' => true,
+        'name' => 'date_entered',
       ),
       'current_user_only' => 
       array (
@@ -78,22 +114,6 @@ array (
         'default' => true,
         'width' => '10%',
       ),
-      'assigned_user_id' => 
-      array (
-        'name' => 'assigned_user_id',
-        'type' => 'enum',
-        'label' => 'LBL_ASSIGNED_TO',
-        'function' => 
-        array (
-          'name' => 'get_user_array',
-          'params' => 
-          array (
-            0 => false,
-          ),
-        ),
-        'default' => true,
-        'width' => '10%',
-      ),
       'means_notice_c' => 
       array (
         'type' => 'relate',
@@ -104,6 +124,17 @@ array (
         'link' => true,
         'width' => '10%',
         'name' => 'means_notice_c',
+      ),
+      'means_notice1_c' => 
+      array (
+        'type' => 'relate',
+        'default' => true,
+        'studio' => 'visible',
+        'label' => 'LBL_MEANS_NOTICE1',
+        'id' => 'MKS_MEANSNOTICE_ID1_C',
+        'link' => true,
+        'width' => '10%',
+        'name' => 'means_notice1_c',
       ),
       'date_closed' => 
       array (
