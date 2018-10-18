@@ -64,16 +64,7 @@ $GLOBALS['app_list_strings']['moduleListSingular']=array (
   'SugarFavorites' => 'SuiteCRM Favorites',
   'SecurityGroups' => 'Filial',
 );
-$GLOBALS['app_list_strings']['turn_list']=array (
-  '' => '',
-  'Manana' => 'Mañana',
-  'Tarde' => 'Tarde',
-  'Noche' => 'Noche',
-  'Mediodia' => 'Mediodía',
-  'Todos' => 'Todos',
-);
 $GLOBALS['app_list_strings']['day_available_list']=array (
-  '' => '',
   'Lunes' => 'Lunes',
   'Martes' => 'Martes',
   'Miercoles' => 'Miercoles',
@@ -81,4 +72,11 @@ $GLOBALS['app_list_strings']['day_available_list']=array (
   'Viernes' => 'Viernes',
   'Sabado' => 'Sàbado',
   'Domingo' => 'Domingo',
+);
+$GLOBALS['app_list_strings']['turn_list']=array (
+  'Manana' => 'Mañana',
+  'Tarde' => 'Tarde',
+  'Noche' => 'Noche',
+  'Mediodia' => 'Mediodía',
+  'Todos' => 'Todos',
 );

@@ -90,4 +90,14 @@ $dictionary['mks_InterestCourse']['fields']['id_autoincrement_c']['inline_edit']
 $dictionary['mks_InterestCourse']['fields']['id_autoincrement_c']['labelValue']='#';
 
  
+
+ // created: 2018-10-18 15:43:20
+$dictionary['mks_InterestCourse']['fields']['day_available']['len']=NULL;
+
+ 
+
+ // created: 2018-10-18 15:43:25
+$dictionary['mks_InterestCourse']['fields']['turn']['len']=NULL;
+
+ 
 ?>
