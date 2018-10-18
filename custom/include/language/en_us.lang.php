@@ -80,3 +80,7 @@ $GLOBALS['app_list_strings']['turn_list']=array (
   'Mediodia' => 'Mediodía',
   'Todos' => 'Todos',
 );
+
+$GLOBALS['app_list_strings']['origin_conact_list']=array (
+  '' => '',
+);

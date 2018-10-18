@@ -103,15 +103,32 @@ $dictionary['Opportunity']['fields']['mks_meansnotice_id_c']['inline_edit']=1;
 
  
 
- // created: 2018-09-24 19:42:09
+ // created: 2018-10-18 19:36:39
 $dictionary['Opportunity']['fields']['means_notice_c']['inline_edit']='1';
-$dictionary['Opportunity']['fields']['means_notice_c']['labelValue']='Medio de aviso';
+$dictionary['Opportunity']['fields']['means_notice_c']['labelValue']='Medio de aviso 1';
 
  
 
  // created: 2018-10-08 17:05:58
 $dictionary['Opportunity']['fields']['next_call_c']['inline_edit']='1';
 $dictionary['Opportunity']['fields']['next_call_c']['labelValue']='Próxima llamada';
+
+ 
+
+ // created: 2018-10-18 19:25:57
+$dictionary['Opportunity']['fields']['origin_conact_c']['inline_edit']='1';
+$dictionary['Opportunity']['fields']['origin_conact_c']['labelValue']='Origen';
+
+ 
+
+ // created: 2018-10-18 19:36:14
+$dictionary['Opportunity']['fields']['mks_meansnotice_id1_c']['inline_edit']=1;
+
+ 
+
+ // created: 2018-10-18 19:36:14
+$dictionary['Opportunity']['fields']['means_notice1_c']['inline_edit']='1';
+$dictionary['Opportunity']['fields']['means_notice1_c']['labelValue']='Medio de Aviso 2';
 
  
 ?>

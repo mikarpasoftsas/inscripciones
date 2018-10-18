@@ -68,19 +68,28 @@ array (
           0 => 'sales_stage',
           1 => 
           array (
-            'name' => 'means_notice_c',
-            'studio' => 'visible',
-            'label' => 'LBL_MEANS_NOTICE',
+            'name' => 'next_call_c',
+            'label' => 'LBL_NEXT_CALL',
           ),
         ),
         3 => 
         array (
           0 => 
           array (
-            'name' => 'next_call_c',
-            'label' => 'LBL_NEXT_CALL',
+            'name' => 'means_notice_c',
+            'studio' => 'visible',
+            'label' => 'LBL_MEANS_NOTICE',
           ),
           1 => 
+          array (
+            'name' => 'means_notice1_c',
+            'studio' => 'visible',
+            'label' => 'LBL_MEANS_NOTICE1',
+          ),
+        ),
+        4 => 
+        array (
+          0 => 
           array (
             'name' => 'assigned_user_name',
             'label' => 'LBL_ASSIGNED_TO',
@@ -98,7 +107,7 @@ array (
           ),
           1 => 
           array (
-            'name' => 'date_entered',            
+            'name' => 'date_entered',
           ),
         ),
         1 => 
@@ -111,7 +120,7 @@ array (
           1 => 
           array (
             'name' => 'date_modified',
-            'label' => 'LBL_DATE_MODIFIED',          
+            'label' => 'LBL_DATE_MODIFIED',
           ),
         ),
       ),

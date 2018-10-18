@@ -4,7 +4,7 @@ array (
   'EditView' => 
   array (
     'templateMeta' => 
-    array (		
+    array (
       'maxColumns' => '2',
       'widths' => 
       array (
@@ -35,15 +35,14 @@ array (
         ),
       ),
       'syncDetailEditViews' => false,
-	  'includes' =>
-		array(
-			0 =>
-                array(
-                        'file' => 'custom/modules/Opportunities/script_op.js',
-                ),
-		),	  
+      'includes' => 
+      array (
+        0 => 
+        array (
+          'file' => 'custom/modules/Opportunities/script_op.js',
+        ),
+      ),
     ),
-	
     'panels' => 
     array (
       'default' => 
@@ -61,19 +60,24 @@ array (
           0 => 'sales_stage',
           1 => 
           array (
-            'name' => 'means_notice_c',
-            'studio' => 'visible',
-            'label' => 'LBL_MEANS_NOTICE',
+            'name' => 'next_call_c',
+            'label' => 'LBL_NEXT_CALL',
           ),
         ),
         2 => 
         array (
           0 => 
           array (
-            'name' => 'next_call_c',
-            'label' => 'LBL_NEXT_CALL',
+            'name' => 'means_notice_c',
+            'studio' => 'visible',
+            'label' => 'LBL_MEANS_NOTICE',
           ),
-          1 => '',
+          1 => 
+          array (
+            'name' => 'means_notice1_c',
+            'studio' => 'visible',
+            'label' => 'LBL_MEANS_NOTICE1',
+          ),
         ),
       ),
       'LBL_PANEL_ASSIGNMENT' => 

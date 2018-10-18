@@ -50,14 +50,29 @@ array (
         1 => 
         array (
           0 => 'sales_stage',
-          1 => 
+          1 => '',
+        ),
+        2 => 
+        array (
+          0 => 
           array (
             'name' => 'means_notice_c',
             'studio' => 'visible',
             'label' => 'LBL_MEANS_NOTICE',
           ),
+          1 => '',
         ),
-        2 => 
+        3 => 
+        array (
+          0 => 
+          array (
+            'name' => 'means_notice1_c',
+            'studio' => 'visible',
+            'label' => 'LBL_MEANS_NOTICE1',
+          ),
+          1 => '',
+        ),
+        4 => 
         array (
           0 => 
           array (
