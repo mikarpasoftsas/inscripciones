@@ -141,4 +141,32 @@ $beanFiles['mks_Sizes'] = 'modules/mks_Sizes/mks_Sizes.php';
 $moduleList[] = 'mks_Sizes';
 
 
+ 
+ //WARNING: The contents of this file are auto-generated
+$beanList['mks_GroupSchedule'] = 'mks_GroupSchedule';
+$beanFiles['mks_GroupSchedule'] = 'modules/mks_GroupSchedule/mks_GroupSchedule.php';
+$moduleList[] = 'mks_GroupSchedule';
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+$beanList['mks_AcademicGroups'] = 'mks_AcademicGroups';
+$beanFiles['mks_AcademicGroups'] = 'modules/mks_AcademicGroups/mks_AcademicGroups.php';
+$moduleList[] = 'mks_AcademicGroups';
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+$beanList['mks_GroupMatterTeachers'] = 'mks_GroupMatterTeachers';
+$beanFiles['mks_GroupMatterTeachers'] = 'modules/mks_GroupMatterTeachers/mks_GroupMatterTeachers.php';
+$moduleList[] = 'mks_GroupMatterTeachers';
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+$beanList['mks_GroupMatters'] = 'mks_GroupMatters';
+$beanFiles['mks_GroupMatters'] = 'modules/mks_GroupMatters/mks_GroupMatters.php';
+$moduleList[] = 'mks_GroupMatters';
+
+
 ?>

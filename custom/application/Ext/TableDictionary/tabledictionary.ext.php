@@ -104,4 +104,39 @@ include('custom/metadata/mks_movementdescription_notes_1MetaData.php');
 include('custom/metadata/jckl_dashboarddeployments_jckl_dashboardtemplatesMetaData.php');
 
 
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_academicgroups_securitygroupsMetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_academicgroups_mks_groupscheduleMetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_academicgroups_usersMetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_groupmatters_mks_groupmatterteachersMetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_academicgroups_mks_groupmatters_1MetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_teacher_mks_groupmatterteachers_1MetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_academicgroups_mks_teacher_1MetaData.php');
+
+
 ?>

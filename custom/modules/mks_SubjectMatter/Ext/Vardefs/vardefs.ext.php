@@ -35,4 +35,10 @@ $dictionary["mks_SubjectMatter"]["fields"]["mks_courses_mks_subjectmatter_1mks_c
   'vname' => 'LBL_MKS_COURSES_MKS_SUBJECTMATTER_1_FROM_MKS_SUBJECTMATTER_TITLE',
 );
 
+
+ // created: 2018-10-23 20:40:20
+$dictionary['mks_SubjectMatter']['fields']['type_c']['inline_edit']='1';
+$dictionary['mks_SubjectMatter']['fields']['type_c']['labelValue']='Tipo';
+
+ 
 ?>
