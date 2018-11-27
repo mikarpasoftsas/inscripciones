@@ -1,9 +1,9 @@
 <?php
-// created: 2018-10-18 20:07:45
+// created: 2018-11-21 16:01:23
 $mod_strings = array (
   'LBL_LEADS' => 'Preinformes/Potenciales',
   'LBL_LEADS_SUBPANEL_TITLE' => 'Preinformes/Potenciales',
-  'LNK_NEW_OPPORTUNITY' => 'Nuevo Preinforme',
+  'LNK_NEW_OPPORTUNITY' => 'Crear Preinforme',
   'LNK_OPPORTUNITY_LIST' => 'Ver Preinformes',
   'LNK_IMPORT_OPPORTUNITIES' => 'Importar Preinformes',
   'LBL_LIST_FORM_TITLE' => 'Lista de Preinformes',

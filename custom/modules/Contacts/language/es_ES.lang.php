@@ -26,6 +26,6 @@ $mod_strings = array (
   'LBL_PRIMARY_ADDRES_BETWEEN_STREE' => 'Entre calles',
   'LBL_PRIMARY_ADDRESS_HOME_C' => 'Domicilio',
   'LBL_MODULE_NAME' => 'Preinformes/Contactos',
-  'LBL_SECURITYGROUPS' => 'Grupos de Seguridad',
-  'LBL_SECURITYGROUPS_SUBPANEL_TITLE' => 'Grupos de Seguridad',
+  'LBL_SECURITYGROUPS' => 'Filiales',
+  'LBL_SECURITYGROUPS_SUBPANEL_TITLE' => 'Filiales',
 );

@@ -1,5 +1,5 @@
 <?php
-// created: 2018-10-12 21:00:36
+// created: 2018-11-24 14:12:26
 $mod_strings = array (
   'LBL_LEADS' => 'Clientes Potenciales',
   'LBL_LEADS_SUBPANEL_TITLE' => 'Preinformes/Potenciales',
@@ -40,8 +40,8 @@ $mod_strings = array (
   'LBL_FIRST_NAME' => 'Nombre',
   'LBL_LAST_NAME' => 'Apellidos',
   'LBL_NAME' => 'Nombre Completo',
-  'LBL_SECURITYGROUPS' => 'Grupos de Seguridad',
-  'LBL_SECURITYGROUPS_SUBPANEL_TITLE' => 'Grupos de Seguridad',
+  'LBL_SECURITYGROUPS' => 'Filiales',
+  'LBL_SECURITYGROUPS_SUBPANEL_TITLE' => 'Filiales',
   'LBL_PHONE_MOBILE' => 'Tel. Celular',
   'LBL_PHONE_ALT' => 'Tel. Aternativo',
   'LBL_PHONE_HOME' => 'Tel. Particular',
@@ -54,4 +54,8 @@ $mod_strings = array (
   'LBL_ANY_PHONE' => 'Teléfono',
   'LBL_ANY_EMAIL' => 'Email',
   'LBL_DETAILVIEW_PANEL2' => 'Otro',
+  'LBL_ID_AUTOINCREMENT' => '#',
+  'LBL_ACCOUNTS_MKS_REGISTRATION_1_FROM_MKS_REGISTRATION_TITLE' => 'Matriculas',
+  'LBL_FB_USER_ID' => 'Id Usuario FB',
+  'LBL_AVATAR' => 'Avatar',
 );

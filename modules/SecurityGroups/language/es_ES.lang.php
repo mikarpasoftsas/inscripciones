@@ -100,7 +100,7 @@ $mod_strings = array(
     'LBL_GROUP' => 'Grupo:',
     'LBL_MODULE' => 'Modulo:',
 
-    'LBL_MASS_ASSIGN' => 'Grupos de Seguridad: Asignación Masiva',
+    'LBL_MASS_ASSIGN' => 'Filiales: Asignación Masiva',
     'LBL_ASSIGN' => 'Asignar',
     'LBL_REMOVE' => 'Remover',
     'LBL_ASSIGN_CONFIRM' => 'Está seguro que quiere agregar este Grupo de ',

@@ -7,7 +7,9 @@ class fullname {
     	
 	function fullname(&$bean, $event, $arguments)
 	{
-		$bean->name = $bean->last_name_c . " " . $bean->first_name_c;
+		$bean->name     = $bean->last_name_c . " " . $bean->first_name_c;
+		$bean->sic_code = $bean->first_name_c;
+		$bean->website  = $bean->id_local_c;
 	}	
 	
 }

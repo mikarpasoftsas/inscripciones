@@ -44,6 +44,13 @@ array (
         ),
       ),
       'syncDetailEditViews' => true,
+      'includes' => 
+      array (
+        0 => 
+        array (
+          'file' => 'custom/modules/Opportunities/js/messages.js',
+        ),
+      ),
     ),
     'panels' => 
     array (
@@ -61,18 +68,28 @@ array (
         1 => 
         array (
           0 => 'account_name',
-          1 => 'date_closed',
+          1 => '',
         ),
         2 => 
         array (
+          0 => 'date_closed',
+          1 => '',
+        ),
+        3 => 
+        array (
           0 => 'sales_stage',
-          1 => 
+          1 => '',
+        ),
+        4 => 
+        array (
+          0 => 
           array (
             'name' => 'next_call_c',
             'label' => 'LBL_NEXT_CALL',
           ),
+          1 => '',
         ),
-        3 => 
+        5 => 
         array (
           0 => 
           array (
@@ -80,20 +97,26 @@ array (
             'studio' => 'visible',
             'label' => 'LBL_MEANS_NOTICE',
           ),
-          1 => 
+          1 => '',
+        ),
+        6 => 
+        array (
+          0 => 
           array (
             'name' => 'means_notice1_c',
             'studio' => 'visible',
             'label' => 'LBL_MEANS_NOTICE1',
           ),
+          1 => '',
         ),
-        4 => 
+        7 => 
         array (
           0 => 
           array (
             'name' => 'assigned_user_name',
             'label' => 'LBL_ASSIGNED_TO',
           ),
+          1 => '',
         ),
       ),
       'lbl_detailview_panel1' => 
@@ -105,23 +128,33 @@ array (
             'name' => 'created_by_name',
             'label' => 'LBL_CREATED',
           ),
-          1 => 
+          1 => '',
+        ),
+        1 => 
+        array (
+          0 => 
           array (
             'name' => 'date_entered',
           ),
+          1 => '',
         ),
-        1 => 
+        2 => 
         array (
           0 => 
           array (
             'name' => 'modified_by_name',
             'label' => 'LBL_MODIFIED_NAME',
           ),
-          1 => 
+          1 => '',
+        ),
+        3 => 
+        array (
+          0 => 
           array (
             'name' => 'date_modified',
             'label' => 'LBL_DATE_MODIFIED',
           ),
+          1 => '',
         ),
       ),
     ),

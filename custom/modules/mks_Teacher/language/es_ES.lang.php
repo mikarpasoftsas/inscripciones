@@ -1,7 +1,7 @@
 <?php
 // created: 2018-10-24 14:06:36
 $mod_strings = array (
-  'LBL_SECURITYGROUPS' => 'Grupos de Seguridad',
+  'LBL_SECURITYGROUPS' => 'Filiales',
   'LBL_MKS_TEACHER_SECURITYGROUPS_FROM_SECURITYGROUPS_TITLE' => 'Filiales',
   'LBL_AMOUNT_THEORY' => 'Teoría',
   'LBL_AMOUNT_PRACTICE' => 'Practica',

@@ -9,6 +9,6 @@ $mod_strings = array (
   'LBL_CAMPAIGN_ACCOUNTS_SUBPANEL_TITLE' => 'Contactos',
   'LBL_CONTACTS' => 'Preinformes/Contactos',
   'LBL_LOG_ENTRIES_CONTACT_TITLE' => 'Preinformes/Contactos Creados',
-  'LBL_SECURITYGROUPS' => 'Grupos de Seguridad',
-  'LBL_SECURITYGROUPS_SUBPANEL_TITLE' => 'Grupos de Seguridad',
+  'LBL_SECURITYGROUPS' => 'Filiales',
+  'LBL_SECURITYGROUPS_SUBPANEL_TITLE' => 'Filiales',
 );

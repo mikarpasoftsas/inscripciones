@@ -50,13 +50,21 @@ array (
     'width' => '10%',
     'default' => true,
   ),
+  'DESCRIPTION' => 
+  array (
+    'type' => 'text',
+    'label' => 'LBL_DESCRIPTION',
+    'sortable' => false,
+    'width' => '10%',
+    'default' => true,
+  ),
   'QUANTITY' => 
   array (
     'type' => 'int',
     'label' => 'LBL_QUANTITY',
     'width' => '10%',
     'default' => true,
-  ),  
+  ),
 );
 ;
 ?>

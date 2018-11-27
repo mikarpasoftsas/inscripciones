@@ -5,7 +5,7 @@ $mod_strings = array (
   'LBL_USER_CRM' => 'Usuario CRM',
   'LBL_MKS_SUBSIDIARYUSERS_ACLROLES_FROM_ACLROLES_TITLE' => 'Roles',
   'LBL_EMAIL_ADDRESS' => 'Correo',
-  'LBL_SECURITYGROUPS' => 'Grupos de Seguridad',
+  'LBL_SECURITYGROUPS' => 'Filiales',
   'LBL_MKS_SUBSIDIARYUSERS_SECURITYGROUPS_FROM_SECURITYGROUPS_TITLE' => 'Filiales',
   'LBL_MOBILE_PHONE' => 'Tel. celular',
 );

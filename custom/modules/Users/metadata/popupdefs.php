@@ -1,7 +1,6 @@
 <?php
 if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 global $current_user;
-echo "hola";
 $popupMeta = array(
 	'moduleMain' => 'User',
 	'varName' => 'USER',

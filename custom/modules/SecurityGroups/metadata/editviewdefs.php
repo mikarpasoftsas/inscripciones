@@ -20,6 +20,15 @@ array (
           'field' => '30',
         ),
       ),
+      'useTabs' => false,
+      'tabDefs' => 
+      array (
+        'DEFAULT' => 
+        array (
+          'newTab' => false,
+          'panelDefault' => 'expanded',
+        ),
+      ),
     ),
     'panels' => 
     array (
@@ -39,9 +48,17 @@ array (
         ),
         1 => 
         array (
-          0 => 'noninheritable',
+          0 => 
+          array (
+            'name' => 'fb_page_access_token_c',
+            'label' => 'LBL_FB_PAGE_ACCESS_TOKEN',
+          ),
         ),
         2 => 
+        array (
+          0 => 'noninheritable',
+        ),
+        3 => 
         array (
           0 => 'description',
         ),

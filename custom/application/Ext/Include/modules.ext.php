@@ -169,4 +169,59 @@ $beanFiles['mks_GroupMatters'] = 'modules/mks_GroupMatters/mks_GroupMatters.php'
 $moduleList[] = 'mks_GroupMatters';
 
 
+ 
+ //WARNING: The contents of this file are auto-generated
+$beanList['mks_DiscountRules'] = 'mks_DiscountRules';
+$beanFiles['mks_DiscountRules'] = 'modules/mks_DiscountRules/mks_DiscountRules.php';
+$moduleList[] = 'mks_DiscountRules';
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+$beanList['mks_PaymentPlan'] = 'mks_PaymentPlan';
+$beanFiles['mks_PaymentPlan'] = 'modules/mks_PaymentPlan/mks_PaymentPlan.php';
+$moduleList[] = 'mks_PaymentPlan';
+$beanList['mks_PlanFees'] = 'mks_PlanFees';
+$beanFiles['mks_PlanFees'] = 'modules/mks_PlanFees/mks_PlanFees.php';
+$moduleList[] = 'mks_PlanFees';
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+$beanList['mks_Registration'] = 'mks_Registration';
+$beanFiles['mks_Registration'] = 'modules/mks_Registration/mks_Registration.php';
+$moduleList[] = 'mks_Registration';
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+$beanList['mks_CustomPaymentPlan'] = 'mks_CustomPaymentPlan';
+$beanFiles['mks_CustomPaymentPlan'] = 'modules/mks_CustomPaymentPlan/mks_CustomPaymentPlan.php';
+$moduleList[] = 'mks_CustomPaymentPlan';
+$beanList['mks_CustomPlanFees'] = 'mks_CustomPlanFees';
+$beanFiles['mks_CustomPlanFees'] = 'modules/mks_CustomPlanFees/mks_CustomPlanFees.php';
+$moduleList[] = 'mks_CustomPlanFees';
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+$beanList['mks_CustomDiscountRules'] = 'mks_CustomDiscountRules';
+$beanFiles['mks_CustomDiscountRules'] = 'modules/mks_CustomDiscountRules/mks_CustomDiscountRules.php';
+$moduleList[] = 'mks_CustomDiscountRules';
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+$beanList['mks_Refinances'] = 'mks_Refinances';
+$beanFiles['mks_Refinances'] = 'modules/mks_Refinances/mks_Refinances.php';
+$moduleList[] = 'mks_Refinances';
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+$beanList['mks_MessagesFb'] = 'mks_MessagesFb';
+$beanFiles['mks_MessagesFb'] = 'modules/mks_MessagesFb/mks_MessagesFb.php';
+$moduleList[] = 'mks_MessagesFb';
+
+
 ?>
