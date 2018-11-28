@@ -84,17 +84,15 @@ $subpanel_layout = array(
             'vname' => 'LBL_LIST_PHONE',
             'width' => '15%',
         ),
-        'edit_button' => array(
-            'vname' => 'LBL_EDIT_BUTTON',
-            'widget_class' => 'SubPanelEditButton',
-            'module' => 'Contacts',
-            'width' => '5%',
+		'amount_theory_c' => array(
+            'name' => 'amount_theory_c',
+            'vname' => 'LBL_AMOUNT_THEORY',
+            'width' => '15%',
         ),
-        'remove_button' => array(
-            'vname' => 'LBL_REMOVE',
-            'widget_class' => 'SubPanelRemoveButton',
-            'module' => 'Contacts',
-            'width' => '5%',
-        ),
+		'amount_practice_c' => array(
+            'name' => 'amount_practice_c',
+            'vname' => 'LBL_AMOUNT_PRACTICE',
+            'width' => '15%',
+        ),		        
     ),
 );

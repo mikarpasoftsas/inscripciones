@@ -20,54 +20,25 @@ array (
           'field' => '30',
         ),
       ),
-      'useTabs' => true,
+      'useTabs' => false,
       'tabDefs' => 
       array (
         'DEFAULT' => 
         array (
-          'newTab' => true,
-          'panelDefault' => 'expanded',
-        ),
-        'LBL_QUICKCREATE_PANEL1' => 
-        array (
-          'newTab' => true,
+          'newTab' => false,
           'panelDefault' => 'expanded',
         ),
       ),
+	  'includes' => 
+	   array(	
+			array (
+				'file' => 'custom/modules/mks_InterestCourse/js/editview.js',       
+			)	
+	   ),
     ),
     'panels' => 
     array (
       'default' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            'name' => 'course',
-            'studio' => 'visible',
-            'label' => 'LBL_COURSE',
-          ),
-        ),
-        1 => 
-        array (
-          0 => 
-          array (
-            'name' => 'day_available',
-            'studio' => 'visible',
-            'label' => 'LBL_DAY_AVAILABLE',
-          ),
-        ),
-        2 => 
-        array (
-          0 => 
-          array (
-            'name' => 'turn',
-            'studio' => 'visible',
-            'label' => 'LBL_TURN',
-          ),
-        ),
-      ),
-      'lbl_quickcreate_panel1' => 
       array (
         0 => 
         array (
@@ -79,7 +50,43 @@ array (
         ),
         1 => 
         array (
+          0 => 
+          array (
+            'name' => 'course',
+            'studio' => 'visible',
+            'label' => 'LBL_COURSE',
+          ),
+        ),
+        2 => 
+        array (
+          0 => 
+          array (
+            'name' => 'day_available',
+            'studio' => 'visible',
+            'label' => 'LBL_DAY_AVAILABLE',
+          ),
+        ),
+        3 => 
+        array (
+          0 => 
+          array (
+            'name' => 'turn',
+            'studio' => 'visible',
+            'label' => 'LBL_TURN',
+          ),
+        ),
+        4 => 
+        array (
           0 => 'assigned_user_name',
+        ),
+        5 => 
+        array (
+          0 => 
+          array (
+            'name' => 'description',
+            'comment' => 'Full text of the note',
+            'label' => 'LBL_DESCRIPTION',
+          ),
         ),
       ),
     ),

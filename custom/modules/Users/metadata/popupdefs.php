@@ -12,7 +12,21 @@ $popupMeta = array(
 		'is_group'   => 'users.is_group',
 		'id'         => 'users.id',
 	),
-	'whereStatement'=> " users.id = '$current_user->id' ",
+	'whereStatement'=> " 
+		users.id = '$current_user->id' or 
+		users.id IN (
+		
+			SELECT `user_id` 
+			FROM `securitygroups_users` 
+			WHERE `securitygroup_id` IN (
+				SELECT `securitygroup_id` 
+				FROM `securitygroups_users`
+				WHERE `user_id` = '$current_user->id' AND deleted = 0
+			) AND deleted = 0
+			GROUP BY `user_id`
+		)	
+	
+	",
 	'searchInputs' => array(
 		'first_name',
 		'last_name',

@@ -1,9 +1,9 @@
 <?php
-// created: 2018-10-10 20:49:02
+// created: 2018-11-21 16:01:23
 $mod_strings = array (
   'LBL_LEADS' => 'Preinformes/Potenciales',
   'LBL_LEADS_SUBPANEL_TITLE' => 'Preinformes/Potenciales',
-  'LNK_NEW_OPPORTUNITY' => 'Nuevo Preinforme',
+  'LNK_NEW_OPPORTUNITY' => 'Crear Preinforme',
   'LNK_OPPORTUNITY_LIST' => 'Ver Preinformes',
   'LNK_IMPORT_OPPORTUNITIES' => 'Importar Preinformes',
   'LBL_LIST_FORM_TITLE' => 'Lista de Preinformes',
@@ -11,7 +11,7 @@ $mod_strings = array (
   'LBL_MY_CLOSED_OPPORTUNITIES' => 'Mis Preinformes Cerradas',
   'LBL_TOP_OPPORTUNITIES' => 'Mis Principales Preinformes',
   'LBL_AMOUNT' => 'Monto de Preinforme:',
-  'LBL_OPPORTUNITY_NAME' => 'Nombre del Preinforme:',
+  'LBL_OPPORTUNITY_NAME' => 'Apellido/Nombre',
   'LBL_MODULE_NAME' => 'Preinformes',
   'LBL_SALES_STAGE' => 'Estado:',
   'LBL_DATE_CLOSED' => 'Fecha de cierre:',
@@ -30,8 +30,13 @@ $mod_strings = array (
   'LBL_MKS_WAITINGLISTASSIGNMENT_OPPORTUNITIES_FROM_MKS_WAITINGLISTASSIGNMENT_TITLE' => 'Lista de Espera',
   'LBL_ID_AUTOINCREMENT_C' => '#',
   'LBL_MEANS_NOTICE_MKS_MEANSNOTICE_ID' => 'Medio de aviso (relacionado  ID)',
-  'LBL_MEANS_NOTICE' => 'Medio de aviso',
+  'LBL_MEANS_NOTICE' => 'Medio de aviso 1',
   'LBL_NEXT_CALL' => 'Próxima llamada',
   'LBL_DETAILVIEW_PANEL1' => 'Otro',
   'LBL_MODIFIED_NAME' => 'Modificado Por',
+  'LBL_ORIGIN_CONACT_C' => 'Origen',
+  'LBL_EDITVIEW_PANEL1' => 'Nuevo Panel 1',
+  'LBL_MEANS_NOTICE1_MKS_MEANSNOTICE_ID' => 'Medio de Aviso 2 (relacionado  ID)',
+  'LBL_MEANS_NOTICE1' => 'Medio de aviso 2',
+  'LBL_CREATED' => 'Creado Por',
 );

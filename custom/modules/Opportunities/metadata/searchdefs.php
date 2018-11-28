@@ -5,11 +5,61 @@ array (
   array (
     'basic_search' => 
     array (
+      'id_autoincrement_c' => 
+      array (
+        'type' => 'autoincrement',
+        'default' => true,
+        'label' => 'LBL_ID_AUTOINCREMENT_C',
+        'width' => '10%',
+        'name' => 'id_autoincrement_c',
+      ),
+      'account_name' => 
+      array (
+        'name' => 'account_name',
+        'default' => true,
+        'width' => '10%',
+      ),
       'name' => 
       array (
         'name' => 'name',
         'default' => true,
         'width' => '10%',
+      ),
+      'means_notice_c' => 
+      array (
+        'type' => 'relate',
+        'default' => true,
+        'studio' => 'visible',
+        'label' => 'LBL_MEANS_NOTICE',
+        'link' => true,
+        'width' => '10%',
+        'id' => 'MKS_MEANSNOTICE_ID_C',
+        'name' => 'means_notice_c',
+      ),
+      'means_notice1_c' => 
+      array (
+        'type' => 'relate',
+        'default' => true,
+        'studio' => 'visible',
+        'label' => 'LBL_MEANS_NOTICE1',
+        'link' => true,
+        'width' => '10%',
+        'id' => 'MKS_MEANSNOTICE_ID1_C',
+        'name' => 'means_notice1_c',
+      ),
+      'sales_stage' => 
+      array (
+        'name' => 'sales_stage',
+        'default' => true,
+        'width' => '10%',
+      ),
+      'date_entered' => 
+      array (
+        'type' => 'datetime',
+        'label' => 'LBL_DATE_ENTERED',
+        'width' => '10%',
+        'default' => true,
+        'name' => 'date_entered',
       ),
       'current_user_only' => 
       array (
@@ -30,17 +80,33 @@ array (
     ),
     'advanced_search' => 
     array (
-      'name' => 
+      'id_autoincrement_c' => 
       array (
-        'name' => 'name',
+        'type' => 'autoincrement',
         'default' => true,
+        'label' => 'LBL_ID_AUTOINCREMENT_C',
         'width' => '10%',
+        'name' => 'id_autoincrement_c',
       ),
       'account_name' => 
       array (
         'name' => 'account_name',
         'default' => true,
         'width' => '10%',
+      ),
+      'name' => 
+      array (
+        'name' => 'name',
+        'default' => true,
+        'width' => '10%',
+      ),
+      'date_entered' => 
+      array (
+        'type' => 'datetime',
+        'label' => 'LBL_DATE_ENTERED',
+        'width' => '10%',
+        'default' => true,
+        'name' => 'date_entered',
       ),
       'sales_stage' => 
       array (
@@ -58,6 +124,17 @@ array (
         'link' => true,
         'width' => '10%',
         'name' => 'means_notice_c',
+      ),
+      'means_notice1_c' => 
+      array (
+        'type' => 'relate',
+        'default' => true,
+        'studio' => 'visible',
+        'label' => 'LBL_MEANS_NOTICE1',
+        'id' => 'MKS_MEANSNOTICE_ID1_C',
+        'link' => true,
+        'width' => '10%',
+        'name' => 'means_notice1_c',
       ),
       'date_closed' => 
       array (

@@ -47,9 +47,17 @@ array (
       array (
         0 => 
         array (
-          0 => 'name',
+          0 => 
+          array (
+            'name' => 'mks_courses_mks_subjectmatter_1_name',
+            'label' => 'LBL_MKS_COURSES_MKS_SUBJECTMATTER_1_FROM_MKS_COURSES_TITLE',
+          ),
         ),
         1 => 
+        array (
+          0 => 'name',
+        ),
+        2 => 
         array (
           0 => 'assigned_user_name',
         ),

@@ -133,7 +133,11 @@ class QuickSearchDefaultsCustom
                     'group' => 'or',
                     'field_list' => $field_list,
                     'populate_list' => $populate_list,
-                    'conditions' => array(array('name'=>'name','op'=>'like_custom','end'=>'%','value'=>'')),
+                    'conditions' => array(
+											array('name'=>'name','op'=>'like_custom','end'=>'%','value'=>''),
+											array('name'=>'sic_code','op'=>'like_custom','end'=>'%','value'=>''),
+											array('name'=>'website','op'=>'like_custom','end'=>'%','value'=>'')
+								),
                     'required_list' => array($idKey),
                     'order' => 'name',
                     'limit' => '30',

@@ -2,7 +2,7 @@
 // created: 2018-10-10 14:06:25
 $mod_strings = array (
   'LBL_CONTACT' => 'Preinforme/Contacto',
-  'LBL_SECURITYGROUPS' => 'Grupos de Seguridad',
+  'LBL_SECURITYGROUPS' => 'Filiales',
   'LNK_NEW_RECORD' => 'Crear Articulo',
   'LNK_LIST' => 'Articulos',
   'LBL_LIST_FORM_TITLE' => 'Lista de Articulo',

@@ -6,5 +6,5 @@ $mod_strings = array (
   'LBL_ACCOUNTS' => 'Contactos',
   'LBL_CONTACT' => 'Preinforme/Contacto',
   'LBL_CONTACTS' => 'Preinformes/Contactos',
-  'LBL_SECURITYGROUPS' => 'Grupos de Seguridad',
+  'LBL_SECURITYGROUPS' => 'Filiales',
 );

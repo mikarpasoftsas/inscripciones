@@ -30,6 +30,12 @@ array (
         ),
       ),
       'syncDetailEditViews' => true,
+	  'includes' => 
+	   array(	
+			array (
+				'file' => 'custom/modules/mks_InterestCourse/js/editview.js',       
+			)	
+	   ),
     ),
     'panels' => 
     array (

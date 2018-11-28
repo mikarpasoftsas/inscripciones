@@ -65,7 +65,6 @@ $GLOBALS['app_list_strings']['moduleListSingular']=array (
   'SecurityGroups' => 'Filial',
 );
 $GLOBALS['app_list_strings']['day_available_list']=array (
-  '' => '',
   'Lunes' => 'Lunes',
   'Martes' => 'Martes',
   'Miercoles' => 'Miercoles',
@@ -73,13 +72,43 @@ $GLOBALS['app_list_strings']['day_available_list']=array (
   'Viernes' => 'Viernes',
   'Sabado' => 'Sàbado',
   'Domingo' => 'Domingo',
-  'Todos' => 'Todos',
 );
 $GLOBALS['app_list_strings']['turn_list']=array (
-  '' => '',
   'Manana' => 'Mañana',
   'Tarde' => 'Tarde',
   'Noche' => 'Noche',
   'Mediodia' => 'Mediodía',
   'Todos' => 'Todos',
+);
+
+$GLOBALS['app_list_strings']['origin_conact_list']=array (
+  '' => '',
+);
+$GLOBALS['app_list_strings']['type_list']=array (
+  'percentage' => '%',
+  'Valor' => 'Valor',
+);
+$GLOBALS['app_list_strings']['document_category_dom']=array (
+  '' => '',
+);
+$GLOBALS['app_list_strings']['document_subcategory_dom']=array (
+  '' => '',
+);
+
+$GLOBALS['app_list_strings']['document_status_dom']=array (
+  'Draft' => 'Draft',
+  'Closed' => 'Cerrada',
+);
+$GLOBALS['app_list_strings']['refinance_list']=array (
+  'yes' => 'Si',
+  'no' => 'No',
+);
+$GLOBALS['app_list_strings']['status_ppp_list']=array (
+  'valid' => 'Vigente',
+  'closed' => 'Cerrado',
+);
+$GLOBALS['app_list_strings']['tipo_list']=array (
+  '' => '',
+  'photo' => 'Foto',
+  'other' => 'Otro',
 );

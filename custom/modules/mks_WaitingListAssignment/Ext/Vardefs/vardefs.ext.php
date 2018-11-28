@@ -36,15 +36,28 @@ $dictionary["mks_WaitingListAssignment"]["fields"]["mks_waitinglistassignment_op
 );
 
 
+ // created: 2018-09-24 17:14:39
+$dictionary['mks_WaitingListAssignment']['fields']['name']['full_text_search']=array (
+);
+
+ 
+
  // created: 2018-09-24 17:15:05
 $dictionary['mks_WaitingListAssignment']['fields']['id_autoincrement_c']['inline_edit']='1';
 $dictionary['mks_WaitingListAssignment']['fields']['id_autoincrement_c']['labelValue']='#';
 
  
 
- // created: 2018-09-24 17:14:39
-$dictionary['mks_WaitingListAssignment']['fields']['name']['full_text_search']=array (
-);
+ // created: 2018-10-18 15:42:37
+$dictionary['mks_WaitingListAssignment']['fields']['day_available']['default']='';
+$dictionary['mks_WaitingListAssignment']['fields']['day_available']['len']=NULL;
+$dictionary['mks_WaitingListAssignment']['fields']['day_available']['required']=true;
+
+ 
+
+ // created: 2018-10-18 15:42:54
+$dictionary['mks_WaitingListAssignment']['fields']['turn']['len']=NULL;
+$dictionary['mks_WaitingListAssignment']['fields']['turn']['required']=true;
 
  
 ?>

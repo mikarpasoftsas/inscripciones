@@ -3,5 +3,5 @@
 $mod_strings = array (
   'LBL_SURVEYRESPONSES_ACCOUNTS_FROM_ACCOUNTS_TITLE' => 'Contacto',
   'LBL_SURVEYRESPONSES_CONTACTS_FROM_CONTACTS_TITLE' => 'Preinforme/Contacto',
-  'LBL_SECURITYGROUPS' => 'Grupos de Seguridad',
+  'LBL_SECURITYGROUPS' => 'Filiales',
 );

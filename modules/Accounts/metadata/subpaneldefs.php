@@ -111,11 +111,6 @@ $layout_defs['Accounts'] = array(
                     'subpanel_name' => 'ForHistory',
                     'get_subpanel_data' => 'calls',
                 ),
-                'notes' => array(
-                    'module' => 'Notes',
-                    'subpanel_name' => 'ForHistory',
-                    'get_subpanel_data' => 'notes',
-                ),
                 'emails' => array(
                     'module' => 'Emails',
                     'subpanel_name' => 'ForUnlinkedEmailHistory',
@@ -156,6 +151,27 @@ $layout_defs['Accounts'] = array(
                         'width' => '10%',
                     ),
             ),
+        ),
+		'notes' => array(
+            'order' => 25,
+            'module' => 'Notes',
+            'subpanel_name' => 'default',
+            'sort_order' => 'asc',
+            'sort_by' => 'id',
+            'title_key' => 'LBL_NOTES_SUBPANEL_TITLE',
+            'get_subpanel_data' => 'notes',
+            'top_buttons' =>
+                array(
+                    0 =>
+                        array(
+                            'widget_class' => 'SubPanelTopButtonQuickCreate',
+                        ),
+                    1 =>
+                        array(
+                            'widget_class' => 'SubPanelTopSelectButton',
+                            'mode' => 'MultiSelect',
+                        ),
+                ),
         ),
         'documents' => array(
             'order' => 25,

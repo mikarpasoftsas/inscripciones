@@ -87,6 +87,14 @@ array (
         array (
           0 => 
           array (
+            'name' => 'id_autoincrement_c',
+            'label' => 'LBL_ID_AUTOINCREMENT',
+          ),
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
             'name' => 'first_name_c',
             'label' => 'LBL_FIRST_NAME',
           ),
@@ -96,7 +104,7 @@ array (
             'label' => 'LBL_LAST_NAME',
           ),
         ),
-        1 => 
+        2 => 
         array (
           0 => 
           array (
@@ -110,7 +118,7 @@ array (
             'label' => 'LBL_ID_LOCAL_C',
           ),
         ),
-        2 => 
+        3 => 
         array (
           0 => 
           array (
@@ -124,7 +132,7 @@ array (
             'label' => 'LBL_PHONE_MOBILE',
           ),
         ),
-        3 => 
+        4 => 
         array (
           0 => 
           array (
@@ -138,7 +146,7 @@ array (
             'label' => 'LBL_PHONE_OFFICE',
           ),
         ),
-        4 => 
+        5 => 
         array (
           0 => 
           array (
@@ -152,7 +160,7 @@ array (
             'label' => 'LBL_BIRTHDATE',
           ),
         ),
-        5 => 
+        6 => 
         array (
           0 => 
           array (
@@ -161,7 +169,7 @@ array (
             'label' => 'LBL_EMAIL',
           ),
         ),
-        6 => 
+        7 => 
         array (
           0 => 
           array (
@@ -176,7 +184,17 @@ array (
             'label' => 'LBL_TYPE',
           ),
         ),
-        7 => 
+        8 => 
+        array (
+          0 => 
+          array (
+            'name' => 'avatar_c',
+            'studio' => 'visible',
+            'label' => 'LBL_AVATAR',
+          ),
+          1 => '',
+        ),
+        9 => 
         array (
           0 => 
           array (
