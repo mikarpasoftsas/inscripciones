@@ -42,24 +42,15 @@ $dictionary['mks_Refinances']['fields']['attachment_c']['labelValue']='Archivo f
 
  
 
- // created: 2018-11-16 15:41:39
-$dictionary['mks_Refinances']['fields']['id_autoincrement']['format']='{RFM}{-}{y}{-}{00000000}{}{}';
-
- 
-
- // created: 2018-11-16 21:06:54
-$dictionary['mks_Refinances']['fields']['mks_courses_id_c']['inline_edit']=1;
-
- 
-
  // created: 2018-11-16 21:06:54
 $dictionary['mks_Refinances']['fields']['course_c']['inline_edit']='';
 $dictionary['mks_Refinances']['fields']['course_c']['labelValue']='Carreras y cursos';
 
  
 
- // created: 2018-11-16 21:07:19
-$dictionary['mks_Refinances']['fields']['mks_academicgroups_id_c']['inline_edit']=1;
+ // created: 2018-11-16 21:07:44
+$dictionary['mks_Refinances']['fields']['grouppractice_c']['inline_edit']='';
+$dictionary['mks_Refinances']['fields']['grouppractice_c']['labelValue']='Grupo Practica';
 
  
 
@@ -69,14 +60,23 @@ $dictionary['mks_Refinances']['fields']['grouptheory_c']['labelValue']='Grupo Te
 
  
 
+ // created: 2018-11-16 15:41:39
+$dictionary['mks_Refinances']['fields']['id_autoincrement']['format']='{RFM}{-}{y}{-}{00000000}{}{}';
+
+ 
+
  // created: 2018-11-16 21:07:44
 $dictionary['mks_Refinances']['fields']['mks_academicgroups_id1_c']['inline_edit']=1;
 
  
 
- // created: 2018-11-16 21:07:44
-$dictionary['mks_Refinances']['fields']['grouppractice_c']['inline_edit']='';
-$dictionary['mks_Refinances']['fields']['grouppractice_c']['labelValue']='Grupo Practica';
+ // created: 2018-11-16 21:07:19
+$dictionary['mks_Refinances']['fields']['mks_academicgroups_id_c']['inline_edit']=1;
+
+ 
+
+ // created: 2018-11-16 21:06:54
+$dictionary['mks_Refinances']['fields']['mks_courses_id_c']['inline_edit']=1;
 
  
 

@@ -2,15 +2,16 @@
  //WARNING: The contents of this file are auto-generated
 
 
-// created: 2018-10-22 21:39:35
-$dictionary["mks_AcademicGroups"]["fields"]["mks_academicgroups_securitygroups"] = array (
-  'name' => 'mks_academicgroups_securitygroups',
+// created: 2018-10-25 14:07:23
+$dictionary["mks_AcademicGroups"]["fields"]["mks_academicgroups_mks_groupmatters_1"] = array (
+  'name' => 'mks_academicgroups_mks_groupmatters_1',
   'type' => 'link',
-  'relationship' => 'mks_academicgroups_securitygroups',
+  'relationship' => 'mks_academicgroups_mks_groupmatters_1',
   'source' => 'non-db',
-  'module' => 'SecurityGroups',
-  'bean_name' => 'SecurityGroup',
-  'vname' => 'LBL_MKS_ACADEMICGROUPS_SECURITYGROUPS_FROM_SECURITYGROUPS_TITLE',
+  'module' => 'mks_GroupMatters',
+  'bean_name' => 'mks_GroupMatters',
+  'side' => 'right',
+  'vname' => 'LBL_MKS_ACADEMICGROUPS_MKS_GROUPMATTERS_1_FROM_MKS_GROUPMATTERS_TITLE',
 );
 
 
@@ -27,6 +28,30 @@ $dictionary["mks_AcademicGroups"]["fields"]["mks_academicgroups_mks_groupschedul
 );
 
 
+// created: 2018-10-25 15:02:33
+$dictionary["mks_AcademicGroups"]["fields"]["mks_academicgroups_mks_teacher_1"] = array (
+  'name' => 'mks_academicgroups_mks_teacher_1',
+  'type' => 'link',
+  'relationship' => 'mks_academicgroups_mks_teacher_1',
+  'source' => 'non-db',
+  'module' => 'mks_Teacher',
+  'bean_name' => 'mks_Teacher',
+  'vname' => 'LBL_MKS_ACADEMICGROUPS_MKS_TEACHER_1_FROM_MKS_TEACHER_TITLE',
+);
+
+
+// created: 2018-10-22 21:39:35
+$dictionary["mks_AcademicGroups"]["fields"]["mks_academicgroups_securitygroups"] = array (
+  'name' => 'mks_academicgroups_securitygroups',
+  'type' => 'link',
+  'relationship' => 'mks_academicgroups_securitygroups',
+  'source' => 'non-db',
+  'module' => 'SecurityGroups',
+  'bean_name' => 'SecurityGroup',
+  'vname' => 'LBL_MKS_ACADEMICGROUPS_SECURITYGROUPS_FROM_SECURITYGROUPS_TITLE',
+);
+
+
 // created: 2018-10-22 21:39:35
 $dictionary["mks_AcademicGroups"]["fields"]["mks_academicgroups_users"] = array (
   'name' => 'mks_academicgroups_users',
@@ -37,31 +62,6 @@ $dictionary["mks_AcademicGroups"]["fields"]["mks_academicgroups_users"] = array 
   'bean_name' => 'User',
   'side' => 'right',
   'vname' => 'LBL_MKS_ACADEMICGROUPS_USERS_FROM_USERS_TITLE',
-);
-
-
-// created: 2018-10-25 14:07:23
-$dictionary["mks_AcademicGroups"]["fields"]["mks_academicgroups_mks_groupmatters_1"] = array (
-  'name' => 'mks_academicgroups_mks_groupmatters_1',
-  'type' => 'link',
-  'relationship' => 'mks_academicgroups_mks_groupmatters_1',
-  'source' => 'non-db',
-  'module' => 'mks_GroupMatters',
-  'bean_name' => 'mks_GroupMatters',
-  'side' => 'right',
-  'vname' => 'LBL_MKS_ACADEMICGROUPS_MKS_GROUPMATTERS_1_FROM_MKS_GROUPMATTERS_TITLE',
-);
-
-
-// created: 2018-10-25 15:02:33
-$dictionary["mks_AcademicGroups"]["fields"]["mks_academicgroups_mks_teacher_1"] = array (
-  'name' => 'mks_academicgroups_mks_teacher_1',
-  'type' => 'link',
-  'relationship' => 'mks_academicgroups_mks_teacher_1',
-  'source' => 'non-db',
-  'module' => 'mks_Teacher',
-  'bean_name' => 'mks_Teacher',
-  'vname' => 'LBL_MKS_ACADEMICGROUPS_MKS_TEACHER_1_FROM_MKS_TEACHER_TITLE',
 );
 
 

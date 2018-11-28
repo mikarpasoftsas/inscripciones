@@ -36,14 +36,13 @@ $dictionary["mks_GroupSchedule"]["fields"]["mks_academicgroups_mks_groupschedule
 );
 
 
- // created: 2018-10-25 23:02:11
-$dictionary['mks_GroupSchedule']['fields']['id_autoincrement']['format']='{HGR}{-}{y}{-}{00000}{}{}';
-$dictionary['mks_GroupSchedule']['fields']['id_autoincrement']['inline_edit']='';
+ // created: 2018-10-25 23:02:16
+$dictionary['mks_GroupSchedule']['fields']['classroom']['inline_edit']='';
 
  
 
- // created: 2018-10-25 23:02:16
-$dictionary['mks_GroupSchedule']['fields']['classroom']['inline_edit']='';
+ // created: 2018-10-25 23:02:40
+$dictionary['mks_GroupSchedule']['fields']['day']['inline_edit']='';
 
  
 
@@ -52,13 +51,14 @@ $dictionary['mks_GroupSchedule']['fields']['end_time']['inline_edit']='';
 
  
 
- // created: 2018-10-25 23:02:32
-$dictionary['mks_GroupSchedule']['fields']['start_time']['inline_edit']='';
+ // created: 2018-10-25 23:02:11
+$dictionary['mks_GroupSchedule']['fields']['id_autoincrement']['format']='{HGR}{-}{y}{-}{00000}{}{}';
+$dictionary['mks_GroupSchedule']['fields']['id_autoincrement']['inline_edit']='';
 
  
 
- // created: 2018-10-25 23:02:40
-$dictionary['mks_GroupSchedule']['fields']['day']['inline_edit']='';
+ // created: 2018-10-25 23:02:32
+$dictionary['mks_GroupSchedule']['fields']['start_time']['inline_edit']='';
 
  
 ?>

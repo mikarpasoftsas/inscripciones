@@ -2,6 +2,32 @@
  //WARNING: The contents of this file are auto-generated
 
 
+// created: 2018-11-01 22:42:26
+$dictionary["mks_CustomPaymentPlan"]["fields"]["mks_customdiscountrules_mks_custompaymentplan"] = array (
+  'name' => 'mks_customdiscountrules_mks_custompaymentplan',
+  'type' => 'link',
+  'relationship' => 'mks_customdiscountrules_mks_custompaymentplan',
+  'source' => 'non-db',
+  'module' => 'mks_CustomDiscountRules',
+  'bean_name' => 'mks_CustomDiscountRules',
+  'side' => 'right',
+  'vname' => 'LBL_MKS_CUSTOMDISCOUNTRULES_MKS_CUSTOMPAYMENTPLAN_FROM_MKS_CUSTOMDISCOUNTRULES_TITLE',
+);
+
+
+// created: 2018-11-01 22:42:13
+$dictionary["mks_CustomPaymentPlan"]["fields"]["mks_custompaymentplan_mks_customplanfees"] = array (
+  'name' => 'mks_custompaymentplan_mks_customplanfees',
+  'type' => 'link',
+  'relationship' => 'mks_custompaymentplan_mks_customplanfees',
+  'source' => 'non-db',
+  'module' => 'mks_CustomPlanFees',
+  'bean_name' => 'mks_CustomPlanFees',
+  'side' => 'right',
+  'vname' => 'LBL_MKS_CUSTOMPAYMENTPLAN_MKS_CUSTOMPLANFEES_FROM_MKS_CUSTOMPLANFEES_TITLE',
+);
+
+
 // created: 2018-11-01 22:42:13
 $dictionary["mks_CustomPaymentPlan"]["fields"]["mks_custompaymentplan_mks_registration"] = array (
   'name' => 'mks_custompaymentplan_mks_registration',
@@ -33,32 +59,6 @@ $dictionary["mks_CustomPaymentPlan"]["fields"]["mks_custompaymentplan_mks_regist
   'reportable' => false,
   'side' => 'right',
   'vname' => 'LBL_MKS_CUSTOMPAYMENTPLAN_MKS_REGISTRATION_FROM_MKS_CUSTOMPAYMENTPLAN_TITLE',
-);
-
-
-// created: 2018-11-01 22:42:13
-$dictionary["mks_CustomPaymentPlan"]["fields"]["mks_custompaymentplan_mks_customplanfees"] = array (
-  'name' => 'mks_custompaymentplan_mks_customplanfees',
-  'type' => 'link',
-  'relationship' => 'mks_custompaymentplan_mks_customplanfees',
-  'source' => 'non-db',
-  'module' => 'mks_CustomPlanFees',
-  'bean_name' => 'mks_CustomPlanFees',
-  'side' => 'right',
-  'vname' => 'LBL_MKS_CUSTOMPAYMENTPLAN_MKS_CUSTOMPLANFEES_FROM_MKS_CUSTOMPLANFEES_TITLE',
-);
-
-
-// created: 2018-11-01 22:42:26
-$dictionary["mks_CustomPaymentPlan"]["fields"]["mks_customdiscountrules_mks_custompaymentplan"] = array (
-  'name' => 'mks_customdiscountrules_mks_custompaymentplan',
-  'type' => 'link',
-  'relationship' => 'mks_customdiscountrules_mks_custompaymentplan',
-  'source' => 'non-db',
-  'module' => 'mks_CustomDiscountRules',
-  'bean_name' => 'mks_CustomDiscountRules',
-  'side' => 'right',
-  'vname' => 'LBL_MKS_CUSTOMDISCOUNTRULES_MKS_CUSTOMPAYMENTPLAN_FROM_MKS_CUSTOMDISCOUNTRULES_TITLE',
 );
 
 
