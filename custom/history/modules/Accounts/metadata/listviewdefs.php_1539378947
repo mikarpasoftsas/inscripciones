@@ -1,0 +1,13 @@
+<?php
+$listViewDefs ['Accounts'] = 
+array (
+  'LAST_NAME_C' => 
+  array (
+    'type' => 'varchar',
+    'default' => true,
+    'label' => 'LBL_LAST_NAME',
+    'width' => '10%',
+  ),
+);
+;
+?>

@@ -1,0 +1,44 @@
+<?php
+$popupMeta = array (
+    'moduleMain' => 'mks_AcademicGroups',
+    'varName' => 'mks_AcademicGroups',
+    'orderBy' => 'mks_academicgroups.name',
+    'whereClauses' => array (
+  'name' => 'mks_academicgroups.name',
+),
+    'searchInputs' => array (
+  0 => 'mks_academicgroups_number',
+  1 => 'name',
+  2 => 'priority',
+  3 => 'status',
+),
+    'listviewdefs' => array (
+  'ID_AUTOINCREMENT' => 
+  array (
+    'type' => 'autoincrement',
+    'label' => 'LBL_ID_AUTOINCREMENT',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'id_autoincrement',
+  ),
+  'COURSES' => 
+  array (
+    'type' => 'relate',
+    'studio' => 'visible',
+    'label' => 'LBL_COURSES',
+    'id' => 'MKS_COURSES_ID_C',
+    'link' => true,
+    'width' => '10%',
+    'default' => true,
+  ),
+  'ASSIGNED_USER_NAME' => 
+  array (
+    'width' => '9%',
+    'label' => 'LBL_ASSIGNED_TO_NAME',
+    'module' => 'Employees',
+    'id' => 'ASSIGNED_USER_ID',
+    'default' => true,
+    'name' => 'assigned_user_name',
+  ),
+),
+);

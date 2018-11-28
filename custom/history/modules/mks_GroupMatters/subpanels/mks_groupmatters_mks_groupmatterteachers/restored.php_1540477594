@@ -1,0 +1,41 @@
+<?php
+// created: 2018-10-25 14:26:29
+$layout_defs = array (
+  'id_autoincrement' => 
+  array (
+    'type' => 'autoincrement',
+    'vname' => 'LBL_ID_AUTOINCREMENT',
+    'width' => '10%',
+    'default' => true,
+  ),
+  'amount_theory' => 
+  array (
+    'type' => 'currency',
+    'vname' => 'LBL_AMOUNT_THEORY',
+    'currency_format' => true,
+    'width' => '10%',
+    'default' => true,
+  ),
+  'amount_practice' => 
+  array (
+    'type' => 'currency',
+    'vname' => 'LBL_AMOUNT_PRACTICE',
+    'currency_format' => true,
+    'width' => '10%',
+    'default' => true,
+  ),
+  'date_modified' => 
+  array (
+    'vname' => 'LBL_DATE_MODIFIED',
+    'width' => '45%',
+    'default' => true,
+  ),
+  'edit_button' => 
+  array (
+    'vname' => 'LBL_EDIT_BUTTON',
+    'widget_class' => 'SubPanelEditButton',
+    'module' => 'mks_GroupMatterTeachers',
+    'width' => '4%',
+    'default' => true,
+  ),
+);
