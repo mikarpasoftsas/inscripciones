@@ -2,6 +2,32 @@
  //WARNING: The contents of this file are auto-generated
 
 
+// created: 2018-11-24 14:34:24
+$dictionary["Account"]["fields"]["accounts_mks_messagesfb_1"] = array (
+  'name' => 'accounts_mks_messagesfb_1',
+  'type' => 'link',
+  'relationship' => 'accounts_mks_messagesfb_1',
+  'source' => 'non-db',
+  'module' => 'mks_MessagesFb',
+  'bean_name' => 'mks_MessagesFb',
+  'side' => 'right',
+  'vname' => 'LBL_ACCOUNTS_MKS_MESSAGESFB_1_FROM_MKS_MESSAGESFB_TITLE',
+);
+
+
+// created: 2018-11-13 17:09:55
+$dictionary["Account"]["fields"]["accounts_mks_registration_1"] = array (
+  'name' => 'accounts_mks_registration_1',
+  'type' => 'link',
+  'relationship' => 'accounts_mks_registration_1',
+  'source' => 'non-db',
+  'module' => 'mks_Registration',
+  'bean_name' => 'mks_Registration',
+  'side' => 'right',
+  'vname' => 'LBL_ACCOUNTS_MKS_REGISTRATION_1_FROM_MKS_REGISTRATION_TITLE',
+);
+
+
  // created: 2018-09-25 15:01:23
 $dictionary['Account']['fields']['account_type']['len']=100;
 $dictionary['Account']['fields']['account_type']['inline_edit']=true;
@@ -11,15 +37,33 @@ $dictionary['Account']['fields']['account_type']['default']='Potencial';
 
  
 
+ // created: 2018-11-24 14:12:26
+$dictionary['Account']['fields']['avatar_c']['inline_edit']='1';
+$dictionary['Account']['fields']['avatar_c']['labelValue']='Avatar';
+
+ 
+
  // created: 2018-10-06 12:25:00
 $dictionary['Account']['fields']['birthdate_c']['inline_edit']='1';
 $dictionary['Account']['fields']['birthdate_c']['labelValue']='Fecha de nacimieto';
 
  
 
+ // created: 2018-11-23 21:27:54
+$dictionary['Account']['fields']['fb_user_id_c']['inline_edit']='1';
+$dictionary['Account']['fields']['fb_user_id_c']['labelValue']='Id Usuario FB';
+
+ 
+
  // created: 2018-10-06 12:13:13
 $dictionary['Account']['fields']['first_name_c']['inline_edit']='1';
 $dictionary['Account']['fields']['first_name_c']['labelValue']='Nombre';
+
+ 
+
+ // created: 2018-11-13 18:55:05
+$dictionary['Account']['fields']['id_autoincrement_c']['inline_edit']='';
+$dictionary['Account']['fields']['id_autoincrement_c']['labelValue']='#';
 
  
 
@@ -138,48 +182,4 @@ $dictionary['Account']['fields']['sexo_c']['inline_edit']='1';
 $dictionary['Account']['fields']['sexo_c']['labelValue']='sexo c';
 
  
-
-// created: 2018-11-13 17:09:55
-$dictionary["Account"]["fields"]["accounts_mks_registration_1"] = array (
-  'name' => 'accounts_mks_registration_1',
-  'type' => 'link',
-  'relationship' => 'accounts_mks_registration_1',
-  'source' => 'non-db',
-  'module' => 'mks_Registration',
-  'bean_name' => 'mks_Registration',
-  'side' => 'right',
-  'vname' => 'LBL_ACCOUNTS_MKS_REGISTRATION_1_FROM_MKS_REGISTRATION_TITLE',
-);
-
-
- // created: 2018-11-13 18:55:05
-$dictionary['Account']['fields']['id_autoincrement_c']['inline_edit']='';
-$dictionary['Account']['fields']['id_autoincrement_c']['labelValue']='#';
-
- 
-
- // created: 2018-11-23 21:27:54
-$dictionary['Account']['fields']['fb_user_id_c']['inline_edit']='1';
-$dictionary['Account']['fields']['fb_user_id_c']['labelValue']='Id Usuario FB';
-
- 
-
- // created: 2018-11-24 14:12:26
-$dictionary['Account']['fields']['avatar_c']['inline_edit']='1';
-$dictionary['Account']['fields']['avatar_c']['labelValue']='Avatar';
-
- 
-
-// created: 2018-11-24 14:34:24
-$dictionary["Account"]["fields"]["accounts_mks_messagesfb_1"] = array (
-  'name' => 'accounts_mks_messagesfb_1',
-  'type' => 'link',
-  'relationship' => 'accounts_mks_messagesfb_1',
-  'source' => 'non-db',
-  'module' => 'mks_MessagesFb',
-  'bean_name' => 'mks_MessagesFb',
-  'side' => 'right',
-  'vname' => 'LBL_ACCOUNTS_MKS_MESSAGESFB_1_FROM_MKS_MESSAGESFB_TITLE',
-);
-
 ?>

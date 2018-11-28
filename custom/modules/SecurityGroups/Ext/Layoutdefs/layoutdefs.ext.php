@@ -2,6 +2,30 @@
  //WARNING: The contents of this file are auto-generated
 
 
+ // created: 2018-10-22 21:39:35
+$layout_defs["SecurityGroups"]["subpanel_setup"]['mks_academicgroups_securitygroups'] = array (
+  'order' => 100,
+  'module' => 'mks_AcademicGroups',
+  'subpanel_name' => 'default',
+  'sort_order' => 'asc',
+  'sort_by' => 'id',
+  'title_key' => 'LBL_MKS_ACADEMICGROUPS_SECURITYGROUPS_FROM_MKS_ACADEMICGROUPS_TITLE',
+  'get_subpanel_data' => 'mks_academicgroups_securitygroups',
+  'top_buttons' => 
+  array (
+    0 => 
+    array (
+      'widget_class' => 'SubPanelTopButtonQuickCreate',
+    ),
+    1 => 
+    array (
+      'widget_class' => 'SubPanelTopSelectButton',
+      'mode' => 'MultiSelect',
+    ),
+  ),
+);
+
+
  // created: 2018-09-24 16:25:50
 $layout_defs["SecurityGroups"]["subpanel_setup"]['mks_bank_securitygroups'] = array (
   'order' => 100,
@@ -98,6 +122,30 @@ $layout_defs["SecurityGroups"]["subpanel_setup"]['mks_courses_securitygroups_1']
 );
 
 
+ // created: 2018-11-24 15:24:05
+$layout_defs["SecurityGroups"]["subpanel_setup"]['mks_messagesfb_securitygroups_1'] = array (
+  'order' => 100,
+  'module' => 'mks_MessagesFb',
+  'subpanel_name' => 'default',
+  'sort_order' => 'asc',
+  'sort_by' => 'id',
+  'title_key' => 'LBL_MKS_MESSAGESFB_SECURITYGROUPS_1_FROM_MKS_MESSAGESFB_TITLE',
+  'get_subpanel_data' => 'mks_messagesfb_securitygroups_1',
+  'top_buttons' => 
+  array (
+    0 => 
+    array (
+      'widget_class' => 'SubPanelTopButtonQuickCreate',
+    ),
+    1 => 
+    array (
+      'widget_class' => 'SubPanelTopSelectButton',
+      'mode' => 'MultiSelect',
+    ),
+  ),
+);
+
+
  // created: 2018-09-24 15:56:18
 $layout_defs["SecurityGroups"]["subpanel_setup"]['mks_movementtype_securitygroups'] = array (
   'order' => 100,
@@ -131,6 +179,30 @@ $layout_defs["SecurityGroups"]["subpanel_setup"]['mks_movement_securitygroups'] 
   'sort_by' => 'id',
   'title_key' => 'LBL_MKS_MOVEMENT_SECURITYGROUPS_FROM_MKS_MOVEMENT_TITLE',
   'get_subpanel_data' => 'mks_movement_securitygroups',
+  'top_buttons' => 
+  array (
+    0 => 
+    array (
+      'widget_class' => 'SubPanelTopButtonQuickCreate',
+    ),
+    1 => 
+    array (
+      'widget_class' => 'SubPanelTopSelectButton',
+      'mode' => 'MultiSelect',
+    ),
+  ),
+);
+
+
+ // created: 2018-11-13 17:39:44
+$layout_defs["SecurityGroups"]["subpanel_setup"]['mks_registration_securitygroups_1'] = array (
+  'order' => 100,
+  'module' => 'mks_Registration',
+  'subpanel_name' => 'default',
+  'sort_order' => 'asc',
+  'sort_by' => 'id',
+  'title_key' => 'LBL_MKS_REGISTRATION_SECURITYGROUPS_1_FROM_MKS_REGISTRATION_TITLE',
+  'get_subpanel_data' => 'mks_registration_securitygroups_1',
   'top_buttons' => 
   array (
     0 => 
@@ -203,78 +275,6 @@ $layout_defs["SecurityGroups"]["subpanel_setup"]['mks_teacher_securitygroups'] =
   'sort_by' => 'id',
   'title_key' => 'LBL_MKS_TEACHER_SECURITYGROUPS_FROM_MKS_TEACHER_TITLE',
   'get_subpanel_data' => 'mks_teacher_securitygroups',
-  'top_buttons' => 
-  array (
-    0 => 
-    array (
-      'widget_class' => 'SubPanelTopButtonQuickCreate',
-    ),
-    1 => 
-    array (
-      'widget_class' => 'SubPanelTopSelectButton',
-      'mode' => 'MultiSelect',
-    ),
-  ),
-);
-
-
- // created: 2018-10-22 21:39:35
-$layout_defs["SecurityGroups"]["subpanel_setup"]['mks_academicgroups_securitygroups'] = array (
-  'order' => 100,
-  'module' => 'mks_AcademicGroups',
-  'subpanel_name' => 'default',
-  'sort_order' => 'asc',
-  'sort_by' => 'id',
-  'title_key' => 'LBL_MKS_ACADEMICGROUPS_SECURITYGROUPS_FROM_MKS_ACADEMICGROUPS_TITLE',
-  'get_subpanel_data' => 'mks_academicgroups_securitygroups',
-  'top_buttons' => 
-  array (
-    0 => 
-    array (
-      'widget_class' => 'SubPanelTopButtonQuickCreate',
-    ),
-    1 => 
-    array (
-      'widget_class' => 'SubPanelTopSelectButton',
-      'mode' => 'MultiSelect',
-    ),
-  ),
-);
-
-
- // created: 2018-11-13 17:39:44
-$layout_defs["SecurityGroups"]["subpanel_setup"]['mks_registration_securitygroups_1'] = array (
-  'order' => 100,
-  'module' => 'mks_Registration',
-  'subpanel_name' => 'default',
-  'sort_order' => 'asc',
-  'sort_by' => 'id',
-  'title_key' => 'LBL_MKS_REGISTRATION_SECURITYGROUPS_1_FROM_MKS_REGISTRATION_TITLE',
-  'get_subpanel_data' => 'mks_registration_securitygroups_1',
-  'top_buttons' => 
-  array (
-    0 => 
-    array (
-      'widget_class' => 'SubPanelTopButtonQuickCreate',
-    ),
-    1 => 
-    array (
-      'widget_class' => 'SubPanelTopSelectButton',
-      'mode' => 'MultiSelect',
-    ),
-  ),
-);
-
-
- // created: 2018-11-24 15:24:05
-$layout_defs["SecurityGroups"]["subpanel_setup"]['mks_messagesfb_securitygroups_1'] = array (
-  'order' => 100,
-  'module' => 'mks_MessagesFb',
-  'subpanel_name' => 'default',
-  'sort_order' => 'asc',
-  'sort_by' => 'id',
-  'title_key' => 'LBL_MKS_MESSAGESFB_SECURITYGROUPS_1_FROM_MKS_MESSAGESFB_TITLE',
-  'get_subpanel_data' => 'mks_messagesfb_securitygroups_1',
   'top_buttons' => 
   array (
     0 => 
