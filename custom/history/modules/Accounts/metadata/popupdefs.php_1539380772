@@ -1,0 +1,129 @@
+<?php
+$popupMeta = array (
+    'moduleMain' => 'Account',
+    'varName' => 'ACCOUNT',
+    'orderBy' => 'name',
+    'whereClauses' => array (
+  'name' => 'accounts.name',
+  'account_type' => 'accounts.account_type',
+  'email' => 'accounts.email',
+  'id_local_c' => 'accounts_cstm.id_local_c',
+  'phone_office' => 'accounts.phone_office',
+  'phone_mobile_c' => 'accounts_cstm.phone_mobile_c',
+),
+    'searchInputs' => array (
+  0 => 'name',
+  3 => 'account_type',
+  7 => 'email',
+  8 => 'id_local_c',
+  9 => 'phone_office',
+  10 => 'phone_mobile_c',
+),
+    'create' => array (
+  'formBase' => 'AccountFormBase.php',
+  'formBaseClass' => 'AccountFormBase',
+  'getFormBodyParams' => 
+  array (
+    0 => '',
+    1 => '',
+    2 => 'AccountSave',
+  ),
+  'createButton' => 'LNK_NEW_ACCOUNT',
+),
+    'searchdefs' => array (
+  'name' => 
+  array (
+    'name' => 'name',
+    'width' => '10%',
+  ),
+  'phone_mobile_c' => 
+  array (
+    'type' => 'phone',
+    'label' => 'LBL_PHONE_MOBILE',
+    'width' => '10%',
+    'name' => 'phone_mobile_c',
+  ),
+  'phone_office' => 
+  array (
+    'type' => 'phone',
+    'label' => 'LBL_PHONE_OFFICE',
+    'width' => '10%',
+    'name' => 'phone_office',
+  ),
+  'id_local_c' => 
+  array (
+    'type' => 'varchar',
+    'label' => 'LBL_ID_LOCAL_C',
+    'width' => '10%',
+    'name' => 'id_local_c',
+  ),
+  'account_type' => 
+  array (
+    'type' => 'enum',
+    'label' => 'LBL_TYPE',
+    'width' => '10%',
+    'name' => 'account_type',
+  ),
+  'email' => 
+  array (
+    'name' => 'email',
+    'width' => '10%',
+  ),
+),
+    'listviewdefs' => array (
+  'LAST_NAME_C' => 
+  array (
+    'type' => 'varchar',
+	'link'=>true,
+    'default' => true,
+    'label' => 'LBL_LAST_NAME',
+    'width' => '10%',
+    'name' => 'last_name_c',
+  ),
+  'FIRST_NAME_C' => 
+  array (
+    'type' => 'varchar',
+	'link'=>true,
+    'default' => true,
+    'label' => 'LBL_FIRST_NAME',
+    'width' => '10%',
+  ),
+  'PHONE_MOBILE_C' => 
+  array (
+    'type' => 'phone',
+    'default' => true,
+    'label' => 'LBL_PHONE_MOBILE',
+    'width' => '10%',
+    'name' => 'phone_mobile_c',
+  ),
+  'EMAIL1' => 
+  array (
+    'type' => 'varchar',
+    'studio' => 
+    array (
+      'editField' => true,
+      'searchview' => false,
+    ),
+    'label' => 'LBL_EMAIL',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'email1',
+  ),
+  'ACCOUNT_TYPE' => 
+  array (
+    'type' => 'enum',
+    'label' => 'LBL_TYPE',
+    'width' => '10%',
+    'default' => true,
+    'name' => 'account_type',
+  ),
+  'ID_LOCAL_C' => 
+  array (
+    'type' => 'varchar',
+    'default' => true,
+    'label' => 'LBL_ID_LOCAL_C',
+    'width' => '10%',
+    'name' => 'id_local_c',
+  ),
+),
+);

@@ -1,0 +1,60 @@
+<?php
+// created: 2018-10-22 21:03:27
+$layout_defs = array (
+  'top_buttons' => 
+  array (
+    0 => 
+    array (
+      'widget_class' => 'SubPanelTopCreateButton',
+    ),
+    1 => 
+    array (
+      'widget_class' => 'SubPanelTopSelectButton',
+      'popup_module' => 'mks_AcademicGroups',
+    ),
+  ),
+  'where' => '',
+  'list_fields' => 
+  array (
+    'id_autoincrement' => 
+    array (
+      'type' => 'autoincrement',
+      'vname' => 'LBL_ID_AUTOINCREMENT',
+      'width' => '10%',
+      'default' => true,
+    ),
+    'name' => 
+    array (
+      'type' => 'name',
+      'link' => true,
+      'width' => '45%',
+      'vname' => 'LBL_NAME',
+      'default' => true,
+      'widget_class' => 'SubPanelDetailViewLink',
+      'target_module' => NULL,
+      'target_record_key' => NULL,
+    ),
+    'date_modified' => 
+    array (
+      'vname' => 'LBL_DATE_MODIFIED',
+      'width' => '45%',
+      'default' => true,
+    ),
+    'edit_button' => 
+    array (
+      'vname' => 'LBL_EDIT_BUTTON',
+      'widget_class' => 'SubPanelEditButton',
+      'module' => 'mks_AcademicGroups',
+      'width' => '4%',
+      'default' => true,
+    ),
+    'remove_button' => 
+    array (
+      'vname' => 'LBL_REMOVE',
+      'widget_class' => 'SubPanelRemoveButton',
+      'module' => 'mks_AcademicGroups',
+      'width' => '5%',
+      'default' => true,
+    ),
+  ),
+);
