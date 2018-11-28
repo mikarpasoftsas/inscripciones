@@ -3,11 +3,6 @@
 
  
  //WARNING: The contents of this file are auto-generated
-include('custom/metadata/mks_courses_mks_coursesdetailMetaData.php');
-
-
- 
- //WARNING: The contents of this file are auto-generated
 include('custom/metadata/mks_courses_securitygroupsMetaData.php');
 
 
@@ -24,11 +19,6 @@ include('custom/metadata/mks_nonworkingdays_securitygroupsMetaData.php');
  
  //WARNING: The contents of this file are auto-generated
 include('custom/metadata/mks_interestcourse_opportunitiesMetaData.php');
-
-
- 
- //WARNING: The contents of this file are auto-generated
-include('custom/metadata/leads_mks_interestcourse_1MetaData.php');
 
 
  
@@ -202,6 +192,11 @@ include('custom/metadata/accounts_mks_messagesfb_1MetaData.php');
  
  //WARNING: The contents of this file are auto-generated
 include('custom/metadata/mks_messagesfb_securitygroups_1MetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_paymentplan_securitygroups_1MetaData.php');
 
 
 ?>
