@@ -58,14 +58,22 @@ array (
         ),
         2 => 
         array (
-          0 => 'date_entered',
-          1 => 'date_modified',
+          0 => 
+          array (
+            'name' => 'page_id_c',
+            'label' => 'LBL_PAGE_ID',
+          ),
         ),
         3 => 
         array (
-          0 => 'noninheritable',
+          0 => 'date_entered',
+          1 => 'date_modified',
         ),
         4 => 
+        array (
+          0 => 'noninheritable',
+        ),
+        5 => 
         array (
           0 => 'description',
         ),

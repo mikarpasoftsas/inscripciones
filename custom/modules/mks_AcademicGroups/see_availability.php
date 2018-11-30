@@ -30,8 +30,10 @@ class see_availability
 				$cadena[$order] = $groupschedule->day .' '. $groupschedule->start_time .'-'. $groupschedule->end_time . ' hrs';
 			}
 			for ($i=1;$i<=count($cadena);$i++)		
-				$cadena_ordenada[] = $cadena[$i];
-			
+			{
+				if(isset($cadena[$i]))
+					$cadena_ordenada[] = $cadena[$i];
+			}
 			if(count($cadena_ordenada))
 				
 				$bean->description = implode(', ',$cadena_ordenada);

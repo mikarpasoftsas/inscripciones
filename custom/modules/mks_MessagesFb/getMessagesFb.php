@@ -45,14 +45,27 @@ if($Contact->load_relationship('accounts_mks_messagesfb_1'))
 						
 		$mks_MessagesFb = BeanFactory::getBean('mks_MessagesFb', $msg->id);
 		
-		$Contact 		= BeanFactory::getBean('Accounts', $Contact->account_id);
+		if($mks_MessagesFb->type=='sent')
+		{
+				$User     = BeanFactory::getBean('Users', $Contact->created_by);
+				$fullname = $User->first_name .' '.$User->last_name;
+				$avatar = "index.php?entryPoint=download&id=".$User->id."_photo&type=Users" ;
+		}
+		else
+		{
+			    $fullname = $Contact->first_name_c.' '.$Contact->last_name_c;
+				if(!empty($Contact->profile_pic_fbk_c))
+					$avatar = $Contact->profile_pic_fbk_c;
+				else
+					$avatar = "index.php?entryPoint=download&id=".$Contact->id."_avatar_c&type=Accounts" ;
+		}		
 		
 		$arr["messages"][] = array(
 
 		 "id"=>$mks_MessagesFb->id,
 		 "from"=>array(
-				"name"  => $Contact->name,
-				"avatar"=> "index.php?entryPoint=download&id=".$Contact->account_id."_avatar_c&type=Accounts",
+				"name"  => $fullname,
+				"avatar"=> $avatar,
 			),
 		 "text"=> $mks_MessagesFb->description,
 		 "created_at"=> $mks_MessagesFb->date_entered,
