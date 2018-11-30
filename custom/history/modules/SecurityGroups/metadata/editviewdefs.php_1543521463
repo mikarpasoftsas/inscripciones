@@ -61,6 +61,7 @@ array (
             'name' => 'page_id_c',
             'label' => 'LBL_PAGE_ID',
           ),
+          1 => '',
         ),
         3 => 
         array (

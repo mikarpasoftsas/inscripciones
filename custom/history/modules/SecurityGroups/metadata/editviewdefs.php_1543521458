@@ -56,17 +56,9 @@ array (
         ),
         2 => 
         array (
-          0 => 
-          array (
-            'name' => 'page_id_c',
-            'label' => 'LBL_PAGE_ID',
-          ),
-        ),
-        3 => 
-        array (
           0 => 'noninheritable',
         ),
-        4 => 
+        3 => 
         array (
           0 => 'description',
         ),

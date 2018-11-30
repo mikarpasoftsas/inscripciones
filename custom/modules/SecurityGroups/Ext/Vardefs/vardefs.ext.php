@@ -265,4 +265,10 @@ $dictionary["SecurityGroup"]["fields"]["mks_paymentplan_securitygroups_1"] = arr
   'vname' => 'LBL_MKS_PAYMENTPLAN_SECURITYGROUPS_1_FROM_MKS_PAYMENTPLAN_TITLE',
 );
 
+
+ // created: 2018-11-29 19:57:20
+$dictionary['SecurityGroup']['fields']['page_id_c']['inline_edit']='1';
+$dictionary['SecurityGroup']['fields']['page_id_c']['labelValue']='Page ID';
+
+ 
 ?>

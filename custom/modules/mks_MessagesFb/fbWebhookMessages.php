@@ -1,0 +1,162 @@
+<?php
+// Facebook APP configuration.
+define('VERIFY_TOKEN', 'dRsflkj3242Ofajklsfa#j239842lasf!A');
+/**
+* Execute CURL
+* @param string $url
+* @param array 	$jsonData OPTIONAL
+* @return mixed
+*/
+function executeCurl($url, $jsonData=array()) {
+	//Initiate cURL.
+	$ch = curl_init($url);
+	//Attach our encoded JSON string to the POST fields.
+	if (is_array($jsonData) && count($jsonData) > 0) {
+		//Tell cURL that we want to send a POST request.
+		curl_setopt($ch, CURLOPT_POST, 1);
+		curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($jsonData));
+		//Set the content type to application/json
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json'));
+	}
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	return curl_exec($ch);
+}
+
+/**
+* Find or create user.
+* @param string $PAGE_ACCESS_TOKEN
+* @param string $FB_USER_ID
+* @return object Suite CRM User.
+*/
+function findOrCreateUser($PAGE_ACCESS_TOKEN, $FB_USER_ID){
+	
+	$user = BeanFactory::getBean('Accounts');
+    $user->retrieve_by_string_fields(array('fb_user_id_c'=>$FB_USER_ID,'deleted'=>0));
+	if(empty($user->id))
+	{
+		$url = "https://graph.facebook.com/".$FB_USER_ID."?fields=first_name,last_name,profile_pic&access_token=" . $PAGE_ACCESS_TOKEN;
+		$fbUserData = executeCurl($url);
+		$fbUserData = json_decode($fbUserData);
+		if(is_object($fbUserData))
+		{
+			$user->first_name_c 	  = $fbUserData->first_name;
+			$user->last_name_c  	  = $fbUserData->last_name;
+			$user->fb_user_id_c 	  = $FB_USER_ID;
+			$user->profile_pic_fbk_c  = $fbUserData->profile_pic;
+			$user->assigned_user_id = 1;
+			$user->save();
+		}
+		
+	}
+	// E.g.
+		// {"first_name":"Pedro","last_name":"Suarez","profile_pic":"https:\/\/platform-lookaside.fbsbx.com\/platform\/profilepic\/?psid=1852631734814752&width=1024&ext=1542565085&hash=AeTZ0xTXVq1eOVvK","id":"1852631734814753"}
+		// save in internal database and relationship the FB User Id.
+		// $user = ...
+	return $user;
+}
+
+/**
+* Get Fillial Configuration.
+* @param string $page_id
+* @return object Suite CRM FillialConfiguration.
+*/
+function findFillialConfig($page_id){
+	
+	// Search in internal database fillial configuration.
+	$fillial = BeanFactory::getBean('SecurityGroups');
+    $fillial->retrieve_by_string_fields(array('page_id_c'=>$page_id,'deleted'=>0));
+	return $fillial;
+	
+}
+
+/**
+* Find or create opportunity.
+* @param object $userCrm
+* @return object Suite CRM Opportunity.
+*/
+function findOrCreateOpportunity($userCrm){
+	// E.g.
+	// $opportunity = select * from opportunity where user_id = $userCrm->id and status = 'open'
+		// IF $opportunity IS NULL THEN createOpportunity.
+		
+	if ($userCrm->load_relationship('accounts_opportunities')){
+		
+		$opps = $userCrm->accounts_opportunities->getBeans();
+		 
+		foreach($opps as $opp){
+			
+			if($opp->sales_stage=='Preinforme')
+				
+			   return $opp;
+		}
+	}
+		
+	$opp = BeanFactory::getBean('Opportunities');
+	$opp->account_id = $userCrm->id;
+	$opp->mks_meansnotice_id_c = '89e73c11-165d-79a7-9b5d-5baa4c47e79d';
+	$opp->assigned_user_id = 1;
+	$opp->save();
+    
+	return $opp;
+}
+
+
+
+// 1) FB calls this page for verify token.
+$challenge 		= (!empty($_REQUEST['hub_challenge']) ? $_REQUEST['hub_challenge'] : '');
+$verify_token 	= (!empty($_REQUEST['hub_verify_token']) ? $_REQUEST['hub_verify_token'] : '');
+if ($verify_token === VERIFY_TOKEN) {
+	echo $challenge;
+	exit();
+}
+
+// 2) POST values
+$request = trim(file_get_contents('php://input'));
+if(!empty($request)){
+	$input = json_decode($request, true);
+	// Verify object is page.
+	if (!empty($input['object']) && $input['object'] == 'page') {
+		// Get the Senders Graph ID
+		$sender = $input['entry'][0]['messaging'][0]['sender']['id'];
+		// Get the returned message
+		$message = $input['entry'][0]['messaging'][0]['message']['text'];
+		// Get the Page Graph ID
+		$page_id = $input['entry'][0]['messaging'][0]['recipient']['id'];
+		
+		// 3) Search in internal database the access token from $page_id.
+		$fillialConfigCrm = findFillialConfig($page_id);
+		// set var with page access token
+		$PAGE_ACCESS_TOKEN = $fillialConfigCrm->fb_page_access_token_c;
+		
+		// 4) Search in internal database if users exists with $sender value.
+		$userCrm = findOrCreateUser($PAGE_ACCESS_TOKEN, $sender);
+		
+		// 5) Search in internal database if Opportunity exists for user CRM.
+		$opportunityCrm = findOrCreateOpportunity($userCrm);
+		
+		// 5) Create a message in internal database.
+		// E.g.
+			// INSERT INTO messages (sender_user_id, recipient_user_id, filial_id, opportunity_id, created_at, sender, recipient, text, type)
+			// VALUES ($userCrm->id, null, $fillialConfigCrm->fillial_id, $opportunityCrm->id, now(), $sender, $page_id, $message, 'received');
+		
+		$mks_MessagesFb = BeanFactory::getBean('mks_MessagesFb');
+		$mks_MessagesFb->name = 'Chat Facebook';
+		$mks_MessagesFb->description = $_REQUEST["text"];
+		$mks_MessagesFb->type='received';
+		$mks_MessagesFb->sender=$userCrm->id;
+		$mks_MessagesFb->recipient=$fillialConfigCrm->id;
+		$mks_MessagesFb->assigned_user_id = $current_user->id;
+		$mks_MessagesFb->save();
+		
+		if ($mks_MessagesFb->load_relationship('mks_messagesfb_opportunities'))		
+			$mks_MessagesFb->mks_messagesfb_opportunities->add($opportunityCrm->id);
+		
+		if ($mks_MessagesFb->load_relationship('accounts_mks_messagesfb_1'))	
+			$mks_MessagesFb->accounts_mks_messagesfb_1->add($userCrm->id);
+			
+		if ($mks_MessagesFb->load_relationship('mks_messagesfb_securitygroups_1'))	
+			$mks_MessagesFb->mks_messagesfb_securitygroups_1->add($fillialConfigCrm->id);
+			
+	}
+}
+exit();
