@@ -83,7 +83,7 @@ function findOrCreateOpportunity($userCrm){
 		SELECT opportunities.id FROM opportunities 
 		INNER JOIN `accounts_opportunities` ON opportunities.id = `opportunity_id`
 		WHERE `account_id`='$userCrm->id' AND `accounts_opportunities`.`deleted` = 0 AND `sales_stage` = 'Prospecting'
-		ORDER BY opportunities.`date_modified` DESC
+		ORDER BY opportunities.`date_entered` DESC
 		LIMIT 1
 	";
 	$res = $db->query($query);
