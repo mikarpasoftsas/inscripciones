@@ -44,7 +44,6 @@ array (
               'required' => true,
             ),
           ),
-          1 => 'assigned_user_name',
         ),
         1 => 
         array (
@@ -67,6 +66,10 @@ array (
           0 => 'noninheritable',
         ),
         4 => 
+        array (
+          0 => 'assigned_user_name',
+        ),
+        5 => 
         array (
           0 => 'description',
         ),
