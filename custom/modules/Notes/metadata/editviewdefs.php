@@ -60,7 +60,6 @@ function deleteAttachmentCallBack(text)
         0 => 
         array (
           0 => 'parent_name',
-          1 => '',
         ),
         1 => 
         array (
@@ -70,7 +69,6 @@ function deleteAttachmentCallBack(text)
             'studio' => 'visible',
             'label' => 'LBL_TIPO',
           ),
-          1 => '',
         ),
         2 => 
         array (
@@ -82,12 +80,10 @@ function deleteAttachmentCallBack(text)
               'size' => 60,
             ),
           ),
-          1 => '',
         ),
         3 => 
         array (
           0 => 'filename',
-          1 => '',
         ),
         4 => 
         array (
@@ -96,7 +92,6 @@ function deleteAttachmentCallBack(text)
             'name' => 'description',
             'label' => 'LBL_NOTE_STATUS',
           ),
-          1 => '',
         ),
       ),
       'LBL_PANEL_ASSIGNMENT' => 
@@ -108,7 +103,6 @@ function deleteAttachmentCallBack(text)
             'name' => 'assigned_user_name',
             'label' => 'LBL_ASSIGNED_TO',
           ),
-          1 => '',
         ),
       ),
     ),
