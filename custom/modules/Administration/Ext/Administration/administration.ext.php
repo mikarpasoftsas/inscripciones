@@ -5,6 +5,8 @@
 
 global $sugar_version, $admin_group_header;
 
+$jckl_options_defs=array();
+
 if (!is_array($jckl_options_defs)) {
     $jckl_options_defs=array();
 }
