@@ -22,7 +22,7 @@ class fb_messages_reply {
 	
 	function fb_messages_reply(&$bean, $event, $arguments)
 	{
-	
+			if($bean->type=="sent"){
 			$fillial = BeanFactory::getBean('SecurityGroups',$bean->recipient);
 			$contact = BeanFactory::getBean('Accounts',$bean->sender);
 					
@@ -32,6 +32,6 @@ class fb_messages_reply {
 				"message" => array("text" => $bean->description)
 			);
 			$this->executeCurl($url, $jsonData);			
-		
+		}
 	}
 }

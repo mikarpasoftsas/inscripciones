@@ -32,8 +32,7 @@ function findOrCreateUser($PAGE_ACCESS_TOKEN, $FB_USER_ID){
 	
 	$user = BeanFactory::getBean('Accounts');
     $user->retrieve_by_string_fields(array('fb_user_id_c'=>$FB_USER_ID,'deleted'=>0));
-	if(empty($user->id))
-	{
+	
 		$url = "https://graph.facebook.com/".$FB_USER_ID."?fields=first_name,last_name,profile_pic&access_token=" . $PAGE_ACCESS_TOKEN;
 		$fbUserData = executeCurl($url);
 		$fbUserData = json_decode($fbUserData);
@@ -43,11 +42,13 @@ function findOrCreateUser($PAGE_ACCESS_TOKEN, $FB_USER_ID){
 			$user->last_name_c  	  = $fbUserData->last_name;
 			$user->fb_user_id_c 	  = $FB_USER_ID;
 			$user->profile_pic_fbk_c  = $fbUserData->profile_pic;
-			$user->assigned_user_id = 1;
+			$user->assigned_user_id   = 1;
+			$user->created_by         = 1;
+			$user->modified_user_id   = 1;
 			$user->save();
 		}
 		
-	}
+	
 	// E.g.
 		// {"first_name":"Pedro","last_name":"Suarez","profile_pic":"https:\/\/platform-lookaside.fbsbx.com\/platform\/profilepic\/?psid=1852631734814752&width=1024&ext=1542565085&hash=AeTZ0xTXVq1eOVvK","id":"1852631734814753"}
 		// save in internal database and relationship the FB User Id.
@@ -62,7 +63,6 @@ function findOrCreateUser($PAGE_ACCESS_TOKEN, $FB_USER_ID){
 */
 function findFillialConfig($page_id){
 	
-	// Search in internal database fillial configuration.
 	$fillial = BeanFactory::getBean('SecurityGroups');
     $fillial->retrieve_by_string_fields(array('page_id_c'=>$page_id,'deleted'=>0));
 	return $fillial;
@@ -75,32 +75,37 @@ function findFillialConfig($page_id){
 * @return object Suite CRM Opportunity.
 */
 function findOrCreateOpportunity($userCrm){
-	// E.g.
-	// $opportunity = select * from opportunity where user_id = $userCrm->id and status = 'open'
-		// IF $opportunity IS NULL THEN createOpportunity.
-		
-	if ($userCrm->load_relationship('accounts_opportunities')){
-		
-		$opps = $userCrm->accounts_opportunities->getBeans();
-		 
-		foreach($opps as $opp){
-			
-			if($opp->sales_stage=='Preinforme')
-				
-			   return $opp;
-		}
+	
+	global $db;
+	
+	$query = "
+	
+		SELECT opportunities.id FROM opportunities 
+		INNER JOIN `accounts_opportunities` ON opportunities.id = `opportunity_id`
+		WHERE `account_id`='$userCrm->id' AND `accounts_opportunities`.`deleted` = 0 AND `sales_stage` = 'Prospecting'
+		ORDER BY opportunities.`date_entered` DESC
+		LIMIT 1
+	";
+	$res = $db->query($query);
+	$row = $db->fetchByAssoc($res);
+	if(isset($row['id']) && !empty($row['id']))	
+		$opp = BeanFactory::getBean('Opportunities',$row['id']);
+	else
+	{
+		$opp = BeanFactory::getBean('Opportunities');
+		$opp->account_id = $userCrm->id;
+		$opp->mks_meansnotice_id_c = '89e73c11-165d-79a7-9b5d-5baa4c47e79d';
+		$opp->id_autoincrement_c='pending';
+		$opp->created_by=1;
+		$opp->modified_user_id=1;
+		$opp->assigned_user_id=1;
+		$opp->save();
 	}
 		
-	$opp = BeanFactory::getBean('Opportunities');
-	$opp->account_id = $userCrm->id;
-	$opp->mks_meansnotice_id_c = '89e73c11-165d-79a7-9b5d-5baa4c47e79d';
-	$opp->assigned_user_id = 1;
-	$opp->save();
+	
     
 	return $opp;
 }
-
-
 
 // 1) FB calls this page for verify token.
 $challenge 		= (!empty($_REQUEST['hub_challenge']) ? $_REQUEST['hub_challenge'] : '');
@@ -122,7 +127,7 @@ if(!empty($request)){
 		$message = $input['entry'][0]['messaging'][0]['message']['text'];
 		// Get the Page Graph ID
 		$page_id = $input['entry'][0]['messaging'][0]['recipient']['id'];
-		
+		//$page_id = $input['page_id'];
 		// 3) Search in internal database the access token from $page_id.
 		$fillialConfigCrm = findFillialConfig($page_id);
 		// set var with page access token
@@ -141,11 +146,11 @@ if(!empty($request)){
 		
 		$mks_MessagesFb = BeanFactory::getBean('mks_MessagesFb');
 		$mks_MessagesFb->name = 'Chat Facebook';
-		$mks_MessagesFb->description = $_REQUEST["text"];
+		$mks_MessagesFb->description = $message;
 		$mks_MessagesFb->type='received';
 		$mks_MessagesFb->sender=$userCrm->id;
 		$mks_MessagesFb->recipient=$fillialConfigCrm->id;
-		$mks_MessagesFb->assigned_user_id = $current_user->id;
+		$mks_MessagesFb->assigned_user_id = 1;
 		$mks_MessagesFb->save();
 		
 		if ($mks_MessagesFb->load_relationship('mks_messagesfb_opportunities'))		
