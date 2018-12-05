@@ -1,11 +1,11 @@
 var messageConfig = {
     title: 'Mensajes',
-    url : 'http://pelitosdeamor.com/crm-creacttive/index.php?entryPoint=getMessagesFb',
+    url : window.location.protocol + '//' + window.location.host + '/index.php?entryPoint=getMessagesFb',
     resultsNotFound : 'No hay mensajes',
     form: {
         input : {'placeholder' : 'Type message ...'},
         button: {'label' : 'Send'},
-        actionUrl: 'http://pelitosdeamor.com/crm-creacttive/index.php?entryPoint=saveMessageFb'
+        actionUrl: window.location.protocol + '//' + window.location.host + '/index.php?entryPoint=saveMessageFb'
     }
 };
 var messagesLoaded = true;
