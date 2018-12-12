@@ -17,7 +17,7 @@ if($mks_Registration->load_relationship('mks_custompaymentplan_mks_registration'
 }
 
 $arr = array(
-				'count'				=>count($cp),
+				'count'				=>$cp,
 				'status_id'			=>$mks_Registration->status_id,
 				'course'			=>$mks_Registration->course,
 				'course_id'			=>$mks_Registration->mks_courses_id_c,
