@@ -1,5 +1,5 @@
 <?php
-// created: 2018-12-12 17:05:29
+// created: 2018-12-13 16:16:24
 $mod_strings = array (
   'LBL_MKS_REGISTRATION_CONTACTS_FROM_CONTACTS_TITLE' => 'Contactos',
   'LBL_CONTACTS_TITLE' => 'Contacto',
@@ -29,4 +29,5 @@ $mod_strings = array (
   'LBL_MKS_CUSTOMPAYMENTPLAN_MKS_REGISTRATION_FROM_MKS_CUSTOMPAYMENTPLAN_TITLE' => 'Plan de Pagos Personalizado',
   'LBL_AMOUNT_FEES_C' => '# de Cuotas',
   'LBL_ADVANCE_C' => 'Anticipo',
+  'LBL_SIZE' => 'Talla del uniforme',
 );

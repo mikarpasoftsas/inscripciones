@@ -167,3 +167,10 @@ $GLOBALS['app_list_strings']['amount_fees_list']=array (
   11 => '11',
   12 => '12',
 );
+$GLOBALS['app_list_strings']['size_list']=array (
+  '' => '',
+  'l' => 'L',
+  'm' => 'M',
+  's' => 'S',
+  'xl' => 'XL',
+);
