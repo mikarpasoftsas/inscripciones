@@ -49,12 +49,18 @@ $subpanel_layout = array (
       'vname' => 'LBL_DATE_MODIFIED',
       'width' => '15%',
       'default' => true,
-    ),    
+    ),
+	'edit_button'=>array(
+		'vname' => 'LBL_EDIT_BUTTON',
+		'widget_class' => 'SubPanelEditButton',
+		'module' => 'mks_CustomPlanFees',
+		'width' => '5%',
+	),	
 	'delete_button' => 
 	  array (
 		'vname' => 'LBL_REMOVE',
 		'widget_class' => 'SubPanelDeleteButton',
-		'module' => 'mks_PlanFees',
+		'module' => 'mks_CustomPlanFees',
 		'width' => '5%',
 		'default' => true,
 	),

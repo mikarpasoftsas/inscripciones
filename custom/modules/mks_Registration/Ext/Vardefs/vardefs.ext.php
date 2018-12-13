@@ -220,4 +220,16 @@ $dictionary['mks_Registration']['fields']['register_c']['inline_edit']='';
 $dictionary['mks_Registration']['fields']['register_c']['labelValue']='Matricula Asociada';
 
  
+
+ // created: 2018-12-12 17:03:59
+$dictionary['mks_Registration']['fields']['amount_fees_c']['inline_edit']='1';
+$dictionary['mks_Registration']['fields']['amount_fees_c']['labelValue']='# de Cuotas';
+
+ 
+
+ // created: 2018-12-12 17:06:24
+$dictionary['mks_Registration']['fields']['advance_c']['inline_edit']='1';
+$dictionary['mks_Registration']['fields']['advance_c']['labelValue']='Anticipo';
+
+ 
 ?>

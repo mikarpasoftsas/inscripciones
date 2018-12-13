@@ -47,6 +47,53 @@ class update_registration {
 						}
 					}
 			}
+			
+			$mks_CustomPaymentPlan = BeanFactory::getBean('mks_CustomPaymentPlan');
+			$mks_CustomPaymentPlan->name='Plan Refinanciado a ' . $bean->amount_fees_c . " cuotas";
+			$mks_CustomPaymentPlan->mks_paymentplan_mks_coursesmks_courses_ida = $bean->mks_courses_id_c;
+			$mks_CustomPaymentPlan->amount = 0;
+			$mks_CustomPaymentPlan->id_autoincrement='pending';
+			$mks_CustomPaymentPlan->save();
+			
+			if ($mks_CustomPaymentPlan->load_relationship('mks_custompaymentplan_mks_registration'))
+			{
+					$mks_CustomPaymentPlan->mks_custompaymentplan_mks_registration->add($IdReg);
+			}
+			
+			$n=0;
+			
+			if($bean->advance_c>0)
+			{
+				$n = 1;
+				$mks_CustomPlanFees 		 = BeanFactory::getBean('mks_CustomPlanFees');
+				$mks_CustomPlanFees->name    = $n . " de " . $bean->amount_fees_c;
+				$mks_CustomPlanFees->n_fee_c = $n;
+				$mks_CustomPlanFees->amount  = $bean->advance_c;	
+				$mks_CustomPlanFees->assigned_user_id = $bean->assigned_user_id;
+				$mks_CustomPlanFees->save();
+
+				if ($mks_CustomPlanFees->load_relationship('mks_custompaymentplan_mks_customplanfees'))
+				{
+					$mks_CustomPlanFees->mks_custompaymentplan_mks_customplanfees->add($mks_CustomPaymentPlan->id);
+				}	
+			}			
+				
+			$valfee = ($bean->total_debt - $bean->advance_c) / $bean->amount_fees_c;
+			
+			for($i=1;$i<=$bean->amount_fees_c;$i++){
+				
+				$mks_CustomPlanFees = BeanFactory::getBean('mks_CustomPlanFees');
+				$mks_CustomPlanFees->name    = ($i + $n) . " de " . $bean->amount_fees_c;
+				$mks_CustomPlanFees->n_fee_c = ($i + $n);
+				$mks_CustomPlanFees->amount  = $valfee;	
+				$mks_CustomPlanFees->assigned_user_id = $bean->assigned_user_id;
+				$mks_CustomPlanFees->save();
+
+				if ($mks_CustomPlanFees->load_relationship('mks_custompaymentplan_mks_customplanfees'))
+				{
+					$mks_CustomPlanFees->mks_custompaymentplan_mks_customplanfees->add($mks_CustomPaymentPlan->id);
+				}										
+			}			
 		}
 	}	
 	

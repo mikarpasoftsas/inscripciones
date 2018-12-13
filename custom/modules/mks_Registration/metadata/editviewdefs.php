@@ -195,6 +195,25 @@ array (
           ),
           1 => '',
         ),
+        4 => 
+        array (
+          0 => 
+          array (
+            'name' => 'advance_c',
+            'label' => 'LBL_ADVANCE_C',
+          ),
+          1 => '',
+        ),
+        5 => 
+        array (
+          0 => 
+          array (
+            'name' => 'amount_fees_c',
+            'studio' => 'visible',
+            'label' => 'LBL_AMOUNT_FEES_C',
+          ),
+          1 => '',
+        ),
       ),
     ),
   ),

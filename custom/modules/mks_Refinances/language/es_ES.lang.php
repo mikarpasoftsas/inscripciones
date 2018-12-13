@@ -1,5 +1,5 @@
 <?php
-// created: 2018-11-23 00:20:15
+// created: 2018-12-12 15:46:39
 $mod_strings = array (
   'LBL_ATTACHMENT' => 'Archivo firmado',
   'LBL_ID_AUTOINCREMENT' => '#',
@@ -11,4 +11,6 @@ $mod_strings = array (
   'LBL_GROUPPRACTICE_MKS_ACADEMICGROUPS_ID' => 'Grupo Practica (relacionado  ID)',
   'LBL_GROUPPRACTICE' => 'Grupo Practica',
   'LBL_UPDATE_REGISTRATION_C' => 'Actualizar Matricula?',
+  'LBL_AMOUNT_FEES' => '# Cuotas',
+  'LBL_ ADVANCE' => 'Anticipo',
 );
