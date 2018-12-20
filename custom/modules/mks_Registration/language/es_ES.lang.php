@@ -1,10 +1,10 @@
 <?php
-// created: 2018-12-13 16:58:26
+// created: 2018-12-20 15:40:40
 $mod_strings = array (
   'LBL_MKS_REGISTRATION_CONTACTS_FROM_CONTACTS_TITLE' => 'Contactos',
   'LBL_CONTACTS_TITLE' => 'Contacto',
   'LBL_FLAG_PAYMENT_PLAN' => 'Bandera Plan de Pago',
-  'LBL_EDITVIEW_PANEL1' => 'Vencimientos y Adjuntos',
+  'LBL_EDITVIEW_PANEL1' => 'Vencimientos',
   'LBL_EDITVIEW_PANEL2' => 'Grupos',
   'LBL_ID_AUTOINCREMENT' => '#',
   'LBL_COURSE_MKS_COURSES_ID' => 'Carreras y cursos (relacionado  ID)',
