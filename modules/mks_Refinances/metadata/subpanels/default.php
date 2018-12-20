@@ -5,7 +5,7 @@ $subpanel_layout = array (
   array (
     0 => 
     array (
-      'widget_class' => 'SubPanelTopCreateButton',
+      'widget_class' => 'SubPanelTopButtonQuickCreate',
     ),
     1 => 
     array (
@@ -13,6 +13,7 @@ $subpanel_layout = array (
       'popup_module' => 'mks_Refinances',
     ),
   ),
+  'refresh_page'=>1,
   'where' => '',
   'list_fields' => 
   array (
