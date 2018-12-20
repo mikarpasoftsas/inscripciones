@@ -86,13 +86,13 @@ $dictionary['mks_Refinances']['fields']['update_registration_c']['labelValue']='
 
  
 
- // created: 2018-12-12 15:43:39
+ // created: 2018-12-13 17:01:51
 $dictionary['mks_Refinances']['fields']['amount_fees_c']['inline_edit']='1';
 $dictionary['mks_Refinances']['fields']['amount_fees_c']['labelValue']='# Cuotas';
 
  
 
- // created: 2018-12-12 15:49:01
+ // created: 2018-12-13 17:01:28
 $dictionary['mks_Refinances']['fields']['advance_c']['inline_edit']='1';
 $dictionary['mks_Refinances']['fields']['advance_c']['labelValue']='Anticipo';
 

@@ -11,7 +11,8 @@ $hook_array['before_save'][] = Array(1, 'create_new_registration', 'custom/modul
 $hook_array['before_save'][] = Array(2, 'consecutive_per_subsidiary', 'custom/modules/mks_Registration/consecutive_per_subsidiary.php','consecutive_per_subsidiary', 'consecutive_per_subsidiary'); 
 $hook_array['before_save'][] = Array(3, 'assign_name_record_rg', 'custom/modules/mks_Registration/assign_name_record_rg.php','assign_name_record_rg', 'assign_name_record_rg'); 
 $hook_array['before_save'][] = Array(4, 'copy_payment_plan', 'custom/modules/mks_Registration/copy_payment_plan.php','copy_payment_plan', 'copy_payment_plan'); 
-$hook_array['before_save'][] = Array(5, 'reset_values_ref', 'custom/modules/mks_Registration/reset_values_ref.php','reset_values_ref', 'reset_values_ref'); 
+$hook_array['before_save'][] = Array(5, 'reset_values_ref', 'custom/modules/mks_Registration/reset_values_ref.php','reset_values_ref', 'reset_values_ref');
+$hook_array['process_record'][] = Array(6, 'process_record_refresh', 'custom/modules/mks_Registration/process_record_refresh.php','process_record_refresh', 'process_record_refresh');
 
 
 ?>
