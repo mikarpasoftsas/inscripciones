@@ -6,12 +6,12 @@ cache/*
 upload/*
 !upload/index.html
 # Ignore some files and directories from the custom directory.
-custom/history/*
-custom/blowfish/*
-custom/modulebuilder/*
-custom/working/*
-custom/modules/**/Ext/
-custom/modules/unified_search_modules_display.php
+#custom/history/*
+#custom/blowfish/*
+#custom/modulebuilder/*
+#custom/working/*
+#custom/modules/**/Ext/
+#custom/modules/unified_search_modules_display.php
 # Ignore AOD indexes
 modules/AOD_Index/*
 install/status.json
@@ -20,7 +20,7 @@ install/status.json
 /config_override.php
 /config_si.php
 # Connector configuration should also be ignored.
-custom/modules/Connectors/connectors/sources/ext/*/*/config.php
+#custom/modules/Connectors/connectors/sources/ext/*/*/config.php
 # Logs files can safely be ignored.
 *.log
 ## IDE specific items
@@ -95,7 +95,7 @@ tests/_output/*
 BrowserStackLocal
 browserstack.err
 cache/
-custom/**/
+#custom/**/
 .sass-cache/
 .php_cs.cache
 
