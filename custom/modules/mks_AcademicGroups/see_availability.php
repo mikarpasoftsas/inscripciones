@@ -38,7 +38,26 @@ class see_availability
 				
 				$bean->description = implode(', ',$cadena_ordenada);
 		}
-       
+		
+		global $db;
+						
+		$query = "
+					
+			SELECT document_name, mks_courses.name, COUNT(*) as c
+			FROM `mks_registration` AS matricula
+			INNER JOIN `mks_academicgroups` mg ON (mg.`id` = mks_academicgroups_id_c) OR (mg.id = `mks_academicgroups_id1_c`)
+			INNER JOIN `mks_courses`  ON matricula.mks_courses_id_c = mks_courses.id
+			WHERE matricula.deleted = 0 AND matricula.mks_courses_id_c = mg.mks_courses_id_c AND mg.id = '".$bean->id."' 
+			GROUP BY mg.name
+							
+		";
+			
+		$result = $db->query($query);
+		
+		if($row = $db->fetchByAssoc($result))
+		{
+			$bean->vacancies_available_c = $bean->quantity - $row['c'];
+		}			
 
     }
 
