@@ -94,11 +94,6 @@ $GLOBALS['app_list_strings']['document_category_dom']=array (
 $GLOBALS['app_list_strings']['document_subcategory_dom']=array (
   '' => '',
 );
-
-$GLOBALS['app_list_strings']['document_status_dom']=array (
-  'Draft' => 'Draft',
-  'Closed' => 'Cerrada',
-);
 $GLOBALS['app_list_strings']['refinance_list']=array (
   'yes' => 'Si',
   'no' => 'No',
@@ -132,4 +127,8 @@ $GLOBALS['app_list_strings']['size_list']=array (
   'm' => 'M',
   'l' => 'L',
   'xl' => 'XL',
+);
+$GLOBALS['app_list_strings']['document_status_dom']=array (
+  'Draft' => 'Draft',
+  'Closed' => 'Cerrada',
 );
