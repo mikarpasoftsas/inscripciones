@@ -221,13 +221,13 @@ $dictionary['mks_Registration']['fields']['register_c']['labelValue']='Matricula
 
  
 
- // created: 2018-12-12 17:03:59
+ // created: 2018-12-13 16:58:26
 $dictionary['mks_Registration']['fields']['amount_fees_c']['inline_edit']='1';
-$dictionary['mks_Registration']['fields']['amount_fees_c']['labelValue']='# de Cuotas';
+$dictionary['mks_Registration']['fields']['amount_fees_c']['labelValue']='# Cuotas';
 
  
 
- // created: 2018-12-12 17:06:24
+ // created: 2018-12-13 16:58:00
 $dictionary['mks_Registration']['fields']['advance_c']['inline_edit']='1';
 $dictionary['mks_Registration']['fields']['advance_c']['labelValue']='Anticipo';
 
