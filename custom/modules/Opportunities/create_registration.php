@@ -22,7 +22,35 @@ class create_registration {
 			$mks_Registration->opportunity_id_c = $bean->id;
 			$mks_Registration->accounts_mks_registration_1accounts_ida = $bean->account_id;
 			$mks_Registration->save();
+			
+			if ($mks_Registration->load_relationship('mks_registration_securitygroups_1')){
+			
+					
+					global $db;
+					
+					$query = "
 				
+						select * 
+						from securitygroups_records 
+						where module = 'Opportunities' 
+						and deleted = 0 and 
+						record_id = '".$bean->id."'
+						
+					";
+					
+					$result = $db->query($query);
+					
+					while( $row = $db->fetchByAssoc($result)){ 
+					
+						$mks_Registration->mks_registration_securitygroups_1->add($row['securitygroup_id']);
+					
+					}
+			}
+			else
+			{
+				die("not load rel mks_registration_securitygroups_1");
+			}
+						
 			$queryParams = array(
 				'module' => 'mks_Registration',
 				'action' => 'EditView',
