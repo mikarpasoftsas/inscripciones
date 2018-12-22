@@ -102,6 +102,20 @@ function findOrCreateOpportunity($userCrm,$FILIAL_ID){
 		$opp->assigned_user_id=1;
 		$opp->origin_fb_c	  = $FILIAL_ID;
 		$opp->save();
+		
+		$query_op = "	
+
+					UPDATE opportunities 
+					SET 
+						created_by = 1,
+						modified_user_id = 1,
+						assigned_user_id = 1,	
+					
+					WHERE id = '".$opp->id."'
+						
+		";				
+			
+		$result = $db->query($query_op);
 	}
 		
 	
@@ -153,6 +167,7 @@ if(!empty($request)){
 		$mks_MessagesFb->sender=$userCrm->id;
 		$mks_MessagesFb->recipient=$fillialConfigCrm->id;
 		$mks_MessagesFb->assigned_user_id = 1;
+		$mks_MessagesFb->json_c = $request;
 		$mks_MessagesFb->save();
 		
 		if ($mks_MessagesFb->load_relationship('mks_messagesfb_opportunities'))		
