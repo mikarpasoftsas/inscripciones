@@ -7,6 +7,7 @@ $hook_array = Array();
 $hook_array['before_save'] = Array(); 
 $hook_array['before_save'][] = Array(77, 'updateGeocodeInfo', 'modules/Accounts/AccountsJjwg_MapsLogicHook.php','AccountsJjwg_MapsLogicHook', 'updateGeocodeInfo'); 
 $hook_array['before_save'][] = Array(1, 'fullname', 'custom/modules/Accounts/fullname.php','fullname', 'fullname'); 
+$hook_array['before_save'][] = Array(2, 'assigned_filial_acc', 'custom/modules/Accounts/assigned_filial_acc.php','assigned_filial_acc', 'assigned_filial_acc'); 
 
 $hook_array['after_save'] = Array(); 
 $hook_array['after_save'][] = Array(77, 'updateRelatedMeetingsGeocodeInfo', 'modules/Accounts/AccountsJjwg_MapsLogicHook.php','AccountsJjwg_MapsLogicHook', 'updateRelatedMeetingsGeocodeInfo'); 
