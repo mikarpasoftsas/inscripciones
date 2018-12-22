@@ -30,6 +30,8 @@ function executeCurl($url, $jsonData=array()) {
 */
 function findOrCreateUser($PAGE_ACCESS_TOKEN, $FB_USER_ID, $FILIAL_ID){
 	
+	global $db;
+	
 	$user = BeanFactory::getBean('Accounts');
     $user->retrieve_by_string_fields(array('fb_user_id_c'=>$FB_USER_ID,'deleted'=>0));
 	
@@ -47,6 +49,20 @@ function findOrCreateUser($PAGE_ACCESS_TOKEN, $FB_USER_ID, $FILIAL_ID){
 			$user->modified_user_id   = 1;
 			$user->origin_fb_c		  = $FILIAL_ID;
 			$user->save();
+			
+			$query_u = "	
+
+					UPDATE accounts 
+					SET 
+						created_by = 1,
+						modified_user_id = 1,
+						assigned_user_id = 1,	
+					
+					WHERE id = '".$user->id."'
+						
+			";				
+			
+			$result = $db->query($query_u);
 		}
 		
 	
