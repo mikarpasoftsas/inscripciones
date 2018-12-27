@@ -28,7 +28,9 @@ function executeCurl($url, $jsonData=array()) {
 * @param string $FB_USER_ID
 * @return object Suite CRM User.
 */
-function findOrCreateUser($PAGE_ACCESS_TOKEN, $FB_USER_ID){
+function findOrCreateUser($PAGE_ACCESS_TOKEN, $FB_USER_ID, $FILIAL_ID){
+	
+	global $db;
 	
 	$user = BeanFactory::getBean('Accounts');
     $user->retrieve_by_string_fields(array('fb_user_id_c'=>$FB_USER_ID,'deleted'=>0));
@@ -45,7 +47,22 @@ function findOrCreateUser($PAGE_ACCESS_TOKEN, $FB_USER_ID){
 			$user->assigned_user_id   = 1;
 			$user->created_by         = 1;
 			$user->modified_user_id   = 1;
+			$user->origin_fb_c		  = $FILIAL_ID;
 			$user->save();
+			
+			$query_u = "	
+
+					UPDATE accounts 
+					SET 
+						created_by = 1,
+						modified_user_id = 1,
+						assigned_user_id = 1,	
+					
+					WHERE id = '".$user->id."'
+						
+			";				
+			
+			$result = $db->query($query_u);
 		}
 		
 	
@@ -74,7 +91,7 @@ function findFillialConfig($page_id){
 * @param object $userCrm
 * @return object Suite CRM Opportunity.
 */
-function findOrCreateOpportunity($userCrm){
+function findOrCreateOpportunity($userCrm,$FILIAL_ID){
 	
 	global $db;
 	
@@ -99,7 +116,22 @@ function findOrCreateOpportunity($userCrm){
 		$opp->created_by=1;
 		$opp->modified_user_id=1;
 		$opp->assigned_user_id=1;
+		$opp->origin_fb_c	  = $FILIAL_ID;
 		$opp->save();
+		
+		$query_op = "	
+
+					UPDATE opportunities 
+					SET 
+						created_by = 1,
+						modified_user_id = 1,
+						assigned_user_id = 1,	
+					
+					WHERE id = '".$opp->id."'
+						
+		";				
+			
+		$result = $db->query($query_op);
 	}
 		
 	
@@ -134,10 +166,10 @@ if(!empty($request)){
 		$PAGE_ACCESS_TOKEN = $fillialConfigCrm->fb_page_access_token_c;
 		
 		// 4) Search in internal database if users exists with $sender value.
-		$userCrm = findOrCreateUser($PAGE_ACCESS_TOKEN, $sender);
+		$userCrm = findOrCreateUser($PAGE_ACCESS_TOKEN, $sender, $fillialConfigCrm->id);
 		
 		// 5) Search in internal database if Opportunity exists for user CRM.
-		$opportunityCrm = findOrCreateOpportunity($userCrm);
+		$opportunityCrm = findOrCreateOpportunity($userCrm, $fillialConfigCrm->id);
 		
 		// 5) Create a message in internal database.
 		// E.g.
@@ -151,6 +183,7 @@ if(!empty($request)){
 		$mks_MessagesFb->sender=$userCrm->id;
 		$mks_MessagesFb->recipient=$fillialConfigCrm->id;
 		$mks_MessagesFb->assigned_user_id = 1;
+		$mks_MessagesFb->json_c = $request;
 		$mks_MessagesFb->save();
 		
 		if ($mks_MessagesFb->load_relationship('mks_messagesfb_opportunities'))		

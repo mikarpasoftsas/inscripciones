@@ -7,6 +7,7 @@ $hook_array = Array();
 $hook_array['before_save'] = Array(); 
 $hook_array['before_save'][] = Array(1, 'Opportunities push feed', 'modules/Opportunities/SugarFeeds/OppFeed.php','OppFeed', 'pushFeed'); 
 $hook_array['before_save'][] = Array(2, 'set_autoincrement', 'custom/modules/Opportunities/set_autoincrement.php','set_autoincrement', 'set_autoincrement'); 
+$hook_array['before_save'][] = Array(3, 'assigned_filial_op', 'custom/modules/Opportunities/assigned_filial_op.php','assigned_filial_op', 'assigned_filial_op'); 
 $hook_array['after_relationship_delete'] = Array(); 
 $hook_array['after_relationship_delete'][] = Array(77, 'deleteRelationship', 'modules/Opportunities/OpportunitiesJjwg_MapsLogicHook.php','OpportunitiesJjwg_MapsLogicHook', 'deleteRelationship'); 
 $hook_array['after_relationship_add'] = Array(); 

@@ -1,5 +1,5 @@
 <?php
-// created: 2018-11-29 23:16:21
+// created: 2018-12-22 18:24:16
 $mod_strings = array (
   'LBL_LEADS' => 'Clientes Potenciales',
   'LBL_LEADS_SUBPANEL_TITLE' => 'Preinformes/Potenciales',
@@ -59,4 +59,5 @@ $mod_strings = array (
   'LBL_FB_USER_ID' => 'Id Usuario FB',
   'LBL_AVATAR' => 'Avatar',
   'LBL_PROFILE_PIC_FBK' => 'Avatar Fbk',
+  'LBL_ORIGIN_FB' => 'Origen FB',
 );

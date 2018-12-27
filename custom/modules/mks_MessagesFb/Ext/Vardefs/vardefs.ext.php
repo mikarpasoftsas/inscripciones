@@ -81,4 +81,10 @@ $dictionary["mks_MessagesFb"]["fields"]["mks_messagesfb_securitygroups_1"] = arr
   'vname' => 'LBL_MKS_MESSAGESFB_SECURITYGROUPS_1_FROM_SECURITYGROUPS_TITLE',
 );
 
+
+ // created: 2018-12-22 18:55:59
+$dictionary['mks_MessagesFb']['fields']['json_c']['inline_edit']='1';
+$dictionary['mks_MessagesFb']['fields']['json_c']['labelValue']='JSON';
+
+ 
 ?>
