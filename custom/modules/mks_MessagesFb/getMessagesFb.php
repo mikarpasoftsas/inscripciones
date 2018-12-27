@@ -54,10 +54,11 @@ if($Contact->load_relationship('accounts_mks_messagesfb_1'))
 		else
 		{
 			    $fullname = $Contact->first_name_c.' '.$Contact->last_name_c;
-				if(!empty($Contact->profile_pic_fbk_c))
-					$avatar = $Contact->profile_pic_fbk_c;
+				if(!empty($Contact->avatar_c))
+					$avatar = "index.php?entryPoint=download&id=".$Contact->id."_avatar_c&type=Accounts" ;			
 				else
-					$avatar = "index.php?entryPoint=download&id=".$Contact->id."_avatar_c&type=Accounts" ;
+					$avatar = $Contact->profile_pic_fbk_c;
+					
 		}		
 		
 		$arr["messages"][] = array(
