@@ -34,6 +34,13 @@ array (
           'panelDefault' => 'expanded',
         ),
       ),
+	  'includes' => 
+      array (
+        0 => 
+        array (
+          'file' => 'custom/modules/mks_GroupMatterTeachers/js/editview.js',
+        ),
+      ),
     ),
     'panels' => 
     array (
@@ -54,6 +61,14 @@ array (
           array (
             'name' => 'mks_teacher_mks_groupmatterteachers_1_name',
             'label' => 'LBL_MKS_TEACHER_MKS_GROUPMATTERTEACHERS_1_FROM_MKS_TEACHER_TITLE',
+			'displayParams' => 
+            array (
+              'additionalFields' => 
+              array (
+                'amount_theory_c'   => 'amount_theory',
+				'amount_practice_c' => 'amount_practice',				
+              ),
+            ),
           ),
           1 => '',
         ),
