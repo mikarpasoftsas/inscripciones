@@ -1,7 +1,10 @@
 <?php
-ini_set("display_errors",true);
+if (!defined('sugarEntry') || !sugarEntry)
+    die('Not A Valid Entry Point');
+
 global $current_user;
 $recipient = '';
+
 if(!isset($_REQUEST["idcontacto"]) or empty($_REQUEST["idcontacto"]))
 {
 
@@ -58,16 +61,18 @@ if(!empty($_REQUEST["idpreinforme"])){
 	
 	$avatar = "index.php?entryPoint=download&id=".$current_user->id."_photo&type=Users" ;
 	
+	$mks_MessagesFb2 = BeanFactory::getBean('mks_MessagesFb', $mks_MessagesFb->id);
+	
 	$arr["message"] = array(
 
-		 "id"=>$mks_MessagesFb->id,
+		 "id"=>$mks_MessagesFb2->id,
 		 "from"=>array(
 				"name"  => $current_user->first_name . ' ' . $current_user->last_name,
 				"avatar"=> $avatar
 			),
-		 "text"=> $mks_MessagesFb->description,
-		 "created_at"=> $mks_MessagesFb->date_entered,
-		 "type"=> $mks_MessagesFb->type
+		 "text"=> $mks_MessagesFb2->description,
+		 "created_at"=> $mks_MessagesFb2->date_entered,
+		 "type"=> $mks_MessagesFb2->type
 
 		);
 }
