@@ -19,7 +19,9 @@ class set_autoincrement {
 			
 		   $bean->amout = 0;
 		   
-		 $bean->name = "Preinforme / " . $bean->account_name;		
+		if(empty($bean->name))
+			
+			$bean->name = "Preinforme / " . $bean->account_name;		
 	}	
 	
 }
