@@ -69,7 +69,9 @@ if($Contact->load_relationship('accounts_mks_messagesfb_1'))
 			),
 		 "text"=> $mks_MessagesFb->description,
 		 "created_at"=> $mks_MessagesFb->date_entered,
-		 "type"=> $mks_MessagesFb->type
+		 "type"=> $mks_MessagesFb->type,
+		 "start_page"=>$start,
+		 "end_page"=>$end
 
 		);
 		

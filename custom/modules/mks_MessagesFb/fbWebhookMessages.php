@@ -111,6 +111,7 @@ function findOrCreateOpportunity($userCrm,$FILIAL_ID){
 	{
 		$opp = BeanFactory::getBean('Opportunities');
 		$opp->account_id = $userCrm->id;
+		$opp->account_name = $userCrm->last_name_c . " " . $userCrm->first_name_c;
 		$opp->mks_meansnotice_id_c = '89e73c11-165d-79a7-9b5d-5baa4c47e79d';
 		$opp->id_autoincrement_c='pending';
 		$opp->created_by=1;
