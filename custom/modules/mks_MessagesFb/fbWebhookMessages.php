@@ -56,7 +56,7 @@ function findOrCreateUser($PAGE_ACCESS_TOKEN, $FB_USER_ID, $FILIAL_ID){
 					SET 
 						created_by = 1,
 						modified_user_id = 1,
-						assigned_user_id = 1,	
+						assigned_user_id = 1	
 					
 					WHERE id = '".$user->id."'
 						
@@ -125,7 +125,7 @@ function findOrCreateOpportunity($userCrm,$FILIAL_ID){
 					SET 
 						created_by = 1,
 						modified_user_id = 1,
-						assigned_user_id = 1,	
+						assigned_user_id = 1	
 					
 					WHERE id = '".$opp->id."'
 						

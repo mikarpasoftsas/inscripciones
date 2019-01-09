@@ -1,5 +1,4 @@
 <?php
-ini_set("display_errors",true);
 if (!defined('sugarEntry') || !sugarEntry)
     die('Not A Valid Entry Point');
 
