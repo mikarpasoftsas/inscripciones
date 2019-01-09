@@ -44,9 +44,6 @@ function findOrCreateUser($PAGE_ACCESS_TOKEN, $FB_USER_ID, $FILIAL_ID){
 			$user->last_name_c  	  = $fbUserData->last_name;
 			$user->fb_user_id_c 	  = $FB_USER_ID;
 			$user->profile_pic_fbk_c  = $fbUserData->profile_pic;
-			$user->assigned_user_id   = 1;
-			$user->created_by         = 1;
-			$user->modified_user_id   = 1;
 			$user->origin_fb_c		  = $FILIAL_ID;
 			$user->save();
 			
@@ -56,10 +53,7 @@ function findOrCreateUser($PAGE_ACCESS_TOKEN, $FB_USER_ID, $FILIAL_ID){
 					SET 
 						created_by = 1,
 						modified_user_id = 1,
-						assigned_user_id = 1,
-						date_entered  = NOW(),
-						date_modified = NOW()
-						
+						assigned_user_id = 1						
 					
 					WHERE id = '".$user->id."'
 						
@@ -117,9 +111,6 @@ function findOrCreateOpportunity($userCrm,$FILIAL_ID){
 		$opp->name 		 = "Preinforme / " . $userCrm->last_name_c . " " . $userCrm->first_name_c;
 		$opp->mks_meansnotice_id_c = '89e73c11-165d-79a7-9b5d-5baa4c47e79d';
 		$opp->id_autoincrement_c='pending';
-		$opp->created_by=1;
-		$opp->modified_user_id=1;
-		$opp->assigned_user_id=1;
 		$opp->origin_fb_c	  = $FILIAL_ID;
 		$opp->save();
 		
@@ -129,15 +120,18 @@ function findOrCreateOpportunity($userCrm,$FILIAL_ID){
 					SET 
 						created_by = 1,
 						modified_user_id = 1,
-						assigned_user_id = 1,
-						date_entered  = NOW(),
-						date_modified = NOW()						
+						assigned_user_id = 1						
 					
 					WHERE id = '".$opp->id."'
 						
 		";				
 			
 		$result = $db->query($query_op);
+		
+		if ($opp->load_relationship('accounts_opportunities'))
+		{
+			$opp->accounts_opportunities->add($userCrm->id);
+		}
 	}
 		
 	
