@@ -36,6 +36,7 @@ class fb_messages_reply {
             error_log('fb_messages_reply data: ' . \json_encode($jsonData));
             $response = $this->executeCurl($url, $jsonData);
             error_log('fb_messages_reply response: ' . $response);
+            error_log('fb_messages_reply finish ' . time());
         }
     }
 
