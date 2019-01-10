@@ -152,7 +152,7 @@ $request = trim(file_get_contents('php://input'));
 if(!empty($request)){
 	$input = json_decode($request, true);
 	// Verify object is page.
-	if (!empty($input['object']) && $input['object'] == 'page') {
+	if (!empty($input['object']) && $input['object'] == 'page' ) {
 		// Get the Senders Graph ID
 		$sender = $input['entry'][0]['messaging'][0]['sender']['id'];
 		// Get the returned message
@@ -176,25 +176,28 @@ if(!empty($request)){
 			// INSERT INTO messages (sender_user_id, recipient_user_id, filial_id, opportunity_id, created_at, sender, recipient, text, type)
 			// VALUES ($userCrm->id, null, $fillialConfigCrm->fillial_id, $opportunityCrm->id, now(), $sender, $page_id, $message, 'received');
 		
-		$mks_MessagesFb = BeanFactory::getBean('mks_MessagesFb');
-		$mks_MessagesFb->name = 'Chat Facebook';
-		$mks_MessagesFb->description = $message;
-		$mks_MessagesFb->type='received';
-		$mks_MessagesFb->sender=$userCrm->id;
-		$mks_MessagesFb->recipient=$fillialConfigCrm->id;
-		$mks_MessagesFb->assigned_user_id = 1;
-		$mks_MessagesFb->json_c = $request;
-		$mks_MessagesFb->save();
+		if(!empty($message)){
 		
-		if ($mks_MessagesFb->load_relationship('mks_messagesfb_opportunities'))		
-			$mks_MessagesFb->mks_messagesfb_opportunities->add($opportunityCrm->id);
-		
-		if ($mks_MessagesFb->load_relationship('accounts_mks_messagesfb_1'))	
-			$mks_MessagesFb->accounts_mks_messagesfb_1->add($userCrm->id);
+			$mks_MessagesFb = BeanFactory::getBean('mks_MessagesFb');
+			$mks_MessagesFb->name = 'Chat Facebook';
+			$mks_MessagesFb->description = $message;
+			$mks_MessagesFb->type='received';
+			$mks_MessagesFb->sender=$userCrm->id;
+			$mks_MessagesFb->recipient=$fillialConfigCrm->id;
+			$mks_MessagesFb->assigned_user_id = 1;
+			$mks_MessagesFb->json_c = $request;
+			$mks_MessagesFb->save();
 			
-		if ($mks_MessagesFb->load_relationship('mks_messagesfb_securitygroups_1'))	
-			$mks_MessagesFb->mks_messagesfb_securitygroups_1->add($fillialConfigCrm->id);
+			if ($mks_MessagesFb->load_relationship('mks_messagesfb_opportunities'))		
+				$mks_MessagesFb->mks_messagesfb_opportunities->add($opportunityCrm->id);
 			
+			if ($mks_MessagesFb->load_relationship('accounts_mks_messagesfb_1'))	
+				$mks_MessagesFb->accounts_mks_messagesfb_1->add($userCrm->id);
+				
+			if ($mks_MessagesFb->load_relationship('mks_messagesfb_securitygroups_1'))	
+				$mks_MessagesFb->mks_messagesfb_securitygroups_1->add($fillialConfigCrm->id);
+			
+		}	
 	}
 }
 exit();

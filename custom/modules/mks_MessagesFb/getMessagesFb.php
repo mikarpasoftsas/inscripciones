@@ -35,7 +35,7 @@ if($Contact->load_relationship('accounts_mks_messagesfb_1'))
 				SELECT mfb.* 
 				FROM mks_messagesfb mfb
 				INNER JOIN `accounts_mks_messagesfb_1_c` mfbbyacc ON mfbbyacc.`accounts_mks_messagesfb_1mks_messagesfb_idb` = mfb.id
-				WHERE mfb.deleted = 0 AND `accounts_mks_messagesfb_1accounts_ida` = '".$idcontact."'
+				WHERE mfb.deleted = 0 AND `accounts_mks_messagesfb_1accounts_ida` = '".$idcontact."' AND mfb.description != ''
 				ORDER BY date_entered desc
 				limit $start,$end
 						
