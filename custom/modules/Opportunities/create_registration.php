@@ -47,6 +47,7 @@ class create_registration {
 						SET 
 							sales_stage = 'Closed Won',
 							modified_user_id = '".$current_user->id."',
+							date_closed = '".$bean->date_closed."',
 							date_modified = now()
 						WHERE id = '".$bean->id."'
 					
