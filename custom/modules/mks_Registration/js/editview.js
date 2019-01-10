@@ -24,8 +24,8 @@ $( document ).ready(function() {
 	}
 	
 	
-	
-	validateGroups(mks_courses_id_c);
+	// se deshabilita temporalmente
+	//validateGroups(mks_courses_id_c);
 	haveCustomPlan();
 			
 	$("#btn_paymentplan").unbind( "click" );
@@ -89,6 +89,8 @@ $( document ).ready(function() {
 	});
 	
 });
+
+/* se deshabilita temporalmente
 $(function(){
     var Y = YUI().use('node', 'event', function (Y) {
         // node and event modules are loaded.
@@ -99,6 +101,7 @@ $(function(){
 		validateGroups(mks_courses_id_c);	
     });
 });
+*/
 
 function validateGroups(mks_courses_id_c)
 {

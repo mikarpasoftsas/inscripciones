@@ -1,6 +1,5 @@
+/*
 $( document ).ready(function() {
-	
-	alert("hola");	
 	
 	$(function(){   
 		
@@ -20,3 +19,5 @@ $( document ).ready(function() {
 	}, 3000);
     
 });
+});
+*/
