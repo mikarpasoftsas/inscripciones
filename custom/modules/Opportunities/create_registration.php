@@ -26,7 +26,7 @@ class create_registration {
 			if ($mks_Registration->load_relationship('mks_registration_securitygroups_1')){
 			
 					
-					global $db;
+					global $db, $current_user;
 					
 					$query = "
 				
@@ -39,6 +39,21 @@ class create_registration {
 					";
 					
 					$result = $db->query($query);
+					
+					$query1= "
+					
+					
+						UPDATE opportunities 
+						SET 
+							sales_stage = 'Closed Won',
+							modified_user_id = '".$current_user->id."',
+							date_closed = '".$bean->date_closed."',
+							date_modified = now()
+						WHERE id = '".$bean->id."'
+					
+					";
+					
+					$result = $db->query($query1);
 					
 					while( $row = $db->fetchByAssoc($result)){ 
 					
