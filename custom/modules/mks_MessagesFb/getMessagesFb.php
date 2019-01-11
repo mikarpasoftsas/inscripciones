@@ -51,7 +51,7 @@ if($Contact->load_relationship('accounts_mks_messagesfb_1'))
 		
 		if($mks_MessagesFb->type=='sent')
 		{
-				$User     = BeanFactory::getBean('Users', $Contact->created_by);
+				$User     = BeanFactory::getBean('Users', $mks_MessagesFb->assigned_user_id);
 				$fullname = $User->first_name .' '.$User->last_name;
 				$avatar = "index.php?entryPoint=download&id=".$User->id."_photo&type=Users" ;
 		}

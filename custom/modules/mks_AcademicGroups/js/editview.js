@@ -6,6 +6,7 @@ function clearType()
 $( document ).ready(function() {
     
 });
+/*
 $(function(){
     var Y = YUI().use('node', 'event', function (Y) {
         // node and event modules are loaded.
@@ -31,3 +32,4 @@ $(function(){
 		},"json"); 	
     });
 });
+*/
