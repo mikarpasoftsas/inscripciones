@@ -94,12 +94,14 @@ return;}else{SUGAR.subpanelUtils.cancelCreate(buttonName);var parts=theForm.spli
 if(savedModule!=''){savedModule='_'+savedModule;}
 savedModule=parts[i]+savedModule;if(window.ModuleSubPanels&&window.ModuleSubPanels[savedModule]){subPanels=subPanels.concat(window.ModuleSubPanels[savedModule]);}}
 for(var i=0;i<subPanels.length;i++){showSubPanel(subPanels[i],null,true);
-    console.log('inlineSave', subPanels[i]);
-    console.log('inlineSave typeof', (typeof subPanels[i] + '_inlineSave_onComplete'));
-    if(typeof subPanels[i] + '_inlineSave_onComplete' === 'function'){
-        console.log('inlineSave function exists. Then call');
-        var fn = window[subPanels[i] + '_inlineSave_onComplete'];
-        fn();
+    console.log('inlineSave subpanelname is:', subPanels[i]);
+    var fnName = subPanels[i] + '_inlineSave_onComplete';
+    console.log('inlineSave fnName', fnName);
+    var fn = window[fnName];
+    var fnExists = typeof fn === 'function';
+    console.log('inlineSave fnExists', fnExists);
+    if(fnExists){
+       fn();
     }
 }
 ajaxStatus.showStatus(SUGAR.language.get('app_strings','LBL_SAVED'));window.setTimeout('ajaxStatus.hideStatus()',1000);for(var i=0;i<saveButton.length;i++){saveButton[i].disabled=false;}}}
