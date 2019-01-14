@@ -6,6 +6,7 @@
 $layout_defs["mks_Registration"]["subpanel_setup"]['mks_custompaymentplan_mks_registration'] = array (
   'order' => 100,
   'module' => 'mks_CustomPaymentPlan',
+  'refresh_page' => 1,
   'subpanel_name' => 'default',
   'sort_order' => 'asc',
   'sort_by' => 'id',
@@ -25,6 +26,7 @@ $layout_defs["mks_Registration"]["subpanel_setup"]['mks_custompaymentplan_mks_re
 $layout_defs["mks_Registration"]["subpanel_setup"]['mks_refinances_mks_registration'] = array (
   'order' => 100,
   'module' => 'mks_Refinances',
+  'refresh_page' => 1,
   'subpanel_name' => 'default',
   'sort_order' => 'asc',
   'sort_by' => 'id',
@@ -51,6 +53,7 @@ $layout_defs["mks_Registration"]["subpanel_setup"]['mks_refinances_mks_registrat
 $layout_defs["mks_Registration"]["subpanel_setup"]['mks_registration_securitygroups_1'] = array (
   'order' => 100,
   'module' => 'SecurityGroups',
+  'refresh_page' => 1,
   'subpanel_name' => 'admin',
   'sort_order' => 'asc',
   'sort_by' => 'id',
