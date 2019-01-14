@@ -1,5 +1,6 @@
 function mks_refinances_mks_registration_inlineSave_onComplete(){
     console.log('mks_refinances_mks_registration_inlineSave_onComplete is called. Then redirect');
+    document.location.reload(true);
 }
 
 $( document ).ready(function() {
