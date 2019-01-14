@@ -465,12 +465,14 @@ SUGAR.subpanelUtils = function () {
           for (var i = 0; i < subPanels.length; i++) {
             showSubPanel(subPanels[i], null, true);
             
-            console.log('inlineSave', subPanels[i]);
-            console.log('inlineSave typeof', (typeof subPanels[i] + '_inlineSave_onComplete'));
-            if(typeof subPanels[i] + '_inlineSave_onComplete' === 'function'){
-                console.log('inlineSave function exists. Then call');
-                var fn = window[subPanels[i] + '_inlineSave_onComplete'];
-                fn();
+            console.log('inlineSave subpanelname is:', subPanels[i]);
+            var fnName = subPanels[i] + '_inlineSave_onComplete';
+            console.log('inlineSave fnName', fnName);
+            var fn = window[fnName];
+            var fnExists = typeof fn === 'function';
+            console.log('inlineSave fnExists', fnExists);
+            if(fnExists){
+               fn();
             }
           }
           ajaxStatus.showStatus(SUGAR.language.get('app_strings', 'LBL_SAVED'));
