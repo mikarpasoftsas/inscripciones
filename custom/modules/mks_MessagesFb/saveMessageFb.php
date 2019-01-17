@@ -63,6 +63,10 @@ if(!empty($_REQUEST["idpreinforme"])){
 	
 	$mks_MessagesFb2 = BeanFactory::getBean('mks_MessagesFb', $mks_MessagesFb->id);
 	
+	global $current_user;
+	$timeDate = new TimeDate();
+	$sampleDateTime = $mks_MessagesFb2->date_entered;
+	$FormatedDateTime = $timeDate->to_display_date_time($sampleDateTime, true, true, $current_user);
 	$arr["message"] = array(
 
 		 "id"=>$mks_MessagesFb2->id,
@@ -71,7 +75,7 @@ if(!empty($_REQUEST["idpreinforme"])){
 				"avatar"=> $avatar
 			),
 		 "text"=> $mks_MessagesFb2->description,
-		 "created_at"=> $mks_MessagesFb2->date_entered,
+		 "created_at"=> $FormatedDateTime,
 		 "type"=> $mks_MessagesFb2->type
 
 		);
