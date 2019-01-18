@@ -154,7 +154,7 @@ array (
       ),
       'courses_of_interest_c' => 
       array (
-        'type' => 'text',
+        'type' => 'varchar',
         'default' => true,
         'studio' => 'visible',
         'label' => 'LBL_COURSES_OF_INTEREST',
