@@ -284,6 +284,7 @@
     overflow-x:hidden;
     transform: rotate(180deg);
     direction: rtl;
+    z-index: 10009;
 }
 .direct-chat-msg, .direct-chat-text {
     display: block;
@@ -475,6 +476,7 @@
     border: 0px solid;
     padding-left: 10px;
     padding-right: 10px;
+    z-index: 10001;
 }
 .chat-box .chat-box-section {
     display: none;
@@ -501,5 +503,6 @@
         border: 0px solid;
         padding: 0px;
         margin: 0px;
+        z-index: 10001;
     } 
 }
