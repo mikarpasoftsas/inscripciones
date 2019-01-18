@@ -95,6 +95,10 @@ array (
           ),
           1 => '',
         ),
+        6 => 
+        array (
+          0 => 'description',
+        ),
       ),
       'LBL_PANEL_ASSIGNMENT' => 
       array (

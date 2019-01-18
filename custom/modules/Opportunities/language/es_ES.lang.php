@@ -1,5 +1,5 @@
 <?php
-// created: 2018-12-22 18:28:07
+// created: 2019-01-17 15:14:04
 $mod_strings = array (
   'LBL_LEADS' => 'Preinformes/Potenciales',
   'LBL_LEADS_SUBPANEL_TITLE' => 'Preinformes/Potenciales',
@@ -40,4 +40,5 @@ $mod_strings = array (
   'LBL_MEANS_NOTICE1' => 'Medio de aviso 2',
   'LBL_CREATED' => 'Creado Por',
   'LBL_ORIGIN_FB_C' => 'origin fb c',
+  'LBL_DESCRIPTION' => 'Observaciones',
 );

@@ -130,3 +130,9 @@ $GLOBALS['app_list_strings']['turn_list']=array (
   'Noche' => 'Noche',
   'Mediodia' => 'Mediodía',
 );
+
+$GLOBALS['app_list_strings']['discountrule_list']=array (
+  '' => '',
+  'discount' => 'Descuento',
+  'surcharge' => 'Recargo',
+);

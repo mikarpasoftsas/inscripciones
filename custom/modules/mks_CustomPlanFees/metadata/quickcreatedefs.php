@@ -29,7 +29,7 @@ array (
           'panelDefault' => 'expanded',
         ),
       ),
-	  'includes' => 
+      'includes' => 
       array (
         0 => 
         array (
@@ -52,11 +52,6 @@ array (
         ),
         1 => 
         array (
-          0 => 'name',
-          1 => '',
-        ),
-        2 => 
-        array (
           0 => 
           array (
             'name' => 'mks_custompaymentplan_mks_customplanfees_name',
@@ -64,7 +59,7 @@ array (
           ),
           1 => '',
         ),
-        3 => 
+        2 => 
         array (
           0 => 
           array (
@@ -73,7 +68,7 @@ array (
           ),
           1 => '',
         ),
-        4 => 
+        3 => 
         array (
           0 => 
           array (
@@ -82,7 +77,7 @@ array (
           ),
           1 => '',
         ),
-        5 => 
+        4 => 
         array (
           0 => 'assigned_user_name',
           1 => '',

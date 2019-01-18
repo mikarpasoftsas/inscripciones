@@ -118,6 +118,14 @@ array (
           ),
           1 => '',
         ),
+        8 => 
+        array (
+          0 => 
+          array (
+            'name' => 'description',
+            'nl2br' => true,
+          ),
+        ),
       ),
       'lbl_detailview_panel1' => 
       array (
