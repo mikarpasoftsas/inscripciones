@@ -96,7 +96,7 @@ function findOrCreateOpportunity($userCrm,$FILIAL_ID){
 	
 		SELECT opportunities.id FROM opportunities 
 		INNER JOIN `accounts_opportunities` ON opportunities.id = `opportunity_id`
-		WHERE `account_id`='$userCrm->id' AND `accounts_opportunities`.`deleted` = 0 AND `sales_stage` = 'Prospecting'
+		WHERE `account_id`='$userCrm->id' AND `accounts_opportunities`.`deleted` = 0 AND (`sales_stage` = 'Prospecting' or `sales_stage` = 'Qualification')
 		ORDER BY opportunities.`date_entered` DESC
 		LIMIT 1
 	";
