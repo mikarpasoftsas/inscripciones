@@ -44,6 +44,15 @@ array (
     'label' => 'LBL_LIST_SALES_STAGE',
     'default' => true,
   ),
+  'COURSES_OF_INTEREST_C' => 
+  array (
+    'type' => 'text',
+    'default' => true,
+    'studio' => 'visible',
+    'label' => 'LBL_COURSES_OF_INTEREST',
+    'sortable' => false,
+    'width' => '10%',
+  ),
   'ASSIGNED_USER_NAME' => 
   array (
     'width' => '10%',

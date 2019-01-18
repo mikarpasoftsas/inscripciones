@@ -315,6 +315,13 @@ class ListViewData {
         if(!isset($params['custom_where'])) $params['custom_where'] = '';
         if(!isset($params['custom_order_by'])) $params['custom_order_by'] = '';
 		$main_query = $ret_array['select'] . $params['custom_select'] . $ret_array['from'] . $params['custom_from'] . $ret_array['inner_join']. $ret_array['where'] . $params['custom_where'] . $ret_array['order_by'] . $params['custom_order_by'];
+		//G.D.C.P
+		$main_query = str_replace('opportunities_cstm.id ','opportunities_cstm.id_c ',$main_query);
+		/*
+		echo "<pre>";
+		print_r($main_query);
+		echo "</pre>";
+		*/
 		//C.L. - Fix for 23461
 		if(empty($_REQUEST['action']) || $_REQUEST['action'] != 'Popup') {
           	   $_SESSION['export_where'] = $ret_array['where'];

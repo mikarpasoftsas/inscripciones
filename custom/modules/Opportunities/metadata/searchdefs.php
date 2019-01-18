@@ -53,6 +53,16 @@ array (
         'default' => true,
         'width' => '10%',
       ),
+      'courses_of_interest_c' => 
+      array (
+        'type' => 'text',
+        'default' => true,
+        'studio' => 'visible',
+        'label' => 'LBL_COURSES_OF_INTEREST',
+        'sortable' => false,
+        'width' => '10%',
+        'name' => 'courses_of_interest_c',
+      ),
       'date_entered' => 
       array (
         'type' => 'datetime',
@@ -141,6 +151,16 @@ array (
         'name' => 'date_closed',
         'default' => true,
         'width' => '10%',
+      ),
+      'courses_of_interest_c' => 
+      array (
+        'type' => 'text',
+        'default' => true,
+        'studio' => 'visible',
+        'label' => 'LBL_COURSES_OF_INTEREST',
+        'sortable' => false,
+        'width' => '10%',
+        'name' => 'courses_of_interest_c',
       ),
     ),
   ),

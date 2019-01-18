@@ -1,5 +1,5 @@
 <?php
-// created: 2018-10-18 20:20:10
+// created: 2019-01-18 15:38:36
 $searchFields['Opportunities'] = array (
   'name' => 
   array (
@@ -167,5 +167,26 @@ $searchFields['Opportunities'] = array (
   'amount_usdollar' => 
   array (
     'query_type' => 'default',
+  ),
+  'courses_of_interest_c' =>
+  array (
+	'query_type' => 'format',
+	'operator'   => 'subquery',
+	'subquery'   => '
+	
+			SELECT opp.id 
+			FROM `opportunities` opp
+			LEFT JOIN `mks_interestcourse_opportunities_c` icp ON icp.`mks_interestcourse_opportunitiesopportunities_ida` = opp.id 
+			INNER JOIN `mks_interestcourse` ic ON ic.id = icp.`mks_interestcourse_opportunitiesmks_interestcourse_idb`
+			INNER JOIN mks_courses c ON c.id = ic.`mks_courses_id_c`
+			WHERE c.name LIKE "%{0}%"
+	
+	',
+	'db_field' => 
+		array (
+		
+			0 => 'id'
+			
+		)
   ),
 );
