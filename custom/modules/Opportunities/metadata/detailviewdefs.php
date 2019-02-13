@@ -122,6 +122,15 @@ array (
         array (
           0 => 
           array (
+            'name' => 'ads_id_c',
+            'label' => 'LBL_ADS_ID',
+          ),
+          1 => '',
+        ),
+        9 => 
+        array (
+          0 => 
+          array (
             'name' => 'description',
             'nl2br' => true,
           ),

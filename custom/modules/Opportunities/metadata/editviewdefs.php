@@ -97,6 +97,15 @@ array (
         ),
         6 => 
         array (
+          0 => 
+          array (
+            'name' => 'ads_id_c',
+            'label' => 'LBL_ADS_ID',
+          ),
+          1 => '',
+        ),
+        7 => 
+        array (
           0 => 'description',
         ),
       ),

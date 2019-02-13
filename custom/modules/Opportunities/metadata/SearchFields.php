@@ -1,5 +1,5 @@
 <?php
-// created: 2019-01-18 15:38:36
+// created: 2019-02-13 15:07:17
 $searchFields['Opportunities'] = array (
   'name' => 
   array (
@@ -168,11 +168,11 @@ $searchFields['Opportunities'] = array (
   array (
     'query_type' => 'default',
   ),
-  'courses_of_interest_c' =>
+  'courses_of_interest_c' => 
   array (
-	'query_type' => 'format',
-	'operator'   => 'subquery',
-	'subquery'   => '
+    'query_type' => 'format',
+    'operator' => 'subquery',
+    'subquery' => '
 	
 			SELECT opp.id 
 			FROM `opportunities` opp
@@ -182,11 +182,9 @@ $searchFields['Opportunities'] = array (
 			WHERE c.name LIKE "%{0}%"
 	
 	',
-	'db_field' => 
-		array (
-		
-			0 => 'id'
-			
-		)
+    'db_field' => 
+    array (
+      0 => 'id',
+    ),
   ),
 );

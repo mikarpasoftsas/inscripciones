@@ -53,6 +53,13 @@ array (
     'sortable' => false,
     'width' => '10%',
   ),
+  'ADS_ID_C' => 
+  array (
+    'type' => 'varchar',
+    'default' => true,
+    'label' => 'LBL_ADS_ID',
+    'width' => '20%',
+  ),
   'ASSIGNED_USER_NAME' => 
   array (
     'width' => '10%',
