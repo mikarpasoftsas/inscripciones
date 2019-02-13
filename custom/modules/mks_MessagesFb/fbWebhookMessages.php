@@ -168,35 +168,42 @@ if(!empty($request)){
 		// 4) Search in internal database if users exists with $sender value.
 		$userCrm = findOrCreateUser($PAGE_ACCESS_TOKEN, $sender, $fillialConfigCrm->id);
 		
-		// 5) Search in internal database if Opportunity exists for user CRM.
-		$opportunityCrm = findOrCreateOpportunity($userCrm, $fillialConfigCrm->id);
+		if (!empty($userCrm->id)) {
 		
-		// 5) Create a message in internal database.
-		// E.g.
-			// INSERT INTO messages (sender_user_id, recipient_user_id, filial_id, opportunity_id, created_at, sender, recipient, text, type)
-			// VALUES ($userCrm->id, null, $fillialConfigCrm->fillial_id, $opportunityCrm->id, now(), $sender, $page_id, $message, 'received');
-		
-		if(!empty($message)){
-		
-			$mks_MessagesFb = BeanFactory::getBean('mks_MessagesFb');
-			$mks_MessagesFb->name = 'Chat Facebook';
-			$mks_MessagesFb->description = $message;
-			$mks_MessagesFb->type='received';
-			$mks_MessagesFb->sender=$userCrm->id;
-			$mks_MessagesFb->recipient=$fillialConfigCrm->id;
-			$mks_MessagesFb->assigned_user_id = 1;
-			$mks_MessagesFb->json_c = $request;
-			$mks_MessagesFb->save();
+			// 5) Search in internal database if Opportunity exists for user CRM.
+			$opportunityCrm = findOrCreateOpportunity($userCrm, $fillialConfigCrm->id);
 			
-			if ($mks_MessagesFb->load_relationship('mks_messagesfb_opportunities'))		
-				$mks_MessagesFb->mks_messagesfb_opportunities->add($opportunityCrm->id);
+			if (!empty($opportunityCrm->id)) {
 			
-			if ($mks_MessagesFb->load_relationship('accounts_mks_messagesfb_1'))	
-				$mks_MessagesFb->accounts_mks_messagesfb_1->add($userCrm->id);
+				// 5) Create a message in internal database.
+				// E.g.
+					// INSERT INTO messages (sender_user_id, recipient_user_id, filial_id, opportunity_id, created_at, sender, recipient, text, type)
+					// VALUES ($userCrm->id, null, $fillialConfigCrm->fillial_id, $opportunityCrm->id, now(), $sender, $page_id, $message, 'received');
 				
-			if ($mks_MessagesFb->load_relationship('mks_messagesfb_securitygroups_1'))	
-				$mks_MessagesFb->mks_messagesfb_securitygroups_1->add($fillialConfigCrm->id);
+				if(!empty($message)){
+				
+					$mks_MessagesFb = BeanFactory::getBean('mks_MessagesFb');
+					$mks_MessagesFb->name = 'Chat Facebook';
+					$mks_MessagesFb->description = $message;
+					$mks_MessagesFb->type='received';
+					$mks_MessagesFb->sender=$userCrm->id;
+					$mks_MessagesFb->recipient=$fillialConfigCrm->id;
+					$mks_MessagesFb->assigned_user_id = 1;
+					$mks_MessagesFb->json_c = $request;
+					$mks_MessagesFb->save();
+					
+					if ($mks_MessagesFb->load_relationship('mks_messagesfb_opportunities'))		
+						$mks_MessagesFb->mks_messagesfb_opportunities->add($opportunityCrm->id);
+					
+					if ($mks_MessagesFb->load_relationship('accounts_mks_messagesfb_1'))	
+						$mks_MessagesFb->accounts_mks_messagesfb_1->add($userCrm->id);
+						
+					if ($mks_MessagesFb->load_relationship('mks_messagesfb_securitygroups_1'))	
+						$mks_MessagesFb->mks_messagesfb_securitygroups_1->add($fillialConfigCrm->id);
+					
+				}
 			
+			}
 		}	
 	}
 }
