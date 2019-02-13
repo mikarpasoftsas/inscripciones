@@ -6,6 +6,7 @@ $hook_array = Array();
 // position, file, function 
 $hook_array['before_save'] = Array(); 
 $hook_array['before_save'][] = Array(77, 'updateGeocodeInfo', 'modules/Accounts/AccountsJjwg_MapsLogicHook.php','AccountsJjwg_MapsLogicHook', 'updateGeocodeInfo'); 
+$hook_array['before_save'][] = Array(0, 'set_autoincrement_acc', 'custom/modules/Accounts/set_autoincrement_acc.php','set_autoincrement_acc', 'set_autoincrement_acc'); 
 $hook_array['before_save'][] = Array(1, 'fullname', 'custom/modules/Accounts/fullname.php','fullname', 'fullname'); 
 $hook_array['before_save'][] = Array(2, 'assigned_filial_acc', 'custom/modules/Accounts/assigned_filial_acc.php','assigned_filial_acc', 'assigned_filial_acc'); 
 

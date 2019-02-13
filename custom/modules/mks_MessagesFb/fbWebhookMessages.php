@@ -45,6 +45,11 @@ function findOrCreateUser($PAGE_ACCESS_TOKEN, $FB_USER_ID, $FILIAL_ID){
 			$user->fb_user_id_c 	  = $FB_USER_ID;
 			$user->profile_pic_fbk_c  = $fbUserData->profile_pic;
 			$user->origin_fb_c		  = $FILIAL_ID;
+			
+			if(empty($user->id_autoincrement_c))
+				
+				$user->id_autoincrement_c='pending';
+			
 			$user->save();
 			
 			$query_u = "	
