@@ -9,6 +9,7 @@ global $current_user, $db;
 
 
 $module = $_REQUEST['return_module'];
+
 $sugarbean = null;
 
 $securitygroup = $_REQUEST['massassign_group'];
@@ -58,6 +59,11 @@ if(isset($_POST['mass']) && is_array($_POST['mass'])){
 	foreach($_POST['mass'] as $id){
 		if(isset($_POST['Delete'])){
 			$sugarbean->retrieve($id);
+			
+			if($module=='Opportunities')
+			{
+				$acc = BeanFactory::getBean('Accounts',$sugarbean->account_id);
+			}
 
 			//if($sugarbean->ACLAccess('Delete')){
 				
@@ -66,9 +72,17 @@ if(isset($_POST['mass']) && is_array($_POST['mass'])){
 					$rel_name = "SecurityGroups";
 				} else if(empty($rel_name) || !isset($rel_name)) {
 					$rel_name = $groupFocus->getLinkName($sugarbean->module_dir,"SecurityGroups");
+					if($module=='Opportunities')
+						$rel_name2 = $groupFocus->getLinkName("Accounts","SecurityGroups");
 				}
 				$sugarbean->load_relationship($rel_name);
 				$sugarbean->$rel_name->delete($sugarbean->id,$groupFocus->id);
+				
+				if($module=='Opportunities')
+				{
+					$acc->load_relationship($rel_name2);
+					$acc->$rel_name2->delete($acc->id,$groupFocus->id);
+				}
 				
 				//As of 6.3.0 many-to-many requires a link field set in both modules...so lets bypass that
 				//$groupFocus->removeGroupFromRecord($sugarbean->module_dir, $id, $groupFocus->id);
@@ -78,6 +92,11 @@ if(isset($_POST['mass']) && is_array($_POST['mass'])){
 		}
 		else {
 			$sugarbean->retrieve($id);
+			
+			if($module=='Opportunities')
+			{
+				$acc = BeanFactory::getBean('Accounts',$sugarbean->account_id);
+			}
 
 			//if($sugarbean->ACLAccess('Save')){
 				
@@ -86,10 +105,18 @@ if(isset($_POST['mass']) && is_array($_POST['mass'])){
 					$rel_name = "SecurityGroups";
 				} else if(empty($rel_name) || !isset($rel_name)) {
 					$rel_name = $groupFocus->getLinkName($sugarbean->module_dir,"SecurityGroups");
+					if($module=='Opportunities')
+						$rel_name2 = $groupFocus->getLinkName("Accounts","SecurityGroups");
 				}
 				$GLOBALS['log']->debug("MassAssign - adding relationship relationship name: ".$rel_name);
 				$sugarbean->load_relationship($rel_name);
 				$sugarbean->$rel_name->add($groupFocus->id);
+				
+				if($module=='Opportunities')
+				{
+					$acc->load_relationship($rel_name2);
+					$acc->$rel_name2->add($groupFocus->id);
+				}
 				
 
 				//As of 6.3.0 many-to-many requires a link field set in both modules...so lets bypass that
