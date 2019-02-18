@@ -81,6 +81,15 @@ array (
           ),
           1 => '',
         ),
+        5 => 
+        array (
+          0 => 
+          array (
+            'name' => 'ads_id_c',
+            'label' => 'LBL_ADS_ID',
+          ),
+          1 => '',
+        ),
       ),
       'LBL_PANEL_ASSIGNMENT' => 
       array (

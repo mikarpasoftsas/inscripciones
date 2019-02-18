@@ -63,6 +63,14 @@ array (
         'width' => '10%',
         'name' => 'courses_of_interest_c',
       ),
+      'ads_id_c' => 
+      array (
+        'type' => 'varchar',
+        'default' => true,
+        'label' => 'LBL_ADS_ID',
+        'width' => '10%',
+        'name' => 'ads_id_c',
+      ),
       'date_entered' => 
       array (
         'type' => 'datetime',
@@ -161,6 +169,14 @@ array (
         'sortable' => false,
         'width' => '10%',
         'name' => 'courses_of_interest_c',
+      ),
+      'ads_id_c' => 
+      array (
+        'type' => 'varchar',
+        'default' => true,
+        'label' => 'LBL_ADS_ID',
+        'width' => '10%',
+        'name' => 'ads_id_c',
       ),
     ),
   ),
