@@ -7,6 +7,7 @@
 git config git-ftp.url ftp://162.241.139.215/
 git config git-ftp.user repository@logos.igi-la.com
 git config git-ftp.password R3posiTor1
+git config git-ftp.insecure 1
 git ftp add-scope production 162.241.139.215
 git ftp init -s production
 
