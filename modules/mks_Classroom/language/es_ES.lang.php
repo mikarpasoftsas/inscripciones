@@ -42,8 +42,8 @@
 $mod_strings = array (
   'LBL_ASSIGNED_TO_ID' => 'Id de usuario asignado',
   'LBL_ASSIGNED_TO_NAME' => 'Asignado a',
-  'LBL_SECURITYGROUPS' => 'Grupos de Seguridad',
-  'LBL_SECURITYGROUPS_SUBPANEL_TITLE' => 'Grupos de Seguridad',
+  'LBL_SECURITYGROUPS' => 'Filiales',
+  'LBL_SECURITYGROUPS_SUBPANEL_TITLE' => 'Filiales',
   'LBL_ID' => 'ID',
   'LBL_DATE_ENTERED' => 'Fecha de Creación',
   'LBL_DATE_MODIFIED' => 'Fecha de Modificación',
@@ -76,4 +76,5 @@ $mod_strings = array (
   'LBL_ACTIVITIES_SUBPANEL_TITLE' => 'Actividades',
   'LBL_MKS_CLASSROOM_SUBPANEL_TITLE' => 'Aulas',
   'LBL_NEW_FORM_TITLE' => 'Nuevo Aulas',
+  'LBL_FILIAL_SUBPANEL_TITLE'=>'Filiales'
 );

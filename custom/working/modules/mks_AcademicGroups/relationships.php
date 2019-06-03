@@ -42,7 +42,7 @@
 $relationships = array (
   'mks_academicgroups_modified_user' => 
   array (
-    'id' => '7225c3ed-0e9b-a584-e421-5bd1d552f24e',
+    'id' => '66fadde6-f8ec-4a77-eeff-5cc77e4a9a23',
     'relationship_name' => 'mks_academicgroups_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -68,7 +68,7 @@ $relationships = array (
   ),
   'mks_academicgroups_created_by' => 
   array (
-    'id' => '72780678-d8a1-a2de-2c13-5bd1d5d97150',
+    'id' => '6722cc1f-aaec-218a-3595-5cc77e3dd101',
     'relationship_name' => 'mks_academicgroups_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -94,7 +94,7 @@ $relationships = array (
   ),
   'mks_academicgroups_assigned_user' => 
   array (
-    'id' => '72baca76-cf08-aa4e-60f3-5bd1d56047b7',
+    'id' => '674b69b0-8a95-0755-a91d-5cc77edf4b66',
     'relationship_name' => 'mks_academicgroups_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
@@ -120,7 +120,7 @@ $relationships = array (
   ),
   'securitygroups_mks_academicgroups' => 
   array (
-    'id' => '72ff253a-4e4a-50fd-b350-5bd1d57772ba',
+    'id' => '6771cb36-c959-38ec-5621-5cc77ecc8418',
     'relationship_name' => 'securitygroups_mks_academicgroups',
     'lhs_module' => 'SecurityGroups',
     'lhs_table' => 'securitygroups',
@@ -146,7 +146,7 @@ $relationships = array (
   ),
   'mks_academicgroups_securitygroups' => 
   array (
-    'id' => '936daab8-71ae-90ba-e8ec-5bd1d5f5b77e',
+    'id' => '9929e3d0-4646-4cb1-c4ba-5cc77e498801',
     'relationship_name' => 'mks_academicgroups_securitygroups',
     'lhs_module' => 'mks_AcademicGroups',
     'lhs_table' => 'mks_academicgroups',
@@ -172,7 +172,7 @@ $relationships = array (
   ),
   'mks_academicgroups_mks_groupschedule' => 
   array (
-    'id' => '93b6e6ce-6e5b-6b67-c500-5bd1d53e07ed',
+    'id' => '99517981-a816-d1af-fdba-5cc77e736914',
     'relationship_name' => 'mks_academicgroups_mks_groupschedule',
     'lhs_module' => 'mks_AcademicGroups',
     'lhs_table' => 'mks_academicgroups',
@@ -198,7 +198,7 @@ $relationships = array (
   ),
   'mks_academicgroups_users' => 
   array (
-    'id' => '940861d3-158f-72e1-0776-5bd1d526c32d',
+    'id' => '9981f3bd-ce18-f544-6334-5cc77e93629b',
     'relationship_name' => 'mks_academicgroups_users',
     'lhs_module' => 'mks_AcademicGroups',
     'lhs_table' => 'mks_academicgroups',
@@ -224,7 +224,7 @@ $relationships = array (
   ),
   'mks_academicgroups_mks_groupmatters_1' => 
   array (
-    'id' => '94b3d152-6b32-655c-ed1d-5bd1d52dd64e',
+    'id' => '99d3a15d-bd5d-b0eb-fab8-5cc77ed96cdd',
     'relationship_name' => 'mks_academicgroups_mks_groupmatters_1',
     'lhs_module' => 'mks_AcademicGroups',
     'lhs_table' => 'mks_academicgroups',
@@ -250,19 +250,44 @@ $relationships = array (
   ),
   'mks_academicgroups_mks_teacher_1' => 
   array (
-    'rhs_label' => 'Docentes',
-    'lhs_label' => 'Grupos',
+    'id' => '9a358a5a-4924-55e4-d50d-5cc77e68b27e',
+    'relationship_name' => 'mks_academicgroups_mks_teacher_1',
+    'lhs_module' => 'mks_AcademicGroups',
+    'lhs_table' => 'mks_academicgroups',
+    'lhs_key' => 'id',
+    'rhs_module' => 'mks_Teacher',
+    'rhs_table' => 'mks_teacher',
+    'rhs_key' => 'id',
+    'join_table' => 'mks_academicgroups_mks_teacher_1_c',
+    'join_key_lhs' => 'mks_academicgroups_mks_teacher_1mks_academicgroups_ida',
+    'join_key_rhs' => 'mks_academicgroups_mks_teacher_1mks_teacher_idb',
+    'relationship_type' => 'many-to-many',
+    'relationship_role_column' => NULL,
+    'relationship_role_column_value' => NULL,
+    'reverse' => '0',
+    'deleted' => '0',
+    'readonly' => true,
+    'rhs_subpanel' => 'default',
     'lhs_subpanel' => 'default',
+    'from_studio' => true,
+    'is_custom' => true,
+    'relationship_only' => false,
+    'for_activities' => false,
+  ),
+  'mks_academicgroups_mks_assists_1' => 
+  array (
+    'rhs_label' => 'Asistencia',
+    'lhs_label' => 'Grupos',
     'rhs_subpanel' => 'default',
     'lhs_module' => 'mks_AcademicGroups',
-    'rhs_module' => 'mks_Teacher',
-    'relationship_type' => 'many-to-many',
+    'rhs_module' => 'mks_Assists',
+    'relationship_type' => 'one-to-many',
     'readonly' => true,
     'deleted' => false,
     'relationship_only' => false,
     'for_activities' => false,
     'is_custom' => false,
     'from_studio' => true,
-    'relationship_name' => 'mks_academicgroups_mks_teacher_1',
+    'relationship_name' => 'mks_academicgroups_mks_assists_1',
   ),
 );

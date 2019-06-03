@@ -1,5 +1,5 @@
 <?php
-// created: 2019-02-13 15:06:27
+// created: 2019-02-22 14:41:58
 $mod_strings = array (
   'LBL_LEADS' => 'Preinformes/Potenciales',
   'LBL_LEADS_SUBPANEL_TITLE' => 'Preinformes/Potenciales',

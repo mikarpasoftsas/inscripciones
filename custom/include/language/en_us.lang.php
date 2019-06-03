@@ -3,11 +3,6 @@ $GLOBALS['app_list_strings']['tmp_list']=array (
   'A' => 'A',
   '' => '',
 );
-$GLOBALS['app_list_strings']['sexo_list']=array (
-  '' => '',
-  'Masculino' => 'Masculino',
-  'Femenino' => 'Femenino',
-);
 $GLOBALS['app_list_strings']['id_type_list']=array (
   '' => '',
   'NIT' => 'NIT',
@@ -135,4 +130,99 @@ $GLOBALS['app_list_strings']['discountrule_list']=array (
   '' => '',
   'discount' => 'Descuento',
   'surcharge' => 'Recargo',
+);
+$GLOBALS['app_list_strings']['payment_status_list']=array (
+  '' => '',
+  'pending' => 'Pendiente',
+  'partial' => 'Parcial',
+  'Paid' => 'Pagado',
+);
+$GLOBALS['app_list_strings']['type_1']=array (
+  '' => '',
+  'debit' => 'Debito',
+  'credit' => 'Crédito',
+);
+$GLOBALS['app_list_strings']['fees_list']=array (
+  1 => '1',
+  2 => '2',
+  3 => '3',
+  4 => '4',
+  5 => '5',
+  6 => '6',
+  7 => '7',
+  8 => '8',
+  9 => '9',
+  '' => '',
+  10 => '10',
+  11 => '11',
+  12 => '12',
+  13 => '13',
+  14 => '14',
+  15 => '15',
+  16 => '16',
+  17 => '17',
+  18 => '18',
+  19 => '19',
+  20 => '20',
+  21 => '21',
+  22 => '22',
+  23 => '23',
+  24 => '24',
+);
+$GLOBALS['app_list_strings']['status_registration_receipts_list']=array (
+  'draft' => 'Borrador',
+  'confirmed' => 'Confirmado',
+);
+$GLOBALS['app_list_strings']['status_managment_list']=array (
+  '' => '',
+  'closed' => 'Cerrado',
+  'reagenda' => 'Reagenda',
+);
+
+$GLOBALS['app_list_strings']['type_managment_list']=array (
+  'query' => 'Consulta',
+  '' => '',
+);
+$GLOBALS['app_list_strings']['type_concept_list']=array (
+  '' => '',
+  'discount' => 'Descuento',
+  'surcharge' => 'Recargo',
+  'standard' => 'Normal',
+  'fee' => 'Cuota',
+);
+$GLOBALS['app_list_strings']['status_payment_list']=array (
+  'pending' => 'Pendiente',
+  'paid' => 'Pagado',
+);
+$GLOBALS['app_list_strings']['type_rr_list']=array (
+  '_x_c' => 'X',
+  '_a_c' => 'A',
+  '' => '',
+);
+$GLOBALS['app_list_strings']['status_list']=array (
+  'open' => 'Abierta',
+  'closed' => 'Cerrada',
+);
+$GLOBALS['app_list_strings']['status_mov_box']=array (
+  'open' => 'Abierta',
+  'closed' => 'Cerrada',
+);
+$GLOBALS['app_list_strings']['currency_list']=array (
+  'ARS' => 'ARS',
+  'COL' => 'Pesos colombianos',
+);
+$GLOBALS['app_list_strings']['sexo_list']=array (
+  '' => '',
+  'Masculino' => 'Male',
+  'Femenino' => 'Famele',
+);
+$GLOBALS['app_list_strings']['pdf_template_type_dom']=array (
+  'AOS_Quotes' => 'Quotes',
+  'AOS_Invoices' => 'Invoices',
+  'AOS_Contracts' => 'Contracts',
+  'Accounts' => 'Accounts',
+  'Contacts' => 'Contacts',
+  'Leads' => 'Leads',
+  'mks_RegistrationReceipts' => 'Recibos',
+  'mks_Registration' => 'Matriculas',
 );

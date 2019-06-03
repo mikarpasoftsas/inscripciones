@@ -10,6 +10,20 @@ array (
       'maxColumns' => '2',
       'form' => 
       array (
+        'buttons' => 
+        array (
+          0 => 'EDIT',
+          1 => 'DUPLICATE',
+          2 => 'DELETE',
+          3 => 
+          array (
+            'customCode' => '<input title="Generar Recibo" accessKey="R" type="button" class="button" onClick="document.location=\'index.php?entryPoint=NewAutoRegRR&new_auto_reg_rr=true&record={$fields.id.value}\'" name="receipt" value="Generar Recibo">',
+          ),
+		  4 => 
+          array (
+            'customCode' => '<input type="button" class="button" onClick="showPopup(\'pdf\');" value="{$MOD.LBL_PRINT_AS_PDF}">',
+          ),
+        ),
       ),
       'widths' => 
       array (
@@ -28,6 +42,11 @@ array (
       'tabDefs' => 
       array (
         'DEFAULT' => 
+        array (
+          'newTab' => false,
+          'panelDefault' => 'expanded',
+        ),
+        'LBL_DETAILVIEW_PANEL3' => 
         array (
           'newTab' => false,
           'panelDefault' => 'expanded',
@@ -110,6 +129,30 @@ array (
             'studio' => 'visible',
             'label' => 'LBL_SIZE',
           ),
+          1 => '',
+        ),
+        6 => 
+        array (
+          0 => 
+          array (
+            'name' => 'receip_type_c',
+            'studio' => 'visible',
+            'label' => 'LBL_RECEIP_TYPE',
+          ),
+          1 => '',
+        ),
+      ),
+      'lbl_detailview_panel3' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            'name' => 'description',
+            'comment' => 'Full text of the note',
+            'label' => 'LBL_DESCRIPTION',
+          ),
+          1 => '',
         ),
       ),
       'lbl_editview_panel2' => 

@@ -30,7 +30,7 @@ array (
         ),
       ),
       'syncDetailEditViews' => false,
-	  'includes' => 
+      'includes' => 
       array (
         0 => 
         array (
@@ -121,17 +121,26 @@ array (
         array (
           0 => 
           array (
-            'name' => 'attachment_c',
-            'label' => 'LBL_ATTACHMENT',
+            'name' => 'first_expiration_c',
+            'label' => 'LBL_FIRST_EXPIRATION',
           ),
           1 => '',
         ),
         9 => 
         array (
-          0 => 'assigned_user_name',
+          0 => 
+          array (
+            'name' => 'attachment_c',
+            'label' => 'LBL_ATTACHMENT',
+          ),
           1 => '',
         ),
         10 => 
+        array (
+          0 => 'assigned_user_name',
+          1 => '',
+        ),
+        11 => 
         array (
           0 => 'description',
           1 => '',

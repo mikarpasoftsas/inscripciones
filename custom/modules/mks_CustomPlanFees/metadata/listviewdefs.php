@@ -39,6 +39,14 @@ array (
     'width' => '10%',
     'default' => true,
   ),
+  'PAYMENT_STATUS_C' => 
+  array (
+    'type' => 'enum',
+    'default' => true,
+    'studio' => 'visible',
+    'label' => 'LBL_PAYMENT_STATUS',
+    'width' => '10%',
+  ),
   'ASSIGNED_USER_NAME' => 
   array (
     'width' => '9%',

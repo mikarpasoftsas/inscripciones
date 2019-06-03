@@ -3,6 +3,11 @@
 
  
  //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_assists_mks_assistants_1MetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
 include('custom/metadata/mks_subjectmatter_securitygroupsMetaData.php');
 
 
@@ -81,6 +86,41 @@ include('custom/metadata/jckl_dashboarddeployments_jckl_dashboardtemplatesMetaDa
 
  
  //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_registration_mks_registrationreceipts_1MetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_registrationreceipts_mks_paymentstransfer_1MetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_registrationreceipts_mks_paymentscard_1MetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_box_mks_paymentscash_1MetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_bank_mks_paymentscheck_1MetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_paymentconcepts_mks_collectionconcepts_1MetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_dailyboxmovements_mks_paymentscash_1MetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
 include('custom/metadata/mks_academicgroups_securitygroupsMetaData.php');
 
 
@@ -121,7 +161,37 @@ include('custom/metadata/mks_paymentplan_mks_planfeesMetaData.php');
 
  
  //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_registration_mks_management_1MetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_academicgroups_mks_assists_1MetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
 include('custom/metadata/mks_custompaymentplan_mks_customplanfeesMetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_registrationreceipts_mks_collectionconcepts_1MetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_box_mks_paymentstransfer_1MetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_collectionconcepts_mks_customplanfees_1MetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_dailyboxmovements_mks_paymentstransfer_1MetaData.php');
 
 
  
@@ -132,6 +202,11 @@ include('custom/metadata/mks_paymentplan_mks_discountrulesMetaData.php');
  
  //WARNING: The contents of this file are auto-generated
 include('custom/metadata/mks_paymentplan_mks_coursesMetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_dailyboxmovements_mks_movement_1MetaData.php');
 
 
  
@@ -187,6 +262,31 @@ include('custom/metadata/mks_paymentplan_securitygroups_1MetaData.php');
  
  //WARNING: The contents of this file are auto-generated
 include('custom/metadata/mks_courses_securitygroups_1MetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_registrationreceipts_mks_paymentscash_1MetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_registrationreceipts_mks_paymentscheck_1MetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_custompaymentplan_mks_registrationreceipts_1MetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/accounts_mks_management_1MetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_registrationreceipts_mks_customplanfees_1MetaData.php');
 
 
 ?>

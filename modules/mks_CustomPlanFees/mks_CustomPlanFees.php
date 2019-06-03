@@ -76,4 +76,207 @@ class mks_CustomPlanFees extends Basic
         return false;
     }
 	
+	function getRuleCharge($obj,$diff_days)
+	{
+			
+		global $db;
+	
+		$query = "
+		
+			SELECT  mks_customdiscountrules.id, mks_customdiscountrules_cstm.`type_c`, `value`
+			FROM mks_customdiscountrules  
+			LEFT JOIN mks_customdiscountrules_cstm ON mks_customdiscountrules.id = mks_customdiscountrules_cstm.id_c   
+			LEFT JOIN  mks_customdiscountrules_mks_custompaymentplan_c jtl0 ON mks_customdiscountrules.id=jtl0.mks_custom34c2ntrules_idb AND jtl0.deleted=0
+			LEFT JOIN  mks_custompaymentplan jt0 ON jt0.id=jtl0.mks_custom2713entplan_ida AND jt0.deleted=0 AND jt0.deleted=0 
+			LEFT JOIN  users jt1 ON mks_customdiscountrules.assigned_user_id=jt1.id AND jt1.deleted=0 AND jt1.deleted=0 
+			 WHERE ((jt0.id = '".$obj->mks_customed0dentplan_ida."')) 
+				AND mks_customdiscountrules.deleted=0 
+				AND `discountrule` = 'surcharge' AND
+				( 
+				
+					final_day > 0 AND ( ".$diff_days." BETWEEN `initial_day` AND `final_day` ) OR
+					
+					final_day = 0 AND ( ".$diff_days." >`initial_day`) 					
+				   
+				) 
+				
+			ORDER BY mks_customdiscountrules.id_autoincrement ASC
+					
+		";
+	     
+		$res = $db->query($query);
+		
+		$row = $db->fetchByAssoc($res);
+
+		$idrule = array("id"=>"","type_c"=>"","value"=>0.00);
+		
+		if(isset($row['id']))	
+					
+			$idrule = $row;
+		
+		return $idrule;
+		
+	}
+	
+	function getRuleDiscount($obj,$diff_days)
+	{
+			
+		global $db;
+	
+		$query = "
+		
+			SELECT  mks_customdiscountrules.id, mks_customdiscountrules_cstm.`type_c`, `value`
+			FROM mks_customdiscountrules  
+			LEFT JOIN mks_customdiscountrules_cstm ON mks_customdiscountrules.id = mks_customdiscountrules_cstm.id_c   
+			LEFT JOIN  mks_customdiscountrules_mks_custompaymentplan_c jtl0 ON mks_customdiscountrules.id=jtl0.mks_custom34c2ntrules_idb AND jtl0.deleted=0
+			LEFT JOIN  mks_custompaymentplan jt0 ON jt0.id=jtl0.mks_custom2713entplan_ida AND jt0.deleted=0 AND jt0.deleted=0 
+			LEFT JOIN  users jt1 ON mks_customdiscountrules.assigned_user_id=jt1.id AND jt1.deleted=0 AND jt1.deleted=0 
+			 WHERE ((jt0.id = '".$obj->mks_customed0dentplan_ida."')) 
+				AND mks_customdiscountrules.deleted=0 
+				AND `discountrule` = 'discount'
+				AND ".$diff_days." BETWEEN `initial_day` AND `final_day`
+			ORDER BY mks_customdiscountrules.id_autoincrement ASC
+					
+		";
+	     
+		$res = $db->query($query);
+		
+		$row = $db->fetchByAssoc($res);
+
+		$idrule = array("id"=>"","type_c"=>"","value"=>0.00);
+		
+		if(isset($row['id']))	
+					
+			$idrule = $row;
+			
+		return $idrule;
+		
+	}
+	
+	function getDiffDay($a,$b)
+	{
+		global $timedate,$db; 
+	
+		if(!empty($a) && !empty($b)){
+			
+			$b1 = $timedate->to_db($b);
+			
+			
+			$query = "
+			
+				SELECT DATEDIFF('".$b1."','".$a."') as date_difference
+						
+			";
+			 
+			$res = $db->query($query);
+			
+			$row = $db->fetchByAssoc($res);
+
+			if(isset($row['date_difference']))	
+						
+				return $row['date_difference'];
+		}
+		
+		return 0;	
+	}
+	
+	
+	function getSurcharge($obj)
+	{ 
+		
+		$diffday = $this->getDiffDay(date("Y-m-d H:i:s"),$obj->expiration);
+
+		if ( $diffday < 0 )
+		{
+			 $rule = $this->getRuleCharge($obj,$diffday*-1);
+			 
+			 if (!empty($rule['id']))
+			 {	 
+				 if($rule['type_c']=='valor')
+					 
+					return $rule['value'];
+					
+				 else
+					 
+					return ($obj->amount-$obj->partial_mount_c) * ($rule['value'] / 100);
+			 }				
+		}
+		
+		return 0.00;
+	}
+	
+	function getDiscount($obj)
+	{
+		
+		$diffday = $this->getDiffDay(date("Y-m-d H:i:s"),$obj->expiration);
+
+		if ( $diffday < 0 )
+		{
+			 $rule = $this->getRuleDiscount($obj,$diffday*-1);
+			 if (!empty($rule['id']))
+			 {
+				 if($rule['type_c']=='valor')
+					 
+					return $rule['value'];
+					
+				 else
+					 
+					return ($obj->amount-$obj->partial_mount_c) * ($rule['value'] / 100);
+			 }
+		}
+		
+		return 0.00;
+	}
+	
+	function calculate_payment_detail($obj)
+	{
+		
+		if($obj->payment_status_c != 'Paid'){
+			
+			$surcharge = 0.00;
+			
+			if (empty($obj->amount_interest_c)||$obj->amount_interest_c==0.00)
+				{
+					$surcharge = $this->getSurcharge($obj);
+					
+					if($surcharge > 0.00)
+						
+						$obj->amount_interest_c = $surcharge;
+						$obj->amount = $obj->amount + $obj->amount_interest_c;
+					
+				}
+				
+			$discount  = $this->getDiscount($obj);	
+			
+			return (($obj->amount-$obj->partial_mount_c) - $discount);		
+			
+		}	
+		
+	}
+	
+	function calculate_payment_detail_only_surcharge($obj)
+	{
+		
+		if($obj->payment_status_c != 'Paid'){
+			
+			$surcharge = 0.00;
+			
+			if (empty($obj->amount_interest_c)||$obj->amount_interest_c==0.00)
+				{
+					$surcharge = $this->getSurcharge($obj);
+					
+					if($surcharge > 0.00)
+					{
+						$obj->amount_interest_c = $surcharge;
+						$obj->amount = $obj->amount + $obj->amount_interest_c;
+					}	
+					
+				}
+					
+			return (($obj->amount-$obj->partial_mount_c));		
+			
+		}	
+		
+	}
+	
 }

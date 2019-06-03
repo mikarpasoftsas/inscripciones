@@ -12,7 +12,9 @@ class assigned_filial_reg {
 			global $db;
 						
 			$query = "					
-				SELECT `securitygroup_id` FROM `securitygroups_users` WHERE `user_id` = '".$bean->assigned_user_id."'													
+				SELECT `securitygroup_id` 
+				FROM `securitygroups_users` 
+				WHERE `user_id` = '".$bean->assigned_user_id."' and deleted = 0													
 			";
 			
 			$result = $db->query($query);

@@ -1,0 +1,11 @@
+<?php
+// created: 2019-05-18 15:19:20
+$layout_defs = array (
+  'amount_c' => 
+  array (
+    'type' => 'float',
+    'default' => true,
+    'vname' => 'LBL_AMOUNT',
+    'width' => '10%',
+  ),
+);

@@ -5,10 +5,12 @@ ini_set("display_errors",true);
 class see_availability
 
 {
-
+	
     function see_availability($bean, $event, $arguments)
 
     {
+		global $app_list_strings;
+		
 		if($bean->load_relationship('mks_academicgroups_mks_groupschedule'))
 		{
 			$groupschedules = $bean->mks_academicgroups_mks_groupschedule->getBeans();
@@ -16,18 +18,20 @@ class see_availability
 			$cadena_ordenada=array();
 			
 			foreach ($groupschedules as $groupschedule)
-			{
+			{   
+			    
+				$order = 0 ;
 				switch($groupschedule->day)
 				{
-					case 'Lunes': $order = 1;break;
-					case 'Martes': $order = 2;break;
-					case 'Miercoles': $order = 3;break;
-					case 'Jueves': $order = 4;break;
-					case 'Viernes': $order = 5;break;
-					case 'Sabado': $order = 6;break;
-					case 'Domingo': $order = 7;break;
+					case 0: $order = 1;break;
+					case 1: $order = 2;break;
+					case 2: $order = 3;break;
+					case 3: $order = 4;break;
+					case 4: $order = 5;break;
+					case 5: $order = 6;break;
+					case 6: $order = 7;break;
 				}
-				$cadena[$order] = $groupschedule->day .' '. $groupschedule->start_time .'-'. $groupschedule->end_time . ' hrs';
+				$cadena[$order] = $app_list_strings['day_available_list'][$groupschedule->day] .' '. $groupschedule->start_time .'-'. $groupschedule->end_time . ' hrs';
 			}
 			for ($i=1;$i<=count($cadena);$i++)		
 			{

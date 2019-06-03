@@ -102,6 +102,15 @@ array (
             'label' => 'LBL_SIZE',
           ),
         ),
+        4 => 
+        array (
+          0 => 
+          array (
+            'name' => 'receip_type_c',
+            'studio' => 'visible',
+            'label' => 'LBL_RECEIP_TYPE',
+          ),
+        ),
       ),
       'lbl_editview_panel2' => 
       array (

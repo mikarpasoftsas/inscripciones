@@ -38,6 +38,7 @@
  * display the words  "Powered by SugarCRM" and "Supercharged by SuiteCRM".
  */
 ini_set("display_errors",0);
+
 if (!defined('sugarEntry')) {
     define('sugarEntry', true);
 }

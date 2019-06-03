@@ -63,13 +63,22 @@ array (
         ),
         3 => 
         array (
-          0 => 'noninheritable',
+          0 => 
+          array (
+            'name' => 'key_autoincrement_c',
+            'label' => 'LBL_KEY_AUTOINCREMENT',
+          ),
+          1 => '',
         ),
         4 => 
         array (
-          0 => 'assigned_user_name',
+          0 => 'noninheritable',
         ),
         5 => 
+        array (
+          0 => 'assigned_user_name',
+        ),
+        6 => 
         array (
           0 => 'description',
         ),

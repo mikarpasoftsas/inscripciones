@@ -1,5 +1,5 @@
 <?php
-// created: 2018-12-20 15:40:40
+// created: 2019-06-01 15:40:59
 $mod_strings = array (
   'LBL_MKS_REGISTRATION_CONTACTS_FROM_CONTACTS_TITLE' => 'Contactos',
   'LBL_CONTACTS_TITLE' => 'Contacto',
@@ -25,9 +25,26 @@ $mod_strings = array (
   'LBL_EDITVIEW_PANEL3' => 'Reinscripción',
   'LBL_ TOTAL_DEBT' => 'Deuda total del plan',
   'LBL_REGISTER_MKS_REGISTRATION_ID' => 'register (relacionado  ID)',
-  'LBL_REGISTER' => 'Matricula Asociada',
+  'LBL_REGISTER' => 'Matricula',
   'LBL_MKS_CUSTOMPAYMENTPLAN_MKS_REGISTRATION_FROM_MKS_CUSTOMPAYMENTPLAN_TITLE' => 'Plan de Pagos Personalizado',
   'LBL_AMOUNT_FEES_C' => '# Cuotas',
   'LBL_ADVANCE_C' => 'Anticipo',
   'LBL_SIZE' => 'Talla del uniforme',
+  'LBL_MKS_REGISTRATION_MKS_REGISTRATIONRECEIPTS_1_FROM_MKS_REGISTRATIONRECEIPTS_TITLE' => 'Recibos',
+  'LBL_DETAILVIEW_PANEL3' => 'Resumen de Deuda',
+  'LBL_MKS_REGISTRATION_MKS_MANAGEMENT_1_FROM_MKS_MANAGEMENT_TITLE' => 'Gestión',
+  'LBL_TITLE_DEBT_SUMMARY_TABLE' => '# de Cuota | Monto | Vencimiento | Estado Pago',
+  'LBL_TITLE_DEBT_SUMMARY_TABLE_1' => '# de Cuota | Monto | Vencimiento',
+  'LBL_PENDING_DEBIT_1' => 'A la fecha',
+  'LBL_PENDING_DEBIT_2' => 'NO presenta deuda pendiente',
+  'LBL_PENDING_DEBIT_3' => ' tiene una deuda de ',
+  'LBL_PENDING_DEBIT_4' => ' cuota(s) con un saldo de ',
+  'LBL_PENDING_DEBIT_5' => 'El último pago recibido fue el ',
+  'LBL_PENDING_DEBIT_6' => 'El último pago recibido fue hoy',
+  'LBL_PENDING_DEBIT_7' => 'Hasta el momento no se registra pagos',
+  'LBL_PENDING_DEBIT_8' => ' por un monto de ',
+  'LBL_RECEIP_TYPE_MKS_RECEIPTYPE_ID' => 'Tipo de Recibo (relacionado  ID)',
+  'LBL_RECEIP_TYPE' => 'Tipo de Recibo',
+  'LBL_PRINT_AS_PDF' => 'Generar PDF',
+  'LBL_DETAIL_PAYMEN_PLAN' => 'Detalle del plan de pago',
 );

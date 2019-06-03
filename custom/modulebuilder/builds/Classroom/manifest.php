@@ -65,9 +65,9 @@ $manifest = array (
   'icon' => '',
   'is_uninstallable' => true,
   'name' => 'Classroom',
-  'published_date' => '2018-09-24 16:21:43',
+  'published_date' => '2019-04-29 19:04:16',
   'type' => 'module',
-  'version' => 1537806103,
+  'version' => 1556564656,
   'remove_tables' => 'prompt',
 );
 
@@ -86,23 +86,9 @@ $installdefs = array (
   ),
   'layoutdefs' => 
   array (
-    0 => 
-    array (
-      'from' => '<basepath>/SugarModules/relationships/layoutdefs/mks_classroom_securitygroups_SecurityGroups.php',
-      'to_module' => 'SecurityGroups',
-    ),
-    1 => 
-    array (
-      'from' => '<basepath>/SugarModules/relationships/layoutdefs/mks_classroom_securitygroups_mks_Classroom.php',
-      'to_module' => 'mks_Classroom',
-    ),
   ),
   'relationships' => 
   array (
-    0 => 
-    array (
-      'meta_data' => '<basepath>/SugarModules/relationships/relationships/mks_classroom_securitygroupsMetaData.php',
-    ),
   ),
   'image_dir' => '<basepath>/icons',
   'copy' => 
@@ -117,52 +103,15 @@ $installdefs = array (
   array (
     0 => 
     array (
-      'from' => '<basepath>/SugarModules/relationships/language/SecurityGroups.php',
-      'to_module' => 'SecurityGroups',
-      'language' => 'es_ES',
-    ),
-    1 => 
-    array (
-      'from' => '<basepath>/SugarModules/relationships/language/SecurityGroups.php',
-      'to_module' => 'SecurityGroups',
-      'language' => 'en_us',
-    ),
-    2 => 
-    array (
-      'from' => '<basepath>/SugarModules/relationships/language/mks_Classroom.php',
-      'to_module' => 'mks_Classroom',
-      'language' => 'es_ES',
-    ),
-    3 => 
-    array (
-      'from' => '<basepath>/SugarModules/relationships/language/mks_Classroom.php',
-      'to_module' => 'mks_Classroom',
-      'language' => 'en_us',
-    ),
-    4 => 
-    array (
       'from' => '<basepath>/SugarModules/language/application/en_us.lang.php',
       'to_module' => 'application',
       'language' => 'en_us',
     ),
-    5 => 
+    1 => 
     array (
       'from' => '<basepath>/SugarModules/language/application/es_ES.lang.php',
       'to_module' => 'application',
       'language' => 'es_ES',
-    ),
-  ),
-  'vardefs' => 
-  array (
-    0 => 
-    array (
-      'from' => '<basepath>/SugarModules/relationships/vardefs/mks_classroom_securitygroups_SecurityGroups.php',
-      'to_module' => 'SecurityGroups',
-    ),
-    1 => 
-    array (
-      'from' => '<basepath>/SugarModules/relationships/vardefs/mks_classroom_securitygroups_mks_Classroom.php',
-      'to_module' => 'mks_Classroom',
     ),
   ),
 );

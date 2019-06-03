@@ -65,9 +65,9 @@ $manifest = array (
   'icon' => '',
   'is_uninstallable' => true,
   'name' => 'Classroom',
-  'published_date' => '2018-09-24 16:21:42',
+  'published_date' => '2019-04-29 19:04:15',
   'type' => 'module',
-  'version' => 1537806103,
+  'version' => 1556564655,
   'remove_tables' => 'prompt',
 );
 

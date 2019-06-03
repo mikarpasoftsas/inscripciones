@@ -1,5 +1,5 @@
 <?php
-// created: 2018-12-13 17:01:51
+// created: 2019-05-03 17:23:16
 $mod_strings = array (
   'LBL_ATTACHMENT' => 'Archivo firmado',
   'LBL_ID_AUTOINCREMENT' => '#',
@@ -15,4 +15,5 @@ $mod_strings = array (
   'LBL_ ADVANCE' => 'Anticipo',
   'LBL_ADVANCE_C' => 'Anticipo',
   'LBL_AMOUNT_FEES_C' => '# Cuotas',
+  'LBL_FIRST_EXPIRATION' => 'Primer Vencimiento',
 );

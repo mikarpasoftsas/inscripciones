@@ -4122,8 +4122,8 @@ class SugarBean
      */
     public function process_order_by($order_by, $submodule = null, $suppress_table_name = false)
     {
-        if (empty($order_by)) {
-            return $order_by;
+        if (empty($order_by)||is_array($order_by)) {
+            return '';
         }
         //submodule is empty,this is for list object in focus
         if (empty($submodule)) {
