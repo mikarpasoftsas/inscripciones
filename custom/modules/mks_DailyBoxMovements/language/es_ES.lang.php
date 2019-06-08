@@ -1,10 +1,9 @@
 <?php
-// created: 2019-05-18 15:31:57
+// created: 2019-06-07 21:58:17
 $mod_strings = array (
   'LBL_DATE_BOX' => 'Fecha',
   'LBL_BOX_MKS_BOX_ID' => 'Caja (relacionado  ID)',
   'LBL_BOX' => 'Caja',
-  'LBL_BALANCE' => 'Balance',
   'LBL_DETAILVIEW_PANEL1' => 'Nuevo Panel 1',
   'LBL_STATUS' => 'Estado',
   'LBL_NAME' => 'Nombre',
@@ -13,4 +12,5 @@ $mod_strings = array (
   'LBL_MKS_DAILYBOXMOVEMENTS_MKS_PAYMENTSCHECK_1_FROM_MKS_PAYMENTSCHECK_TITLE' => 'Cheques',
   'LBL_MKS_DAILYBOXMOVEMENTS_MKS_PAYMENTSCARD_1_FROM_MKS_PAYMENTSCARD_TITLE' => 'Tarjeta Deb y Cred',
   'LBL_MKS_DAILYBOXMOVEMENTS_MKS_MOVEMENT_1_FROM_MKS_MOVEMENT_TITLE' => 'Movimiento Manual',
+  'LBL_BALANCE_C' => 'Saldo',
 );

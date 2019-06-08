@@ -29,6 +29,13 @@ array (
           'panelDefault' => 'expanded',
         ),
       ),
+	  'includes' => 
+      array (
+        0 => 
+        array (
+          'file' => 'custom/modules/mks_PaymentsCash/js/quickcreate.js',
+        ),
+      ),
     ),
     'panels' => 
     array (

@@ -9,6 +9,14 @@ array (
     'default' => true,
     'link' => true,
   ),
+  'BALANCE_C' => 
+  array (
+    'type' => 'currency',
+    'default' => true,
+    'label' => 'LBL_BALANCE_C',
+    'currency_format' => true,
+    'width' => '10%',
+  ),
   'DATE_BOX_C' => 
   array (
     'type' => 'date',
@@ -25,13 +33,6 @@ array (
     'id' => 'MKS_BOX_ID_C',
     'link' => true,
     'width' => '30%',
-  ),
-  'BALANCE_C' => 
-  array (
-    'type' => 'decimal',
-    'default' => true,
-    'label' => 'LBL_BALANCE',
-    'width' => '10%',
   ),
   'ASSIGNED_USER_NAME' => 
   array (

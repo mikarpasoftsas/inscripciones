@@ -187,4 +187,25 @@ $searchFields['Opportunities'] = array (
       0 => 'id',
     ),
   ),
+  'filter_filial_c' => 
+  array (
+    'query_type' => 'format',
+    'operator' => 'subquery',
+    'subquery' => '
+	
+			SELECT opp.id 
+			FROM `opportunities` opp					
+			INNER JOIN securitygroups_records secr
+                            ON secr.deleted = 0
+                               AND secr.module = \'Opportunities\'
+							   AND secr.record_id = opp.id
+			INNER JOIN securitygroups secg	ON 	secg.id = secr.securitygroup_id	   			
+			WHERE secg.name LIKE "%{0}%"
+	
+	',
+    'db_field' => 
+    array (
+      0 => 'id',
+    ),
+  ),
 );

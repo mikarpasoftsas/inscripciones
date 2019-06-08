@@ -42,6 +42,15 @@ array (
         array (
           0 => 
           array (
+            'name' => 'balance_c',
+            'label' => 'LBL_BALANCE_C',
+          ),
+          1 => '',
+        ),
+        2 => 
+        array (
+          0 => 
+          array (
             'name' => 'date_box_c',
             'label' => 'LBL_DATE_BOX',
           ),
@@ -52,7 +61,7 @@ array (
             'label' => 'LBL_BOX',
           ),
         ),
-        2 => 
+        3 => 
         array (
           0 => 'assigned_user_name',
         ),

@@ -8,4 +8,6 @@ $mod_strings = array (
   'LBL_FB_PAGE_ACCESS_TOKEN' => 'FB Token',
   'LBL_PAGE_ID' => 'Page ID',
   'LBL_KEY_AUTOINCREMENT' => 'Llave(Consecutivo)',
+  'LBL_AOS_PRODUCTS_SECURITYGROUPS_FROM_SECURITYGROUPS_TITLE'=>'Filiales',
+  'LBL_GROUP_SELECT_NEW_RECORD' => 'Selecciona la Filial que debe tener acceso a este registro'
 );

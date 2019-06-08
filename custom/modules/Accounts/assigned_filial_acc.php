@@ -12,7 +12,7 @@ class assigned_filial_acc {
 		if($bean->origin_fb_c == '0'){		
 									
 			$query = "					
-				SELECT `securitygroup_id` FROM `securitygroups_users` WHERE `user_id` = '".$bean->assigned_user_id."'													
+				SELECT `securitygroup_id` FROM `securitygroups_users` WHERE `user_id` = '".$bean->assigned_user_id."' AND deleted=0													
 			";
 				
 			$result = $db->query($query);

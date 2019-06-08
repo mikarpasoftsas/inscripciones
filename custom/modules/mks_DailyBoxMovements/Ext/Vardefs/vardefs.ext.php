@@ -21,12 +21,6 @@ $dictionary['mks_DailyBoxMovements']['fields']['box_c']['labelValue']='Caja';
 
  
 
- // created: 2019-05-18 15:19:54
-$dictionary['mks_DailyBoxMovements']['fields']['balance_c']['inline_edit']='1';
-$dictionary['mks_DailyBoxMovements']['fields']['balance_c']['labelValue']='Balance';
-
- 
-
  // created: 2019-05-18 15:10:48
 $dictionary['mks_DailyBoxMovements']['fields']['status_c']['inline_edit']='1';
 $dictionary['mks_DailyBoxMovements']['fields']['status_c']['labelValue']='Estado';
@@ -81,4 +75,15 @@ $dictionary["mks_DailyBoxMovements"]["fields"]["mks_dailyboxmovements_mks_moveme
   'vname' => 'LBL_MKS_DAILYBOXMOVEMENTS_MKS_MOVEMENT_1_FROM_MKS_MOVEMENT_TITLE',
 );
 
+
+ // created: 2019-06-07 21:58:17
+$dictionary['mks_DailyBoxMovements']['fields']['balance_c']['inline_edit']='1';
+$dictionary['mks_DailyBoxMovements']['fields']['balance_c']['labelValue']='Saldo';
+
+ 
+
+ // created: 2019-06-07 21:58:17
+$dictionary['mks_DailyBoxMovements']['fields']['currency_id']['inline_edit']=1;
+
+ 
 ?>

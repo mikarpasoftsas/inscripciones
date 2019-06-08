@@ -19,4 +19,5 @@ $mod_strings = array (
   'LBL_CURRENCY' => 'Moneda:',
   'LBL_COST' => 'Costo',
   'LBL_PRICE' => 'Precio',
+  'LBL_AOS_PRODUCTS_SECURITYGROUPS_FROM_SECURITYGROUPS_TITLE'=>'Filiales',
 );

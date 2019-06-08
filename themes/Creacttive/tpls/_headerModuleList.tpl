@@ -636,6 +636,21 @@
         </div>
         <div class="desktop-bar">
             <ul id="toolbar" class="toolbar">
+				<!--<li>
+                    <form id="searchform" class="navbar-form searchform" name='UnifiedSearch' action='index.php'
+                          onsubmit='return SUGAR.unifiedSearchAdvanced.checkUsaAdvanced()'>
+                        <input type="hidden" class="form-control" name="action" value="UnifiedSearch">
+                        <input type="hidden" class="form-control" name="module" value="Home">
+                        <input type="hidden" class="form-control" name="search_form" value="false">
+                        <input type="hidden" class="form-control" name="advanced" value="false">
+                        <div class="input-group">
+                            <select class="form-control" id="default_securitygroup_id_c" name="default_securitygroup_id_c">
+								<option>Seleccione una filial...</option>
+								<option>Filial Moron</option>
+							</select>
+                        </div>
+                    </form>
+                </li>-->
                 <li id="quickcreatetop" class="create dropdown nav navbar-nav quickcreatetop">
                     <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                         {$APP.LBL_CREATE_BUTTON_LABEL}<span class="suitepicon suitepicon-action-caret"></span>

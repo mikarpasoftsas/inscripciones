@@ -121,4 +121,7 @@ $dictionary["mks_PaymentsCash"]["fields"]["mks_dailybae34vements_ida"] = array (
   'vname' => 'LBL_MKS_DAILYBOXMOVEMENTS_MKS_PAYMENTSCASH_1_FROM_MKS_PAYMENTSCASH_TITLE',
 );
 
+
+$dictionary['mks_PaymentsCash']['fields']['mks_box_mks_paymentscash_1_name']['required']=true;
+
 ?>

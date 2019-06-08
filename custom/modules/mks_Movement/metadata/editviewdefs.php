@@ -30,6 +30,13 @@ array (
         ),
       ),
       'syncDetailEditViews' => false,
+	  'includes' => 
+      array (
+        0 => 
+        array (
+          'file' => 'custom/modules/mks_Movement/js/editview.js',
+        ),
+      ),
     ),
     'panels' => 
     array (
@@ -106,6 +113,16 @@ array (
           ),
         ),
         6 => 
+        array (
+          0 => 
+          array (
+            'name' => 'voucher_c',
+            'studio' => 'visible',
+            'label' => 'LBL_VOUCHER',
+          ),
+          1 => '',
+        ),
+        7 => 
         array (
           0 => 'assigned_user_name',
         ),

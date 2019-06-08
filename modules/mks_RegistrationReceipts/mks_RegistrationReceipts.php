@@ -75,9 +75,11 @@ class mks_RegistrationReceipts extends Basic
         return false;
     }
 	
-	public function getOpenMovementByBox($idbox,$assigned_user_id)
+	public function getOpenMovementByBox($idbox,$ObjReg)
 	{
 		global $db;
+		
+		$assigned_user_id = $ObjReg->assigned_user_id;
 		
 		$query = "					
 			
@@ -134,6 +136,76 @@ class mks_RegistrationReceipts extends Basic
 		
 			return BeanFactory::getBean('mks_DailyBoxMovements',$row['id']);
 		
+		else{
+			
+			$mks_DailyBoxMovements = BeanFactory::getBean('mks_DailyBoxMovements');			
+			$mks_Box = BeanFactory::getBean('mks_Box',$idbox);			
+			$mks_DailyBoxMovements->name = 'Mov. Diario';			
+			$mks_DailyBoxMovements->date_box_c = date('Y-m-d');			
+			$mks_DailyBoxMovements->mks_box_id_c = $idbox;			
+			$mks_DailyBoxMovements->assigned_user_id = $assigned_user_id;	
+			$mks_DailyBoxMovements->status_c = 'open';	
+			$mks_DailyBoxMovements->balance_c = $mks_Box->balance_c;
+			$mks_DailyBoxMovements->save();
+			
+			require_once('modules/SecurityGroups/SecurityGroup.php');
+			$groupFocus = new SecurityGroup();
+			$security_modules = $groupFocus->getSecurityModules();
+			//sanity check
+			if(in_array("mks_DailyBoxMovements",array_keys($security_modules))) {
+				//add each group in securitygroup_list to new record
+				$rel_name = $groupFocus->getLinkName("mks_DailyBoxMovements","SecurityGroups");
+				$gbu 	  = $groupFocus->getUserSecurityGroups($current_user->id);
+				if($mks_DailyBoxMovements->load_relationship($rel_name)){
+					
+					$query = "
+				
+						select * 
+						from securitygroups_records 
+						where module = 'mks_Box' 
+						and deleted = 0 and 
+						record_id = '".$idbox."'
+						
+					";
+					
+					$result = $db->query($query);
+					
+					while( $row = $db->fetchByAssoc($result)){ 
+					
+						$mks_DailyBoxMovements->$rel_name->add($row['securitygroup_id']);
+						$groupFocus->addGroupToRecord('mks_DailyBoxMovements', $mks_DailyBoxMovements->id,$row['securitygroup_id']);						
+					}		
+				
+				}
+				else
+					die("Not load rel $rel_name");
+			}
+			
+			
+			/*			
+			
+			$mks_Box = BeanFactory::getBean('mks_Box',$idbox);
+			
+			if ($mks_Box->load_relationship('mks_box_securitygroups')){
+				
+				$filiales = $mks_Box->mks_box_securitygroups->getBeans();
+							
+				if ($mks_DailyBoxMovements->load_relationship(' mks_dailyboxmovements_securitygroups_1')){
+
+					foreach($filiales as $filial)
+						
+						$mks_DailyBoxMovements-> mks_dailyboxmovements_securitygroups_1->add($filial->id);
+				}
+				else
+					die("Not load rel  mks_dailyboxmovements_securitygroups_1");		
+			}
+				else
+					die("Not load rel mks_box_securitygroups");		
+			*/
+			
+			return BeanFactory::getBean('mks_DailyBoxMovements',$mks_DailyBoxMovements->id);
+		}
+		
 		return null;
 	}
 	
@@ -153,13 +225,21 @@ class mks_RegistrationReceipts extends Basic
 			
 			foreach($listObjs as $Obj)
 			{				
-				$ObjBox = $this->getOpenMovementByBox($Obj->$NameFieldIdBox, $ObjReg->assigned_user_id);
+				$mks_Box = BeanFactory::getBean(
+							'mks_Box', 
+							$Obj->$NameFieldIdBox
+						);
+						
+				$ObjBox = $this->getOpenMovementByBox($Obj->$NameFieldIdBox, $ObjReg);
 				if(is_object($ObjBox)){
 					if ($ObjBox->load_relationship($NameRelBox))
 					{
 						$ObjBox->$NameRelBox->add($Obj->id);
 						$ObjBox->balance_c+=$Obj->amount_c * $Obj->exchange_rate_c;
 						$ObjBox->save();					
+						
+						$mks_Box->balance_c+=$Obj->amount_c * $Obj->exchange_rate_c;
+						$mks_Box->save();
 					}
 					else
 					{

@@ -226,3 +226,9 @@ $GLOBALS['app_list_strings']['pdf_template_type_dom']=array (
   'mks_RegistrationReceipts' => 'Recibos',
   'mks_Registration' => 'Matriculas',
 );
+$GLOBALS['app_list_strings']['securitygroup_list']=array (
+);
+
+$GLOBALS['app_list_strings']['default_securitygroup_id_list']=array (
+  '' => '',
+);

@@ -6,7 +6,8 @@ class AssignGroups {
 
 function popup_select(&$bean, $event, $arguments)
 {
-	global $sugar_config;
+	global $sugar_config,$current_user;
+	
 
 	//only process if action is Save (meaning a user has triggered this event and not the portal or automated process)
 	if(isset($_REQUEST['action']) && $_REQUEST['action'] == 'Save' 
@@ -57,6 +58,32 @@ function popup_select(&$bean, $event, $arguments)
 			'module' => $bean->module_dir,
 			'id' => $bean->id
 		);
+	}
+	else if(
+			isset($_REQUEST['default_securitygroup_id_c'])
+			&&!empty($_REQUEST['default_securitygroup_id_c'])
+			&& empty($bean->fetched_row['id']) 
+			&& $bean->module_dir != "Users"
+			){
+			//G.D.C.P
+			require_once('modules/SecurityGroups/SecurityGroup.php');
+			$groupFocus = new SecurityGroup();
+			$security_modules = $groupFocus->getSecurityModules();
+			//sanity check
+			if(in_array($bean->module_dir,array_keys($security_modules))) {
+				//add each group in securitygroup_list to new record
+				$rel_name = $groupFocus->getLinkName($bean->module_dir,"SecurityGroups");
+				$gbu 	  = $groupFocus->getUserSecurityGroups($current_user->id);
+				if($bean->load_relationship($rel_name)){		
+					foreach($gbu as $key => $value)
+					{
+						if($key!=$_REQUEST['default_securitygroup_id_c'])
+							$bean->$rel_name->remove($key);
+					}					
+					$bean->$rel_name->add($_REQUEST['default_securitygroup_id_c']);
+					$groupFocus->addGroupToRecord($bean->module_dir, $bean->id,$_REQUEST['default_securitygroup_id_c']);					
+				}	
+			}			
 	}
 } 
 
@@ -117,8 +144,9 @@ EOQ;
 }
 
 function mass_assign($event, $arguments)
-{
-    $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : null;
+{	
+    
+	$action = isset($_REQUEST['action']) ? $_REQUEST['action'] : null;
     $module = isset($_REQUEST['module']) ? $_REQUEST['module'] : null;
   
   	$no_mass_assign_list = array("Emails"=>"Emails","ACLRoles"=>"ACLRoles"); //,"Users"=>"Users");

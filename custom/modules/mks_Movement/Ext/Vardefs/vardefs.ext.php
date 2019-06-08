@@ -59,4 +59,10 @@ $dictionary['mks_Movement']['fields']['exchange_rate_c']['inline_edit']='1';
 $dictionary['mks_Movement']['fields']['exchange_rate_c']['labelValue']='T.C';
 
  
+
+ // created: 2019-06-06 15:36:37
+$dictionary['mks_Movement']['fields']['voucher_c']['inline_edit']='';
+$dictionary['mks_Movement']['fields']['voucher_c']['labelValue']='Comprobante';
+
+ 
 ?>

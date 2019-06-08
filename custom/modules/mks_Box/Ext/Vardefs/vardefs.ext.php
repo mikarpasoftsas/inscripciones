@@ -41,4 +41,15 @@ $dictionary["mks_Box"]["fields"]["mks_box_mks_paymentstransfer_1"] = array (
   'required' => true,
 );
 
+
+ // created: 2019-06-07 21:54:49
+$dictionary['mks_Box']['fields']['balance_c']['inline_edit']='1';
+$dictionary['mks_Box']['fields']['balance_c']['labelValue']='Saldo';
+
+ 
+
+ // created: 2019-06-07 21:54:49
+$dictionary['mks_Box']['fields']['currency_id']['inline_edit']=1;
+
+ 
 ?>

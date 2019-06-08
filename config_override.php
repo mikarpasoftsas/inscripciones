@@ -83,4 +83,13 @@ $sugar_config['lock_subpanels'] = false;
 $sugar_config['hide_subpanels'] = false;
 $sugar_config['enable_line_editing_detail'] = false;
 $sugar_config['enable_line_editing_list'] = false;
+$sugar_config['securitysuite_filter_user_list'] = true;
+$sugar_config['securitysuite_popup_select'] = false;
+$sugar_config['securitysuite_inbound_email'] = false;
+$sugar_config['securitysuite_inherit_creator'] = false;
+$sugar_config['securitysuite_inherit_assigned'] = false;
+$sugar_config['securitysuite_strict_rights'] = false;
+$sugar_config['securitysuite_additive'] = true;
+$sugar_config['securitysuite_user_popup'] = false;
+$sugar_config['securitysuite_inherit_parent'] = false;
 /***CONFIGURATOR***/

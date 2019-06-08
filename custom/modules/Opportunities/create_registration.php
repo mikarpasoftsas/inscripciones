@@ -41,6 +41,15 @@ class create_registration {
 					
 					$result = $db->query($query);
 					
+					require_once('modules/SecurityGroups/SecurityGroup.php');
+					$groupFocus = new SecurityGroup();
+					while( $row = $db->fetchByAssoc($result)){ 
+					
+						$mks_Registration->mks_registration_securitygroups_1->add($row['securitygroup_id']);
+						$groupFocus->addGroupToRecord('mks_Registration', $mks_Registration->id,$row['securitygroup_id']);
+					
+					}
+					
 					$query1= "
 					
 					
@@ -55,12 +64,6 @@ class create_registration {
 					";
 					
 					$result = $db->query($query1);
-					
-					while( $row = $db->fetchByAssoc($result)){ 
-					
-						$mks_Registration->mks_registration_securitygroups_1->add($row['securitygroup_id']);
-					
-					}
 			}
 			else
 			{

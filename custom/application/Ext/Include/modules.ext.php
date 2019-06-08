@@ -315,4 +315,25 @@ $beanFiles['mks_ReceipType'] = 'modules/mks_ReceipType/mks_ReceipType.php';
 $moduleList[] = 'mks_ReceipType';
 
 
+ 
+ //WARNING: The contents of this file are auto-generated
+$beanList['mks_Articles'] = 'mks_Articles';
+$beanFiles['mks_Articles'] = 'modules/mks_Articles/mks_Articles.php';
+$moduleList[] = 'mks_Articles';
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+$beanList['mks_AuthOriginBox'] = 'mks_AuthOriginBox';
+$beanFiles['mks_AuthOriginBox'] = 'modules/mks_AuthOriginBox/mks_AuthOriginBox.php';
+$moduleList[] = 'mks_AuthOriginBox';
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+$beanList['mks_AuthDestinationBox'] = 'mks_AuthDestinationBox';
+$beanFiles['mks_AuthDestinationBox'] = 'modules/mks_AuthDestinationBox/mks_AuthDestinationBox.php';
+$moduleList[] = 'mks_AuthDestinationBox';
+
+
 ?>

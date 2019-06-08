@@ -9,7 +9,8 @@ array (
       'form' => 
       array (
         'buttons' => 
-        array (
+         array (
+          0 => 'EDIT'          
         ),
       ),
       'maxColumns' => '2',
@@ -76,6 +77,7 @@ array (
           array (
             'name' => 'amount',
             'label' => 'LBL_AMOUNT',
+			'customCode' => '{$custom_value}',
           ),
           1 => 
           array (
@@ -112,6 +114,16 @@ array (
           ),
         ),
         6 => 
+        array (
+          0 => 
+          array (
+            'name' => 'voucher_c',
+            'studio' => 'visible',
+            'label' => 'LBL_VOUCHER',
+          ),
+          1 => '',
+        ),
+        7 => 
         array (
           0 => 'assigned_user_name',
         ),

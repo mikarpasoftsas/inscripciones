@@ -92,8 +92,6 @@ $app_list_strings['moduleListSingular']['Accounts']='Contacto';
 $app_list_strings['record_type_display']['Accounts']='Contacto';
 $app_list_strings['parent_type_display']['Accounts']='Contacto';
 $app_list_strings['record_type_display_notes']['Accounts']='Contacto';
-$app_list_strings['moduleList']['AOS_Products']='Articulos';
-$app_list_strings['moduleListSingular']['AOS_Products']='Articulo';
 $app_list_strings['moduleList']['AOS_Product_Categories']='Articulos - Categorías';
 $app_list_strings['moduleListSingular']['AOS_Product_Categories']='Articulo - Categoría';
 $app_list_strings['moduleList']['SecurityGroups']='Filiales';
@@ -267,3 +265,28 @@ $GLOBALS['app_list_strings']['pdf_template_type_dom']=array (
   'mks_RegistrationReceipts' => 'Recibos',
   'mks_Registration' => 'Matriculas',
 );
+$app_list_strings['moduleList']['AOS_Products']='Productos';
+$app_list_strings['moduleListSingular']['AOS_Products']='Producto';
+$GLOBALS['app_list_strings']['securitygroup_list']=array (
+);
+global $current_user;
+if(is_object($current_user)){
+require_once('modules/SecurityGroups/SecurityGroup.php');
+$groupFocus = new SecurityGroup();
+            $security_modules = $groupFocus->getSecurityModules();
+			$group_options = array();
+            if (array_key_exists("Accounts", $security_modules)) {
+                global $current_user;
+                    $groups = $groupFocus->getUserSecurityGroups($current_user->id);
+                   
+                    foreach ($groups as $group) {
+                        $group_options[$group['id']]= $group['name'];
+                    }
+			}		
+}
+else
+{
+	$group_options=array();
+}
+	
+$GLOBALS['app_list_strings']['default_securitygroup_id_list']=$group_options;

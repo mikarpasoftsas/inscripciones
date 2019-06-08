@@ -63,6 +63,16 @@ array (
         'width' => '10%',
         'name' => 'courses_of_interest_c',
       ),
+      'filter_filial_c' => 
+      array (
+        'type' => 'text',
+        'default' => true,
+        'studio' => 'visible',
+        'label' => 'LBL_FILTER_FILIAL_C',
+        'sortable' => false,
+        'width' => '10%',
+        'name' => 'filter_filial_c',
+      ),
       'ads_id_c' => 
       array (
         'type' => 'varchar',
@@ -177,6 +187,16 @@ array (
         'label' => 'LBL_ADS_ID',
         'width' => '10%',
         'name' => 'ads_id_c',
+      ),
+      'filter_filial_c' => 
+      array (
+        'type' => 'text',
+        'default' => true,
+        'studio' => 'visible',
+        'label' => 'LBL_FILTER_FILIAL_C',
+        'sortable' => false,
+        'width' => '10%',
+        'name' => 'filter_filial_c',
       ),
     ),
   ),

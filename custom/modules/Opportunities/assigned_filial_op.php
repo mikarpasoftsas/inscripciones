@@ -11,6 +11,7 @@ class assigned_filial_op {
 		
 		if($bean->origin_fb_c == '0'){		
 									
+			/*
 			$query = "					
 				SELECT `securitygroup_id` FROM `securitygroups_users` WHERE `user_id` = '".$bean->assigned_user_id."'													
 			";
@@ -28,7 +29,8 @@ class assigned_filial_op {
 				";				
 				$result = $db->query($query1);
 							
-			}		
+			}
+			*/			
 		}
 		else{
 			
