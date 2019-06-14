@@ -2,16 +2,6 @@
 $module_name = 'mks_AuthDestinationBox';
 $listViewDefs [$module_name] = 
 array (
-  'BOX_C' => 
-  array (
-    'type' => 'relate',
-    'default' => true,
-    'studio' => 'visible',
-    'label' => 'LBL_BOX',
-    'id' => 'MKS_BOX_ID_C',
-    'link' => true,
-    'width' => '10%',
-  ),
   'AUTH_USER_C' => 
   array (
     'type' => 'relate',

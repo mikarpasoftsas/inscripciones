@@ -36,6 +36,8 @@ function removeElements(){
 
 $( document ).ready(function() {
 	
+	$("#whole_subpanel_mks_registrationreceipts_mks_customplanfees_1").remove();
+	
 	
 	if($("#status_registration_receipts_c").val()=='confirmed')
 	{

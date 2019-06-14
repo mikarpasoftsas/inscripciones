@@ -171,7 +171,9 @@ class mks_RegistrationReceiptsViewDetail extends ViewDetail {
 							
 				if($concept->name='Cuotas')
 				{
-					$array = array();
+					$array  = array();
+					$array2 = array();
+					$sum    = 0;
 					
 					if ($mks_RegistrationReceipts->load_relationship('mks_registrationreceipts_mks_customplanfees_1'))
 					{
@@ -186,17 +188,20 @@ class mks_RegistrationReceiptsViewDetail extends ViewDetail {
 						
 						foreach($fees as $fee){
 
-							$array[$fee->n_fee_c] = "Cuota " . $fee->n_fee_c;
+							 $array[$fee->n_fee_c]  = "\nCuota " . $fee->n_fee_c . " _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _";
+							 $array2[$fee->n_fee_c] = "\n".currency_format_number($fee->last_paid_value_c);
+							 $sum+=$fee->last_paid_value_c;
 						}
 					ksort($array);	
-					$concept->mks_paymentconcepts_mks_collectionconcepts_1_name	= implode(',',$array);
-					$concept->amount_c = $mks_RegistrationReceipts->total_paid_fees_c;
-						
+					ksort($array2);
+					$a	= implode('',$array);
+					$b  = implode('',$array2);						
 					}
 				}
 				
-				$ConceptsSummary[]    = $concept->mks_paymentconcepts_mks_collectionconcepts_1_name . ": ";
-				$ConceptsSummaryVal[] = currency_format_number($concept->amount_c); 
+				$ConceptsSummary[]     = $a;
+				$ConceptsSummary2[]    = $b;
+				$ConceptsSummaryVal[]  = currency_format_number($sum); 
 				
 			}
 				
@@ -208,8 +213,9 @@ class mks_RegistrationReceiptsViewDetail extends ViewDetail {
 		
 		return array(
 			
-				mb_convert_encoding(implode("\n",$ConceptsSummary),'UTF-8'),
-				mb_convert_encoding(implode("\n",$ConceptsSummaryVal),'UTF-8')
+				$ConceptsSummary,
+				$ConceptsSummary2,
+				$ConceptsSummaryVal
 						
 			); 
 		
@@ -268,11 +274,27 @@ class mks_RegistrationReceiptsViewDetail extends ViewDetail {
 			LEFT JOIN  mks_custompaymentplan jt1 ON jt1.id=jtl1.mks_custom8555entplan_ida AND jt1.deleted=0 AND jt1.deleted=0
 			LEFT JOIN  users jt2 ON mks_registrationreceipts.assigned_user_id=jt2.id AND jt2.deleted=0 AND jt2.deleted=0 
 			WHERE ((jt0.id = '".$idreg."')) AND mks_registrationreceipts.deleted=0 AND mks_registrationreceipts_cstm.status_registration_receipts_c = 'confirmed'
-				
+			AND mks_registrationreceipts_cstm.refinancing_process_c='not'
+			
 		";
 
 		$res = $db->query($query);
 		$row = $db->fetchByAssoc($res);
+		
+		//recent amount
+		$query2 = "
+		
+			SELECT  total_charge_c
+			FROM mks_registrationreceipts  
+			INNER JOIN mks_registrationreceipts_cstm ON mks_registrationreceipts.id = mks_registrationreceipts_cstm.id_c 
+			WHERE payment_date_c = '".$row['most_recent_date']."'	
+		
+		";
+		
+		$res2 = $db->query($query2);
+		$row2 = $db->fetchByAssoc($res2);
+
+		$total_charge_c = $row2['total_charge_c'];
 
 		$days = 0;
 		
@@ -289,11 +311,11 @@ class mks_RegistrationReceiptsViewDetail extends ViewDetail {
 			$timeDate = new TimeDate();
 			$FormatedDate = $timeDate->to_display_date($row['most_recent_date'], true, true, $current_user);
 				
-			return $mod_strings['LBL_PENDING_DEBIT_5'] . $FormatedDate . $mod_strings['LBL_PENDING_DEBIT_8'] . currency_format_number($row['total_charge_c']) . " , " . $str;
+			return $mod_strings['LBL_PENDING_DEBIT_5'] . $FormatedDate . $mod_strings['LBL_PENDING_DEBIT_8'] . currency_format_number($total_charge_c) . " , " . $str;
 		}	
 		else if ($row['cont']>0)
 		{
-			return $mod_strings['LBL_PENDING_DEBIT_6'] . $mod_strings['LBL_PENDING_DEBIT_8'] . currency_format_number($row['total_charge_c']);
+			return $mod_strings['LBL_PENDING_DEBIT_6'] . $mod_strings['LBL_PENDING_DEBIT_8'] . currency_format_number($total_charge_c);
 		}
 		else
 			
@@ -533,15 +555,13 @@ class mks_RegistrationReceiptsViewDetail extends ViewDetail {
 				require_once("convert.php");
 				$mks_RegistrationReceipts->total_letters_c			=   ucfirst(convertir(number_format($mks_RegistrationReceipts->total_charge_c, 0, '', '')));
 				$sc = $this->getSummaryConcepts();
-				$mks_RegistrationReceipts->consolidated_concepts_c	    =   $sc[0];
-				$mks_RegistrationReceipts->consolided_concept_values_c	=   $sc[1];
-				
+				$mks_RegistrationReceipts->consolidated_concepts_c	      = implode('',$sc[0]);
+				$mks_RegistrationReceipts->consolided_concept_values_c	  = implode('',$sc[1]);				
 				$mks_RegistrationReceipts->save();	
 			
 			
 			
-				//Fomat Currency
-				$this->bean->total_effective_c = currency_format_number($this->bean->total_effective_c);
+				
 			
 			
         parent::display();

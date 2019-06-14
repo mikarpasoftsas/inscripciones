@@ -1,5 +1,6 @@
 <?php
 // created: 2018-11-28 23:31:51
+/*
 $dictionary["mks_paymentplan_securitygroups_1"] = array (
   'true_relationship_type' => 'many-to-many',
   'from_studio' => true,
@@ -76,4 +77,4 @@ $dictionary["mks_paymentplan_securitygroups_1"] = array (
       ),
     ),
   ),
-);
+);*/

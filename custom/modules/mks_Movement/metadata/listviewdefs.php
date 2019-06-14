@@ -26,6 +26,16 @@ array (
     'width' => '10%',
     'default' => true,
   ),
+  'DESTINATION_BOX' => 
+  array (
+    'type' => 'relate',
+    'studio' => 'visible',
+    'label' => 'LBL_DESTINATION_BOX',
+    'id' => 'MKS_BOX_ID1_C',
+    'link' => true,
+    'width' => '10%',
+    'default' => true,
+  ),
   'AMOUNT' => 
   array (
     'type' => 'currency',

@@ -116,4 +116,10 @@ $dictionary["mks_CustomPlanFees"]["fields"]["mks_registrationreceipts_mks_custom
   'vname' => 'LBL_MKS_REGISTRATIONRECEIPTS_MKS_CUSTOMPLANFEES_1_FROM_MKS_REGISTRATIONRECEIPTS_TITLE',
 );
 
+
+ // created: 2019-06-13 22:23:45
+$dictionary['mks_CustomPlanFees']['fields']['last_paid_value_c']['inline_edit']='1';
+$dictionary['mks_CustomPlanFees']['fields']['last_paid_value_c']['labelValue']='Ultimo monto pagado';
+
+ 
 ?>

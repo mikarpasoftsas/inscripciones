@@ -1,5 +1,5 @@
 <?php
-// created: 2019-06-01 15:40:59
+// created: 2019-06-13 03:43:19
 $mod_strings = array (
   'LBL_MKS_REGISTRATION_CONTACTS_FROM_CONTACTS_TITLE' => 'Contactos',
   'LBL_CONTACTS_TITLE' => 'Contacto',
@@ -47,4 +47,7 @@ $mod_strings = array (
   'LBL_RECEIP_TYPE' => 'Tipo de Recibo',
   'LBL_PRINT_AS_PDF' => 'Generar PDF',
   'LBL_DETAIL_PAYMEN_PLAN' => 'Detalle del plan de pago',
+  'LBL_OBSERVATIONS' => 'Observaciones',
+  'LBL_FREEZE_PLAN' => 'Congelar Plan?',
+  'LBL_FREEZE_PLAN_DES' => 'Contenido Congelado',
 );

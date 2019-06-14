@@ -23,7 +23,7 @@ class create_registration {
 			$mks_Registration->accounts_mks_registration_1accounts_ida = $bean->account_id;
 			$mks_Registration->assigned_user_id = $bean->assigned_user_id;
 			$mks_Registration->save();
-			
+		
 			if ($mks_Registration->load_relationship('mks_registration_securitygroups_1')){
 			
 					

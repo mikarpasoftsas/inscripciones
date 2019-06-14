@@ -111,6 +111,15 @@ array (
             'label' => 'LBL_RECEIP_TYPE',
           ),
         ),
+        5 => 
+        array (
+          0 => 
+          array (
+            'name' => 'observations_c',
+            'studio' => 'visible',
+            'label' => 'LBL_OBSERVATIONS',
+          ),
+        ),
       ),
       'lbl_editview_panel2' => 
       array (

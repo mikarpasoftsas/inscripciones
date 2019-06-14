@@ -49,9 +49,8 @@ array (
         array (
           0 => 
           array (
-            'name' => 'box_c',
-            'studio' => 'visible',
-            'label' => 'LBL_BOX',
+            'name' => 'mks_box_mks_authdestinationbox_1_name',
+            'label' => 'LBL_MKS_BOX_MKS_AUTHDESTINATIONBOX_1_FROM_MKS_BOX_TITLE',
           ),
           1 => 
           array (

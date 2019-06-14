@@ -209,10 +209,11 @@ class mks_CustomPlanFees extends Basic
 	{
 		
 		$diffday = $this->getDiffDay(date("Y-m-d H:i:s"),$obj->expiration);
-
-		if ( $diffday < 0 )
-		{
-			 $rule = $this->getRuleDiscount($obj,$diffday*-1);
+       
+		if ( $diffday > 0 )
+		{    
+			 $rule = $this->getRuleDiscount($obj,$diffday);
+			 
 			 if (!empty($rule['id']))
 			 {
 				 if($rule['type_c']=='valor')

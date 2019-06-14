@@ -1008,8 +1008,13 @@ EOQ;
 
                     $groups = $groupFocus->getUserSecurityGroups($current_user->id);
                     $group_options = '';
+					$select = '';
                     foreach ($groups as $group) {
-                        $group_options .= '<option value="' . $group['id'] . '" label="' . $group['name'] . '" ' . $group['name'] . '</option>';
+						
+						if(!empty($current_user->filter_filial_c) && $current_user->filter_filial_c == $group['id'] )
+							$group_options .= '<option value="' . $group['id'] . '" label="' . $group['name'] . '" selected="selected">' . $group['name'] . '</option>';
+						else
+							$group_options .= '<option value="' . $group['id'] . '" label="' . $group['name'] . '" .'.$select.' > ' . $group['name'] . '</option>';
                     }
                     //multilingual support
                     global $current_language;

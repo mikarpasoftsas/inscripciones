@@ -279,4 +279,22 @@ $dictionary['mks_Registration']['fields']['detail_paymen_plan_c']['inline_edit']
 $dictionary['mks_Registration']['fields']['detail_paymen_plan_c']['labelValue']='Detalle del plan de pago';
 
  
+
+ // created: 2019-06-13 03:30:19
+$dictionary['mks_Registration']['fields']['observations_c']['inline_edit']='1';
+$dictionary['mks_Registration']['fields']['observations_c']['labelValue']='Observaciones';
+
+ 
+
+ // created: 2019-06-13 03:41:33
+$dictionary['mks_Registration']['fields']['freeze_plan_c']['inline_edit']='1';
+$dictionary['mks_Registration']['fields']['freeze_plan_c']['labelValue']='Congelar Plan?';
+
+ 
+
+ // created: 2019-06-13 03:43:19
+$dictionary['mks_Registration']['fields']['freeze_plan_des_c']['inline_edit']='1';
+$dictionary['mks_Registration']['fields']['freeze_plan_des_c']['labelValue']='Contenido Congelado';
+
+ 
 ?>

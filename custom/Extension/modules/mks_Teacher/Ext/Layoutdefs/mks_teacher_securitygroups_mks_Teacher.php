@@ -1,23 +1,21 @@
 <?php
- // created: 2018-09-24 16:22:53
-$layout_defs["mks_Teacher"]["subpanel_setup"]['mks_teacher_securitygroups'] = array (
-  'order' => 100,
-  'module' => 'SecurityGroups',
-  'subpanel_name' => 'admin',
-  'sort_order' => 'asc',
-  'sort_by' => 'id',
-  'title_key' => 'LBL_MKS_TEACHER_SECURITYGROUPS_FROM_SECURITYGROUPS_TITLE',
-  'get_subpanel_data' => 'mks_teacher_securitygroups',
-  'top_buttons' => 
-  array (
-    0 => 
-    array (
-      'widget_class' => 'SubPanelTopButtonQuickCreate',
-    ),
-    1 => 
-    array (
-      'widget_class' => 'SubPanelTopSelectButton',
-      'mode' => 'MultiSelect',
-    ),
-  ),
-);
+
+$layout_defs['mks_Teacher']['subpanel_setup']['securitygroups_mks_teacher'] = array(
+	'top_buttons' => array(
+						array(
+						
+							'widget_class' => 'SubPanelTopSelectButton', 
+							'popup_module' => 'SecurityGroups', 
+							'mode' => 'MultiSelect'
+						),
+	),
+	'order' => 900,
+	'sort_by' => 'name',
+	'sort_order' => 'asc',
+	'module' => 'SecurityGroups',
+	'refresh_page' => 1,
+	'subpanel_name' => 'default',
+	'get_subpanel_data' => 'SecurityGroups',
+	'add_subpanel_data' => 'securitygroup_id',
+	'title_key' => 'LBL_SECURITYGROUPS',	
+ );

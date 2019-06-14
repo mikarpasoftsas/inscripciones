@@ -256,10 +256,26 @@ class mks_RegistrationViewDetail extends ViewDetail {
 			LEFT JOIN  mks_custompaymentplan jt1 ON jt1.id=jtl1.mks_custom8555entplan_ida AND jt1.deleted=0 AND jt1.deleted=0
 			LEFT JOIN  users jt2 ON mks_registrationreceipts.assigned_user_id=jt2.id AND jt2.deleted=0 AND jt2.deleted=0 
 			WHERE ((jt0.id = '".$idreg."')) AND mks_registrationreceipts.deleted=0 AND mks_registrationreceipts_cstm.status_registration_receipts_c = 'confirmed'
-				
+			
+			AND mks_registrationreceipts_cstm.refinancing_process_c='not'
 		";
 		$res = $db->query($query);
 		$row = $db->fetchByAssoc($res);
+		
+		//recent amount
+		$query2 = "
+		
+			SELECT  total_charge_c
+			FROM mks_registrationreceipts  
+			INNER JOIN mks_registrationreceipts_cstm ON mks_registrationreceipts.id = mks_registrationreceipts_cstm.id_c 
+			WHERE payment_date_c = '".$row['most_recent_date']."'	
+		
+		";
+		
+		$res2 = $db->query($query2);
+		$row2 = $db->fetchByAssoc($res2);
+
+		$total_charge_c = $row2['total_charge_c'];
 
 		$days = 0;
 		
@@ -276,11 +292,11 @@ class mks_RegistrationViewDetail extends ViewDetail {
 			$timeDate = new TimeDate();
 			$FormatedDate = $timeDate->to_display_date($row['most_recent_date'], true, true, $current_user);
 				
-			return $mod_strings['LBL_PENDING_DEBIT_5'] . $FormatedDate . $mod_strings['LBL_PENDING_DEBIT_8'] . currency_format_number($row['total_charge_c']) . " , " . $str;
+			return $mod_strings['LBL_PENDING_DEBIT_5'] . $FormatedDate . $mod_strings['LBL_PENDING_DEBIT_8'] . currency_format_number($total_charge_c) . " , " . $str;
 		}	
 		else if ($row['cont']>0)
 		{
-			return $mod_strings['LBL_PENDING_DEBIT_6'] . $mod_strings['LBL_PENDING_DEBIT_8'] . currency_format_number($row['total_charge_c']);
+			return $mod_strings['LBL_PENDING_DEBIT_6'] . $mod_strings['LBL_PENDING_DEBIT_8'] . currency_format_number($total_charge_c);
 		}
 		else
 			
@@ -296,14 +312,25 @@ class mks_RegistrationViewDetail extends ViewDetail {
 		
 		$this->displayPopupHtml();
 		
-		$this->bean->description = "<b>".$mod_strings['LBL_REGISTER']."<b>: " . currency_format_number($this->getValueRegistration()) . "<br><br>" . $this->getSummaryPlanFees() . "<br><br>" . $this->getPendingDebt() . "<br><br>" . $this->getLastPaymentDays($this->bean->id);
+		if($this->bean->freeze_plan_c=='not')
+			
+			$this->bean->description = "<b>".$mod_strings['LBL_REGISTER']."<b>: " . currency_format_number($this->getValueRegistration()) . "<br><br>" . $this->getSummaryPlanFees() . "<br><br>" . $this->getPendingDebt() . "<br><br>" . $this->getLastPaymentDays($this->bean->id);
+
+		else
+			
+			$this->bean->description =htmlspecialchars_decode($this->bean->freeze_plan_des_c);
 		
 		$mks_Registration = BeanFactory::getBean(
 							'mks_Registration', 
 							$this->bean->id
 		);
 		
-		$mks_Registration->description = "\n\n" . $mod_strings['LBL_REGISTER'].": " . currency_format_number($this->getValueRegistration()) . "\n\n" . $this->getSummaryPlanFeesToPDF("\n") . "\n\n";
+		if($this->bean->freeze_plan_c=='not')
+		{
+			$mks_Registration->description     = "\n\n" . $mod_strings['LBL_REGISTER'].": " . currency_format_number($this->getValueRegistration()) . "\n\n" . $this->getSummaryPlanFeesToPDF("\n") . "\n\n";
+			$mks_Registration->freeze_plan_c   = 'yes';
+			$mks_Registration->freeze_plan_des_c = $this->bean->description;
+		}
 		
 		$mks_Registration->detail_paymen_plan_c = $this->getRulesTexPlain();
 		

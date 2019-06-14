@@ -24,6 +24,20 @@ array (
         'headerTpl' => 'modules/Users/tpls/EditViewHeader.tpl',
         'footerTpl' => 'modules/Users/tpls/EditViewFooter.tpl',
       ),
+      'useTabs' => false,
+      'tabDefs' => 
+      array (
+        'LBL_USER_INFORMATION' => 
+        array (
+          'newTab' => false,
+          'panelDefault' => 'expanded',
+        ),
+        'LBL_EMPLOYEE_INFORMATION' => 
+        array (
+          'newTab' => false,
+          'panelDefault' => 'expanded',
+        ),
+      ),
     ),
     'panels' => 
     array (
@@ -60,6 +74,15 @@ array (
           array (
             'name' => 'UserType',
             'customCode' => '{if $IS_ADMIN}{$USER_TYPE_DROPDOWN}{else}{$USER_TYPE_READONLY}{/if}',
+          ),
+          1 => 
+          array (
+            'name' => 'filter_filial_c',
+            'studio' => 'visible',
+            'label' => 'LBL_FILTER_FILIAL_C',
+			'customCode'=>'
+			<select name="filter_filial_c" id="filter_filial_c" title="">{$FILTER_FILIAL}</option></select>			
+			'
           ),
         ),
         3 => 
@@ -115,11 +138,11 @@ array (
         ),
         4 => 
         array (
-          1 => 'phone_fax',
+          0 => 'phone_fax',
         ),
         5 => 
         array (
-          1 => 'phone_home',
+          0 => 'phone_home',
         ),
         6 => 
         array (

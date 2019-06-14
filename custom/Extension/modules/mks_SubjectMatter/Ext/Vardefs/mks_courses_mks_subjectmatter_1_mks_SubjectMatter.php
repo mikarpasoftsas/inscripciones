@@ -31,3 +31,4 @@ $dictionary["mks_SubjectMatter"]["fields"]["mks_courses_mks_subjectmatter_1mks_c
   'side' => 'right',
   'vname' => 'LBL_MKS_COURSES_MKS_SUBJECTMATTER_1_FROM_MKS_SUBJECTMATTER_TITLE',
 );
+$dictionary['mks_SubjectMatter']['fields']['mks_courses_mks_subjectmatter_1_name']['required']=true;

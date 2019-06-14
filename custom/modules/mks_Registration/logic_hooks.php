@@ -13,7 +13,7 @@ $hook_array['before_save'][] = Array(3, 'assign_name_record_rg', 'custom/modules
 $hook_array['before_save'][] = Array(4, 'copy_payment_plan', 'custom/modules/mks_Registration/copy_payment_plan.php','copy_payment_plan', 'copy_payment_plan'); 
 $hook_array['before_save'][] = Array(5, 'reset_values_ref', 'custom/modules/mks_Registration/reset_values_ref.php','reset_values_ref', 'reset_values_ref');
 //$hook_array['before_save'][] = Array(2, 'assigned_filial_reg', 'custom/modules/mks_Registration/assigned_filial_reg.php','assigned_filial_reg', 'assigned_filial_reg'); 
-$hook_array['process_record'][] = Array(6, 'process_record_refresh', 'custom/modules/mks_Registration/process_record_refresh.php','process_record_refresh', 'process_record_refresh');
+//$hook_array['process_record'][] = Array(6, 'process_record_refresh', 'custom/modules/mks_Registration/process_record_refresh.php','process_record_refresh', 'process_record_refresh');
 
 
 ?>

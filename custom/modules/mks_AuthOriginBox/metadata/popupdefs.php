@@ -4,24 +4,12 @@ $popupMeta = array (
     'varName' => 'mks_AuthOriginBox',
     'orderBy' => 'mks_authoriginbox.name',
     'whereClauses' => array (
-  'box_c' => 'mks_authoriginbox.box_c',
   'assigned_user_id' => 'mks_authoriginbox.assigned_user_id',
 ),
     'searchInputs' => array (
-  4 => 'box_c',
   5 => 'assigned_user_id',
 ),
     'searchdefs' => array (
-  'box_c' => 
-  array (
-    'type' => 'relate',
-    'studio' => 'visible',
-    'label' => 'LBL_BOX',
-    'id' => 'MKS_BOX_ID_C',
-    'link' => true,
-    'width' => '10%',
-    'name' => 'box_c',
-  ),
   'assigned_user_id' => 
   array (
     'name' => 'assigned_user_id',
@@ -39,16 +27,15 @@ $popupMeta = array (
   ),
 ),
     'listviewdefs' => array (
-  'BOX_C' => 
+  'MKS_BOX_MKS_AUTHORIGINBOX_1_NAME' => 
   array (
     'type' => 'relate',
-    'default' => true,
-    'studio' => 'visible',
-    'label' => 'LBL_BOX',
-    'id' => 'MKS_BOX_ID_C',
     'link' => true,
+    'label' => 'LBL_MKS_BOX_MKS_AUTHORIGINBOX_1_FROM_MKS_BOX_TITLE',
+    'id' => 'MKS_BOX_MKS_AUTHORIGINBOX_1MKS_BOX_IDA',
     'width' => '10%',
-    'name' => 'box_c',
+    'default' => true,
+    'name' => 'mks_box_mks_authoriginbox_1_name',
   ),
   'AUTH_USER_C' => 
   array (

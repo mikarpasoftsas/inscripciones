@@ -48,6 +48,21 @@ class update_registration {
 					}
 			}
 			
+			global $db;
+			
+			$query = "
+			
+				UPDATE `mks_registrationreceipts_cstm` SET mks_registrationreceipts_cstm.refinancing_process_c = 'yes' where mks_registrationreceipts_cstm.id_c IN (SELECT mks_registrationreceipts.id
+				FROM mks_registrationreceipts  
+				LEFT JOIN  mks_registration_mks_registrationreceipts_1_c jtl0 ON mks_registrationreceipts.id=jtl0.mks_regist608feceipts_idb AND jtl0.deleted=0
+				LEFT JOIN  mks_registration jt0 ON jt0.id=jtl0.mks_registration_mks_registrationreceipts_1mks_registration_ida AND jt0.deleted=0 AND jt0.deleted=0
+				WHERE ((jt0.id = '".$IdReg."'))
+				)
+			";
+			
+			$db->query($query);
+			
+			
 			$mks_CustomPaymentPlan = BeanFactory::getBean('mks_CustomPaymentPlan');
 			$mks_CustomPaymentPlan->name='Plan Refinanciado a ' . $bean->amount_fees_c . " cuotas";
 			$mks_CustomPaymentPlan->mks_paymentplan_mks_coursesmks_courses_ida = $bean->mks_courses_id_c;
@@ -101,8 +116,11 @@ class update_registration {
 				{
 					$mks_CustomPlanFees->mks_custompaymentplan_mks_customplanfees->add($mks_CustomPaymentPlan->id);
 				}										
-			}			
+			}	
+
+			$bean->update_registration_c = 0;		
 		}
+		
 	}	
 	
 }

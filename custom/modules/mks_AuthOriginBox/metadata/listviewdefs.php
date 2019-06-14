@@ -2,15 +2,14 @@
 $module_name = 'mks_AuthOriginBox';
 $listViewDefs [$module_name] = 
 array (
-  'BOX_C' => 
+  'MKS_BOX_MKS_AUTHORIGINBOX_1_NAME' => 
   array (
     'type' => 'relate',
-    'default' => true,
-    'studio' => 'visible',
-    'label' => 'LBL_BOX',
-    'id' => 'MKS_BOX_ID_C',
     'link' => true,
+    'label' => 'LBL_MKS_BOX_MKS_AUTHORIGINBOX_1_FROM_MKS_BOX_TITLE',
+    'id' => 'MKS_BOX_MKS_AUTHORIGINBOX_1MKS_BOX_IDA',
     'width' => '10%',
+    'default' => true,
   ),
   'AUTH_USER_C' => 
   array (

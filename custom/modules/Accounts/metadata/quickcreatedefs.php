@@ -37,11 +37,6 @@ array (
       'useTabs' => false,
       'tabDefs' => 
       array (
-        'LBL_QUICKCREATE_PANEL2' => 
-        array (
-          'newTab' => false,
-          'panelDefault' => 'expanded',
-        ),
         'LBL_ACCOUNT_INFORMATION' => 
         array (
           'newTab' => false,
@@ -56,18 +51,6 @@ array (
     ),
     'panels' => 
     array (
-      'lbl_quickcreate_panel2' => 
-      array (
-        0 => 
-        array (
-          0 => 
-          array (
-            'name' => 'default_securitygroup_id_c',
-            'studio' => 'visible',
-            'label' => 'LBL_DEFAULT_SECURITYGROUP_ID',
-          ),
-        ),
-      ),
       'lbl_account_information' => 
       array (
         0 => 

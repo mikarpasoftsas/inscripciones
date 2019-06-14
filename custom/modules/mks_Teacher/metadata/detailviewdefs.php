@@ -92,9 +92,14 @@ array (
         array (
           0 => 
           array (
-            'name' => 'currency_id',
+            'name' => 'currency_c',
             'studio' => 'visible',
             'label' => 'LBL_CURRENCY',
+          ),
+          1 => 
+          array (
+            'name' => 'exchange_rate_c',
+            'label' => 'LBL_EXCHANGE_RATE_C',
           ),
         ),
         1 => 

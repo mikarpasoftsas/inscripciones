@@ -63,6 +63,30 @@ global $db,$current_user;
 	
 	while (($row = $db->fetchByAssoc($result)) != null){
 			
+			$horaEntrada 	   = $row['start_time'];	
+ 			$v_HorasPartes     = explode(":", $horaEntrada);
+			if(count($v_HorasPartes)>1){
+				$minutosTotales	   = ($v_HorasPartes[0] * 60) + $v_HorasPartes[1];
+				$row['start_time'] = $minutosTotales;
+			}
+			else
+			{
+				$minutosTotales	   = ($v_HorasPartes[0] * 60);
+				$row['start_time'] = $minutosTotales;
+			}
+				
+			
+			$horaEntrada 	   = $row['end_time'];	
+ 			$v_HorasPartes     = explode(":", $horaEntrada);
+			if(count($v_HorasPartes)>1){
+				$minutosTotales	   = ($v_HorasPartes[0] * 60) + $v_HorasPartes[1];
+				$row['end_time'] = $minutosTotales;
+			}
+			else
+			{
+				$minutosTotales	   = ($v_HorasPartes[0] * 60);
+				$row['end_time'] = $minutosTotales;
+			}
 			
 			$arr[] = array(
 			

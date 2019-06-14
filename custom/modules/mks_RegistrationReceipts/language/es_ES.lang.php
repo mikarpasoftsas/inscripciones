@@ -1,5 +1,5 @@
 <?php
-// created: 2019-06-01 18:18:09
+// created: 2019-06-13 17:38:36
 $mod_strings = array (
   'LBL_ID_AUTOINCREMENT_C' => 'Número.',
   'LBL_MKS_REGISTRATIONRECEIPTS_MKS_PAYMENTSCASH_1_FROM_MKS_PAYMENTSCASH_TITLE' => 'Efectivo',
@@ -51,4 +51,5 @@ $mod_strings = array (
   'LBL_RECEIP_TYPE' => 'Tipo de Recibo',
   'LBL_MKS_REGISTRATIONRECEIPTS_MKS_CUSTOMPLANFEES_1_FROM_MKS_CUSTOMPLANFEES_TITLE' => 'Cuotas Pagadas',
   'LBL_ TOTAL_PAID_FEES' => 'Total Pagado Cuotas',
+  'LBL_REFINANCING_PROCESS' => 'Matricula fue refinanciada?',
 );

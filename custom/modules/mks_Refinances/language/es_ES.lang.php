@@ -1,7 +1,6 @@
 <?php
-// created: 2019-05-03 17:23:16
+// created: 2019-06-13 17:07:27
 $mod_strings = array (
-  'LBL_ATTACHMENT' => 'Archivo firmado',
   'LBL_ID_AUTOINCREMENT' => '#',
   'LBL_DEBT' => 'Deuda cuota vencida',
   'LBL_COURSE_MKS_COURSES_ID' => 'Carreras y cursos (relacionado  ID)',

@@ -235,7 +235,7 @@ if(isset($_REQUEST['record']) && !empty($_REQUEST['record']))
 							'mks_PaymentConcepts', 
 							$mks_CollectionConcepts->mks_paymen2b29oncepts_ida
 					);
-				
+				  
 					if($amount_available>0 && $mks_CollectionConcepts->status_payment_c == 'pending' && $mks_PaymentConcepts->type_concept_c=='fee')
 					{
 							$query_fee = "	
@@ -268,18 +268,19 @@ if(isset($_REQUEST['record']) && !empty($_REQUEST['record']))
 								    if($amount_available >= $saldo)
  								    {
 										$mks_CustomPlanFees->payment_status_c = 'Paid';
-										$mks_CustomPlanFees->partial_mount_c+=$saldo;
+										$mks_CustomPlanFees->partial_mount_c+= $saldo;
+										$mks_CustomPlanFees->last_paid_value_c= $saldo;
 										$mks_CustomPlanFees->save();
 										$amount_available-=$saldo;
 										$totalPayment+=$saldo;
 									}	
 									else{
 									    $mks_CustomPlanFees->payment_status_c = 'partial';
-										$mks_CustomPlanFees->partial_mount_c+=$amount_available;
+										$mks_CustomPlanFees->partial_mount_c+= $amount_available;
+										$mks_CustomPlanFees->last_paid_value_c= $amount_available;
 										$mks_CustomPlanFees->save();
 										$totalPayment+=$amount_available;
 										$amount_available=0;
-																				
 									}
 									
 									if ($mks_CustomPlanFees->load_relationship('mks_registrationreceipts_mks_customplanfees_1'))

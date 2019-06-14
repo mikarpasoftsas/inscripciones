@@ -49,7 +49,6 @@ array (
             'name' => 'mks_refinances_mks_registration_name',
             'label' => 'LBL_MKS_REFINANCES_MKS_REGISTRATION_FROM_MKS_REGISTRATION_TITLE',
           ),
-          1 => '',
         ),
         1 => 
         array (
@@ -59,7 +58,6 @@ array (
             'studio' => 'visible',
             'label' => 'LBL_COURSE',
           ),
-          1 => '',
         ),
         2 => 
         array (
@@ -69,7 +67,6 @@ array (
             'studio' => 'visible',
             'label' => 'LBL_GROUPTHEORY',
           ),
-          1 => '',
         ),
         3 => 
         array (
@@ -79,7 +76,6 @@ array (
             'studio' => 'visible',
             'label' => 'LBL_GROUPPRACTICE',
           ),
-          1 => '',
         ),
         4 => 
         array (
@@ -88,7 +84,6 @@ array (
             'name' => 'debt',
             'label' => 'LBL_DEBT',
           ),
-          1 => '',
         ),
         5 => 
         array (
@@ -97,7 +92,6 @@ array (
             'name' => 'surcharge',
             'label' => 'LBL_SURCHARGE',
           ),
-          1 => '',
         ),
         6 => 
         array (
@@ -106,7 +100,6 @@ array (
             'name' => 'discount',
             'label' => 'LBL_DISCOUNT',
           ),
-          1 => '',
         ),
         7 => 
         array (
@@ -115,7 +108,6 @@ array (
             'name' => 'total_debt',
             'label' => 'LBL_TOTAL_DEBT',
           ),
-          1 => '',
         ),
         8 => 
         array (
@@ -124,26 +116,14 @@ array (
             'name' => 'first_expiration_c',
             'label' => 'LBL_FIRST_EXPIRATION',
           ),
-          1 => '',
         ),
         9 => 
         array (
-          0 => 
-          array (
-            'name' => 'attachment_c',
-            'label' => 'LBL_ATTACHMENT',
-          ),
-          1 => '',
+          0 => 'assigned_user_name',
         ),
         10 => 
         array (
-          0 => 'assigned_user_name',
-          1 => '',
-        ),
-        11 => 
-        array (
           0 => 'description',
-          1 => '',
         ),
       ),
     ),

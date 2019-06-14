@@ -147,8 +147,8 @@
 						 
 								post_array =  
 								{
-									  start: start.startOf('week').add(occupation[i].day, 'days').add(occupation[i].start, 'h').format('X'),
-									  end: start.startOf('week').add(occupation[i].day, 'days').add(occupation[i].end, 'h').format('X'),
+									  start: start.startOf('week').add(occupation[i].day, 'days').add(occupation[i].start, 'm').format('X'),
+									  end: start.startOf('week').add(occupation[i].day, 'days').add(occupation[i].end, 'm').format('X'),
 									  title: occupation[i].category,
 									  content: occupation[i].content,
 									  category: occupation[i].category
@@ -180,7 +180,7 @@
 				locale: 'es',
 				weekday: {
 				  timeline: {
-					intervalMinutes: 60,
+					intervalMinutes: 30,
 					fromHour: 9
 				  }
 				},

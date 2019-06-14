@@ -46,7 +46,12 @@ array (
       array (
         0 => 
         array (
-          0 => 'parent_name',
+          0 => 
+          array (
+            'name' => 'tipo_c',
+            'studio' => 'visible',
+            'label' => 'LBL_TIPO',
+          ),
           1 => '',
         ),
         1 => 

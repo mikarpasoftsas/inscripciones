@@ -89,11 +89,6 @@ $GLOBALS['app_list_strings']['status_ppp_list']=array (
   'valid' => 'Vigente',
   'closed' => 'Cerrado',
 );
-$GLOBALS['app_list_strings']['tipo_list']=array (
-  '' => '',
-  'photo' => 'Foto',
-  'other' => 'Otro',
-);
 $GLOBALS['app_list_strings']['amount_fees_list']=array (
   1 => '1',
   2 => '2',
@@ -231,4 +226,20 @@ $GLOBALS['app_list_strings']['securitygroup_list']=array (
 
 $GLOBALS['app_list_strings']['default_securitygroup_id_list']=array (
   '' => '',
+);
+$GLOBALS['app_list_strings']['filter_filial_c_list']=array (
+  '' => '',
+);
+
+$GLOBALS['app_list_strings']['freeze_plan_list']=array (
+  'yes' => 'Si',
+  'not' => 'No',
+);
+$GLOBALS['app_list_strings']['tipo_list']=array (
+  '' => '',
+  'mks_Refinances' => 'Archivo firmado',
+);
+$GLOBALS['app_list_strings']['refinancing_process_list']=array (
+  'yes' => 'Si',
+  'not' => 'no',
 );

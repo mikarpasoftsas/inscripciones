@@ -294,4 +294,19 @@ include('custom/metadata/mks_registrationreceipts_mks_customplanfees_1MetaData.p
 include('custom/metadata/aos_product_categories_mks_articles_1MetaData.php');
 
 
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_box_mks_authoriginbox_1MetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_box_mks_authdestinationbox_1MetaData.php');
+
+
+ 
+ //WARNING: The contents of this file are auto-generated
+include('custom/metadata/mks_refinances_notes_1MetaData.php');
+
+
 ?>
