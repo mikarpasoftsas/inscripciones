@@ -110,4 +110,9 @@ $dictionary["mks_Refinances"]["fields"]["mks_refinances_notes_1"] = array (
   'vname' => 'LBL_MKS_REFINANCES_NOTES_1_FROM_NOTES_TITLE',
 );
 
+
+ // created: 2019-06-14 05:45:41
+$dictionary['mks_Refinances']['fields']['surcharge']['len']='';
+
+ 
 ?>

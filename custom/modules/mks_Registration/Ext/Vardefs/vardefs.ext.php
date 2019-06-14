@@ -179,13 +179,13 @@ $dictionary['mks_Registration']['fields']['debt_c']['labelValue']='Deduda cuota 
 
  
 
- // created: 2018-11-14 18:03:33
+ // created: 2019-06-14 05:46:25
 $dictionary['mks_Registration']['fields']['surcharge_c']['inline_edit']='';
 $dictionary['mks_Registration']['fields']['surcharge_c']['labelValue']='Recargo %';
 
  
 
- // created: 2018-11-14 18:06:42
+ // created: 2019-06-14 05:46:07
 $dictionary['mks_Registration']['fields']['discount_c']['inline_edit']='';
 $dictionary['mks_Registration']['fields']['discount_c']['labelValue']='Mondo del Descuento';
 
@@ -295,6 +295,12 @@ $dictionary['mks_Registration']['fields']['freeze_plan_c']['labelValue']='Congel
  // created: 2019-06-13 03:43:19
 $dictionary['mks_Registration']['fields']['freeze_plan_des_c']['inline_edit']='1';
 $dictionary['mks_Registration']['fields']['freeze_plan_des_c']['labelValue']='Contenido Congelado';
+
+ 
+
+ // created: 2019-06-14 05:23:32
+$dictionary['mks_Registration']['fields']['first_expiration_ref_c']['inline_edit']='1';
+$dictionary['mks_Registration']['fields']['first_expiration_ref_c']['labelValue']='Vencimiento';
 
  
 ?>

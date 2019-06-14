@@ -1,5 +1,5 @@
 <?php
-// created: 2019-06-13 03:43:19
+// created: 2019-06-14 05:23:32
 $mod_strings = array (
   'LBL_MKS_REGISTRATION_CONTACTS_FROM_CONTACTS_TITLE' => 'Contactos',
   'LBL_CONTACTS_TITLE' => 'Contacto',
@@ -50,4 +50,5 @@ $mod_strings = array (
   'LBL_OBSERVATIONS' => 'Observaciones',
   'LBL_FREEZE_PLAN' => 'Congelar Plan?',
   'LBL_FREEZE_PLAN_DES' => 'Contenido Congelado',
+  'LBL_FIRST_EXPIRATION_REF_C' => 'Vencimiento',
 );

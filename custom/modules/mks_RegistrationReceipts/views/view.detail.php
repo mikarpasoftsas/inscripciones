@@ -131,15 +131,18 @@ class mks_RegistrationReceiptsViewDetail extends ViewDetail {
 		{
 			die("Not load Rel mks_custompaymentplan_mks_customplanfees");
 		}
+		
+		
 		ksort($FeesSummary);
 		$np = 0;
 		$FeesSummary2 = "";
 		foreach($FeesSummary as $key=>$value){	
-			if($np==0)
+			if($np==1)
 			{   $s = explode('|',$value);
-				$this->next_expiration = $s[2];
+				$this->next_expiration = $s[2];		
 			}
 			$FeesSummary2.= "<br>" . $value;
+			$np++;
 		}
 		
 		return $FeesSummary2;

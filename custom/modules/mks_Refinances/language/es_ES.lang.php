@@ -1,5 +1,5 @@
 <?php
-// created: 2019-06-13 17:07:27
+// created: 2019-06-14 05:45:41
 $mod_strings = array (
   'LBL_ID_AUTOINCREMENT' => '#',
   'LBL_DEBT' => 'Deuda cuota vencida',
@@ -15,4 +15,5 @@ $mod_strings = array (
   'LBL_ADVANCE_C' => 'Anticipo',
   'LBL_AMOUNT_FEES_C' => '# Cuotas',
   'LBL_FIRST_EXPIRATION' => 'Primer Vencimiento',
+  'LBL_SURCHARGE' => 'Recargo %',
 );
