@@ -65,15 +65,7 @@ $dictionary['mks_CustomDiscountRules'] = array(
     'len' => '2',
     'size' => '20',
     'enable_range_search' => false,
-    'disable_num_format' => '',
-    'min' => 1,
-    'max' => 31,
-    'validation' => 
-    array (
-      'type' => 'range',
-      'min' => 1,
-      'max' => 31,
-    ),
+    'disable_num_format' => '', 
   ),
   'final_day' => 
   array (
@@ -96,15 +88,7 @@ $dictionary['mks_CustomDiscountRules'] = array(
     'len' => '2',
     'size' => '20',
     'enable_range_search' => false,
-    'disable_num_format' => '',
-    'min' => 1,
-    'max' => 31,
-    'validation' => 
-    array (
-      'type' => 'range',
-      'min' => 1,
-      'max' => 31,
-    ),
+    'disable_num_format' => '',   
   ),
   'value' => 
   array (

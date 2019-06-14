@@ -55,4 +55,16 @@ $dictionary["mks_Teacher"]["fields"]["mks_academicgroups_mks_teacher_1"] = array
   'vname' => 'LBL_MKS_ACADEMICGROUPS_MKS_TEACHER_1_FROM_MKS_ACADEMICGROUPS_TITLE',
 );
 
+
+ // created: 2019-06-14 03:19:48
+$dictionary['mks_Teacher']['fields']['currency_c']['inline_edit']='1';
+$dictionary['mks_Teacher']['fields']['currency_c']['labelValue']='Moneda';
+
+ 
+
+ // created: 2019-06-14 03:21:11
+$dictionary['mks_Teacher']['fields']['exchange_rate_c']['inline_edit']='1';
+$dictionary['mks_Teacher']['fields']['exchange_rate_c']['labelValue']='T.C';
+
+ 
 ?>

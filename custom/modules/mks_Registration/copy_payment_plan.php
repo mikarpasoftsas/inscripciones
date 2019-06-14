@@ -29,6 +29,25 @@ class copy_payment_plan {
 					$bean->mks_custompaymentplan_mks_registration->add($mks_CustomPaymentPlan->id);
 				}
 				
+				require_once('modules/SecurityGroups/SecurityGroup.php');
+				$groupFocus = new SecurityGroup();
+				$security_modules = $groupFocus->getSecurityModules();
+				if(in_array($bean->module_dir,array_keys($security_modules))) {
+					$rel_name = $groupFocus->getLinkName($bean->module_dir,"SecurityGroups");
+					$rel_name2 = $groupFocus->getLinkName('mks_CustomPaymentPlan',"SecurityGroups");
+					if($bean->load_relationship($rel_name)){
+						if($mks_CustomPaymentPlan->load_relationship($rel_name2)){						
+							$SecurityGroupByRegistration = $bean->$rel_name->getBeans();	
+							foreach($SecurityGroupByRegistration as $SecurityGroup){
+								
+									$mks_CustomPaymentPlan->$rel_name2->add($SecurityGroup->id);
+									$groupFocus->addGroupToRecord('mks_CustomPaymentPlan', $mks_CustomPaymentPlan->id,$SecurityGroup->id);					
+								
+							}						
+						}
+					}	
+				}
+				
 				//Second, plan fees are copied
 				
 				if ($mks_PaymentPlan->load_relationship('mks_paymentplan_mks_planfees'))
@@ -75,6 +94,22 @@ class copy_payment_plan {
 								$mks_CustomPaymentPlan->mks_custompaymentplan_mks_customplanfees->add($mks_CustomPlanFees->id);
 							}
 							
+							if(in_array($bean->module_dir,array_keys($security_modules))) {
+								$rel_name = $groupFocus->getLinkName($bean->module_dir,"SecurityGroups");
+								$rel_name2 = $groupFocus->getLinkName('mks_CustomPlanFees',"SecurityGroups");
+								if($bean->load_relationship($rel_name)){
+									if($mks_CustomPlanFees->load_relationship($rel_name2)){						
+										$SecurityGroupByRegistration = $bean->$rel_name->getBeans();	
+										foreach($SecurityGroupByRegistration as $SecurityGroup){
+											
+												$mks_CustomPlanFees->$rel_name2->add($SecurityGroup->id);
+												$groupFocus->addGroupToRecord('mks_CustomPlanFees', $mks_CustomPlanFees->id,$SecurityGroup->id);					
+											
+										}						
+									}
+								}	
+							}
+							
 							$i++;
 						}	
 					    	
@@ -106,6 +141,22 @@ class copy_payment_plan {
 						if ($mks_CustomPaymentPlan->load_relationship('mks_customdiscountrules_mks_custompaymentplan'))
 						{
 							$mks_CustomPaymentPlan->mks_customdiscountrules_mks_custompaymentplan->add($mks_CustomDiscountRules->id);
+						}
+						
+						if(in_array($bean->module_dir,array_keys($security_modules))) {
+								$rel_name = $groupFocus->getLinkName($bean->module_dir,"SecurityGroups");
+								$rel_name2 = $groupFocus->getLinkName('mks_CustomDiscountRules',"SecurityGroups");
+								if($bean->load_relationship($rel_name)){
+									if($mks_CustomDiscountRules->load_relationship($rel_name2)){						
+										$SecurityGroupByRegistration = $bean->$rel_name->getBeans();	
+										foreach($SecurityGroupByRegistration as $SecurityGroup){
+											
+												$mks_CustomDiscountRules->$rel_name2->add($SecurityGroup->id);
+												$groupFocus->addGroupToRecord('mks_CustomDiscountRules', $mks_CustomDiscountRules->id,$SecurityGroup->id);					
+											
+										}						
+									}
+								}	
 						}
 						
 					}

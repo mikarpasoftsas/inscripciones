@@ -6,8 +6,10 @@ class assign_name_record_rg {
     	
 	function assign_name_record_rg(&$bean, $event, $arguments)
 	{
-		$bean->name =  $bean->reg_num_c ." / " . $bean->accounts_mks_registration_1_name;
-		$bean->document_name = $bean->reg_num_c ." / " . $bean->accounts_mks_registration_1_name;
+		if(isset($bean->accounts_mks_registration_1_name)){
+			$bean->name =  $bean->reg_num_c ." / " . $bean->accounts_mks_registration_1_name;
+			$bean->document_name = $bean->reg_num_c ." / " . $bean->accounts_mks_registration_1_name;
+		}
 	}	
 	
 }

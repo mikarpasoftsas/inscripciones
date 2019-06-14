@@ -47,4 +47,79 @@ $dictionary['mks_CustomPlanFees']['fields']['n_fee_c']['inline_edit']='';
 $dictionary['mks_CustomPlanFees']['fields']['n_fee_c']['labelValue']='Cuota N°';
 
  
+
+ // created: 2019-02-26 16:49:58
+$dictionary['mks_CustomPlanFees']['fields']['payment_status_c']['inline_edit']='1';
+$dictionary['mks_CustomPlanFees']['fields']['payment_status_c']['labelValue']='Estado del Pago';
+
+ 
+
+// created: 2019-02-27 16:49:15
+$dictionary["mks_CustomPlanFees"]["fields"]["mks_collectionconcepts_mks_customplanfees_1"] = array (
+  'name' => 'mks_collectionconcepts_mks_customplanfees_1',
+  'type' => 'link',
+  'relationship' => 'mks_collectionconcepts_mks_customplanfees_1',
+  'source' => 'non-db',
+  'module' => 'mks_CollectionConcepts',
+  'bean_name' => 'mks_CollectionConcepts',
+  'vname' => 'LBL_MKS_COLLECTIONCONCEPTS_MKS_CUSTOMPLANFEES_1_FROM_MKS_COLLECTIONCONCEPTS_TITLE',
+  'id_name' => 'mks_collec035foncepts_ida',
+);
+$dictionary["mks_CustomPlanFees"]["fields"]["mks_collectionconcepts_mks_customplanfees_1_name"] = array (
+  'name' => 'mks_collectionconcepts_mks_customplanfees_1_name',
+  'type' => 'relate',
+  'source' => 'non-db',
+  'vname' => 'LBL_MKS_COLLECTIONCONCEPTS_MKS_CUSTOMPLANFEES_1_FROM_MKS_COLLECTIONCONCEPTS_TITLE',
+  'save' => true,
+  'id_name' => 'mks_collec035foncepts_ida',
+  'link' => 'mks_collectionconcepts_mks_customplanfees_1',
+  'table' => 'mks_collectionconcepts',
+  'module' => 'mks_CollectionConcepts',
+  'rname' => 'name',
+);
+$dictionary["mks_CustomPlanFees"]["fields"]["mks_collec035foncepts_ida"] = array (
+  'name' => 'mks_collec035foncepts_ida',
+  'type' => 'link',
+  'relationship' => 'mks_collectionconcepts_mks_customplanfees_1',
+  'source' => 'non-db',
+  'reportable' => false,
+  'side' => 'left',
+  'vname' => 'LBL_MKS_COLLECTIONCONCEPTS_MKS_CUSTOMPLANFEES_1_FROM_MKS_COLLECTIONCONCEPTS_TITLE',
+);
+
+
+ // created: 2019-04-27 20:51:57
+$dictionary['mks_CustomPlanFees']['fields']['partial_mount_c']['inline_edit']='1';
+$dictionary['mks_CustomPlanFees']['fields']['partial_mount_c']['labelValue']='Importe Parcial';
+
+ 
+
+ // created: 2019-04-27 19:55:19
+$dictionary['mks_CustomPlanFees']['fields']['amount']['audited']=true;
+
+ 
+
+ // created: 2019-05-28 23:38:10
+$dictionary['mks_CustomPlanFees']['fields']['amount_interest_c']['inline_edit']='1';
+$dictionary['mks_CustomPlanFees']['fields']['amount_interest_c']['labelValue']='Intereses';
+
+ 
+
+// created: 2019-06-01 17:47:30
+$dictionary["mks_CustomPlanFees"]["fields"]["mks_registrationreceipts_mks_customplanfees_1"] = array (
+  'name' => 'mks_registrationreceipts_mks_customplanfees_1',
+  'type' => 'link',
+  'relationship' => 'mks_registrationreceipts_mks_customplanfees_1',
+  'source' => 'non-db',
+  'module' => 'mks_RegistrationReceipts',
+  'bean_name' => 'mks_RegistrationReceipts',
+  'vname' => 'LBL_MKS_REGISTRATIONRECEIPTS_MKS_CUSTOMPLANFEES_1_FROM_MKS_REGISTRATIONRECEIPTS_TITLE',
+);
+
+
+ // created: 2019-06-13 22:23:45
+$dictionary['mks_CustomPlanFees']['fields']['last_paid_value_c']['inline_edit']='1';
+$dictionary['mks_CustomPlanFees']['fields']['last_paid_value_c']['labelValue']='Ultimo monto pagado';
+
+ 
 ?>

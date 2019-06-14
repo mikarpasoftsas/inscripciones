@@ -66,14 +66,22 @@ array (
         ),
         3 => 
         array (
-          0 => 'date_entered',
-          1 => 'date_modified',
+          0 => 
+          array (
+            'name' => 'key_autoincrement_c',
+            'label' => 'LBL_KEY_AUTOINCREMENT',
+          ),
         ),
         4 => 
         array (
-          0 => 'noninheritable',
+          0 => 'date_entered',
+          1 => 'date_modified',
         ),
         5 => 
+        array (
+          0 => 'noninheritable',
+        ),
+        6 => 
         array (
           0 => 'description',
         ),

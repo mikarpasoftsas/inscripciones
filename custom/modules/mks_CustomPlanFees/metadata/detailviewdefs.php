@@ -52,12 +52,10 @@ array (
             'name' => 'n_fee_c',
             'label' => 'LBL_N_FEE',
           ),
-          1 => '',
         ),
         1 => 
         array (
           0 => 'name',
-          1 => '',
         ),
         2 => 
         array (
@@ -66,7 +64,6 @@ array (
             'name' => 'mks_custompaymentplan_mks_customplanfees_name',
             'label' => 'LBL_MKS_CUSTOMPAYMENTPLAN_MKS_CUSTOMPLANFEES_FROM_MKS_CUSTOMPAYMENTPLAN_TITLE',
           ),
-          1 => '',
         ),
         3 => 
         array (
@@ -75,21 +72,44 @@ array (
             'name' => 'amount',
             'label' => 'LBL_AMOUNT',
           ),
-          1 => '',
         ),
         4 => 
+        array (
+          0 => 
+          array (
+            'name' => 'amount_interest_c',
+            'label' => 'LBL_AMOUNT_INTEREST',
+          ),
+        ),
+        5 => 
         array (
           0 => 
           array (
             'name' => 'expiration',
             'label' => 'LBL_EXPIRATION',
           ),
+        ),
+        6 => 
+        array (
+          0 => 
+          array (
+            'name' => 'payment_status_c',
+            'studio' => 'visible',
+            'label' => 'LBL_PAYMENT_STATUS',
+          ),
+        ),
+        7 => 
+        array (
+          0 => 
+          array (
+            'name' => 'partial_mount_c',
+            'label' => 'LBL_PARTIAL_MOUNT',
+          ),
           1 => '',
         ),
-        5 => 
+        8 => 
         array (
           0 => 'assigned_user_name',
-          1 => '',
         ),
       ),
     ),

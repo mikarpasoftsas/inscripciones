@@ -36,12 +36,6 @@ $dictionary["mks_Refinances"]["fields"]["mks_refinances_mks_registrationmks_regi
 );
 
 
- // created: 2018-11-21 17:16:16
-$dictionary['mks_Refinances']['fields']['attachment_c']['inline_edit']='1';
-$dictionary['mks_Refinances']['fields']['attachment_c']['labelValue']='Archivo firmado';
-
- 
-
  // created: 2018-11-16 15:41:39
 $dictionary['mks_Refinances']['fields']['id_autoincrement']['format']='{RFM}{-}{y}{-}{00000000}{}{}';
 
@@ -95,6 +89,30 @@ $dictionary['mks_Refinances']['fields']['amount_fees_c']['labelValue']='# Cuotas
  // created: 2018-12-13 17:01:28
 $dictionary['mks_Refinances']['fields']['advance_c']['inline_edit']='1';
 $dictionary['mks_Refinances']['fields']['advance_c']['labelValue']='Anticipo';
+
+ 
+
+ // created: 2019-05-03 17:23:16
+$dictionary['mks_Refinances']['fields']['first_expiration_c']['inline_edit']='1';
+$dictionary['mks_Refinances']['fields']['first_expiration_c']['labelValue']='Primer Vencimiento';
+
+ 
+
+// created: 2019-06-13 17:11:18
+$dictionary["mks_Refinances"]["fields"]["mks_refinances_notes_1"] = array (
+  'name' => 'mks_refinances_notes_1',
+  'type' => 'link',
+  'relationship' => 'mks_refinances_notes_1',
+  'source' => 'non-db',
+  'module' => 'Notes',
+  'bean_name' => 'Note',
+  'side' => 'right',
+  'vname' => 'LBL_MKS_REFINANCES_NOTES_1_FROM_NOTES_TITLE',
+);
+
+
+ // created: 2019-06-14 05:45:41
+$dictionary['mks_Refinances']['fields']['surcharge']['len']='';
 
  
 ?>

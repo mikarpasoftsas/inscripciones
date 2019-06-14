@@ -6,7 +6,8 @@ class AssignGroups {
 
 function popup_select(&$bean, $event, $arguments)
 {
-	global $sugar_config;
+	global $sugar_config,$current_user;
+	
 
 	//only process if action is Save (meaning a user has triggered this event and not the portal or automated process)
 	if(isset($_REQUEST['action']) && $_REQUEST['action'] == 'Save' 
@@ -58,6 +59,86 @@ function popup_select(&$bean, $event, $arguments)
 			'id' => $bean->id
 		);
 	}
+	else if(
+			isset($_REQUEST['default_securitygroup_id_c'])
+			&&!empty($_REQUEST['default_securitygroup_id_c'])
+			&& empty($bean->fetched_row['id']) 
+			&& $bean->module_dir != "Users"
+			){
+			//G.D.C.P			
+			
+			require_once('modules/SecurityGroups/SecurityGroup.php');
+			$groupFocus = new SecurityGroup();
+			$security_modules = $groupFocus->getSecurityModules();
+			//sanity check
+			if(in_array($bean->module_dir,array_keys($security_modules))) {
+				//add each group in securitygroup_list to new record
+				$rel_name = $groupFocus->getLinkName($bean->module_dir,"SecurityGroups");
+				$gbu 	  = $groupFocus->getUserSecurityGroups($current_user->id);
+			
+			    switch($bean->module_dir)
+				 {
+					 case 'mks_Box' 				: $rel_name = 'mks_box_securitygroups'; break;
+					 case 'mks_Courses' 		    : $rel_name = 'mks_courses_securitygroups_1'; break;
+					 case 'mks_MovementType' 		: $rel_name = 'mks_movementtype_securitygroups'; break;
+					 case 'mks_PaymentPlan'			: $rel_name = 'mks_paymentplan_securitygroups_1'; break;
+					 //case 'mks_WaitingList'			: $rel_name = 'securitygroups_mks_waitinglist'; break;	
+					 case 'mks_Registration'		: $rel_name = 'mks_registration_securitygroups_1'; break;
+					 //case 'mks_Classroom'			: $rel_name = 'mks_classroom_securitygroups'; break;
+				 }
+				
+				if($bean->load_relationship($rel_name)){
+					foreach($gbu as $key => $value)
+					{  
+						if($key!=$_REQUEST['default_securitygroup_id_c']){
+							$bean->$rel_name->remove($key);
+							
+						}
+					}
+					$bean->$rel_name->add($_REQUEST['default_securitygroup_id_c']);
+					$groupFocus->addGroupToRecord($bean->module_dir, $bean->id,$_REQUEST['default_securitygroup_id_c']);					
+				}								
+			}			
+	}
+	else if(
+			isset($current_user->filter_filial_c)
+			&&!empty($current_user->filter_filial_c)
+			&& empty($bean->fetched_row['id']) 
+			&& $bean->module_dir != "Users"
+			){
+			//G.D.C.P
+			
+			require_once('modules/SecurityGroups/SecurityGroup.php');
+			$groupFocus = new SecurityGroup();
+			$security_modules = $groupFocus->getSecurityModules();
+			//sanity check
+			if(in_array($bean->module_dir,array_keys($security_modules))) {
+				//add each group in securitygroup_list to new record
+				$rel_name = $groupFocus->getLinkName($bean->module_dir,"SecurityGroups");
+				$gbu 	  = $groupFocus->getUserSecurityGroups($current_user->id);
+			    switch($bean->module_dir)
+				 {
+					 case 'mks_Box' 				: $rel_name = 'mks_box_securitygroups'; break;
+					 case 'mks_Courses' 		    : $rel_name = 'mks_courses_securitygroups_1'; break;
+					 case 'mks_MovementType' 		: $rel_name = 'mks_movementtype_securitygroups'; break;
+					 case 'mks_PaymentPlan'			: $rel_name = 'mks_paymentplan_securitygroups_1'; break;
+					//case 'mks_WaitingList'			: $rel_name = 'mks_waitinglist_securitygroups_c'; break;	
+					 case 'mks_Registration'		: $rel_name = 'mks_registration_securitygroups_1'; break;
+					 //case 'mks_Classroom'			: $rel_name = 'mks_classroom_securitygroups'; break; 
+				 }
+				if($bean->load_relationship($rel_name)){		
+				
+					foreach($gbu as $key => $value)
+					{
+						if($key!=$current_user->filter_filial_c)
+							$bean->$rel_name->remove($key);
+					}
+					$bean->$rel_name->add($current_user->filter_filial_c);
+					$groupFocus->addGroupToRecord($bean->module_dir, $bean->id,$current_user->filter_filial_c);					
+				}
+									
+			}		
+	}	
 } 
 
 
@@ -117,8 +198,9 @@ EOQ;
 }
 
 function mass_assign($event, $arguments)
-{
-    $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : null;
+{	
+    
+	$action = isset($_REQUEST['action']) ? $_REQUEST['action'] : null;
     $module = isset($_REQUEST['module']) ? $_REQUEST['module'] : null;
   
   	$no_mass_assign_list = array("Emails"=>"Emails","ACLRoles"=>"ACLRoles"); //,"Users"=>"Users");
@@ -144,11 +226,24 @@ function mass_assign($event, $arguments)
 
 				$form_header = get_form_header($current_module_strings['LBL_MASS_ASSIGN'], '', false);
 
-				$groups = $groupFocus->get_list("name","",0,-99,-99);
-				$options = array(""=>"");
-				foreach($groups['list'] as $group) {
-					$options[$group->id] = $group->name;
+				
+				
+				//G.D.C.P
+				if(is_admin($current_user)){
+					$groups = $groupFocus->get_list("name","",0,-99,-99);
+					$options = array(""=>"");
+					foreach($groups['list'] as $group) 
+						$options[$group->id] = $group->name;
+					
 				}
+				else{
+					$groups   = $groupFocus->getUserSecurityGroups($current_user->id);
+					$options = array(""=>"");
+					foreach($groups as $key => $value) 
+						$options[$value['id']] = $value['name'];					
+				}				
+				
+				
 				$group_options =  get_select_options_with_id($options, "");
 
 				$mass_assign = <<<EOQ

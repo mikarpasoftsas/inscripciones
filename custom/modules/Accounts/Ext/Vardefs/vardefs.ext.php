@@ -194,4 +194,31 @@ $dictionary['Account']['fields']['origin_fb_c']['inline_edit']='1';
 $dictionary['Account']['fields']['origin_fb_c']['labelValue']='Origen FB';
 
  
+
+// created: 2019-03-14 15:32:06
+$dictionary["Account"]["fields"]["accounts_mks_management_1"] = array (
+  'name' => 'accounts_mks_management_1',
+  'type' => 'link',
+  'relationship' => 'accounts_mks_management_1',
+  'source' => 'non-db',
+  'module' => 'mks_Management',
+  'bean_name' => 'mks_Management',
+  'side' => 'right',
+  'vname' => 'LBL_ACCOUNTS_MKS_MANAGEMENT_1_FROM_MKS_MANAGEMENT_TITLE',
+);
+
+
+ // created: 2019-06-08 18:11:24
+$dictionary['Account']['fields']['default_securitygroup_id_c']['inline_edit']='1';
+$dictionary['Account']['fields']['default_securitygroup_id_c']['labelValue']='Filial';
+
+ 
+
+$dictionary['Accounts']['fields']['default_securitygroup_id_c'] = array (
+	'name' => 'default_securitygroup_id_c',
+	'function' => 'getUserSecurityGroups',
+	'type' => 'enum',
+	'len' => '100',
+	'comment' => '',
+);
 ?>

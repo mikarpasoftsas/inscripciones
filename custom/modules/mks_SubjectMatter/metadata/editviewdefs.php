@@ -30,6 +30,13 @@ array (
         ),
       ),
       'syncDetailEditViews' => true,
+	  'includes' => 
+      array (
+        0 => 
+        array (
+          'file' => 'custom/modules/mks_SubjectMatter/js/editview.js',
+        ),
+      ),
     ),
     'panels' => 
     array (
@@ -39,15 +46,24 @@ array (
         array (
           0 => 
           array (
-            'name' => 'mks_courses_mks_subjectmatter_1_name',
-            'label' => 'LBL_MKS_COURSES_MKS_SUBJECTMATTER_1_FROM_MKS_COURSES_TITLE',
+            'name' => 'type_c',
+            'studio' => 'visible',
+            'label' => 'LBL_TYPE',
           ),
         ),
         1 => 
         array (
-          0 => 'name',
+          0 => 
+          array (
+            'name' => 'mks_courses_mks_subjectmatter_1_name',
+            'label' => 'LBL_MKS_COURSES_MKS_SUBJECTMATTER_1_FROM_MKS_COURSES_TITLE',
+          ),
         ),
         2 => 
+        array (
+          0 => 'name',
+        ),
+        3 => 
         array (
           0 => 'assigned_user_name',
         ),

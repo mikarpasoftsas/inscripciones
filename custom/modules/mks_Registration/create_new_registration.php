@@ -65,6 +65,7 @@ class create_new_registration {
 			$mks_CustomPaymentPlan->mks_paymentplan_mks_coursesmks_courses_ida = $bean->mks_courses_id_c;
 			$mks_CustomPaymentPlan->amount = 0;
 			$mks_CustomPaymentPlan->id_autoincrement='pending';
+			$mks_CustomPaymentPlan->assigned_user_id=$bean->assigned_user_id;
 			$mks_CustomPaymentPlan->save();
 			
 			if ($mks_CustomPaymentPlan->load_relationship('mks_custompaymentplan_mks_registration'))
@@ -73,15 +74,18 @@ class create_new_registration {
 			}
 			
 			$n=0;
-			
+			$m = 1;
 			if($bean->advance_c>0)
 			{
 				$n = 1;
+				$m = 0;
 				$mks_CustomPlanFees 		 = BeanFactory::getBean('mks_CustomPlanFees');
 				$mks_CustomPlanFees->name    = $n . " de " . $bean->amount_fees_c;
 				$mks_CustomPlanFees->n_fee_c = $n;
 				$mks_CustomPlanFees->amount  = $bean->advance_c;	
 				$mks_CustomPlanFees->assigned_user_id = $bean->assigned_user_id;
+				$mks_CustomPlanFees->expiration = $bean->first_expiration_ref_c;
+				$m++;
 				$mks_CustomPlanFees->save();
 
 				if ($mks_CustomPlanFees->load_relationship('mks_custompaymentplan_mks_customplanfees'))
@@ -98,6 +102,10 @@ class create_new_registration {
 				$mks_CustomPlanFees->name    = ($i + $n) . " de " . $bean->amount_fees_c;
 				$mks_CustomPlanFees->n_fee_c = ($i + $n);
 				$mks_CustomPlanFees->amount  = $valfee;	
+				$dateDB = $GLOBALS['timedate']->fromString($bean->first_expiration_ref_c);
+				$dateDBformatDate = new DateTime($dateDB);
+				$dateDBformatDate->add(new DateInterval("P".$m++."M"));
+				$mks_CustomPlanFees->expiration = $dateDBformatDate->format('Y-m-d');
 				$mks_CustomPlanFees->assigned_user_id = $bean->assigned_user_id;
 				$mks_CustomPlanFees->save();
 

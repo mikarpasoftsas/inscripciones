@@ -126,6 +126,141 @@ $dictionary['securitygroups_records'] = array (
 			'relationship_type'=>'many-to-many',
 			'join_table'=> 'securitygroups_records', 'join_key_lhs'=>'securitygroup_id', 'join_key_rhs'=>'record_id',
 			'relationship_role_column'=>'module','relationship_role_column_value'=>'Tasks'),
+		//1
+		'mks_paymentplan_securitygroups_1' => array(
+			'lhs_module'=> 'SecurityGroups', 'lhs_table'=> 'securitygroups', 'lhs_key' => 'id',
+			'rhs_module'=> 'mks_PaymentPlan', 'rhs_table'=> 'mks_paymentplan', 'rhs_key' => 'id',
+			'relationship_type'=>'many-to-many',
+			'join_table'=> 'securitygroups_records', 'join_key_lhs'=>'securitygroup_id', 'join_key_rhs'=>'record_id',
+			'relationship_role_column'=>'module','relationship_role_column_value'=>'mks_PaymentPlan'),	
+		//2
+		'mks_academicgroups_securitygroups_c' => array(
+			'lhs_module'=> 'SecurityGroups', 'lhs_table'=> 'securitygroups', 'lhs_key' => 'id',
+			'rhs_module'=> 'mks_AcademicGroups', 'rhs_table'=> 'mks_academicgroups', 'rhs_key' => 'id',
+			'relationship_type'=>'many-to-many',
+			'join_table'=> 'securitygroups_records', 'join_key_lhs'=>'securitygroup_id', 'join_key_rhs'=>'record_id',
+			'relationship_role_column'=>'module','relationship_role_column_value'=>'mks_AcademicGroups'),	
+		//3
+		'mks_bank_securitygroups_c' => array(
+			'lhs_module'=> 'SecurityGroups', 'lhs_table'=> 'securitygroups', 'lhs_key' => 'id',
+			'rhs_module'=> 'mks_Bank', 'rhs_table'=> 'mks_bank', 'rhs_key' => 'id',
+			'relationship_type'=>'many-to-many',
+			'join_table'=> 'securitygroups_records', 'join_key_lhs'=>'securitygroup_id', 'join_key_rhs'=>'record_id',
+			'relationship_role_column'=>'module','relationship_role_column_value'=>'mks_Bank'),	
+		//4
+		'mks_box_securitygroups_c' => array(
+			'lhs_module'=> 'SecurityGroups', 'lhs_table'=> 'securitygroups', 'lhs_key' => 'id',
+			'rhs_module'=> 'mks_Box', 'rhs_table'=> 'mks_box', 'rhs_key' => 'id',
+			'relationship_type'=>'many-to-many',
+			'join_table'=> 'securitygroups_records', 'join_key_lhs'=>'securitygroup_id', 'join_key_rhs'=>'record_id',
+			'relationship_role_column'=>'module','relationship_role_column_value'=>'mks_Box'),			
+		//5
+		'mks_classroom_securitygroups' => array(
+			'lhs_module'=> 'SecurityGroups', 'lhs_table'=> 'securitygroups', 'lhs_key' => 'id',
+			'rhs_module'=> 'mks_Classroom', 'rhs_table'=> 'mks_classroom', 'rhs_key' => 'id',
+			'relationship_type'=>'many-to-many',
+			'join_table'=> 'securitygroups_records', 'join_key_lhs'=>'securitygroup_id', 'join_key_rhs'=>'record_id',
+			'relationship_role_column'=>'module','relationship_role_column_value'=>'mks_Classroom'),
+		//5.1
+		'securitygroups_mks_classroom' => array(
+			'lhs_module'=> 'SecurityGroups', 'lhs_table'=> 'securitygroups', 'lhs_key' => 'id',
+			'rhs_module'=> 'mks_Classroom', 'rhs_table'=> 'mks_classroom', 'rhs_key' => 'id',
+			'relationship_type'=>'many-to-many',
+			'join_table'=> 'securitygroups_records', 'join_key_lhs'=>'securitygroup_id', 'join_key_rhs'=>'record_id',
+			'relationship_role_column'=>'module','relationship_role_column_value'=>'mks_Classroom'),	
+		//6
+		'mks_classroomnew_securitygroups_c' => array(
+			'lhs_module'=> 'SecurityGroups', 'lhs_table'=> 'securitygroups', 'lhs_key' => 'id',
+			'rhs_module'=> 'mks_ClassroomNew', 'rhs_table'=> 'mks_classroomnew', 'rhs_key' => 'id',
+			'relationship_type'=>'many-to-many',
+			'join_table'=> 'securitygroups_records', 'join_key_lhs'=>'securitygroup_id', 'join_key_rhs'=>'record_id',
+			'relationship_role_column'=>'module','relationship_role_column_value'=>'mks_ClassroomNew'),
+		//7
+		'mks_courses_securitygroups_1_c' => array(
+			'lhs_module'=> 'SecurityGroups', 'lhs_table'=> 'securitygroups', 'lhs_key' => 'id',
+			'rhs_module'=> 'mks_Courses', 'rhs_table'=> 'mks_courses', 'rhs_key' => 'id',
+			'relationship_type'=>'many-to-many',
+			'join_table'=> 'securitygroups_records', 'join_key_lhs'=>'securitygroup_id', 'join_key_rhs'=>'record_id',
+			'relationship_role_column'=>'module','relationship_role_column_value'=>'mks_Courses'),
+		//8
+		'mks_messagesfb_securitygroups_1_c' => array(
+			'lhs_module'=> 'SecurityGroups', 'lhs_table'=> 'securitygroups', 'lhs_key' => 'id',
+			'rhs_module'=> 'mks_MessagesFb', 'rhs_table'=> 'mks_messagesfb', 'rhs_key' => 'id',
+			'relationship_type'=>'many-to-many',
+			'join_table'=> 'securitygroups_records', 'join_key_lhs'=>'securitygroup_id', 'join_key_rhs'=>'record_id',
+			'relationship_role_column'=>'module','relationship_role_column_value'=>'mks_MessagesFb'),
+		//9
+		'mks_movement_securitygroups_c' => array(
+			'lhs_module'=> 'SecurityGroups', 'lhs_table'=> 'securitygroups', 'lhs_key' => 'id',
+			'rhs_module'=> 'mks_PaymentPlan', 'rhs_table'=> 'tasks', 'rhs_key' => 'id',
+			'relationship_type'=>'many-to-many',
+			'join_table'=> 'securitygroups_records', 'join_key_lhs'=>'securitygroup_id', 'join_key_rhs'=>'record_id',
+			'relationship_role_column'=>'module','relationship_role_column_value'=>'mks_PaymentPlan'),
+		//10
+		'mks_movementtype_securitygroups_c' => array(
+			'lhs_module'=> 'SecurityGroups', 'lhs_table'=> 'securitygroups', 'lhs_key' => 'id',
+			'rhs_module'=> 'mks_Movement', 'rhs_table'=> 'mks_movement', 'rhs_key' => 'id',
+			'relationship_type'=>'many-to-many',
+			'join_table'=> 'securitygroups_records', 'join_key_lhs'=>'securitygroup_id', 'join_key_rhs'=>'record_id',
+			'relationship_role_column'=>'module','relationship_role_column_value'=>'mks_Movement'),
+		//11
+		'mks_nonworkingdays_securitygroups_c' => array(
+			'lhs_module'=> 'SecurityGroups', 'lhs_table'=> 'securitygroups', 'lhs_key' => 'id',
+			'rhs_module'=> 'mks_NonworkingDays', 'rhs_table'=> 'mks_nonworkingdays', 'rhs_key' => 'id',
+			'relationship_type'=>'many-to-many',
+			'join_table'=> 'securitygroups_records', 'join_key_lhs'=>'securitygroup_id', 'join_key_rhs'=>'record_id',
+			'relationship_role_column'=>'module','relationship_role_column_value'=>'mks_NonworkingDays'),
+		//12
+		'mks_registration_securitygroups_1_c' => array(
+			'lhs_module'=> 'SecurityGroups', 'lhs_table'=> 'securitygroups', 'lhs_key' => 'id',
+			'rhs_module'=> 'mks_Registration', 'rhs_table'=> 'mks_registration', 'rhs_key' => 'id',
+			'relationship_type'=>'many-to-many',
+			'join_table'=> 'securitygroups_records', 'join_key_lhs'=>'securitygroup_id', 'join_key_rhs'=>'record_id',
+			'relationship_role_column'=>'module','relationship_role_column_value'=>'mks_Registration'),
+		//13
+		'mks_subjectmatter_securitygroups_c' => array(
+			'lhs_module'=> 'SecurityGroups', 'lhs_table'=> 'securitygroups', 'lhs_key' => 'id',
+			'rhs_module'=> 'mks_SubjectMatter', 'rhs_table'=> 'mks_subjectmatter', 'rhs_key' => 'id',
+			'relationship_type'=>'many-to-many',
+			'join_table'=> 'securitygroups_records', 'join_key_lhs'=>'securitygroup_id', 'join_key_rhs'=>'record_id',
+			'relationship_role_column'=>'module','relationship_role_column_value'=>'mks_SubjectMatter'),
+		//14
+		'mks_subsidiaryusers_securitygroups_c' => array(
+			'lhs_module'=> 'SecurityGroups', 'lhs_table'=> 'securitygroups', 'lhs_key' => 'id',
+			'rhs_module'=> 'mks_SubsidiaryUsers', 'rhs_table'=> 'mks_subsidiaryusers', 'rhs_key' => 'id',
+			'relationship_type'=>'many-to-many',
+			'join_table'=> 'securitygroups_records', 'join_key_lhs'=>'securitygroup_id', 'join_key_rhs'=>'record_id',
+			'relationship_role_column'=>'module','relationship_role_column_value'=>'mks_SubsidiaryUsers'),
+		//15
+		'mks_teacher_securitygroups_c' => array(
+			'lhs_module'=> 'SecurityGroups', 'lhs_table'=> 'securitygroups', 'lhs_key' => 'id',
+			'rhs_module'=> 'mks_Teacher', 'rhs_table'=> 'mks_teacher', 'rhs_key' => 'id',
+			'relationship_type'=>'many-to-many',
+			'join_table'=> 'securitygroups_records', 'join_key_lhs'=>'securitygroup_id', 'join_key_rhs'=>'record_id',
+			'relationship_role_column'=>'module','relationship_role_column_value'=>'mks_Teacher'),
+		//15.1	
+		'securitygroups_mks_teacher' => array(
+			'lhs_module'=> 'SecurityGroups', 'lhs_table'=> 'securitygroups', 'lhs_key' => 'id',
+			'rhs_module'=> 'mks_Teacher', 'rhs_table'=> 'mks_teacher', 'rhs_key' => 'id',
+			'relationship_type'=>'many-to-many',
+			'join_table'=> 'securitygroups_records', 'join_key_lhs'=>'securitygroup_id', 'join_key_rhs'=>'record_id',
+			'relationship_role_column'=>'module','relationship_role_column_value'=>'mks_Teacher'),			
+		//16
+		'mks_waitinglist_securitygroups_c' => array(
+			'lhs_module'=> 'SecurityGroups', 'lhs_table'=> 'securitygroups', 'lhs_key' => 'id',
+			'rhs_module'=> 'mks_WaitingList', 'rhs_table'=> 'mks_waitinglist', 'rhs_key' => 'id',
+			'relationship_type'=>'many-to-many',
+			'join_table'=> 'securitygroups_records', 'join_key_lhs'=>'securitygroup_id', 'join_key_rhs'=>'record_id',
+			'relationship_role_column'=>'module','relationship_role_column_value'=>'mks_WaitingList'),
+		//16.1
+		'securitygroups_mks_waitinglist' => array(
+			'lhs_module'=> 'SecurityGroups', 'lhs_table'=> 'securitygroups', 'lhs_key' => 'id',
+			'rhs_module'=> 'mks_WaitingList', 'rhs_table'=> 'mks_waitinglist', 'rhs_key' => 'id',
+			'relationship_type'=>'many-to-many',
+			'join_table'=> 'securitygroups_records', 'join_key_lhs'=>'securitygroup_id', 'join_key_rhs'=>'record_id',
+			'relationship_role_column'=>'module','relationship_role_column_value'=>'mks_WaitingList'),	
+			
+			
 
 	)
 );

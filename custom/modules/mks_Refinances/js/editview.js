@@ -1,21 +1,57 @@
+
+
+function calculate_total_debt()
+{
+	var total;
+	var debt      = $( "#debt" ).val(); parseFloat(debt);
+	var surcharge = $( "#surcharge" ).val();parseFloat(surcharge);
+	var discount  = $( "#discount" ).val();parseFloat(discount);
+	
+	var rest = (debt * surcharge) / 100; parseFloat(rest);
+	
+	total = parseFloat(debt) + parseFloat(rest) - parseFloat(discount);
+	
+	$( "#total_debt" ).val(total);
+	
+}
+
+$( "#surcharge" ).keyup(function() {
+  calculate_total_debt();
+});
+
+$( "#discount" ).keyup(function() {
+  calculate_total_debt();
+});
+
+$( "#debt" ).keyup(function() {
+  calculate_total_debt();
+});
+
 $( document ).ready(function() {
+	
+	 $.post( "index.php?entryPoint=geDebt", { 
+		
+			IdRegistration: $("#mks_refinances_mks_registrationmks_registration_ida").val(), 
+		
+	},function(data) {
+						  
+			var arr = jQuery.parseJSON(data); 
+
+			$('input[name="debt"]').val(arr.total);	
+
+			calculate_total_debt();			
+			
+	});	
 	
 	$( "#mks_refinances_mks_registration_name" ).prop( "disabled", true );
 	$( "#btn_mks_refinances_mks_registration_name" ).prop( "disabled", true );
-	$( "#btn_clr_mks_refinances_mks_registration_name" ).prop( "disabled", true );
-	//$( "#mks_Refinances_subpanel_full_form_button" ).remove();
-	//$( "#mks_Refinances_subpanel_full_form_button" ).remove();
-	
-	
+	$( "#btn_clr_mks_refinances_mks_registration_name" ).prop( "disabled", true );	
 	
 	$("#btn_grouptheory_c").removeAttr("onclick");	
 	$("#btn_grouppractice_c").removeAttr("onclick");
 	$("#grouptheory_c").attr('readonly',true);
 	$("#grouppractice_c").attr('readonly',true);
 	
-	//var mks_courses_id_c = $( "#mks_courses_id_c" ).val();
-	
-	//validateGroups(mks_courses_id_c)
 		
 	$("#btn_grouptheory_c").click(function(){ 
 	var course = $( "#course_c" ).val();

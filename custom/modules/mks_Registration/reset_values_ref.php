@@ -12,6 +12,7 @@ class reset_values_ref {
 		$bean->total_debt_c  = 0;
 		$bean->advance_c 	 = 0;
 		$bean->amount_fees_c = 0;	
+		$bean->first_expiration_ref_c = '';	
 	}	
 	
 }

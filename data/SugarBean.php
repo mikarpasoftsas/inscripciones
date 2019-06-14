@@ -3565,6 +3565,7 @@ class SugarBean
             }
         }
         /* BEGIN - SECURITY GROUPS */
+		
         global $current_user, $sugar_config;
         if ($this->module_dir == 'Users' && !is_admin($current_user)
             && isset($sugar_config['securitysuite_filter_user_list'])
@@ -3579,9 +3580,12 @@ class SugarBean
                 $where .= " AND (" . $group_where . ") ";
             }
         } elseif ($this->bean_implements('ACL') && ACLController::requireSecurityGroup($this->module_dir, 'list')) {
+			
             require_once('modules/SecurityGroups/SecurityGroup.php');
             global $current_user;
-            $owner_where = $this->getOwnerWhere($current_user->id);
+			//G.D.C.P 
+			$owner_where = $this->getOwnerWhere($current_user->id);
+			//$owner_where = '';
             $group_where = SecurityGroup::getGroupWhere($this->table_name, $this->module_dir, $current_user->id);
             if (!empty($owner_where)) {
                 if (empty($where)) {
@@ -3589,9 +3593,11 @@ class SugarBean
                 } else {
                     $where .= " AND (" . $owner_where . " or " . $group_where . ") ";
                 }
-            } else {
+            } else if (!empty($where)) {//G.D.C.P
                 $where .= ' AND ' . $group_where;
             }
+			else
+			    $where .= $group_where;	
         }
         /* END - SECURITY GROUPS */
         if (!empty($params['distinct'])) {
@@ -4122,8 +4128,8 @@ class SugarBean
      */
     public function process_order_by($order_by, $submodule = null, $suppress_table_name = false)
     {
-        if (empty($order_by)) {
-            return $order_by;
+        if (empty($order_by)||is_array($order_by)) {
+            return '';
         }
         //submodule is empty,this is for list object in focus
         if (empty($submodule)) {

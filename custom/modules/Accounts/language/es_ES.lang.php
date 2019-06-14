@@ -1,5 +1,5 @@
 <?php
-// created: 2018-12-22 18:24:16
+// created: 2019-06-08 17:36:01
 $mod_strings = array (
   'LBL_LEADS' => 'Clientes Potenciales',
   'LBL_LEADS_SUBPANEL_TITLE' => 'Preinformes/Potenciales',
@@ -60,4 +60,7 @@ $mod_strings = array (
   'LBL_AVATAR' => 'Avatar',
   'LBL_PROFILE_PIC_FBK' => 'Avatar Fbk',
   'LBL_ORIGIN_FB' => 'Origen FB',
+  'LBL_EDITVIEW_PANEL2' => 'Nuevo Panel 2',
+  'LBL_DEFAULT_SECURITYGROUP_ID' => 'Filial',
+  'LBL_QUICKCREATE_PANEL2' => ' Selecciona la Filial que debe tener acceso a este registro',
 );

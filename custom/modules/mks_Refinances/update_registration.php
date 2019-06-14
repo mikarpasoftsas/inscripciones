@@ -48,11 +48,27 @@ class update_registration {
 					}
 			}
 			
+			global $db;
+			
+			$query = "
+			
+				UPDATE `mks_registrationreceipts_cstm` SET mks_registrationreceipts_cstm.refinancing_process_c = 'yes' where mks_registrationreceipts_cstm.id_c IN (SELECT mks_registrationreceipts.id
+				FROM mks_registrationreceipts  
+				LEFT JOIN  mks_registration_mks_registrationreceipts_1_c jtl0 ON mks_registrationreceipts.id=jtl0.mks_regist608feceipts_idb AND jtl0.deleted=0
+				LEFT JOIN  mks_registration jt0 ON jt0.id=jtl0.mks_registration_mks_registrationreceipts_1mks_registration_ida AND jt0.deleted=0 AND jt0.deleted=0
+				WHERE ((jt0.id = '".$IdReg."'))
+				)
+			";
+			
+			$db->query($query);
+			
+			
 			$mks_CustomPaymentPlan = BeanFactory::getBean('mks_CustomPaymentPlan');
 			$mks_CustomPaymentPlan->name='Plan Refinanciado a ' . $bean->amount_fees_c . " cuotas";
 			$mks_CustomPaymentPlan->mks_paymentplan_mks_coursesmks_courses_ida = $bean->mks_courses_id_c;
 			$mks_CustomPaymentPlan->amount = 0;
 			$mks_CustomPaymentPlan->id_autoincrement='pending';
+			$mks_CustomPaymentPlan->assigned_user_id = $bean->assigned_user_id;
 			$mks_CustomPaymentPlan->save();
 			
 			if ($mks_CustomPaymentPlan->load_relationship('mks_custompaymentplan_mks_registration'))
@@ -61,15 +77,18 @@ class update_registration {
 			}
 			
 			$n=0;
-			
+			$m=1;
 			if($bean->advance_c>0)
 			{
 				$n = 1;
+				$m = 0;
 				$mks_CustomPlanFees 		 = BeanFactory::getBean('mks_CustomPlanFees');
 				$mks_CustomPlanFees->name    = $n . " de " . $bean->amount_fees_c;
 				$mks_CustomPlanFees->n_fee_c = $n;
 				$mks_CustomPlanFees->amount  = $bean->advance_c;	
 				$mks_CustomPlanFees->assigned_user_id = $bean->assigned_user_id;
+				$mks_CustomPlanFees->expiration = $bean->first_expiration_c;
+				$m++;
 				$mks_CustomPlanFees->save();
 
 				if ($mks_CustomPlanFees->load_relationship('mks_custompaymentplan_mks_customplanfees'))
@@ -85,7 +104,11 @@ class update_registration {
 				$mks_CustomPlanFees = BeanFactory::getBean('mks_CustomPlanFees');
 				$mks_CustomPlanFees->name    = ($i + $n) . " de " . $bean->amount_fees_c;
 				$mks_CustomPlanFees->n_fee_c = ($i + $n);
-				$mks_CustomPlanFees->amount  = $valfee;	
+				$mks_CustomPlanFees->amount  = $valfee;
+				$dateDB = $GLOBALS['timedate']->fromString($bean->first_expiration_c);
+				$dateDBformatDate = new DateTime($dateDB);
+				$dateDBformatDate->add(new DateInterval("P".$m++."M"));
+				$mks_CustomPlanFees->expiration = $dateDBformatDate->format('Y-m-d');
 				$mks_CustomPlanFees->assigned_user_id = $bean->assigned_user_id;
 				$mks_CustomPlanFees->save();
 
@@ -93,8 +116,11 @@ class update_registration {
 				{
 					$mks_CustomPlanFees->mks_custompaymentplan_mks_customplanfees->add($mks_CustomPaymentPlan->id);
 				}										
-			}			
+			}	
+
+			$bean->update_registration_c = 0;		
 		}
+		
 	}	
 	
 }

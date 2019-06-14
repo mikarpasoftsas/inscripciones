@@ -12,10 +12,6 @@ $layout_defs["mks_PaymentPlan"]["subpanel_setup"]['mks_paymentplan_securitygroup
   array (
     0 => 
     array (
-      'widget_class' => 'SubPanelTopButtonQuickCreate',
-    ),
-    1 => 
-    array (
       'widget_class' => 'SubPanelTopSelectButton',
       'mode' => 'MultiSelect',
     ),

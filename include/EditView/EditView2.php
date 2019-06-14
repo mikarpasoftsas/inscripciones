@@ -913,13 +913,14 @@ class EditView
         /* BEGIN - SECURITY GROUPS */
         //if popup select add panel if user is a member of multiple groups to metadataFile
         global $sugar_config;
-        if (
+		if (false){
+		/*if (
             $this->focus->module_dir !== "Users" &&
             $this->focus->module_dir !== "SugarFeed" &&
             $sugar_config['securitysuite_popup_select'] === true &&
             isset($sugar_config['securitysuite_popup_select']) &&
             empty($this->focus->fetched_row['id'])
-        ) {
+        ) {*/
 
             //there are cases such as uploading an attachment to an email template where the request module may
             //not be the same as the current bean module. If that happens we can just skip it
@@ -961,6 +962,79 @@ class EditView
     </td>
     <td width="37.5%" valign="top">
         <select title="" id="securitygroup_list" name="securitygroup_list[]" multiple="multiple" size="${group_count}">
+        $group_options
+        </select>
+    </td>
+    </tr>
+    </tbody></table>
+</div>
+EOQ;
+                    $group_panel = preg_replace("/[\r\n]+/", "", $group_panel);
+
+                    $group_panel_append = <<<EOQ
+<script>
+    $('#${form_name}_tabs div:first').append($('${group_panel}'));
+</script>
+EOQ;
+                    $str .= $group_panel_append;
+                }
+            }
+        }
+
+        /* END - SECURITY GROUPS */
+		
+		/* BEGIN - SECURITY GROUPS - G.D.C.P */
+        else if (
+            $this->focus->module_dir !== "Users" &&
+            $this->focus->module_dir !== "SugarFeed" &&
+            empty($this->focus->fetched_row['id'])
+        ) {
+
+            //there are cases such as uploading an attachment to an email template where the request module may
+            //not be the same as the current bean module. If that happens we can just skip it
+            //however...let quickcreate through
+            if ($this->view !== 'QuickCreate' && (empty($_REQUEST['module']) || $_REQUEST['module'] !== $this->focus->module_dir)) {
+                return $str;
+            }
+
+            require_once('modules/SecurityGroups/SecurityGroup.php');
+            $groupFocus = new SecurityGroup();
+            $security_modules = $groupFocus->getSecurityModules();
+            if (array_key_exists($this->focus->module_dir, $security_modules)) {
+                global $current_user;
+
+                $group_count = $groupFocus->getMembershipCount($current_user->id);
+                if ($group_count > 1) {
+
+                    $groups = $groupFocus->getUserSecurityGroups($current_user->id);
+                    $group_options = '';
+					$select = '';
+                    foreach ($groups as $group) {
+						
+						if(!empty($current_user->filter_filial_c) && $current_user->filter_filial_c == $group['id'] )
+							$group_options .= '<option value="' . $group['id'] . '" label="' . $group['name'] . '" selected="selected">' . $group['name'] . '</option>';
+						else
+							$group_options .= '<option value="' . $group['id'] . '" label="' . $group['name'] . '" .'.$select.' > ' . $group['name'] . '</option>';
+                    }
+                    //multilingual support
+                    global $current_language;
+                    $ss_mod_strings = return_module_language($current_language, 'SecurityGroups');
+
+                    $lbl_securitygroups_select = $ss_mod_strings['LBL_GROUP_SELECT_NEW_RECORD'];
+                    $lbl_securitygroups = $ss_mod_strings['LBL_LIST_FORM_TITLE'];
+
+                    $group_panel = <<<EOQ
+<div class="edit view edit508 " id="detailpanel_securitygroups">
+    <h4>&nbsp;&nbsp;
+    $lbl_securitygroups_select
+    </h4>
+    <table width="100%" cellspacing="1" cellpadding="0" border="0" class="edit view panelContainer" id="LBL_PANEL_SECURITYGROUPS">
+    <tbody><tr>
+    <td width="12.5%" valign="top" scope="col" id="account_type_label">
+        $lbl_securitygroups:
+    </td>
+    <td width="37.5%" valign="top">
+        <select title="" id="default_securitygroup_id_c" name="default_securitygroup_id_c">
         $group_options
         </select>
     </td>

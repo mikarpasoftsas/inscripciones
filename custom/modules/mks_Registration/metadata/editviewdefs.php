@@ -102,6 +102,24 @@ array (
             'label' => 'LBL_SIZE',
           ),
         ),
+        4 => 
+        array (
+          0 => 
+          array (
+            'name' => 'receip_type_c',
+            'studio' => 'visible',
+            'label' => 'LBL_RECEIP_TYPE',
+          ),
+        ),
+        5 => 
+        array (
+          0 => 
+          array (
+            'name' => 'observations_c',
+            'studio' => 'visible',
+            'label' => 'LBL_OBSERVATIONS',
+          ),
+        ),
       ),
       'lbl_editview_panel2' => 
       array (
@@ -211,6 +229,15 @@ array (
             'name' => 'amount_fees_c',
             'studio' => 'visible',
             'label' => 'LBL_AMOUNT_FEES_C',
+          ),
+          1 => '',
+        ),
+        6 => 
+        array (
+          0 => 
+          array (
+            'name' => 'first_expiration_ref_c',
+            'label' => 'LBL_FIRST_EXPIRATION_REF_C',
           ),
           1 => '',
         ),

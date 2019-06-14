@@ -162,4 +162,10 @@ $dictionary['Opportunity']['fields']['ads_id_c']['inline_edit']='1';
 $dictionary['Opportunity']['fields']['ads_id_c']['labelValue']='ADS ID';
 
  
+
+ // created: 2019-06-03 17:37:40
+$dictionary['Opportunity']['fields']['filter_filial_c']['inline_edit']='1';
+$dictionary['Opportunity']['fields']['filter_filial_c']['labelValue']='Filial';
+
+ 
 ?>

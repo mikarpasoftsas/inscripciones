@@ -1,7 +1,6 @@
 <?php
-// created: 2018-12-13 17:01:51
+// created: 2019-06-14 05:45:41
 $mod_strings = array (
-  'LBL_ATTACHMENT' => 'Archivo firmado',
   'LBL_ID_AUTOINCREMENT' => '#',
   'LBL_DEBT' => 'Deuda cuota vencida',
   'LBL_COURSE_MKS_COURSES_ID' => 'Carreras y cursos (relacionado  ID)',
@@ -15,4 +14,6 @@ $mod_strings = array (
   'LBL_ ADVANCE' => 'Anticipo',
   'LBL_ADVANCE_C' => 'Anticipo',
   'LBL_AMOUNT_FEES_C' => '# Cuotas',
+  'LBL_FIRST_EXPIRATION' => 'Primer Vencimiento',
+  'LBL_SURCHARGE' => 'Recargo %',
 );

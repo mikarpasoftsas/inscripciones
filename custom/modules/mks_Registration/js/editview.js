@@ -1,5 +1,48 @@
-$( document ).ready(function() {
+function calculate_total_debt()
+{
+	var total;
+	var debt      = $( "#debt_c" ).val(); parseFloat(debt);
+	var surcharge = $( "#surcharge_c" ).val();parseFloat(surcharge);
+	var discount  = $( "#discount_c" ).val();parseFloat(discount);
+	
+	var rest = (debt * surcharge) / 100; parseFloat(rest);
+	
+	total = parseFloat(debt) + parseFloat(rest) - parseFloat(discount);
+	
+	$( "#total_debt_c" ).val(total);
+	
+}
 
+
+
+$( document ).ready(function() {
+	
+	 $( "#surcharge_c" ).keyup(function() {
+	  calculate_total_debt();
+	});
+
+	$( "#discount_c" ).keyup(function() {
+	  calculate_total_debt();
+	});
+
+	$( "#debt_c" ).keyup(function() {
+	  calculate_total_debt();
+	});
+
+	 $.post( "index.php?entryPoint=geDebt", { 
+		
+			IdRegistration: $('input[name="duplicateId"]').val(), 
+		
+	},function(data) {
+						  
+			var arr = jQuery.parseJSON(data); 
+
+			$('input[name="debt_c"]').val(arr.total);	
+
+			calculate_total_debt();			
+			
+	});		
+	
 	var mks_courses_id_c = $( "#mks_courses_id_c" ).val();	
 	
 	if (! $('input[name="duplicateId"]').length){

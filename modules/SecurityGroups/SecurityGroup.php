@@ -41,7 +41,26 @@ class SecurityGroup extends SecurityGroup_sugar
      */
     public static function getGroupWhere($table_name, $module, $user_id)
     {
-
+		//G.D.C.P
+		global $current_user;
+		$query_filter_filial = '';
+		if(!empty($current_user->filter_filial_c))
+		$query_filter_filial = " AND ".
+	
+				$table_name.".id IN (
+			
+								SELECT ".$table_name.".id 
+								FROM ".$table_name."					
+								INNER JOIN securitygroups_records secr
+												ON secr.deleted = 0
+												   AND secr.module = '".$table_name."'
+												   AND secr.record_id = ".$table_name.".id
+								INNER JOIN securitygroups secg	ON 	secg.id = secr.securitygroup_id	   			
+								WHERE secg.id = '".$current_user->filter_filial_c."'
+						
+							   )	
+				
+				";
         //need a different query if doing a securitygroups check
         if ($module == 'SecurityGroups') {
             return " $table_name.id in (
@@ -56,13 +75,15 @@ class SecurityGroup extends SecurityGroup_sugar
                           INNER JOIN securitygroups_users secu
                             ON secg.id = secu.securitygroup_id
                                AND secu.deleted = 0
-                               AND secu.user_id = '$user_id'
+                               AND secu.user_id = '".$user_id."'
                           INNER JOIN securitygroups_records secr
                             ON secg.id = secr.securitygroup_id
                                AND secr.deleted = 0
-                               AND secr.module = '$module'
-                       WHERE   secr.record_id = " . $table_name . '.id
-                               AND secg.deleted = 0) ';
+                               AND secr.module = '".$module."'
+                       WHERE   secr.record_id = " . $table_name . ".id
+                               AND secg.deleted = 0 ) 					
+							   
+				" . $query_filter_filial;
         }
     }
 

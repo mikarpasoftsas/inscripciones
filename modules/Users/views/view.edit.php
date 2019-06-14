@@ -242,6 +242,29 @@ EOD
         
         $this->ss->assign('SUBTHEMES', $this->bean->getSubThemes());
         $this->ss->assign('SUBTHEME', $this->bean->getSubTheme());
+		
+				//G.D.C.P
+				require_once('modules/SecurityGroups/SecurityGroup.php');
+				$groupFocus = new SecurityGroup();
+				global $current_language;
+				if(is_admin($current_user)){
+					$groups = $groupFocus->get_list("name","",0,-99,-99);
+					$options = array(""=>"");
+					foreach($groups['list'] as $group) 
+						$options[$group->id] = $group->name;
+					
+				}
+				else{
+					$groups   = $groupFocus->getUserSecurityGroups($current_user->id);
+					$options = array(""=>"");
+					foreach($groups as $key => $value) 
+						$options[$value['id']] = $value['name'];					
+				}				
+				
+				
+				$group_options =  get_select_options_with_id($options, $this->bean->filter_filial_c);
+				$this->ss->assign('FILTER_FILIAL', $group_options);
+					
         
 
         require_once('modules/Emails/EmailUI.php');

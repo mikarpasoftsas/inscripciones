@@ -5,7 +5,7 @@
 $layout_defs["mks_SubsidiaryUsers"]["subpanel_setup"]['mks_subsidiaryusers_aclroles'] = array (
   'order' => 100,
   'module' => 'ACLRoles',
-  'subpanel_name' => 'default',
+  'subpanel_name' => 'admin',
   'sort_order' => 'asc',
   'sort_by' => 'id',
   'title_key' => 'LBL_MKS_SUBSIDIARYUSERS_ACLROLES_FROM_ACLROLES_TITLE',

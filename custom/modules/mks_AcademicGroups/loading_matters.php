@@ -49,9 +49,7 @@ class loading_matters {
 								die("Not load mks_academicgroups_mks_groupmatters_1");
 							}
 								
-						}
-					else
-						die("The course has no subjects");
+						}					
 				}
 				else
 				{

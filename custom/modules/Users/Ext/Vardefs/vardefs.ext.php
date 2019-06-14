@@ -35,4 +35,10 @@ $dictionary["User"]["fields"]["mks_academicgroups_usersmks_academicgroups_ida"] 
   'vname' => 'LBL_MKS_ACADEMICGROUPS_USERS_FROM_USERS_TITLE',
 );
 
+
+ // created: 2019-06-12 03:16:38
+$dictionary['User']['fields']['filter_filial_c']['inline_edit']='1';
+$dictionary['User']['fields']['filter_filial_c']['labelValue']='Filtro por filial';
+
+ 
 ?>

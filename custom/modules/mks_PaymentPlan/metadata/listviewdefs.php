@@ -8,7 +8,7 @@ array (
     'label' => 'LBL_ID_AUTOINCREMENT',
     'width' => '10%',
     'default' => true,
-	'link' => true,
+    'link' => true,
   ),
   'NAME' => 
   array (
@@ -39,7 +39,7 @@ array (
     'label' => 'LBL_ASSIGNED_TO_NAME',
     'module' => 'Employees',
     'id' => 'ASSIGNED_USER_ID',
-    'default' => false,
+    'default' => true,
   ),
 );
 ;

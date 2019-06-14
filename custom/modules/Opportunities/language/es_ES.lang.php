@@ -1,5 +1,5 @@
 <?php
-// created: 2019-02-13 15:06:27
+// created: 2019-06-03 17:37:40
 $mod_strings = array (
   'LBL_LEADS' => 'Preinformes/Potenciales',
   'LBL_LEADS_SUBPANEL_TITLE' => 'Preinformes/Potenciales',
@@ -43,4 +43,5 @@ $mod_strings = array (
   'LBL_DESCRIPTION' => 'Observaciones',
   'LBL_COURSES_OF_INTEREST' => 'Cursos de Interes',
   'LBL_ADS_ID' => 'ADS ID',
+  'LBL_FILTER_FILIAL_C' => 'Filial',
 );

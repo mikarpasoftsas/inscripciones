@@ -1,5 +1,5 @@
 <?php
- // created: 2018-10-25 23:02:16
+ // created: 2019-04-29 17:38:11
 $dictionary['mks_GroupSchedule']['fields']['classroom']['inline_edit']='';
 
  ?>

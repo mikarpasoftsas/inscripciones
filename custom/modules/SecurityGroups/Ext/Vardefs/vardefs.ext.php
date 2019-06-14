@@ -118,18 +118,6 @@ $dictionary["SecurityGroup"]["fields"]["mks_box_securitygroups"] = array (
 );
 
 
-// created: 2018-09-24 16:21:43
-$dictionary["SecurityGroup"]["fields"]["mks_classroom_securitygroups"] = array (
-  'name' => 'mks_classroom_securitygroups',
-  'type' => 'link',
-  'relationship' => 'mks_classroom_securitygroups',
-  'source' => 'non-db',
-  'module' => 'mks_Classroom',
-  'bean_name' => 'mks_Classroom',
-  'vname' => 'LBL_MKS_CLASSROOM_SECURITYGROUPS_FROM_MKS_CLASSROOM_TITLE',
-);
-
-
 // created: 2018-09-24 16:22:53
 $dictionary["SecurityGroup"]["fields"]["mks_teacher_securitygroups"] = array (
   'name' => 'mks_teacher_securitygroups',
@@ -237,4 +225,10 @@ $dictionary["SecurityGroup"]["fields"]["mks_courses_securitygroups_1"] = array (
   'vname' => 'LBL_MKS_COURSES_SECURITYGROUPS_1_FROM_MKS_COURSES_TITLE',
 );
 
+
+ // created: 2019-05-03 23:29:27
+$dictionary['SecurityGroup']['fields']['key_autoincrement_c']['inline_edit']='1';
+$dictionary['SecurityGroup']['fields']['key_autoincrement_c']['labelValue']='Llave(Consecutivo)';
+
+ 
 ?>

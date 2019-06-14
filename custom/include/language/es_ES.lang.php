@@ -1,9 +1,4 @@
 <?php
-$GLOBALS['app_list_strings']['sexo_list']=array (
-  '' => '',
-  'Masculino' => 'Masculino',
-  'Femenino' => 'Femenino',
-);
 $GLOBALS['app_list_strings']['course_interest_list']=array (
   '' => '',
   'Pateleria' => 'Pasteleria',
@@ -97,8 +92,6 @@ $app_list_strings['moduleListSingular']['Accounts']='Contacto';
 $app_list_strings['record_type_display']['Accounts']='Contacto';
 $app_list_strings['parent_type_display']['Accounts']='Contacto';
 $app_list_strings['record_type_display_notes']['Accounts']='Contacto';
-$app_list_strings['moduleList']['AOS_Products']='Articulos';
-$app_list_strings['moduleListSingular']['AOS_Products']='Articulo';
 $app_list_strings['moduleList']['AOS_Product_Categories']='Articulos - Categorías';
 $app_list_strings['moduleListSingular']['AOS_Product_Categories']='Articulo - Categoría';
 $app_list_strings['moduleList']['SecurityGroups']='Filiales';
@@ -106,13 +99,13 @@ $app_list_strings['moduleList']['mks_SubsidiaryGroup']='Grupo de Usuarios de Fil
 $app_list_strings['moduleListSingular']['SecurityGroups']='Filial';
 $app_list_strings['moduleListSingular']['mks_SubsidiaryGroup']='Grupo de Usuarios de Filial';
 $GLOBALS['app_list_strings']['day_available_list']=array (
-  'Lunes' => 'Lunes',
-  'Martes' => 'Martes',
-  'Miercoles' => 'Miercoles',
-  'Jueves' => 'Jueves',
-  'Viernes' => 'Viernes',
-  'Sabado' => 'Sàbado',
-  'Domingo' => 'Domingo',
+  '0' => 'Lunes',
+  '1' => 'Martes',
+  '2' => 'Miercoles',
+  '3' => 'Jueves',
+  '4' => 'Viernes',
+  '5' => 'Sàbado',
+  '6' => 'Domingo',
 );
 $GLOBALS['app_list_strings']['origin_conact_list']=array (
   '' => '',
@@ -134,11 +127,6 @@ $GLOBALS['app_list_strings']['refinance_list']=array (
 $GLOBALS['app_list_strings']['status_ppp_list']=array (
   'valid' => 'Vigente',
   'closed' => 'Cerrado',
-);
-$GLOBALS['app_list_strings']['tipo_list']=array (
-  '' => '',
-  'photo' => 'Foto',
-  'other' => 'Otro',
 );
 $GLOBALS['app_list_strings']['amount_fees_list']=array (
   1 => '1',
@@ -176,4 +164,140 @@ $GLOBALS['app_list_strings']['discountrule_list']=array (
   '' => '',
   'discount' => 'Descuento',
   'surcharge' => 'Recargo',
+);
+$GLOBALS['app_list_strings']['payment_status_list']=array (
+  '' => '',
+  'pending' => 'Pendiente',
+  'partial' => 'Parcial',
+  'Paid' => 'Pagado',
+);
+$GLOBALS['app_list_strings']['type_1']=array (
+  '' => '',
+  'debit' => 'Debito',
+  'credit' => 'Crédito',
+);
+$GLOBALS['app_list_strings']['fees_list']=array (
+  1 => '1',
+  2 => '2',
+  3 => '3',
+  4 => '4',
+  5 => '5',
+  6 => '6',
+  7 => '7',
+  8 => '8',
+  9 => '9',
+  '' => '',
+  10 => '10',
+  11 => '11',
+  12 => '12',
+  13 => '13',
+  14 => '14',
+  15 => '15',
+  16 => '16',
+  17 => '17',
+  18 => '18',
+  19 => '19',
+  20 => '20',
+  21 => '21',
+  22 => '22',
+  23 => '23',
+  24 => '24',
+);
+$GLOBALS['app_list_strings']['status_registration_receipts_list']=array (
+  'draft' => 'Borrador',
+  'confirmed' => 'Confirmado',
+);
+$GLOBALS['app_list_strings']['status_managment_list']=array (
+  '' => '',
+  'closed' => 'Cerrado',
+  'reagenda' => 'Reagenda',
+);
+
+$GLOBALS['app_list_strings']['type_managment_list']=array (
+  '' => '',
+  'query' => 'Consulta',
+);
+$GLOBALS['app_list_strings']['type_concept_list']=array (
+  '' => '',
+  'fee' => 'Cuota',
+  'discount' => 'Descuento',
+  'surcharge' => 'Recargo',
+  'standard' => 'Normal',
+);
+$GLOBALS['app_list_strings']['status_payment_list']=array (
+  'pending' => 'Pendiente',
+  'paid' => 'Procesado',
+);
+$GLOBALS['app_list_strings']['type_rr_list']=array (
+  '' => '',
+  '_x_c' => 'X',
+  '_a_c' => 'A',
+);
+$GLOBALS['app_list_strings']['status_list']=array (
+  'open' => 'Abierta',
+  'closed' => 'Cerrada',
+);
+$GLOBALS['app_list_strings']['status_mov_box']=array (
+  'open' => 'Abierta',
+  'closed' => 'Cerrada',
+);
+$GLOBALS['app_list_strings']['currency_list']=array (
+  'ARS' => 'ARS',
+  'COL' => 'Pesos colombianos',
+);
+$GLOBALS['app_list_strings']['sexo_list']=array (
+  '' => '',
+  'Masculino' => 'Masculino',
+  'Femenino' => 'Femenino',
+);
+$GLOBALS['app_list_strings']['pdf_template_type_dom']=array (
+  'AOS_Quotes' => 'Presupuestos',
+  'AOS_Invoices' => 'Facturas',
+  'AOS_Contracts' => 'Contratos',
+  'Accounts' => 'Cuentas',
+  'Contacts' => 'Contactos',
+  'Leads' => 'Clientes Potenciales',
+  'mks_RegistrationReceipts' => 'Recibos',
+  'mks_Registration' => 'Matriculas',
+);
+$app_list_strings['moduleList']['AOS_Products']='Productos';
+$app_list_strings['moduleListSingular']['AOS_Products']='Producto';
+$GLOBALS['app_list_strings']['securitygroup_list']=array (
+);
+global $current_user;
+if(is_object($current_user)){
+require_once('modules/SecurityGroups/SecurityGroup.php');
+$groupFocus = new SecurityGroup();
+            $security_modules = $groupFocus->getSecurityModules();
+			$group_options = array();
+            if (array_key_exists("Accounts", $security_modules)) {
+                global $current_user;
+                    $groups = $groupFocus->getUserSecurityGroups($current_user->id);
+                   
+                    foreach ($groups as $group) {
+                        $group_options[$group['id']]= $group['name'];
+                    }
+			}		
+}
+else
+{
+	$group_options=array();
+}
+	
+$GLOBALS['app_list_strings']['default_securitygroup_id_list']=$group_options;
+$GLOBALS['app_list_strings']['filter_filial_c_list']=array (
+  '' => '',
+);
+
+$GLOBALS['app_list_strings']['freeze_plan_list']=array (
+  'yes' => 'Si',
+  'not' => 'No',
+);
+$GLOBALS['app_list_strings']['tipo_list']=array (
+  '' => '',
+  'mks_Refinances' => 'Archivo firmado',
+);
+$GLOBALS['app_list_strings']['refinancing_process_list']=array (
+  'yes' => 'Si',
+  'not' => 'no',
 );

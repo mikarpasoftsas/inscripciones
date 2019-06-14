@@ -179,13 +179,13 @@ $dictionary['mks_Registration']['fields']['debt_c']['labelValue']='Deduda cuota 
 
  
 
- // created: 2018-11-14 18:03:33
+ // created: 2019-06-14 05:46:25
 $dictionary['mks_Registration']['fields']['surcharge_c']['inline_edit']='';
 $dictionary['mks_Registration']['fields']['surcharge_c']['labelValue']='Recargo %';
 
  
 
- // created: 2018-11-14 18:06:42
+ // created: 2019-06-14 05:46:07
 $dictionary['mks_Registration']['fields']['discount_c']['inline_edit']='';
 $dictionary['mks_Registration']['fields']['discount_c']['labelValue']='Mondo del Descuento';
 
@@ -234,6 +234,73 @@ $dictionary['mks_Registration']['fields']['advance_c']['labelValue']='Anticipo';
  
 
  // created: 2018-12-13 16:16:24
+
+ 
+
+// created: 2019-02-25 16:59:06
+$dictionary["mks_Registration"]["fields"]["mks_registration_mks_registrationreceipts_1"] = array (
+  'name' => 'mks_registration_mks_registrationreceipts_1',
+  'type' => 'link',
+  'relationship' => 'mks_registration_mks_registrationreceipts_1',
+  'source' => 'non-db',
+  'module' => 'mks_RegistrationReceipts',
+  'bean_name' => 'mks_RegistrationReceipts',
+  'side' => 'right',
+  'vname' => 'LBL_MKS_REGISTRATION_MKS_REGISTRATIONRECEIPTS_1_FROM_MKS_REGISTRATIONRECEIPTS_TITLE',
+);
+
+
+// created: 2019-03-14 15:31:29
+$dictionary["mks_Registration"]["fields"]["mks_registration_mks_management_1"] = array (
+  'name' => 'mks_registration_mks_management_1',
+  'type' => 'link',
+  'relationship' => 'mks_registration_mks_management_1',
+  'source' => 'non-db',
+  'module' => 'mks_Management',
+  'bean_name' => 'mks_Management',
+  'side' => 'right',
+  'vname' => 'LBL_MKS_REGISTRATION_MKS_MANAGEMENT_1_FROM_MKS_MANAGEMENT_TITLE',
+);
+
+
+ // created: 2019-05-29 19:50:51
+$dictionary['mks_Registration']['fields']['mks_receiptype_id_c']['inline_edit']=1;
+
+ 
+
+ // created: 2019-05-29 19:50:51
+$dictionary['mks_Registration']['fields']['receip_type_c']['inline_edit']='1';
+$dictionary['mks_Registration']['fields']['receip_type_c']['labelValue']='Tipo de Recibo';
+
+ 
+
+ // created: 2019-06-01 15:40:59
+$dictionary['mks_Registration']['fields']['detail_paymen_plan_c']['inline_edit']='1';
+$dictionary['mks_Registration']['fields']['detail_paymen_plan_c']['labelValue']='Detalle del plan de pago';
+
+ 
+
+ // created: 2019-06-13 03:30:19
+$dictionary['mks_Registration']['fields']['observations_c']['inline_edit']='1';
+$dictionary['mks_Registration']['fields']['observations_c']['labelValue']='Observaciones';
+
+ 
+
+ // created: 2019-06-13 03:41:33
+$dictionary['mks_Registration']['fields']['freeze_plan_c']['inline_edit']='1';
+$dictionary['mks_Registration']['fields']['freeze_plan_c']['labelValue']='Congelar Plan?';
+
+ 
+
+ // created: 2019-06-13 03:43:19
+$dictionary['mks_Registration']['fields']['freeze_plan_des_c']['inline_edit']='1';
+$dictionary['mks_Registration']['fields']['freeze_plan_des_c']['labelValue']='Contenido Congelado';
+
+ 
+
+ // created: 2019-06-14 05:23:32
+$dictionary['mks_Registration']['fields']['first_expiration_ref_c']['inline_edit']='1';
+$dictionary['mks_Registration']['fields']['first_expiration_ref_c']['labelValue']='Vencimiento';
 
  
 ?>

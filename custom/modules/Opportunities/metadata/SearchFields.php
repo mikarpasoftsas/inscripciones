@@ -1,5 +1,5 @@
 <?php
-// created: 2019-02-13 15:07:17
+// created: 2019-06-12 02:38:55
 $searchFields['Opportunities'] = array (
   'name' => 
   array (
@@ -180,6 +180,27 @@ $searchFields['Opportunities'] = array (
 			INNER JOIN `mks_interestcourse` ic ON ic.id = icp.`mks_interestcourse_opportunitiesmks_interestcourse_idb`
 			INNER JOIN mks_courses c ON c.id = ic.`mks_courses_id_c`
 			WHERE c.name LIKE "%{0}%"
+	
+	',
+    'db_field' => 
+    array (
+      0 => 'id',
+    ),
+  ),
+  'filter_filial_c' => 
+  array (
+    'query_type' => 'format',
+    'operator' => 'subquery',
+    'subquery' => '
+	
+			SELECT opp.id 
+			FROM `opportunities` opp					
+			INNER JOIN securitygroups_records secr
+                            ON secr.deleted = 0
+                               AND secr.module = \'Opportunities\'
+							   AND secr.record_id = opp.id
+			INNER JOIN securitygroups secg	ON 	secg.id = secr.securitygroup_id	   			
+			WHERE secg.name LIKE "%{0}%"
 	
 	',
     'db_field' => 

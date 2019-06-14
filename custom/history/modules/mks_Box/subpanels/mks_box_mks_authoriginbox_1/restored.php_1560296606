@@ -1,0 +1,25 @@
+<?php
+// created: 2019-06-11 23:43:21
+$layout_defs = array (
+  'auth_user_c' => 
+  array (
+    'type' => 'relate',
+    'default' => true,
+    'studio' => 'visible',
+    'vname' => 'LBL_AUTH_USER',
+    'id' => 'USER_ID_C',
+    'link' => true,
+    'width' => '10%',
+    'widget_class' => 'SubPanelDetailViewLink',
+    'target_module' => 'Users',
+    'target_record_key' => 'user_id_c',
+  ),
+  'remove_button' => 
+  array (
+    'vname' => 'LBL_REMOVE',
+    'widget_class' => 'SubPanelRemoveButton',
+    'module' => 'mks_AuthOriginBox',
+    'width' => '5%',
+    'default' => true,
+  ),
+);

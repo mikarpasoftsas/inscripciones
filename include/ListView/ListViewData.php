@@ -313,10 +313,39 @@ class ListViewData {
         if(!isset($params['custom_select'])) $params['custom_select'] = '';
         if(!isset($params['custom_from'])) $params['custom_from'] = '';
         if(!isset($params['custom_where'])) $params['custom_where'] = '';
+		
+		//G.D.C.P
+		if($_REQUEST['action'] == 'Popup' && $_REQUEST['module'] == 'mks_Box' &&  isset($_REQUEST['type']) && $_REQUEST['type'] == 'origin')
+		{
+			$params['custom_where'] .= " AND mks_box.id IN (
+				
+					SELECT mks_box_mks_authoriginbox_1mks_box_ida 
+					FROM mks_authoriginbox 
+					INNER JOIN mks_authoriginbox_cstm ON id = id_c 
+					INNER JOIN `mks_box_mks_authoriginbox_1_c` ON `mks_box_mks_authoriginbox_1mks_authoriginbox_idb` = mks_authoriginbox.id
+					WHERE user_id_c = '".$current_user->id."' AND mks_authoriginbox.deleted = 0
+				)
+			";
+		}
+		else if($_REQUEST['action'] == 'Popup' && $_REQUEST['module'] == 'mks_Box' &&  isset($_REQUEST['type']) && $_REQUEST['type'] == 'destination')
+		{
+			$params['custom_where'] .= " AND mks_box.id IN (
+				
+					SELECT mks_box_mks_authdestinationbox_1mks_box_ida 
+					FROM mks_authdestinationbox 
+					INNER JOIN mks_authdestinationbox_cstm ON id = id_c 
+					INNER JOIN mks_box_mks_authdestinationbox_1_c on mks_box_mks_authdestinationbox_1mks_authdestinationbox_idb = mks_authdestinationbox.id
+					WHERE user_id_c = '".$current_user->id."' AND mks_authdestinationbox.deleted = 0
+				)
+			";
+		}
+		
         if(!isset($params['custom_order_by'])) $params['custom_order_by'] = '';
 		$main_query = $ret_array['select'] . $params['custom_select'] . $ret_array['from'] . $params['custom_from'] . $ret_array['inner_join']. $ret_array['where'] . $params['custom_where'] . $ret_array['order_by'] . $params['custom_order_by'];
+		
 		//G.D.C.P
 		$main_query = str_replace('opportunities_cstm.id ','opportunities_cstm.id_c ',$main_query);
+		
 		/*
 		echo "<pre>";
 		print_r($main_query);

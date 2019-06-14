@@ -46,4 +46,18 @@ $dictionary['mks_CustomDiscountRules']['fields']['type_c']['labelValue']='Tipo';
 $dictionary['mks_CustomDiscountRules']['fields']['id_autoincrement']['format']='{RDP}{-}{y}{-}{00000}{}{}';
 
  
+
+ // created: 2019-05-12 02:12:34
+$dictionary['mks_CustomDiscountRules']['fields']['final_day']['max']=false;
+$dictionary['mks_CustomDiscountRules']['fields']['final_day']['len']='11';
+$dictionary['mks_CustomDiscountRules']['fields']['final_day']['min']=0;
+
+ 
+
+ // created: 2019-05-12 02:12:24
+$dictionary['mks_CustomDiscountRules']['fields']['initial_day']['len']='11';
+$dictionary['mks_CustomDiscountRules']['fields']['initial_day']['max']=false;
+$dictionary['mks_CustomDiscountRules']['fields']['initial_day']['min']=0;
+
+ 
 ?>

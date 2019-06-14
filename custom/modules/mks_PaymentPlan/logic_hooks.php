@@ -5,5 +5,5 @@
 $hook_array = Array(); 
 // position, file, function 
 $hook_array['before_save'] = Array(); 
-$hook_array['before_save'][] = Array(1, 'assigned_filial_plan', 'custom/modules/mks_PaymentPlan/assigned_filial_plan.php','assigned_filial_plan', 'assigned_filial_plan'); 
+//$hook_array['before_save'][] = Array(1, 'assigned_filial_plan', 'custom/modules/mks_PaymentPlan/assigned_filial_plan.php','assigned_filial_plan', 'assigned_filial_plan'); 
 ?>

@@ -21,8 +21,9 @@ class create_registration {
 			$mks_Registration->id_autoincrement='pending';
 			$mks_Registration->opportunity_id_c = $bean->id;
 			$mks_Registration->accounts_mks_registration_1accounts_ida = $bean->account_id;
+			$mks_Registration->assigned_user_id = $bean->assigned_user_id;
 			$mks_Registration->save();
-			
+		
 			if ($mks_Registration->load_relationship('mks_registration_securitygroups_1')){
 			
 					
@@ -40,6 +41,15 @@ class create_registration {
 					
 					$result = $db->query($query);
 					
+					require_once('modules/SecurityGroups/SecurityGroup.php');
+					$groupFocus = new SecurityGroup();
+					while( $row = $db->fetchByAssoc($result)){ 
+					
+						$mks_Registration->mks_registration_securitygroups_1->add($row['securitygroup_id']);
+						$groupFocus->addGroupToRecord('mks_Registration', $mks_Registration->id,$row['securitygroup_id']);
+					
+					}
+					
 					$query1= "
 					
 					
@@ -54,12 +64,6 @@ class create_registration {
 					";
 					
 					$result = $db->query($query1);
-					
-					while( $row = $db->fetchByAssoc($result)){ 
-					
-						$mks_Registration->mks_registration_securitygroups_1->add($row['securitygroup_id']);
-					
-					}
 			}
 			else
 			{
